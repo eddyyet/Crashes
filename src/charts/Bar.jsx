@@ -12,7 +12,8 @@ export function BarInvolved (props) {
       data={[filteredData]}
       keys={['INJURIES_TOTAL', 'INJURIES_NO_INDICATION']}
       layout="horizontal"
-      height={50}
+      margin={{ top: 0, right: 0, bottom: 0, left: 0 }}
+      padding={0}
       colors={{ scheme: 'purple_orange' }}
       label={data => `${data.id}: ${data.value}`}
       labelFormat= {'textAnchor:left' }
@@ -24,13 +25,13 @@ export function BarInvolved (props) {
 
 export function BarInjured (props) {
   const filteredData = filter(pplInjuredData, props.year, props.side)
+  console.log(filteredData)
 
   return (
     <ResponsiveBar
       data={[filteredData]}
       keys={['INJURIES_FATAL', 'INJURIES_INCAPACITATING', 'INJURIES_NON_INCAPACITATING', 'INJURIES_REPORTED_NOT_EVIDENT']}
       layout="horizontal"
-      height={50}
       colors={{ scheme: 'purple_orange' }}
       label={data => `${data.id}: ${data.value}`}
       labelFormat= {'textAnchor:left' }

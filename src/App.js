@@ -16,9 +16,13 @@ export default function App () {
         <Chart>
           <div>How are the victims?</div>
           <div>Among the people involved...</div>
-          <BarInvolved year={[2018, 2022]} side='Far North Side' />
+          <div style={{ height: '50px' }}>
+            <BarInvolved year={[2018, 2022]} side='Far North Side' />
+          </div>
           <div>Among the people injuried...</div>
-          <BarInjured year={[2018, 2022]} side='Far North Side' />
+          <div style={{ height: '50px' }}>
+            <BarInjured year={[2018, 2022]} side='Far North Side' />
+          </div>
         </Chart>
         <Chart>3</Chart>
       </Stack>
