@@ -10,7 +10,7 @@ export function BarInvolved (props) {
   return (
     <ResponsiveBar
       data={[filteredData]}
-      keys={['INJURIES_TOTAL', 'INJURIES_NO_INDICATION']}
+      keys={['Injured', 'No indication of injury']}
       layout="horizontal"
       margin={{ top: 0, right: 0, bottom: 0, left: 0 }}
       padding={0}
@@ -29,7 +29,7 @@ export function BarInjured (props) {
   return (
     <ResponsiveBar
       data={[filteredData]}
-      keys={['INJURIES_FATAL', 'INJURIES_INCAPACITATING', 'INJURIES_NON_INCAPACITATING', 'INJURIES_REPORTED_NOT_EVIDENT']}
+      keys={['Fatal', 'Incapacitating', 'Non-incapacitating', 'Reported but not evident']}
       layout="horizontal"
       margin={{ top: 0, right: 0, bottom: 0, left: 0 }}
       padding={0}
