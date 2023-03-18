@@ -11,6 +11,7 @@ export default function HeatMap (props) {
   return (
     <ResponsiveHeatMap
       data={heatMapData}
+      keys={['0', '1', '2']}
       margin={{ top: 100, right: 60, bottom: 60, left: 60 }}
       forceSquare={true}
       // xInnerPadding={0.05}

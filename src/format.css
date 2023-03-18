@@ -10,3 +10,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: #d3d3d3;
 }
+
+.subtitle {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+}
