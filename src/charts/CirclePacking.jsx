@@ -7,7 +7,6 @@ import causeData from '../data/crash_cause.json'
 export default function CirclePacking (props) {
   const filteredData = filter(causeData, props.year, props.side)
   const circlePackingData = CirclePackingData(filteredData)
-  console.log(circlePackingData)
 
   return (
     <ResponsiveCirclePacking
@@ -16,7 +15,8 @@ export default function CirclePacking (props) {
       id='cause'
       value='count'
       padding={4}
-      enableBreadcrumb={false}
+      colorBy='depth'
+
       // labelsSkipRadius={50}
       // // colors={{ scheme: 'purple_orange' }}
       // // childColor={{ from: 'color', modifiers: [['darker', 0.8]] }}
