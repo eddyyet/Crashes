@@ -2,6 +2,7 @@ import './format.css'
 import React from 'react'
 import Stack from '@mui/material/Stack'
 import { Chart } from './chart'
+import CirclePacking from './charts/CirclePacking'
 import HeatMap from './charts/HeatMap'
 import { BarInvolved, BarInjured } from './charts/Bar'
 
@@ -9,6 +10,10 @@ export default function App () {
   return (
     <div className="App">
       <Stack spacing={3} sx={{ width: '800px' }}>
+        <Chart height='500px'>
+          <div>Why are the crashes?</div>
+          <CirclePacking year={[2018, 2018]} side='West Side' />
+        </Chart>
         <Chart height='500px'>
           <div>When were the crashes?</div>
           <HeatMap year={[2018, 2022]} side='Far North Side' />
@@ -24,7 +29,6 @@ export default function App () {
             <BarInjured year={[2018, 2022]} side='Far North Side' />
           </div>
         </Chart>
-        <Chart>3</Chart>
         <Chart>4</Chart>
         <Chart>5</Chart>
       </Stack>
