@@ -1,0 +1,407 @@
+[
+  {
+    "CRASH_YEAR":2018,
+    "SIDE":"Central",
+    "Driver-related causes":7950,
+    "Environmental causes":277,
+    "Other\/Unknown causes":376,
+    "Unable to determine":3860,
+    "Vehicle-related causes":42
+  },
+  {
+    "CRASH_YEAR":2018,
+    "SIDE":"Far North Side",
+    "Driver-related causes":8530,
+    "Environmental causes":518,
+    "Other\/Unknown causes":549,
+    "Unable to determine":5406,
+    "Vehicle-related causes":80
+  },
+  {
+    "CRASH_YEAR":2018,
+    "SIDE":"Far Southeast Side",
+    "Driver-related causes":4918,
+    "Environmental causes":369,
+    "Other\/Unknown causes":502,
+    "Unable to determine":3030,
+    "Vehicle-related causes":80
+  },
+  {
+    "CRASH_YEAR":2018,
+    "SIDE":"Far Southwest Side",
+    "Driver-related causes":4279,
+    "Environmental causes":261,
+    "Other\/Unknown causes":443,
+    "Unable to determine":2246,
+    "Vehicle-related causes":69
+  },
+  {
+    "CRASH_YEAR":2018,
+    "SIDE":"North Side",
+    "Driver-related causes":6204,
+    "Environmental causes":328,
+    "Other\/Unknown causes":399,
+    "Unable to determine":4003,
+    "Vehicle-related causes":45
+  },
+  {
+    "CRASH_YEAR":2018,
+    "SIDE":"Northwest Side",
+    "Driver-related causes":5702,
+    "Environmental causes":299,
+    "Other\/Unknown causes":541,
+    "Unable to determine":3393,
+    "Vehicle-related causes":65
+  },
+  {
+    "CRASH_YEAR":2018,
+    "SIDE":"South Side",
+    "Driver-related causes":6087,
+    "Environmental causes":404,
+    "Other\/Unknown causes":655,
+    "Unable to determine":4008,
+    "Vehicle-related causes":112
+  },
+  {
+    "CRASH_YEAR":2018,
+    "SIDE":"Southwest Side",
+    "Driver-related causes":8459,
+    "Environmental causes":400,
+    "Other\/Unknown causes":1576,
+    "Unable to determine":5194,
+    "Vehicle-related causes":100
+  },
+  {
+    "CRASH_YEAR":2018,
+    "SIDE":"West Side",
+    "Driver-related causes":14507,
+    "Environmental causes":739,
+    "Other\/Unknown causes":1295,
+    "Unable to determine":9752,
+    "Vehicle-related causes":155
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Central",
+    "Driver-related causes":7460,
+    "Environmental causes":285,
+    "Other\/Unknown causes":374,
+    "Unable to determine":3938,
+    "Vehicle-related causes":53
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Far North Side",
+    "Driver-related causes":7927,
+    "Environmental causes":573,
+    "Other\/Unknown causes":698,
+    "Unable to determine":5516,
+    "Vehicle-related causes":69
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Far Southeast Side",
+    "Driver-related causes":4802,
+    "Environmental causes":324,
+    "Other\/Unknown causes":557,
+    "Unable to determine":3333,
+    "Vehicle-related causes":91
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Far Southwest Side",
+    "Driver-related causes":3884,
+    "Environmental causes":255,
+    "Other\/Unknown causes":485,
+    "Unable to determine":2249,
+    "Vehicle-related causes":66
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"North Side",
+    "Driver-related causes":5742,
+    "Environmental causes":350,
+    "Other\/Unknown causes":495,
+    "Unable to determine":4035,
+    "Vehicle-related causes":45
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Northwest Side",
+    "Driver-related causes":5767,
+    "Environmental causes":300,
+    "Other\/Unknown causes":521,
+    "Unable to determine":3386,
+    "Vehicle-related causes":70
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"South Side",
+    "Driver-related causes":5744,
+    "Environmental causes":357,
+    "Other\/Unknown causes":556,
+    "Unable to determine":4409,
+    "Vehicle-related causes":91
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Southwest Side",
+    "Driver-related causes":7972,
+    "Environmental causes":468,
+    "Other\/Unknown causes":1712,
+    "Unable to determine":5348,
+    "Vehicle-related causes":129
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"West Side",
+    "Driver-related causes":13407,
+    "Environmental causes":732,
+    "Other\/Unknown causes":1329,
+    "Unable to determine":10476,
+    "Vehicle-related causes":143
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Central",
+    "Driver-related causes":3584,
+    "Environmental causes":177,
+    "Other\/Unknown causes":221,
+    "Unable to determine":1965,
+    "Vehicle-related causes":40
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Far North Side",
+    "Driver-related causes":4898,
+    "Environmental causes":296,
+    "Other\/Unknown causes":399,
+    "Unable to determine":4000,
+    "Vehicle-related causes":67
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Far Southeast Side",
+    "Driver-related causes":4525,
+    "Environmental causes":215,
+    "Other\/Unknown causes":460,
+    "Unable to determine":3540,
+    "Vehicle-related causes":62
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Far Southwest Side",
+    "Driver-related causes":3853,
+    "Environmental causes":190,
+    "Other\/Unknown causes":360,
+    "Unable to determine":2330,
+    "Vehicle-related causes":68
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"North Side",
+    "Driver-related causes":3545,
+    "Environmental causes":180,
+    "Other\/Unknown causes":256,
+    "Unable to determine":2503,
+    "Vehicle-related causes":53
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Northwest Side",
+    "Driver-related causes":4049,
+    "Environmental causes":207,
+    "Other\/Unknown causes":333,
+    "Unable to determine":2788,
+    "Vehicle-related causes":53
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"South Side",
+    "Driver-related causes":5270,
+    "Environmental causes":257,
+    "Other\/Unknown causes":442,
+    "Unable to determine":4448,
+    "Vehicle-related causes":105
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Southwest Side",
+    "Driver-related causes":6976,
+    "Environmental causes":297,
+    "Other\/Unknown causes":1323,
+    "Unable to determine":5154,
+    "Vehicle-related causes":116
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"West Side",
+    "Driver-related causes":10760,
+    "Environmental causes":414,
+    "Other\/Unknown causes":1039,
+    "Unable to determine":9242,
+    "Vehicle-related causes":153
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Central",
+    "Driver-related causes":4948,
+    "Environmental causes":238,
+    "Other\/Unknown causes":424,
+    "Unable to determine":2412,
+    "Vehicle-related causes":71
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Far North Side",
+    "Driver-related causes":5872,
+    "Environmental causes":344,
+    "Other\/Unknown causes":526,
+    "Unable to determine":4880,
+    "Vehicle-related causes":76
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Far Southeast Side",
+    "Driver-related causes":4850,
+    "Environmental causes":337,
+    "Other\/Unknown causes":487,
+    "Unable to determine":4291,
+    "Vehicle-related causes":91
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Far Southwest Side",
+    "Driver-related causes":4191,
+    "Environmental causes":228,
+    "Other\/Unknown causes":396,
+    "Unable to determine":2829,
+    "Vehicle-related causes":60
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"North Side",
+    "Driver-related causes":4384,
+    "Environmental causes":226,
+    "Other\/Unknown causes":357,
+    "Unable to determine":3521,
+    "Vehicle-related causes":41
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Northwest Side",
+    "Driver-related causes":4251,
+    "Environmental causes":178,
+    "Other\/Unknown causes":352,
+    "Unable to determine":3700,
+    "Vehicle-related causes":59
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"South Side",
+    "Driver-related causes":5930,
+    "Environmental causes":307,
+    "Other\/Unknown causes":521,
+    "Unable to determine":5413,
+    "Vehicle-related causes":113
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Southwest Side",
+    "Driver-related causes":7837,
+    "Environmental causes":447,
+    "Other\/Unknown causes":1489,
+    "Unable to determine":6499,
+    "Vehicle-related causes":123
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"West Side",
+    "Driver-related causes":11624,
+    "Environmental causes":550,
+    "Other\/Unknown causes":1165,
+    "Unable to determine":10833,
+    "Vehicle-related causes":153
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Central",
+    "Driver-related causes":5645,
+    "Environmental causes":231,
+    "Other\/Unknown causes":390,
+    "Unable to determine":3027,
+    "Vehicle-related causes":54
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Far North Side",
+    "Driver-related causes":6072,
+    "Environmental causes":341,
+    "Other\/Unknown causes":514,
+    "Unable to determine":5733,
+    "Vehicle-related causes":68
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Far Southeast Side",
+    "Driver-related causes":4418,
+    "Environmental causes":333,
+    "Other\/Unknown causes":399,
+    "Unable to determine":3851,
+    "Vehicle-related causes":76
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Far Southwest Side",
+    "Driver-related causes":3549,
+    "Environmental causes":220,
+    "Other\/Unknown causes":377,
+    "Unable to determine":2716,
+    "Vehicle-related causes":55
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"North Side",
+    "Driver-related causes":4441,
+    "Environmental causes":203,
+    "Other\/Unknown causes":350,
+    "Unable to determine":4202,
+    "Vehicle-related causes":37
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Northwest Side",
+    "Driver-related causes":4199,
+    "Environmental causes":178,
+    "Other\/Unknown causes":298,
+    "Unable to determine":4165,
+    "Vehicle-related causes":53
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"South Side",
+    "Driver-related causes":5508,
+    "Environmental causes":341,
+    "Other\/Unknown causes":418,
+    "Unable to determine":4611,
+    "Vehicle-related causes":85
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Southwest Side",
+    "Driver-related causes":8024,
+    "Environmental causes":425,
+    "Other\/Unknown causes":1331,
+    "Unable to determine":6171,
+    "Vehicle-related causes":110
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"West Side",
+    "Driver-related causes":11363,
+    "Environmental causes":519,
+    "Other\/Unknown causes":1059,
+    "Unable to determine":10774,
+    "Vehicle-related causes":126
+  }
+]
