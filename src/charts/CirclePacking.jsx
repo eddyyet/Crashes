@@ -15,7 +15,7 @@ export default function CirclePacking (props) {
       id='cause'
       value='count'
       padding={4}
-      colorBy='depth'
+      // color='red'
 
       // labelsSkipRadius={50}
       // // colors={{ scheme: 'purple_orange' }}
