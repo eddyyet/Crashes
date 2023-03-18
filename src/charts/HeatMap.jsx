@@ -7,12 +7,11 @@ import dayTimeData from '../data/crash_day_time.json'
 export default function HeatMap (props) {
   const filteredData = filter(dayTimeData, props.year, props.side)
   const heatMapData = HeatMapData(filteredData)
-
+  console.log(heatMapData)
   return (
     <ResponsiveHeatMap
       data={heatMapData}
-      keys={['0', '1', '2']}
-      margin={{ top: 100, right: 60, bottom: 60, left: 60 }}
+      margin={{ top: 0, right: 0, bottom: 0, left: 50 }}
       forceSquare={true}
       // xInnerPadding={0.05}
       // yInnerPadding={0.05}
@@ -20,18 +19,16 @@ export default function HeatMap (props) {
       axisRight={null}
       axisBottom={{
         orient: 'top',
-        tickSize: 5,
-        tickPadding: 5,
-        tickRotation: -90,
+        tickSize: 0,
+        tickPadding: 0,
         legend: 'Time (Hour)',
         legendPosition: 'middle',
         legendOffset: -40
       }}
     axisLeft={{
       orient: 'left',
-      tickSize: 5,
-      tickPadding: 5,
-      tickRotation: 0,
+      tickSize: 0,
+      tickPadding: 0,
       legend: 'Day',
       legendPosition: 'middle',
       legendOffset: -40

@@ -2,271 +2,271 @@
   {
     "CRASH_YEAR":2018,
     "SIDE":"Central",
-    "INJURIES_TOTAL":1852,
-    "INJURIES_NO_INDICATION":27003
+    "Injured":1852,
+    "No indication of injury":27003
   },
   {
     "CRASH_YEAR":2018,
     "SIDE":"Far North Side",
-    "INJURIES_TOTAL":2268,
-    "INJURIES_NO_INDICATION":30042
+    "Injured":2268,
+    "No indication of injury":30042
   },
   {
     "CRASH_YEAR":2018,
     "SIDE":"Far Southeast Side",
-    "INJURIES_TOTAL":1993,
-    "INJURIES_NO_INDICATION":17485
+    "Injured":1993,
+    "No indication of injury":17485
   },
   {
     "CRASH_YEAR":2018,
     "SIDE":"Far Southwest Side",
-    "INJURIES_TOTAL":1556,
-    "INJURIES_NO_INDICATION":14568
+    "Injured":1556,
+    "No indication of injury":14568
   },
   {
     "CRASH_YEAR":2018,
     "SIDE":"North Side",
-    "INJURIES_TOTAL":1719,
-    "INJURIES_NO_INDICATION":22414
+    "Injured":1719,
+    "No indication of injury":22414
   },
   {
     "CRASH_YEAR":2018,
     "SIDE":"Northwest Side",
-    "INJURIES_TOTAL":1596,
-    "INJURIES_NO_INDICATION":19979
+    "Injured":1596,
+    "No indication of injury":19979
   },
   {
     "CRASH_YEAR":2018,
     "SIDE":"South Side",
-    "INJURIES_TOTAL":2786,
-    "INJURIES_NO_INDICATION":22553
+    "Injured":2786,
+    "No indication of injury":22553
   },
   {
     "CRASH_YEAR":2018,
     "SIDE":"Southwest Side",
-    "INJURIES_TOTAL":2968,
-    "INJURIES_NO_INDICATION":32611
+    "Injured":2968,
+    "No indication of injury":32611
   },
   {
     "CRASH_YEAR":2018,
     "SIDE":"West Side",
-    "INJURIES_TOTAL":5686,
-    "INJURIES_NO_INDICATION":55130
+    "Injured":5686,
+    "No indication of injury":55130
   },
   {
     "CRASH_YEAR":2019,
     "SIDE":"Central",
-    "INJURIES_TOTAL":1837,
-    "INJURIES_NO_INDICATION":26305
+    "Injured":1837,
+    "No indication of injury":26305
   },
   {
     "CRASH_YEAR":2019,
     "SIDE":"Far North Side",
-    "INJURIES_TOTAL":2100,
-    "INJURIES_NO_INDICATION":29122
+    "Injured":2100,
+    "No indication of injury":29122
   },
   {
     "CRASH_YEAR":2019,
     "SIDE":"Far Southeast Side",
-    "INJURIES_TOTAL":2164,
-    "INJURIES_NO_INDICATION":17614
+    "Injured":2164,
+    "No indication of injury":17614
   },
   {
     "CRASH_YEAR":2019,
     "SIDE":"Far Southwest Side",
-    "INJURIES_TOTAL":1472,
-    "INJURIES_NO_INDICATION":13921
+    "Injured":1472,
+    "No indication of injury":13921
   },
   {
     "CRASH_YEAR":2019,
     "SIDE":"North Side",
-    "INJURIES_TOTAL":1684,
-    "INJURIES_NO_INDICATION":21638
+    "Injured":1684,
+    "No indication of injury":21638
   },
   {
     "CRASH_YEAR":2019,
     "SIDE":"Northwest Side",
-    "INJURIES_TOTAL":1700,
-    "INJURIES_NO_INDICATION":20008
+    "Injured":1700,
+    "No indication of injury":20008
   },
   {
     "CRASH_YEAR":2019,
     "SIDE":"South Side",
-    "INJURIES_TOTAL":2637,
-    "INJURIES_NO_INDICATION":22422
+    "Injured":2637,
+    "No indication of injury":22422
   },
   {
     "CRASH_YEAR":2019,
     "SIDE":"Southwest Side",
-    "INJURIES_TOTAL":2895,
-    "INJURIES_NO_INDICATION":32748
+    "Injured":2895,
+    "No indication of injury":32748
   },
   {
     "CRASH_YEAR":2019,
     "SIDE":"West Side",
-    "INJURIES_TOTAL":5781,
-    "INJURIES_NO_INDICATION":54307
+    "Injured":5781,
+    "No indication of injury":54307
   },
   {
     "CRASH_YEAR":2020,
     "SIDE":"Central",
-    "INJURIES_TOTAL":1137,
-    "INJURIES_NO_INDICATION":12368
+    "Injured":1137,
+    "No indication of injury":12368
   },
   {
     "CRASH_YEAR":2020,
     "SIDE":"Far North Side",
-    "INJURIES_TOTAL":1637,
-    "INJURIES_NO_INDICATION":18162
+    "Injured":1637,
+    "No indication of injury":18162
   },
   {
     "CRASH_YEAR":2020,
     "SIDE":"Far Southeast Side",
-    "INJURIES_TOTAL":2173,
-    "INJURIES_NO_INDICATION":16632
+    "Injured":2173,
+    "No indication of injury":16632
   },
   {
     "CRASH_YEAR":2020,
     "SIDE":"Far Southwest Side",
-    "INJURIES_TOTAL":1556,
-    "INJURIES_NO_INDICATION":13103
+    "Injured":1556,
+    "No indication of injury":13103
   },
   {
     "CRASH_YEAR":2020,
     "SIDE":"North Side",
-    "INJURIES_TOTAL":1156,
-    "INJURIES_NO_INDICATION":12818
+    "Injured":1156,
+    "No indication of injury":12818
   },
   {
     "CRASH_YEAR":2020,
     "SIDE":"Northwest Side",
-    "INJURIES_TOTAL":1209,
-    "INJURIES_NO_INDICATION":14298
+    "Injured":1209,
+    "No indication of injury":14298
   },
   {
     "CRASH_YEAR":2020,
     "SIDE":"South Side",
-    "INJURIES_TOTAL":2656,
-    "INJURIES_NO_INDICATION":20343
+    "Injured":2656,
+    "No indication of injury":20343
   },
   {
     "CRASH_YEAR":2020,
     "SIDE":"Southwest Side",
-    "INJURIES_TOTAL":2888,
-    "INJURIES_NO_INDICATION":27371
+    "Injured":2888,
+    "No indication of injury":27371
   },
   {
     "CRASH_YEAR":2020,
     "SIDE":"West Side",
-    "INJURIES_TOTAL":5210,
-    "INJURIES_NO_INDICATION":42706
+    "Injured":5210,
+    "No indication of injury":42706
   },
   {
     "CRASH_YEAR":2021,
     "SIDE":"Central",
-    "INJURIES_TOTAL":1562,
-    "INJURIES_NO_INDICATION":16841
+    "Injured":1562,
+    "No indication of injury":16841
   },
   {
     "CRASH_YEAR":2021,
     "SIDE":"Far North Side",
-    "INJURIES_TOTAL":1817,
-    "INJURIES_NO_INDICATION":22166
+    "Injured":1817,
+    "No indication of injury":22166
   },
   {
     "CRASH_YEAR":2021,
     "SIDE":"Far Southeast Side",
-    "INJURIES_TOTAL":2522,
-    "INJURIES_NO_INDICATION":18545
+    "Injured":2522,
+    "No indication of injury":18545
   },
   {
     "CRASH_YEAR":2021,
     "SIDE":"Far Southwest Side",
-    "INJURIES_TOTAL":1660,
-    "INJURIES_NO_INDICATION":14946
+    "Injured":1660,
+    "No indication of injury":14946
   },
   {
     "CRASH_YEAR":2021,
     "SIDE":"North Side",
-    "INJURIES_TOTAL":1392,
-    "INJURIES_NO_INDICATION":16510
+    "Injured":1392,
+    "No indication of injury":16510
   },
   {
     "CRASH_YEAR":2021,
     "SIDE":"Northwest Side",
-    "INJURIES_TOTAL":1424,
-    "INJURIES_NO_INDICATION":16577
+    "Injured":1424,
+    "No indication of injury":16577
   },
   {
     "CRASH_YEAR":2021,
     "SIDE":"South Side",
-    "INJURIES_TOTAL":2911,
-    "INJURIES_NO_INDICATION":23586
+    "Injured":2911,
+    "No indication of injury":23586
   },
   {
     "CRASH_YEAR":2021,
     "SIDE":"Southwest Side",
-    "INJURIES_TOTAL":3208,
-    "INJURIES_NO_INDICATION":32446
+    "Injured":3208,
+    "No indication of injury":32446
   },
   {
     "CRASH_YEAR":2021,
     "SIDE":"West Side",
-    "INJURIES_TOTAL":5709,
-    "INJURIES_NO_INDICATION":47986
+    "Injured":5709,
+    "No indication of injury":47986
   },
   {
     "CRASH_YEAR":2022,
     "SIDE":"Central",
-    "INJURIES_TOTAL":1620,
-    "INJURIES_NO_INDICATION":19228
+    "Injured":1620,
+    "No indication of injury":19228
   },
   {
     "CRASH_YEAR":2022,
     "SIDE":"Far North Side",
-    "INJURIES_TOTAL":1989,
-    "INJURIES_NO_INDICATION":24134
+    "Injured":1989,
+    "No indication of injury":24134
   },
   {
     "CRASH_YEAR":2022,
     "SIDE":"Far Southeast Side",
-    "INJURIES_TOTAL":2205,
-    "INJURIES_NO_INDICATION":16932
+    "Injured":2205,
+    "No indication of injury":16932
   },
   {
     "CRASH_YEAR":2022,
     "SIDE":"Far Southwest Side",
-    "INJURIES_TOTAL":1485,
-    "INJURIES_NO_INDICATION":13306
+    "Injured":1485,
+    "No indication of injury":13306
   },
   {
     "CRASH_YEAR":2022,
     "SIDE":"North Side",
-    "INJURIES_TOTAL":1517,
-    "INJURIES_NO_INDICATION":18035
+    "Injured":1517,
+    "No indication of injury":18035
   },
   {
     "CRASH_YEAR":2022,
     "SIDE":"Northwest Side",
-    "INJURIES_TOTAL":1529,
-    "INJURIES_NO_INDICATION":17295
+    "Injured":1529,
+    "No indication of injury":17295
   },
   {
     "CRASH_YEAR":2022,
     "SIDE":"South Side",
-    "INJURIES_TOTAL":2713,
-    "INJURIES_NO_INDICATION":20877
+    "Injured":2713,
+    "No indication of injury":20877
   },
   {
     "CRASH_YEAR":2022,
     "SIDE":"Southwest Side",
-    "INJURIES_TOTAL":3282,
-    "INJURIES_NO_INDICATION":32013
+    "Injured":3282,
+    "No indication of injury":32013
   },
   {
     "CRASH_YEAR":2022,
     "SIDE":"West Side",
-    "INJURIES_TOTAL":5518,
-    "INJURIES_NO_INDICATION":47161
+    "Injured":5518,
+    "No indication of injury":47161
   }
 ]
