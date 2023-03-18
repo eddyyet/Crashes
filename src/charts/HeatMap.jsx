@@ -2,10 +2,10 @@ import React from 'react'
 import { ResponsiveHeatMap } from '@nivo/heatmap'
 import filter from '../utils/filter'
 import HeatMapData from '../utils/HeatMapData'
-import data from '../data/crash_day_time.json'
+import dayTimeData from '../data/crash_day_time.json'
 
 export default function HeatMap (props) {
-  const filteredData = filter(data, props.year, props.side)
+  const filteredData = filter(dayTimeData, props.year, props.side)
   const heatMapData = HeatMapData(filteredData)
 
   return (
@@ -13,6 +13,8 @@ export default function HeatMap (props) {
       data={heatMapData}
       margin={{ top: 100, right: 60, bottom: 60, left: 60 }}
       forceSquare={true}
+      // xInnerPadding={0.05}
+      // yInnerPadding={0.05}
       axisTop={null}
       axisRight={null}
       axisBottom={{
@@ -47,10 +49,15 @@ export default function HeatMap (props) {
         spacing: 7
       }
     ]}
+    colors={{
+      type: 'diverging',
+      scheme: 'purple_orange',
+      divergeAt: 0.5
+    }}
     fill={[{ id: 'lines' }]}
-    animate={true}
-    motionStiffness={80}
-    motionDamping={9}
+    borderWidth={1.5}
+    borderColor={'#333333'}
+    animate={false}
     hoverTarget="cell"
     cellHoverOthersOpacity={0.25}
     />

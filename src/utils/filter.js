@@ -7,7 +7,6 @@ export default function filter (data, year, side) {
 
     if ((year[0] <= row.CRASH_YEAR && row.CRASH_YEAR <= year[1]) &&
       (side === '' || row.SIDE === side)) {
-      console.log('OK')
       for (const key in row) {
         if (key !== 'CRASH_YEAR' && key !== 'SIDE') {
           if (result[key]) {
@@ -19,6 +18,6 @@ export default function filter (data, year, side) {
       }
     }
   }
-  console.log(result)
+
   return result
 }
