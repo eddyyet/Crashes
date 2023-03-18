@@ -25,7 +25,6 @@ export function BarInvolved (props) {
 
 export function BarInjured (props) {
   const filteredData = filter(pplInjuredData, props.year, props.side)
-  console.log(filteredData)
 
   return (
     <ResponsiveBar
