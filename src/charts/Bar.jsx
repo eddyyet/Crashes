@@ -31,6 +31,8 @@ export function BarInjured (props) {
       data={[filteredData]}
       keys={['INJURIES_FATAL', 'INJURIES_INCAPACITATING', 'INJURIES_NON_INCAPACITATING', 'INJURIES_REPORTED_NOT_EVIDENT']}
       layout="horizontal"
+      margin={{ top: 0, right: 0, bottom: 0, left: 0 }}
+      padding={0}
       colors={{ scheme: 'purple_orange' }}
       label={data => `${data.id}: ${data.value}`}
       labelFormat= {'textAnchor:left' }
