@@ -59,5 +59,5 @@ export default function CirclePackingData (data) {
     }
   }
 
-  return { cause: 'root', radius: 10, color: 'rgba(0, 0, 0, 0)', children: [...groups, ...topLevelCauses] }
+  return { cause: 'root', children: [...groups, ...topLevelCauses] }
 }
