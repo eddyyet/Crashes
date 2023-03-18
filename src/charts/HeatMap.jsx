@@ -7,7 +7,7 @@ import dayTimeData from '../data/crash_day_time.json'
 export default function HeatMap (props) {
   const filteredData = filter(dayTimeData, props.year, props.side)
   const heatMapData = HeatMapData(filteredData)
-  console.log(heatMapData)
+
   return (
     <ResponsiveHeatMap
       data={heatMapData}
