@@ -17,3 +17,23 @@ body {
   margin-top: 0.8rem;
   margin-bottom: 0.8rem;
 }
+
+.filterBar {
+  position: fixed;
+  height: 2rem;
+  width: 600px;
+  border-radius: 1rem;
+  background-color: #444746;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* align-items: center; */
+  color: #8e918f;
+}
+
+.filterName {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-right: 0.5rem;
+}

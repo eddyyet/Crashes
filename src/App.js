@@ -1,5 +1,6 @@
 import './format.css'
-import React from 'react'
+import React, { useState } from 'react'
+import FilterControl from './utils/FilterControl'
 import Stack from '@mui/material/Stack'
 import { Chart } from './Chart'
 import CirclePacking from './charts/CirclePacking'
@@ -7,8 +8,17 @@ import HeatMap from './charts/HeatMap'
 import { BarInvolved, BarInjured } from './charts/Bar'
 
 export default function App () {
+  const [yearRange, setYearRange] = useState([2018, 2022])
+  const [side, setSide] = useState('All')
+
   return (
     <div className="App">
+      <FilterControl
+        yearRange={yearRange}
+        setYearRange={setYearRange}
+        side={side}
+        setSide={setSide}
+      />
       <Stack spacing={3} sx={{ width: '800px' }}>
         <Chart height='500px'>
           <div>Why are the crashes?</div>
