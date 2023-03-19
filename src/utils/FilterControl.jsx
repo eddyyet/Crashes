@@ -1,13 +1,6 @@
 import '../format.css'
 import React from 'react'
 import { AppBar, Toolbar, Slider, Select, MenuItem, Button } from '@mui/material'
-import { makeStyles } from '@mui/styles'
-
-const useStyles = makeStyles({
-  mark: {
-    fontSize: '0.5rem'
-  }
-})
 
 const marks = [
   { value: 2018, label: '2018' },
@@ -31,7 +24,6 @@ const sides = [
 ]
 
 export default function FilterControl (props) {
-  const classes = useStyles()
 
   const handleSliderChange = (event, newYearRange) => {
     props.setYearRange(newYearRange)
@@ -58,7 +50,7 @@ export default function FilterControl (props) {
             value={props.yearRange}
             onChange={handleSliderChange}
             valueLabelDisplay="auto"
-            classes={{ mark: classes.mark }}
+            sx={{ '& .MuiSlider-markLabel': { color: '#CCCCCC', fontSize: '0.7rem' } }}
           />
         </span>
         <span style={{ width: '200px' }}>
