@@ -22,21 +22,21 @@ export default function App () {
       <Stack spacing={3} sx={{ width: '800px' }}>
         <Chart height='500px'>
           <div>Why are the crashes?</div>
-          <CirclePacking year={[2018, 2018]} side='West Side' />
+          <CirclePacking year={yearRange} side={side} />
         </Chart>
         <Chart height='500px'>
           <div>When were the crashes?</div>
-          <HeatMap year={[2018, 2022]} side='Far North Side' />
+          <HeatMap year={yearRange} side={side} />
         </Chart>
         <Chart>
           <div>How are the victims?</div>
           <div className={'subtitle'}>Among the people involved...</div>
           <div style={{ height: '40px' }}>
-            <BarInvolved year={[2018, 2022]} side='Far North Side' />
+            <BarInvolved year={yearRange} side={side} />
           </div>
           <div className={'subtitle'}>Among the people injuried...</div>
           <div style={{ height: '40px' }}>
-            <BarInjured year={[2018, 2022]} side='Far North Side' />
+            <BarInjured year={yearRange} side={side} />
           </div>
         </Chart>
         <Chart>4</Chart>

@@ -1,6 +1,6 @@
 import '../format.css'
 import React from 'react'
-import { AppBar, Slider, Select, MenuItem, Button } from '@mui/material'
+import { AppBar, Toolbar, Slider, Select, MenuItem, Button } from '@mui/material'
 import { makeStyles } from '@mui/styles'
 
 const useStyles = makeStyles({
@@ -47,37 +47,38 @@ export default function FilterControl (props) {
   }
 
   return (
-    <AppBar className={'filterBar'}>
-      <span>
-        <span className={'filterName'}>Year</span>
-        <Slider
-          min={2018}
-          max={2022}
-          marks={marks}
-          value={props.yearRange}
-          onChange={handleSliderChange}
-          valueLabelDisplay="auto"
-          color="secondary"
-          classes={{ mark: classes.mark }}
-        />
-      </span>
-      <span>
-        <span className={'filterName'}>Region</span>
-        <Select
-            value={props.side}
-            onChange={handleSelectChange}
-            inputProps={{ 'aria-label': 'Select side' }}
-        >
-          {sides.map((side) => (
-            <MenuItem key={side}>
-              {side}
-            </MenuItem>
-          ))}
-        </Select>
-      </span>
-      <Button variant="contained" color="secondary" onClick={handleReset}>
-        Reset
-      </Button>
+    <AppBar elevation={0} color='transparent'>
+      <Toolbar className={'filterBar'}>
+        <span style={{ width: '300px' }}>
+          <span className={'filterName'}>Year</span>
+          <Slider
+            min={2018}
+            max={2022}
+            marks={marks}
+            value={props.yearRange}
+            onChange={handleSliderChange}
+            valueLabelDisplay="auto"
+            classes={{ mark: classes.mark }}
+          />
+        </span>
+        <span style={{ width: '200px' }}>
+          <span className={'filterName'}>Region</span>
+          <Select
+              value={props.side}
+              onChange={handleSelectChange}
+              inputProps={{ 'aria-label': 'Select side' }}
+          >
+            {sides.map((side) => (
+              <MenuItem key={side} value={side}>
+                {side}
+              </MenuItem>
+            ))}
+          </Select>
+        </span>
+        <Button onClick={handleReset}>
+          Reset
+        </Button>
+      </Toolbar>
     </AppBar>
   )
 }

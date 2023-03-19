@@ -55,7 +55,7 @@ export default function HeatMap (props) {
     fill={[{ id: 'lines' }]}
     borderWidth={1.5}
     borderColor={'#333333'}
-    animate={false}
+    animate={true}
     hoverTarget="cell"
     cellHoverOthersOpacity={0.25}
     />
