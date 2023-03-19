@@ -1,6 +1,6 @@
 import '../format.css'
 import React from 'react'
-import { AppBar, Toolbar, Slider, Select, MenuItem, Button } from '@mui/material'
+import { AppBar, Toolbar, Slider, Select, MenuItem, Button, debounce } from '@mui/material'
 
 const marks = [
   { value: 2018, label: '2018' },
@@ -24,14 +24,13 @@ const sides = [
 ]
 
 export default function FilterControl (props) {
-
-  const handleSliderChange = (event, newYearRange) => {
+  const handleSliderChange = debounce((event, newYearRange) => {
     props.setYearRange(newYearRange)
-  }
+  }, 10)
 
-  const handleSelectChange = (event) => {
+  const handleSelectChange = debounce((event) => {
     props.setSide(event.target.value)
-  }
+  }, 10)
 
   const handleReset = () => {
     props.setYearRange([2018, 2022])
