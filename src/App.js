@@ -1,7 +1,7 @@
 import './format.css'
 import React from 'react'
 import Stack from '@mui/material/Stack'
-import { Chart } from './chart'
+import { Chart } from './Chart'
 import CirclePacking from './charts/CirclePacking'
 import HeatMap from './charts/HeatMap'
 import { BarInvolved, BarInjured } from './charts/Bar'
