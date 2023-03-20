@@ -1,5 +1,5 @@
 import '../format.css'
-import React from 'react'
+import React, { useState, useCallback } from 'react'
 import { AppBar, Toolbar, Slider, Select, MenuItem, Button, debounce } from '@mui/material'
 
 const marks = [
@@ -24,13 +24,28 @@ const sides = [
 ]
 
 export default function FilterControl (props) {
-  const handleSliderChange = debounce((event, newYearRange) => {
-    props.setYearRange(newYearRange)
-  }, 10)
+  const [yearRangeTemp, setYearRangeTemp] = useState([2018, 2022])
+  const [sideTemp, setSideTemp] = useState('All')
 
-  const handleSelectChange = debounce((event) => {
-    props.setSide(event.target.value)
-  }, 10)
+  const handleSliderChange = (event, newYearRange) => {
+    setYearRangeTemp(newYearRange)
+    debouncedSetYearRange(newYearRange)
+  }
+
+  const debouncedSetYearRange = useCallback(
+    debounce(props.setYearRange, 300),
+    [props.setYearRange]
+  )
+
+  const handleSelectChange = (event) => {
+    setSideTemp(event.target.value)
+    debouncedSetSide(event.target.value)
+  }
+
+  const debouncedSetSide = useCallback(
+    debounce(props.setSide, 300),
+    [props.setSide]
+  )
 
   const handleReset = () => {
     props.setYearRange([2018, 2022])
@@ -46,7 +61,7 @@ export default function FilterControl (props) {
             min={2018}
             max={2022}
             marks={marks}
-            value={props.yearRange}
+            value={yearRangeTemp}
             onChange={handleSliderChange}
             valueLabelDisplay="auto"
             sx={{ '& .MuiSlider-markLabel': { color: '#CCCCCC', fontSize: '0.7rem' } }}
@@ -55,7 +70,7 @@ export default function FilterControl (props) {
         <span style={{ width: '200px' }}>
           <span className={'filterName'}>Region</span>
           <Select
-              value={props.side}
+              value={sideTemp}
               onChange={handleSelectChange}
               inputProps={{ 'aria-label': 'Select side' }}
           >
