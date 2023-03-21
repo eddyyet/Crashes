@@ -15,21 +15,16 @@ export default function Sankey (props) {
       align="justify"
       // colors={{ scheme: 'nivo' }}
       nodeOpacity={1}
-      nodeThickness={18}
-      nodeInnerPadding={3}
-      nodeSpacing={24}
+      nodeThickness={24}
+      nodeSpacing={10}
       nodeBorderWidth={0}
-      nodeBorderColor={{ from: 'color', modifiers: [['darker', 0.8]] }}
-      linkOpacity={0.5}
+      linkOpacity={0.2}
       linkHoverOthersOpacity={0.1}
+      linkBlendMode="normal"
       enableLinkGradient={true}
-      labelPosition="outside"
-      labelOrientation="vertical"
-      labelPadding={16}
+      labelPosition="inside"
+      labelPadding={6}
       labelTextColor={{ from: 'color', modifiers: [['darker', 1]] }}
-      animate={true}
-      motionStiffness={90}
-      motionDamping={15}
     />
   )
 }
