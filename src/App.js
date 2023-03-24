@@ -7,6 +7,7 @@ import CirclePacking from './charts/CirclePacking'
 import HeatMap from './charts/HeatMap'
 import { BarInvolved, BarInjured } from './charts/Bar'
 import Sankey from './charts/Sankey'
+import Bubble from './charts/Bubble'
 
 export default function App () {
   const [yearRange, setYearRange] = useState([2018, 2022])
@@ -46,7 +47,11 @@ export default function App () {
             <Sankey year={yearRange} side={side} />
           </div>
         </Chart>
-        <Chart>5</Chart>
+        <Chart>
+          <div>How did it crash?</div>
+          <Bubble year={yearRange} side={side} />
+        </Chart>
+        <Chart>6</Chart>
       </Stack>
     </div>
   )
