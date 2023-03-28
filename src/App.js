@@ -2,7 +2,7 @@ import './format.css'
 import React, { useState } from 'react'
 import FilterControl from './utils/FilterControl'
 import Stack from '@mui/material/Stack'
-import { Chart } from './Chart'
+import { BigChart } from './Chart'
 import CirclePacking from './charts/CirclePacking'
 import HeatMap from './charts/HeatMap'
 import { BarInvolved, BarInjured } from './charts/Bar'
@@ -22,15 +22,15 @@ export default function App () {
         setSide={setSide}
       />
       <Stack spacing={3} sx={{ width: '800px' }}>
-        <Chart height='500px'>
+        <BigChart height='500px'>
           <div>Why are the crashes?</div>
           <CirclePacking year={yearRange} side={side} />
-        </Chart>
-        <Chart height='500px'>
+        </BigChart>
+        <BigChart height='500px'>
           <div>When were the crashes?</div>
           <HeatMap year={yearRange} side={side} />
-        </Chart>
-        <Chart>
+        </BigChart>
+        <BigChart>
           <div>How are the victims?</div>
           <div className={'subtitle'}>Among the people involved...</div>
           <div style={{ height: '40px' }}>
@@ -40,18 +40,18 @@ export default function App () {
           <div style={{ height: '40px' }}>
             <BarInjured year={yearRange} side={side} />
           </div>
-        </Chart>
-        <Chart>
+        </BigChart>
+        <BigChart>
           <div>How was the scene?</div>
           <div style={{ height: '300px' }}>
             <Sankey year={yearRange} side={side} />
           </div>
-        </Chart>
-        <Chart>
+        </BigChart>
+        <BigChart>
           <div>How did it crash?</div>
           <Bubble year={yearRange} side={side} />
-        </Chart>
-        <Chart>6</Chart>
+        </BigChart>
+        <BigChart>6</BigChart>
       </Stack>
     </div>
   )
