@@ -8,7 +8,6 @@ import bubbleImage from '../images/crash_type_symbol.svg'
 export default function Bubble (props) {
   const filteredData = filter(typeData, props.year, props.side)
   const bubbleData = BubbleData(filteredData)
-  console.log(bubbleData)
 
   return (
     <div style={{ position: 'relative' }}>
