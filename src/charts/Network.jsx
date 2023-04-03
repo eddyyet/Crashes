@@ -8,11 +8,21 @@ export default function Sankey (props) {
   const filteredData = filter(envData, props.year, props.side)
   const graph = NetworkData(filteredData)
 
-  // options = {
-  //   nodes: {
-  //     shape: "circle"
-  //   }
-  // }
+  const options = {
+    layout: {
+      hierarchical: false
+    },
+    edges: {
+      arrows: {
+        to: {
+          enabled: false
+        }
+      }
+    },
+    physics: {
+      enabled: false
+    }
+  }
   
   // events: {
   //   //...
@@ -20,6 +30,6 @@ export default function Sankey (props) {
   // }
 
   return (
-    <Graph graph={graph} /*options={options} events={events}*/ style={{ height: "752px" }} />
+    <Graph graph={graph} options={options} /*events={events}*/ style={{ height: "752px" }} />
   )
 }
