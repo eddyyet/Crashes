@@ -1,17 +1,51 @@
-const NetworkData = (data) => {
-  nodes: [
+export default function NetworkData (data) {
+  const nodes = [
+    { id: "Severe injury", label: "Severe injury", x: 0, y: -100 },
     { id: "Moderate injury", label: "Moderate injury", x: 0, y: 0 },
     { id: "No injury", label:  "No injury", x: 0, y: 100 },
-    { id: "Severe injury", label: "Severe injury", x: 0, y: -100 },
-    ...Object.keys(data)
-      .map((key, i) => ({
-        id: key.split(",")[0],
-        label: key.split(",")[0],
-        x: 300 * Math.cos(((2 * Math.PI) / (Object.keys(data).length - 3)) * i),
-        y: 300 * Math.sin(((2 * Math.PI) / (Object.keys(data).length - 3)) * i),
-      }))
-  ],
-  
-}
+    { id: "Daylight", label: "Daylight", x:-233, y: 189 },
+    { id: "Dawn", label: "Dawn", x:-100, y: 283 },
+    { id: "Darkness", label: "Darkness", x:61, y: 294 },
+    { id: "Dusk", label: "Dusk", x:205, y: 219 },
+    { id: "Clear", label: "Clear", x:300, y: 0 },
+    { id: "Cloudy", label: "Cloudy", x:256, y: -156 },
+    { id: "Rain/Snow", label: "Rain/Snow", x:138, y: -266 },
+    { id: "Dry", label: "Dry", x:-100, y: -283 },
+    { id: "Wet", label: "Wet", x:-233, y: -189 },
+    { id: "Snow/Ice", label: "Snow/Ice", x:-297, y: -41 }
+  ]
 
-export default NetworkData
+  const totalCrashes = Object.values(data).reduce((acc, val) => acc + val, 0)
+
+  const getLift = (condition, severity) => {
+    const conditionCrashes = Object.entries(data)
+      .filter(([key]) => key.startsWith(condition))
+      .reduce((acc, [, value]) => acc + value, 0)
+    const severityCrashes = Object.entries(data)
+      .filter(([key]) => key.endsWith(severity))
+      .reduce((acc, [, value]) => acc + value, 0)
+    return (data[`${condition},${severity}`] / conditionCrashes) / (severityCrashes / totalCrashes)
+  }
+
+  const edges = [];
+  Object.keys(data).forEach((key) => {
+    const [condition, severity] = key.split(",")
+
+    const lift = getLift(condition, severity).toFixed(2)
+    const label = lift
+    const width = 5 * Math.max(Math.min(lift, 1.5), 0.5) - 0.5
+    const smooth = severity === 'Severe injury' ? { type: 'curvedCCW', roundness: 0.3 } :
+                    severity === 'Moderate injury' ? false :
+                    { type: 'curvedCW', roundness: 0.3 }
+
+    edges.push({
+      from: condition,
+      to: severity,
+      label,
+      width,
+      smooth
+    })
+  })
+
+  return nodes, edges
+}

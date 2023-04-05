@@ -40,10 +40,7 @@
     "Wet,No injury":1605,
     "Other\/Unknown surface,Severe injury":3,
     "Other\/Unknown surface,Moderate injury":22,
-    "Other\/Unknown surface,No injury":578,
-    "Severe injury":198,
-    "Moderate injury":828,
-    "No injury":11479
+    "Other\/Unknown surface,No injury":578
   },
   {
     "CRASH_YEAR":2018,
@@ -86,10 +83,7 @@
     "Wet,No injury":1984,
     "Other\/Unknown surface,Severe injury":10,
     "Other\/Unknown surface,Moderate injury":34,
-    "Other\/Unknown surface,No injury":1109,
-    "Severe injury":248,
-    "Moderate injury":1033,
-    "No injury":13801
+    "Other\/Unknown surface,No injury":1109
   },
   {
     "CRASH_YEAR":2018,
@@ -132,10 +126,7 @@
     "Wet,No injury":1126,
     "Other\/Unknown surface,Severe injury":2,
     "Other\/Unknown surface,Moderate injury":30,
-    "Other\/Unknown surface,No injury":552,
-    "Severe injury":173,
-    "Moderate injury":774,
-    "No injury":7952
+    "Other\/Unknown surface,No injury":552
   },
   {
     "CRASH_YEAR":2018,
@@ -178,10 +169,7 @@
     "Wet,No injury":937,
     "Other\/Unknown surface,Severe injury":4,
     "Other\/Unknown surface,Moderate injury":21,
-    "Other\/Unknown surface,No injury":422,
-    "Severe injury":139,
-    "Moderate injury":582,
-    "No injury":6577
+    "Other\/Unknown surface,No injury":422
   },
   {
     "CRASH_YEAR":2018,
@@ -224,10 +212,7 @@
     "Wet,No injury":1382,
     "Other\/Unknown surface,Severe injury":8,
     "Other\/Unknown surface,Moderate injury":49,
-    "Other\/Unknown surface,No injury":1026,
-    "Severe injury":186,
-    "Moderate injury":811,
-    "No injury":9982
+    "Other\/Unknown surface,No injury":1026
   },
   {
     "CRASH_YEAR":2018,
@@ -270,10 +255,7 @@
     "Wet,No injury":1337,
     "Other\/Unknown surface,Severe injury":4,
     "Other\/Unknown surface,Moderate injury":17,
-    "Other\/Unknown surface,No injury":742,
-    "Severe injury":192,
-    "Moderate injury":669,
-    "No injury":9139
+    "Other\/Unknown surface,No injury":742
   },
   {
     "CRASH_YEAR":2018,
@@ -316,10 +298,7 @@
     "Wet,No injury":1342,
     "Other\/Unknown surface,Severe injury":3,
     "Other\/Unknown surface,Moderate injury":31,
-    "Other\/Unknown surface,No injury":772,
-    "Severe injury":255,
-    "Moderate injury":1074,
-    "No injury":9937
+    "Other\/Unknown surface,No injury":772
   },
   {
     "CRASH_YEAR":2018,
@@ -362,10 +341,7 @@
     "Wet,No injury":2000,
     "Other\/Unknown surface,Severe injury":10,
     "Other\/Unknown surface,Moderate injury":31,
-    "Other\/Unknown surface,No injury":720,
-    "Severe injury":320,
-    "Moderate injury":1199,
-    "No injury":14208
+    "Other\/Unknown surface,No injury":720
   },
   {
     "CRASH_YEAR":2018,
@@ -408,10 +384,7 @@
     "Wet,No injury":3491,
     "Other\/Unknown surface,Severe injury":23,
     "Other\/Unknown surface,Moderate injury":80,
-    "Other\/Unknown surface,No injury":1434,
-    "Severe injury":529,
-    "Moderate injury":2308,
-    "No injury":23611
+    "Other\/Unknown surface,No injury":1434
   },
   {
     "CRASH_YEAR":2019,
@@ -454,10 +427,7 @@
     "Wet,No injury":1610,
     "Other\/Unknown surface,Severe injury":4,
     "Other\/Unknown surface,Moderate injury":24,
-    "Other\/Unknown surface,No injury":546,
-    "Severe injury":167,
-    "Moderate injury":812,
-    "No injury":11131
+    "Other\/Unknown surface,No injury":546
   },
   {
     "CRASH_YEAR":2019,
@@ -500,10 +470,7 @@
     "Wet,No injury":1927,
     "Other\/Unknown surface,Severe injury":10,
     "Other\/Unknown surface,Moderate injury":33,
-    "Other\/Unknown surface,No injury":1262,
-    "Severe injury":234,
-    "Moderate injury":917,
-    "No injury":13632
+    "Other\/Unknown surface,No injury":1262
   },
   {
     "CRASH_YEAR":2019,
@@ -546,10 +513,7 @@
     "Wet,No injury":1284,
     "Other\/Unknown surface,Severe injury":13,
     "Other\/Unknown surface,Moderate injury":27,
-    "Other\/Unknown surface,No injury":564,
-    "Severe injury":196,
-    "Moderate injury":796,
-    "No injury":8115
+    "Other\/Unknown surface,No injury":564
   },
   {
     "CRASH_YEAR":2019,
@@ -592,10 +556,7 @@
     "Wet,No injury":873,
     "Other\/Unknown surface,Severe injury":1,
     "Other\/Unknown surface,Moderate injury":7,
-    "Other\/Unknown surface,No injury":378,
-    "Severe injury":136,
-    "Moderate injury":536,
-    "No injury":6267
+    "Other\/Unknown surface,No injury":378
   },
   {
     "CRASH_YEAR":2019,
@@ -638,10 +599,7 @@
     "Wet,No injury":1393,
     "Other\/Unknown surface,Severe injury":2,
     "Other\/Unknown surface,Moderate injury":48,
-    "Other\/Unknown surface,No injury":1046,
-    "Severe injury":154,
-    "Moderate injury":798,
-    "No injury":9715
+    "Other\/Unknown surface,No injury":1046
   },
   {
     "CRASH_YEAR":2019,
@@ -684,10 +642,7 @@
     "Wet,No injury":1353,
     "Other\/Unknown surface,Severe injury":10,
     "Other\/Unknown surface,Moderate injury":26,
-    "Other\/Unknown surface,No injury":624,
-    "Severe injury":186,
-    "Moderate injury":758,
-    "No injury":9100
+    "Other\/Unknown surface,No injury":624
   },
   {
     "CRASH_YEAR":2019,
@@ -730,10 +685,7 @@
     "Wet,No injury":1461,
     "Other\/Unknown surface,Severe injury":9,
     "Other\/Unknown surface,Moderate injury":39,
-    "Other\/Unknown surface,No injury":774,
-    "Severe injury":241,
-    "Moderate injury":1022,
-    "No injury":9894
+    "Other\/Unknown surface,No injury":774
   },
   {
     "CRASH_YEAR":2019,
@@ -776,10 +728,7 @@
     "Wet,No injury":2105,
     "Other\/Unknown surface,Severe injury":2,
     "Other\/Unknown surface,Moderate injury":29,
-    "Other\/Unknown surface,No injury":833,
-    "Severe injury":278,
-    "Moderate injury":1168,
-    "No injury":14183
+    "Other\/Unknown surface,No injury":833
   },
   {
     "CRASH_YEAR":2019,
@@ -822,10 +771,7 @@
     "Wet,No injury":3307,
     "Other\/Unknown surface,Severe injury":18,
     "Other\/Unknown surface,Moderate injury":92,
-    "Other\/Unknown surface,No injury":1457,
-    "Severe injury":510,
-    "Moderate injury":2348,
-    "No injury":23229
+    "Other\/Unknown surface,No injury":1457
   },
   {
     "CRASH_YEAR":2020,
@@ -868,10 +814,7 @@
     "Wet,No injury":815,
     "Other\/Unknown surface,Severe injury":5,
     "Other\/Unknown surface,Moderate injury":20,
-    "Other\/Unknown surface,No injury":299,
-    "Severe injury":111,
-    "Moderate injury":517,
-    "No injury":5359
+    "Other\/Unknown surface,No injury":299
   },
   {
     "CRASH_YEAR":2020,
@@ -914,10 +857,7 @@
     "Wet,No injury":1049,
     "Other\/Unknown surface,Severe injury":4,
     "Other\/Unknown surface,Moderate injury":29,
-    "Other\/Unknown surface,No injury":932,
-    "Severe injury":201,
-    "Moderate injury":707,
-    "No injury":8752
+    "Other\/Unknown surface,No injury":932
   },
   {
     "CRASH_YEAR":2020,
@@ -960,10 +900,7 @@
     "Wet,No injury":941,
     "Other\/Unknown surface,Severe injury":7,
     "Other\/Unknown surface,Moderate injury":20,
-    "Other\/Unknown surface,No injury":544,
-    "Severe injury":215,
-    "Moderate injury":876,
-    "No injury":7711
+    "Other\/Unknown surface,No injury":544
   },
   {
     "CRASH_YEAR":2020,
@@ -1006,10 +943,7 @@
     "Wet,No injury":692,
     "Other\/Unknown surface,Severe injury":1,
     "Other\/Unknown surface,Moderate injury":11,
-    "Other\/Unknown surface,No injury":346,
-    "Severe injury":140,
-    "Moderate injury":598,
-    "No injury":6063
+    "Other\/Unknown surface,No injury":346
   },
   {
     "CRASH_YEAR":2020,
@@ -1052,10 +986,7 @@
     "Wet,No injury":739,
     "Other\/Unknown surface,Severe injury":5,
     "Other\/Unknown surface,Moderate injury":34,
-    "Other\/Unknown surface,No injury":644,
-    "Severe injury":134,
-    "Moderate injury":536,
-    "No injury":5867
+    "Other\/Unknown surface,No injury":644
   },
   {
     "CRASH_YEAR":2020,
@@ -1098,10 +1029,7 @@
     "Wet,No injury":805,
     "Other\/Unknown surface,Severe injury":7,
     "Other\/Unknown surface,Moderate injury":8,
-    "Other\/Unknown surface,No injury":489,
-    "Severe injury":127,
-    "Moderate injury":564,
-    "No injury":6739
+    "Other\/Unknown surface,No injury":489
   },
   {
     "CRASH_YEAR":2020,
@@ -1144,10 +1072,7 @@
     "Wet,No injury":1108,
     "Other\/Unknown surface,Severe injury":8,
     "Other\/Unknown surface,Moderate injury":34,
-    "Other\/Unknown surface,No injury":743,
-    "Severe injury":246,
-    "Moderate injury":1016,
-    "No injury":9260
+    "Other\/Unknown surface,No injury":743
   },
   {
     "CRASH_YEAR":2020,
@@ -1190,10 +1115,7 @@
     "Wet,No injury":1535,
     "Other\/Unknown surface,Severe injury":7,
     "Other\/Unknown surface,Moderate injury":31,
-    "Other\/Unknown surface,No injury":711,
-    "Severe injury":319,
-    "Moderate injury":1152,
-    "No injury":12394
+    "Other\/Unknown surface,No injury":711
   },
   {
     "CRASH_YEAR":2020,
@@ -1236,10 +1158,7 @@
     "Wet,No injury":2218,
     "Other\/Unknown surface,Severe injury":14,
     "Other\/Unknown surface,Moderate injury":72,
-    "Other\/Unknown surface,No injury":1239,
-    "Severe injury":515,
-    "Moderate injury":2126,
-    "No injury":18967
+    "Other\/Unknown surface,No injury":1239
   },
   {
     "CRASH_YEAR":2021,
@@ -1282,10 +1201,7 @@
     "Wet,No injury":920,
     "Other\/Unknown surface,Severe injury":6,
     "Other\/Unknown surface,Moderate injury":26,
-    "Other\/Unknown surface,No injury":518,
-    "Severe injury":144,
-    "Moderate injury":717,
-    "No injury":7232
+    "Other\/Unknown surface,No injury":518
   },
   {
     "CRASH_YEAR":2021,
@@ -1328,10 +1244,7 @@
     "Wet,No injury":1081,
     "Other\/Unknown surface,Severe injury":11,
     "Other\/Unknown surface,Moderate injury":47,
-    "Other\/Unknown surface,No injury":1355,
-    "Severe injury":200,
-    "Moderate injury":810,
-    "No injury":10688
+    "Other\/Unknown surface,No injury":1355
   },
   {
     "CRASH_YEAR":2021,
@@ -1374,10 +1287,7 @@
     "Wet,No injury":1003,
     "Other\/Unknown surface,Severe injury":6,
     "Other\/Unknown surface,Moderate injury":39,
-    "Other\/Unknown surface,No injury":752,
-    "Severe injury":249,
-    "Moderate injury":1038,
-    "No injury":8769
+    "Other\/Unknown surface,No injury":752
   },
   {
     "CRASH_YEAR":2021,
@@ -1420,10 +1330,7 @@
     "Wet,No injury":793,
     "Other\/Unknown surface,Severe injury":9,
     "Other\/Unknown surface,Moderate injury":18,
-    "Other\/Unknown surface,No injury":427,
-    "Severe injury":139,
-    "Moderate injury":668,
-    "No injury":6897
+    "Other\/Unknown surface,No injury":427
   },
   {
     "CRASH_YEAR":2021,
@@ -1466,10 +1373,7 @@
     "Wet,No injury":813,
     "Other\/Unknown surface,Severe injury":10,
     "Other\/Unknown surface,Moderate injury":45,
-    "Other\/Unknown surface,No injury":1023,
-    "Severe injury":146,
-    "Moderate injury":678,
-    "No injury":7705
+    "Other\/Unknown surface,No injury":1023
   },
   {
     "CRASH_YEAR":2021,
@@ -1512,10 +1416,7 @@
     "Wet,No injury":862,
     "Other\/Unknown surface,Severe injury":2,
     "Other\/Unknown surface,Moderate injury":16,
-    "Other\/Unknown surface,No injury":730,
-    "Severe injury":142,
-    "Moderate injury":615,
-    "No injury":7783
+    "Other\/Unknown surface,No injury":730
   },
   {
     "CRASH_YEAR":2021,
@@ -1558,10 +1459,7 @@
     "Wet,No injury":1166,
     "Other\/Unknown surface,Severe injury":11,
     "Other\/Unknown surface,Moderate injury":49,
-    "Other\/Unknown surface,No injury":985,
-    "Severe injury":282,
-    "Moderate injury":1279,
-    "No injury":10723
+    "Other\/Unknown surface,No injury":985
   },
   {
     "CRASH_YEAR":2021,
@@ -1604,10 +1502,7 @@
     "Wet,No injury":1675,
     "Other\/Unknown surface,Severe injury":7,
     "Other\/Unknown surface,Moderate injury":35,
-    "Other\/Unknown surface,No injury":1170,
-    "Severe injury":320,
-    "Moderate injury":1387,
-    "No injury":14688
+    "Other\/Unknown surface,No injury":1170
   },
   {
     "CRASH_YEAR":2021,
@@ -1650,10 +1545,7 @@
     "Wet,No injury":2396,
     "Other\/Unknown surface,Severe injury":35,
     "Other\/Unknown surface,Moderate injury":120,
-    "Other\/Unknown surface,No injury":1883,
-    "Severe injury":547,
-    "Moderate injury":2344,
-    "No injury":21434
+    "Other\/Unknown surface,No injury":1883
   },
   {
     "CRASH_YEAR":2022,
@@ -1696,10 +1588,7 @@
     "Wet,No injury":1073,
     "Other\/Unknown surface,Severe injury":14,
     "Other\/Unknown surface,Moderate injury":55,
-    "Other\/Unknown surface,No injury":982,
-    "Severe injury":165,
-    "Moderate injury":756,
-    "No injury":8402
+    "Other\/Unknown surface,No injury":982
   },
   {
     "CRASH_YEAR":2022,
@@ -1742,10 +1631,7 @@
     "Wet,No injury":1307,
     "Other\/Unknown surface,Severe injury":10,
     "Other\/Unknown surface,Moderate injury":61,
-    "Other\/Unknown surface,No injury":1827,
-    "Severe injury":202,
-    "Moderate injury":991,
-    "No injury":11513
+    "Other\/Unknown surface,No injury":1827
   },
   {
     "CRASH_YEAR":2022,
@@ -1788,10 +1674,7 @@
     "Wet,No injury":973,
     "Other\/Unknown surface,Severe injury":9,
     "Other\/Unknown surface,Moderate injury":48,
-    "Other\/Unknown surface,No injury":944,
-    "Severe injury":202,
-    "Moderate injury":899,
-    "No injury":7947
+    "Other\/Unknown surface,No injury":944
   },
   {
     "CRASH_YEAR":2022,
@@ -1834,10 +1717,7 @@
     "Wet,No injury":754,
     "Other\/Unknown surface,Severe injury":1,
     "Other\/Unknown surface,Moderate injury":17,
-    "Other\/Unknown surface,No injury":658,
-    "Severe injury":127,
-    "Moderate injury":548,
-    "No injury":6224
+    "Other\/Unknown surface,No injury":658
   },
   {
     "CRASH_YEAR":2022,
@@ -1880,10 +1760,7 @@
     "Wet,No injury":1013,
     "Other\/Unknown surface,Severe injury":10,
     "Other\/Unknown surface,Moderate injury":58,
-    "Other\/Unknown surface,No injury":1463,
-    "Severe injury":140,
-    "Moderate injury":714,
-    "No injury":8362
+    "Other\/Unknown surface,No injury":1463
   },
   {
     "CRASH_YEAR":2022,
@@ -1926,10 +1803,7 @@
     "Wet,No injury":948,
     "Other\/Unknown surface,Severe injury":4,
     "Other\/Unknown surface,Moderate injury":33,
-    "Other\/Unknown surface,No injury":1075,
-    "Severe injury":168,
-    "Moderate injury":654,
-    "No injury":8042
+    "Other\/Unknown surface,No injury":1075
   },
   {
     "CRASH_YEAR":2022,
@@ -1972,10 +1846,7 @@
     "Wet,No injury":1178,
     "Other\/Unknown surface,Severe injury":16,
     "Other\/Unknown surface,Moderate injury":56,
-    "Other\/Unknown surface,No injury":1215,
-    "Severe injury":263,
-    "Moderate injury":1064,
-    "No injury":9608
+    "Other\/Unknown surface,No injury":1215
   },
   {
     "CRASH_YEAR":2022,
@@ -2018,10 +1889,7 @@
     "Wet,No injury":1887,
     "Other\/Unknown surface,Severe injury":14,
     "Other\/Unknown surface,Moderate injury":36,
-    "Other\/Unknown surface,No injury":1242,
-    "Severe injury":304,
-    "Moderate injury":1360,
-    "No injury":14363
+    "Other\/Unknown surface,No injury":1242
   },
   {
     "CRASH_YEAR":2022,
@@ -2064,9 +1932,6 @@
     "Wet,No injury":2661,
     "Other\/Unknown surface,Severe injury":30,
     "Other\/Unknown surface,Moderate injury":105,
-    "Other\/Unknown surface,No injury":2258,
-    "Severe injury":505,
-    "Moderate injury":2233,
-    "No injury":21030
+    "Other\/Unknown surface,No injury":2258
   }
 ]
