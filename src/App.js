@@ -3,7 +3,8 @@ import React, { useState } from 'react'
 import FilterControl from './utils/FilterControl'
 import Stack from '@mui/material/Stack'
 import { BigChart } from './Chart'
-import CirclePacking from './charts/CirclePacking'
+import Sunburst from './charts/Sunburst'
+import Network from './charts/Network'
 import HeatMap from './charts/HeatMap'
 import { BarInvolved, BarInjured } from './charts/Bar'
 import Sankey from './charts/Sankey'
@@ -24,7 +25,11 @@ export default function App () {
       <Stack spacing={3} sx={{ width: '800px' }}>
         <BigChart height='500px'>
           <div>Why are the crashes?</div>
-          <CirclePacking year={yearRange} side={side} />
+          <Sunburst year={yearRange} side={side} />
+        </BigChart>
+        <BigChart>
+          <div>What are making the crashes deadly?</div>
+          <Network year={yearRange} side={side} />
         </BigChart>
         <BigChart height='500px'>
           <div>When were the crashes?</div>

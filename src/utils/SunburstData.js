@@ -1,4 +1,4 @@
-export default function CirclePackingData (data) {
+export default function SunburstData (data) {
   const groupMap = {
     'Driver-related':
       ['Bicycle advancing legally on red light',
