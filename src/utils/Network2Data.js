@@ -5,10 +5,10 @@ import CarShort320 from '../images/car_top_short_320.svg'
 
 export default function NetworkData (data) {
   const nodes = [
-    { id: 'Daylight', label: 'Daylight', font: { vadjust: -34 }, x: 40, y: 110, shape: 'image', image: CarLong90, size: 18 },
-    { id: 'Dawn', label: 'Dawn', font: { vadjust: -34 }, x: 40, y: 162, shape: 'image', image: CarLong90, size: 18 },
-    { id: 'Darkness', label: 'Darkness', font: { vadjust: -34 }, x: 40, y: 214, shape: 'image', image: CarLong90, size: 18 },
-    { id: 'Dusk', label: 'Dusk', font: { vadjust: -34 }, x: 40, y: 266, shape: 'image', image: CarLong90, size: 18 },
+    { id: 'Daylight', label: 'Daylight', font: { vadjust: -34 }, x: 40, y: 104, shape: 'image', image: CarLong90, size: 18 },
+    { id: 'Dawn', label: 'Dawn', font: { vadjust: -34 }, x: 40, y: 156, shape: 'image', image: CarLong90, size: 18 },
+    { id: 'Darkness', label: 'Darkness', font: { vadjust: -34 }, x: 40, y: 208, shape: 'image', image: CarLong90, size: 18 },
+    { id: 'Dusk', label: 'Dusk', font: { vadjust: -34 }, x: 40, y: 260, shape: 'image', image: CarLong90, size: 18 },
     { id: 'Clear', label: 'Clear', font: { vadjust: -52 }, x: 162, y: 36, shape: 'image', image: CarMid210, size: 27 },
     { id: 'Cloudy', label: 'Cloudy', font: { vadjust: -52 }, x: 210, y: 62, shape: 'image', image: CarMid210, size: 27 },
     { id: 'Rain/Snow', label: 'Rain/Snow', font: { vadjust: -52 }, x: 258, y: 88, shape: 'image', image: CarMid210, size: 27 },
