@@ -4,6 +4,8 @@ import filter from '../utils/filter'
 import envData from '../data/crash_env.json'
 import NetworkData from '../utils/NetworkData'
 import { v4 } from 'uuid'
+// import Arrow from '../images/arrow.svg'
+
 // import SeveritySevere from '../images/severity_severe.svg'
 // import SeverityModerate from '../images/severity_moderate.svg'
 // import SeverityNo from '../images/severity_no.svg'
@@ -34,14 +36,19 @@ export default function Network (props) {
         opacity: 0.08
       },
       arrows: {
+        // middle: {
+        //   enabled: true,
+        //   src: Arrow,
+        //   scaleFactor: -1,
+        //   type: 'image'
+        // },
         to: {
-          scaleFactor: 0.2
-          // enabled: false
+          enabled: false
         }
       },
       font: {
         size: 8,
-        color: '#CCCCCC',
+        color: '#999999',
         strokeWidth: 0
       },
       chosen: {

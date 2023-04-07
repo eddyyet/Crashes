@@ -21,19 +21,6 @@ export default function NetworkData (data) {
     { id: 'Dry', label: 'Dry', font: { vadjust: -56 }, x: 200, y: -220, shape: 'image', image: CarShort230, size: 37 },
     { id: 'Wet', label: 'Wet', font: { vadjust: -56 }, x: 250, y: -175, shape: 'image', image: CarShort230, size: 37 },
     { id: 'Snow/Ice', label: 'Snow/Ice', font: { vadjust: -56 }, x: 300, y: -130, shape: 'image', image: CarShort230, size: 37 }
-    // { id: 'Severe injury', x: 0, y: -100 },
-    // { id: 'Moderate injury', x: 0, y: 0 },
-    // { id: 'No injury', x: 0, y: 100 },
-    // { id: 'Daylight', x: -233, y: 189, shape: 'image', image: CarLong },
-    // { id: 'Dawn', x: -100, y: 283, shape: 'image', image: CarLong },
-    // { id: 'Darkness', x: 61, y: 294, shape: 'image', image: CarLong },
-    // { id: 'Dusk', x: 205, y: 219, shape: 'image', image: CarLong },
-    // { id: 'Clear', x: 300, y: 0, shape: 'image', image: CarMid },
-    // { id: 'Cloudy', x: 256, y: -156, shape: 'image', image: CarMid },
-    // { id: 'Rain/Snow', x: 138, y: -266, shape: 'image', image: CarMid },
-    // { id: 'Dry', x: -100, y: -283, shape: 'image', image: CarShort },
-    // { id: 'Wet', x: -233, y: -189, shape: 'image', image: CarShort },
-    // { id: 'Snow/Ice', x: -297, y: -41, shape: 'image', image: CarShort }
   ]
 
   const totalCrashes = Object.values(data).reduce((acc, val) => acc + val, 0)
@@ -54,12 +41,12 @@ export default function NetworkData (data) {
 
     const lift = getLift(condition, severity).toFixed(2)
     const label = lift + 'x'
-    const width = 80 * (Math.max(Math.min(lift, 1.3), 0.9) - 0.9) + 3
+    const width = 80 * (Math.max(Math.min(lift, 1.3), 0.9) - 0.9) + 4
     const smooth = (severity === 'Severe injury'
-      ? { enabled: true, type: 'curvedCW', roundness: 0.08 }
+      ? { enabled: true, type: 'curvedCW', roundness: 0.1 }
       : severity === 'Moderate injury'
-        ? { enabled: true, type: 'continuous', roundness: 0.08 }
-        : { enabled: true, type: 'curvedCCW', roundness: 0.08 })
+        ? { enabled: false }
+        : { enabled: true, type: 'curvedCCW', roundness: 0.1 })
 
     edges.push({
       from: condition,
