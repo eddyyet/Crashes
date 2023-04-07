@@ -13,7 +13,7 @@ function onMouseOver (event) {
     weight: 3,
     color: '#666',
     dashArray: '',
-    fillOpacity: 0.7
+    fillOpacity: 0.8
   })
   layer.bringToFront()
 }
