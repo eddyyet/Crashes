@@ -22,9 +22,18 @@ export default function Network (props) {
   const options = {
     nodes: {
       font: {
-        color: '#CCCCCC'
+        size: 16,
+        color: '#CCCCCC',
+        face: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif'
       },
       chosen: {
+        node: function (values, id, selected, hovering) {
+          values.shadow = true
+          values.shadowColor = '#AA4422'
+          values.shadowSize = 2
+          values.shadowX = 0
+          values.shadowY = 0
+        },
         label: function (values, id, selected, hovering) {
           values.color = '#FFFFFF'
         }
@@ -49,12 +58,10 @@ export default function Network (props) {
       font: {
         size: 8,
         color: '#999999',
-        strokeWidth: 0
+        strokeWidth: 0,
+        face: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif'
       },
       chosen: {
-        // node: function (values, id, selected, hovering) {
-        //   if (values.image === CarLong150) { values.image = CarLong150Hover }
-        // },
         edge: function (values, id, selected, hovering) {
           values.opacity = 0.5
         },
