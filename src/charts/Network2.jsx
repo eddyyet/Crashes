@@ -49,9 +49,6 @@ export default function Network (props) {
         face: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif'
       },
       chosen: {
-        edge: function (values, id, selected, hovering) {
-          values.opacity = 0.5
-        },
         label: function (values, id, selected, hovering) {
           values.size = 16
           values.color = '#FFFFFF'

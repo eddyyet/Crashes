@@ -44,8 +44,9 @@ export default function NetworkData (data) {
       ? { enabled: true, type: 'curvedCCW', roundness: 0.1 }
       : { enabled: true, type: 'curvedCW', roundness: 0.1 })
     const hue = lift >= 1 ? 10 : 140
-    const saturation = lift >= 1 ? Math.min((lift - 1), 1.6) * 133 : Math.min((1 - lift), 0.2) * 133
-    const color = `hsl(${hue}, ${saturation}%, 80%)`
+    const saturation = lift >= 1 ? Math.min((lift - 1), 1.6) * 150 : Math.min((1 - lift), 0.2) * 150
+    const color = `hsl(${hue}, ${saturation}%, 60%, 0.15)`
+    const colorHover = `hsl(${hue}, ${saturation}%, 60%, 0.7)`
 
     edges.push({
       from: condition1,
@@ -53,10 +54,7 @@ export default function NetworkData (data) {
       label,
       width,
       smooth,
-      color: {
-        color,
-        opacity: 0.08
-      }
+      color: { color, hover: colorHover }
     })
   })
 
