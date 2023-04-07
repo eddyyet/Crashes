@@ -1,23 +1,23 @@
 import '../format.css'
-import CarLong from '../images/car_top_long.svg'
-import CarMid from '../images/car_top_mid.svg'
-import CarShort from '../images/car_top_short.svg'
+import CarLong150 from '../images/car_top_long_150.svg'
+import CarMid190 from '../images/car_top_mid_190.svg'
+import CarShort230 from '../images/car_top_short_230.svg'
 
 export default function NetworkData (data) {
   const nodes = [
     { id: 'Severe injury', x: -180, y: 0 },
     { id: 'Moderate injury', x: 0, y: 0 },
     { id: 'No injury', x: 180, y: 0 },
-    { id: 'Daylight', x: -310, y: -180, shape: 'image', image: CarLong },
-    { id: 'Dawn', x: -240, y: -210, shape: 'image', image: CarLong },
-    { id: 'Darkness', x: -170, y: -240, shape: 'image', image: CarLong },
-    { id: 'Dusk', x: -100, y: -270, shape: 'image', image: CarLong },
-    { id: 'Clear', x: -10, y: -345, shape: 'image', image: CarMid },
-    { id: 'Cloudy', x: 50, y: -320, shape: 'image', image: CarMid },
-    { id: 'Rain/Snow', x: 110, y: -295, shape: 'image', image: CarMid },
-    { id: 'Dry', x: 200, y: -220, shape: 'image', image: CarShort },
-    { id: 'Wet', x: 250, y: -180, shape: 'image', image: CarShort },
-    { id: 'Snow/Ice', x: 300, y: -140, shape: 'image', image: CarShort }
+    { id: 'Daylight', x: -310, y: -180, shape: 'image', image: CarLong150, size: 40 },
+    { id: 'Dawn', x: -240, y: -210, shape: 'image', image: CarLong150, size: 40 },
+    { id: 'Darkness', x: -170, y: -240, shape: 'image', image: CarLong150, size: 40 },
+    { id: 'Dusk', x: -100, y: -270, shape: 'image', image: CarLong150, size: 40 },
+    { id: 'Clear', x: -10, y: -345, shape: 'image', image: CarMid190, size: 28 },
+    { id: 'Cloudy', x: 50, y: -320, shape: 'image', image: CarMid190, size: 28 },
+    { id: 'Rain/Snow', x: 110, y: -295, shape: 'image', image: CarMid190, size: 28 },
+    { id: 'Dry', x: 200, y: -220, shape: 'image', image: CarShort230, size: 37 },
+    { id: 'Wet', x: 250, y: -180, shape: 'image', image: CarShort230, size: 37 },
+    { id: 'Snow/Ice', x: 300, y: -140, shape: 'image', image: CarShort230, size: 37 }
     // { id: 'Severe injury', x: 0, y: -100 },
     // { id: 'Moderate injury', x: 0, y: 0 },
     // { id: 'No injury', x: 0, y: 100 },

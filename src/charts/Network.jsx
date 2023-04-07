@@ -11,9 +11,6 @@ export default function Network (props) {
   const version = useMemo(v4, [props])
 
   const options = {
-    nodes: {
-      size: 60
-    },
     edges: {
       color: {
         color: '#FFFFFF',
