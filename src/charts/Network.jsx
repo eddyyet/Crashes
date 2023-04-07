@@ -4,6 +4,13 @@ import filter from '../utils/filter'
 import envData from '../data/crash_env.json'
 import NetworkData from '../utils/NetworkData'
 import { v4 } from 'uuid'
+// import SeveritySevere from '../images/severity_severe.svg'
+// import SeverityModerate from '../images/severity_moderate.svg'
+// import SeverityNo from '../images/severity_no.svg'
+// import CarLong150 from '../images/car_top_long_150.svg'
+// import CarLong150Hover from '../images/car_top_long_150_hover.svg'
+// import CarMid190 from '../images/car_top_mid_190.svg'
+// import CarShort230 from '../images/car_top_short_230.svg'
 
 export default function Network (props) {
   const filteredData = filter(envData, props.year, props.side)
@@ -13,8 +20,8 @@ export default function Network (props) {
   const options = {
     edges: {
       color: {
-        color: '#FFFFFF',
-        opacity: 0.1
+        color: '#CCCCCC',
+        opacity: 0.08
       },
       arrows: {
         to: {
@@ -23,12 +30,19 @@ export default function Network (props) {
       },
       font: {
         size: 8,
-        color: '#FFFFFF',
+        color: '#CCCCCC',
         strokeWidth: 0
       },
       chosen: {
+        // node: function (values, id, selected, hovering) {
+        //   if (values.image === CarLong150) { values.image = CarLong150Hover }
+        // },
         edge: function (values, id, selected, hovering) {
-          values.opacity = 0.6
+          values.opacity = 0.5
+        },
+        label: function (values, id, selected, hovering) {
+          values.size = 16
+          values.color = '#FFFFFF'
         }
       }
     },

@@ -56,10 +56,10 @@ export default function NetworkData (data) {
     const label = lift
     const width = 80 * (Math.max(Math.min(lift, 1.3), 0.9) - 0.9) + 3
     const smooth = (severity === 'Severe injury'
-      ? { enabled: true, type: 'curvedCW', roundness: 0.06 }
+      ? { enabled: true, type: 'curvedCW', roundness: 0.08 }
       : severity === 'Moderate injury'
-        ? { enabled: true, type: 'continuous', roundness: 0.06 }
-        : { enabled: true, type: 'curvedCCW', roundness: 0.06 })
+        ? { enabled: true, type: 'continuous', roundness: 0.08 }
+        : { enabled: true, type: 'curvedCCW', roundness: 0.08 })
 
     edges.push({
       from: condition,
