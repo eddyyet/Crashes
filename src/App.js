@@ -32,7 +32,7 @@ export default function App () {
         </BigChart>
         <BigChart>
           <div>What are making the crashes deadly?</div>
-          <Stack direction='row' divider={<Divider orientation="vertical" flexItem />} spacing='1.5rem'>
+          <Stack direction='row' divider={<Divider orientation="vertical" sx={{ borderWidth: '0.5px', borderColor: '#383a3e' }} flexItem />} spacing='1.5rem'>
             <Network year={yearRange} side={side} />
             <Network2 year={yearRange} side={side} />
           </Stack>
