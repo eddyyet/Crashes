@@ -18,6 +18,16 @@ export default function Network (props) {
   const version = useMemo(v4, [props])
 
   const options = {
+    nodes: {
+      font: {
+        color: '#CCCCCC'
+      },
+      chosen: {
+        label: function (values, id, selected, hovering) {
+          values.color = '#FFFFFF'
+        }
+      }
+    },
     edges: {
       color: {
         color: '#CCCCCC',
@@ -25,7 +35,8 @@ export default function Network (props) {
       },
       arrows: {
         to: {
-          enabled: false
+          scaleFactor: 0.2
+          // enabled: false
         }
       },
       font: {
