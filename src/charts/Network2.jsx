@@ -31,10 +31,6 @@ export default function Network (props) {
       }
     },
     edges: {
-      color: {
-        color: '#CCCCCC',
-        opacity: 0.08
-      },
       arrows: {
         // middle: {
         //   enabled: true,
@@ -57,7 +53,7 @@ export default function Network (props) {
           values.opacity = 0.5
         },
         label: function (values, id, selected, hovering) {
-          values.size = 12
+          values.size = 16
           values.color = '#FFFFFF'
         }
       }

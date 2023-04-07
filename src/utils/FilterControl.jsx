@@ -64,7 +64,13 @@ export default function FilterControl (props) {
             value={yearRangeTemp}
             onChange={handleSliderChange}
             valueLabelDisplay="auto"
-            sx={{ '& .MuiSlider-markLabel': { color: '#CCCCCC', fontSize: '0.7rem' } }}
+            sx={
+              {
+                '& .MuiSlider-thumb': { height: '0.75rem', width: '0.75rem', backgroundColor: '#CCCCCC' },
+                '& .MuiSlider-rail': { height: '0.25rem', backgroundColor: '#CCCCCC' },
+                '& .MuiSlider-markLabel': { color: '#CCCCCC', fontSize: '0.7rem' }
+              }
+            }
           />
         </span>
         <span style={{ width: '200px' }}>
