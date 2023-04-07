@@ -1,19 +1,19 @@
 import React, { useMemo } from 'react'
 import Graph from 'react-graph-vis'
 import filter from '../utils/filter'
-import envData from '../data/crash_env.json'
-import NetworkData from '../utils/NetworkData'
+import env2Data from '../data/crash_env2.json'
+import Networ2kData from '../utils/Network2Data'
 import { v4 } from 'uuid'
 
 export default function Network (props) {
-  const filteredData = filter(envData, props.year, props.side)
-  const graph = NetworkData(filteredData)
+  const filteredData = filter(env2Data, props.year, props.side)
+  const graph = Network2Data(filteredData)
   const version = useMemo(v4, [props])
 
   const options = {
     nodes: {
       font: {
-        size: 16,
+        size: 12,
         color: '#CCCCCC',
         face: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif'
       },
@@ -57,7 +57,7 @@ export default function Network (props) {
           values.opacity = 0.5
         },
         label: function (values, id, selected, hovering) {
-          values.size = 16
+          values.size = 12
           values.color = '#FFFFFF'
         }
       }

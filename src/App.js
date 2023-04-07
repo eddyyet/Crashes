@@ -30,7 +30,9 @@ export default function App () {
         </BigChart>
         <BigChart>
           <div>What are making the crashes deadly?</div>
-          <Network year={yearRange} side={side} />
+          <Stack direction='row' spacing='1.5rem'>
+            <Network year={yearRange} side={side} />
+          </Stack>
         </BigChart>
         <BigChart height='500px'>
           <div>When were the crashes?</div>
