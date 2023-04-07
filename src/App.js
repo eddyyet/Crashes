@@ -61,7 +61,7 @@ export default function App () {
         <BigChart>
           <div>Crash by Side</div>
           <div>
-          <Choropleth />
+          <Choropleth style={{ height: '1000px' }}/>
           </div>
         </BigChart>
       </Stack>

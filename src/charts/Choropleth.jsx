@@ -23,7 +23,7 @@ export default function CrashBySide () {
     <div>
     <div style={{ height: '1000px' }}>
       <h1>Choropleth</h1>
-      <MapContainer center={[41.881832, -87.623177]} zoom={11} scrollWheelZoom={false}>
+      <MapContainer center={[41.881832, -87.623177]} zoom={10} scrollWheelZoom={false}>
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
         <GeoJSON data={side} />
         </MapContainer>
