@@ -22,7 +22,7 @@ export default function App () {
         side={side}
         setSide={setSide}
       />
-      <Stack spacing={3} sx={{ width: '800px' }}>
+      <Stack spacing={3} sx={{ width: '1200px' }}>
         <BigChart height='500px'>
           <div>Why are the crashes?</div>
           <Sunburst year={yearRange} side={side} />

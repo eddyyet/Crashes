@@ -11,17 +11,36 @@ export default function Network (props) {
   const version = useMemo(v4, [props])
 
   const options = {
+    nodes: {
+      size: 60
+    },
     edges: {
+      color: {
+        color: '#FFFFFF',
+        opacity: 0.1
+      },
       arrows: {
         to: {
           enabled: false
+        }
+      },
+      font: {
+        size: 8,
+        color: '#FFFFFF',
+        strokeWidth: 0
+      },
+      chosen: {
+        edge: function (values, id, selected, hovering) {
+          values.opacity = 0.6
         }
       }
     },
     interaction: {
       dragNodes: false,
       dragView: false,
-      zoomView: false
+      zoomView: false,
+      selectable: false,
+      hover: true
     },
     layout: {
       hierarchical: false

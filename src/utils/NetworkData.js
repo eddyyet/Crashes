@@ -1,18 +1,36 @@
+import '../format.css'
+import CarLong from '../images/car_top_long.svg'
+import CarMid from '../images/car_top_mid.svg'
+import CarShort from '../images/car_top_short.svg'
+
 export default function NetworkData (data) {
   const nodes = [
-    { id: 'Severe injury', label: 'Severe injury', x: 0, y: -100, shape: 'image', image: 'crash_type_symbol.svg' },
-    { id: 'Moderate injury', label: 'Moderate injury', x: 0, y: 0 },
-    { id: 'No injury', label: 'No injury', x: 0, y: 100 },
-    { id: 'Daylight', label: 'Daylight', x: -233, y: 189 },
-    { id: 'Dawn', label: 'Dawn', x: -100, y: 283 },
-    { id: 'Darkness', label: 'Darkness', x: 61, y: 294 },
-    { id: 'Dusk', label: 'Dusk', x: 205, y: 219 },
-    { id: 'Clear', label: 'Clear', x: 300, y: 0 },
-    { id: 'Cloudy', label: 'Cloudy', x: 256, y: -156 },
-    { id: 'Rain/Snow', label: 'Rain/Snow', x: 138, y: -266 },
-    { id: 'Dry', label: 'Dry', x: -100, y: -283 },
-    { id: 'Wet', label: 'Wet', x: -233, y: -189 },
-    { id: 'Snow/Ice', label: 'Snow/Ice', x: -297, y: -41 }
+    { id: 'Severe injury', x: -180, y: 0 },
+    { id: 'Moderate injury', x: 0, y: 0 },
+    { id: 'No injury', x: 180, y: 0 },
+    { id: 'Daylight', x: -310, y: -180, shape: 'image', image: CarLong },
+    { id: 'Dawn', x: -240, y: -210, shape: 'image', image: CarLong },
+    { id: 'Darkness', x: -170, y: -240, shape: 'image', image: CarLong },
+    { id: 'Dusk', x: -100, y: -270, shape: 'image', image: CarLong },
+    { id: 'Clear', x: -10, y: -345, shape: 'image', image: CarMid },
+    { id: 'Cloudy', x: 50, y: -320, shape: 'image', image: CarMid },
+    { id: 'Rain/Snow', x: 110, y: -295, shape: 'image', image: CarMid },
+    { id: 'Dry', x: 200, y: -220, shape: 'image', image: CarShort },
+    { id: 'Wet', x: 250, y: -180, shape: 'image', image: CarShort },
+    { id: 'Snow/Ice', x: 300, y: -140, shape: 'image', image: CarShort }
+    // { id: 'Severe injury', x: 0, y: -100 },
+    // { id: 'Moderate injury', x: 0, y: 0 },
+    // { id: 'No injury', x: 0, y: 100 },
+    // { id: 'Daylight', x: -233, y: 189, shape: 'image', image: CarLong },
+    // { id: 'Dawn', x: -100, y: 283, shape: 'image', image: CarLong },
+    // { id: 'Darkness', x: 61, y: 294, shape: 'image', image: CarLong },
+    // { id: 'Dusk', x: 205, y: 219, shape: 'image', image: CarLong },
+    // { id: 'Clear', x: 300, y: 0, shape: 'image', image: CarMid },
+    // { id: 'Cloudy', x: 256, y: -156, shape: 'image', image: CarMid },
+    // { id: 'Rain/Snow', x: 138, y: -266, shape: 'image', image: CarMid },
+    // { id: 'Dry', x: -100, y: -283, shape: 'image', image: CarShort },
+    // { id: 'Wet', x: -233, y: -189, shape: 'image', image: CarShort },
+    // { id: 'Snow/Ice', x: -297, y: -41, shape: 'image', image: CarShort }
   ]
 
   const totalCrashes = Object.values(data).reduce((acc, val) => acc + val, 0)
@@ -33,19 +51,19 @@ export default function NetworkData (data) {
 
     const lift = getLift(condition, severity).toFixed(2)
     const label = lift
-    const width = 80 * (Math.max(Math.min(lift, 1.2), 0.9) - 0.9) + 3
-    // const smooth = (severity === 'Severe injury'
-    //   ? { enabled: true, type: 'continuous', roundness: 0.1 }
-    //   : severity === 'Moderate injury'
-    //     ? { enabled: true, type: 'continuous', roundness: 0.1 }
-    //     : { enabled: true, type: 'continuous', roundness: 0.1 })
+    const width = 80 * (Math.max(Math.min(lift, 1.3), 0.9) - 0.9) + 3
+    const smooth = (severity === 'Severe injury'
+      ? { enabled: true, type: 'curvedCW', roundness: 0.06 }
+      : severity === 'Moderate injury'
+        ? { enabled: true, type: 'continuous', roundness: 0.06 }
+        : { enabled: true, type: 'curvedCCW', roundness: 0.06 })
 
     edges.push({
       from: condition,
       to: severity,
       label,
-      width
-      // smooth
+      width,
+      smooth
     })
   })
 
