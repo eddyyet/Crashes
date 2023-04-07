@@ -5,6 +5,7 @@ import Stack from '@mui/material/Stack'
 import { BigChart } from './Chart'
 import Sunburst from './charts/Sunburst'
 import Network from './charts/Network'
+import Network2 from './charts/Network2'
 import HeatMap from './charts/HeatMap'
 import { BarInvolved, BarInjured } from './charts/Bar'
 import Sankey from './charts/Sankey'
@@ -32,6 +33,7 @@ export default function App () {
           <div>What are making the crashes deadly?</div>
           <Stack direction='row' spacing='1.5rem'>
             <Network year={yearRange} side={side} />
+            <Network2 year={yearRange} side={side} />
           </Stack>
         </BigChart>
         <BigChart height='500px'>

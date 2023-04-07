@@ -13,7 +13,7 @@ export default function Network (props) {
   const options = {
     nodes: {
       font: {
-        size: 12,
+        size: 10,
         color: '#CCCCCC',
         face: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif'
       },
@@ -81,6 +81,6 @@ export default function Network (props) {
   // }
 
   return (
-    <Graph key={version} graph={graph} options={options} /* events={events} */ style={{ height: '500px', width: '736px' }} />
+    <Graph key={version} graph={graph} options={options} /* events={events} */ style={{ height: '500px', width: '350px' }} />
   )
 }
