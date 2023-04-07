@@ -2,7 +2,7 @@ import React, { useMemo } from 'react'
 import Graph from 'react-graph-vis'
 import filter from '../utils/filter'
 import env2Data from '../data/crash_env2.json'
-import Networ2kData from '../utils/Network2Data'
+import Network2Data from '../utils/Network2Data'
 import { v4 } from 'uuid'
 
 export default function Network (props) {
