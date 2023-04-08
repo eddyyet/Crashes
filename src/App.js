@@ -27,8 +27,16 @@ export default function App () {
       />
       <Stack spacing={3} sx={{ width: '1200px' }}>
         <BigChart height='500px'>
-          <div className={'chartTitle'}>Why are the crashes?</div>
-          <Sunburst year={yearRange} side={side} />
+        <div className={'story'}>
+          <div>
+            <div className={'storyTitle'}>Traffic Crashes<br />In Chicago</div>
+            <div className={'storyContent'}>In 2021, there were 1,000 traffic crashes in Chicago. 100 people were killed and 1,000 were injured. The crashes were caused by...</div>
+          </div>
+          <div>
+            <span>XXX</span>
+            <Sunburst year={yearRange} side={side} />
+          </div>
+        </div>
         </BigChart>
         <BigChart>
           <div className={'chartTitle'}>What are making the crashes deadly?</div>

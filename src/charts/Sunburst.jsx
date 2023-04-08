@@ -12,6 +12,8 @@ export default function Sunburst (props) {
   return (
     <ResponsiveSunburst
       data={sunburstData}
+      height={400}
+      width={400}
       margin={{ top: 0, right: 0, bottom: 0, left: 0 }}
       id='cause'
       value='count'
