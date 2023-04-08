@@ -25,7 +25,7 @@ export default function App () {
         side={side}
         setSide={setSide}
       />
-      <Stack spacing={3} sx={{ width: '1200px' }}>
+      <Stack spacing='1.5rem' width='1200px'>
         <BigChart height='500px'>
         <div className={'story'}>
           <div>
