@@ -1,6 +1,7 @@
 import '../format.css'
 import React, { useState, useCallback } from 'react'
-import { AppBar, Toolbar, Slider, Select, MenuItem, Button, debounce } from '@mui/material'
+import { AppBar, Toolbar, Slider, Select, MenuItem, IconButton, debounce } from '@mui/material'
+import FilterAltOffIcon from '@mui/icons-material/FilterAltOff'
 
 const marks = [
   { value: 2018, label: '2018' },
@@ -63,18 +64,35 @@ export default function FilterControl (props) {
             marks={marks}
             value={yearRangeTemp}
             onChange={handleSliderChange}
-            valueLabelDisplay="auto"
             sx={
               {
-                '.MuiSlider-root': { padding: '0px!important', margin: '0rem' },
-                '.MuiSlider-marked': { padding: '0px!important', margin: '0rem' },
-                '.MuiSlider-sizeMedium': { padding: '0px!important', margin: '0rem' },
-                '& .MuiSlider-root': { padding: '0rem!important', margin: '0rem' },
-                '& .MuiSlider-marked': { padding: '0rem!important', margin: '0rem' },
-                '& .MuiSlider-sizeMedium': { padding: '0rem!important', margin: '0rem' },
-                '& .MuiSlider-thumb': { height: '0.75rem', width: '0.75rem', backgroundColor: '#CCCCCC' },
-                '& .MuiSlider-rail': { height: '0.25rem', backgroundColor: '#CCCCCC' },
-                '& .MuiSlider-markLabel': { color: '#CCCCCC', fontSize: '0.75rem' }
+                '.MuiSlider-root': { padding: '0px!important', margin: '0rem', color: '#999999' },
+                '.MuiSlider-marked': { padding: '0px!important', margin: '0rem', color: '#999999' },
+                '.MuiSlider-sizeMedium': { padding: '0px!important', margin: '0rem', color: '#999999' },
+                '& .MuiSlider-root': { padding: '0rem!important', margin: '0rem', color: '#999999' },
+                '& .MuiSlider-marked': { padding: '0rem!important', margin: '0rem', color: '#999999' },
+                '& .MuiSlider-sizeMedium': { padding: '0rem!important', margin: '0rem', color: '#999999' },
+                '& .MuiSlider-thumb': {
+                  height: '12px',
+                  width: '2px',
+                  borderRadius: 0,
+                  backgroundColor: '#CCCCCC',
+                  '&:focus, &:hover, &.Mui-active': {
+                    boxShadow: '0 0 0 4px rgba(204, 204, 204, 0.16)'
+                  }
+                },
+                '& .MuiSlider-track': { height: '2px', border: 'none', backgroundColor: '#CCCCCC' },
+                '& .MuiSlider-rail': { height: '2px', backgroundColor: '#999999' },
+                '& .MuiSlider-mark': {
+                  backgroundColor: '#666666',
+                  height: '8px',
+                  width: '1px',
+                  '&.MuiSlider-markActive': {
+                    // opacity: 1,
+                    backgroundColor: '#FFFFFF'
+                  }
+                },
+                '& .MuiSlider-markLabel': { color: '#999999', fontSize: '0.75rem' }
               }
             }
           />
@@ -93,9 +111,9 @@ export default function FilterControl (props) {
             ))}
           </Select>
         </span>
-        <Button onClick={handleReset}>
-          Reset
-        </Button>
+        <IconButton onClick={handleReset}>
+          <FilterAltOffIcon />
+        </IconButton>
       </Toolbar>
     </AppBar>
   )
