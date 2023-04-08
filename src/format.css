@@ -24,7 +24,7 @@ body {
 .filterBar {
   position: fixed;
   margin: 1rem auto;
-  height: 4rem;
+  padding: 0rem;
   border: 0.75px solid #999999;
   border-radius: 2rem; 
   background-color: rgba(80, 83, 85, 0.5);
@@ -47,6 +47,12 @@ body {
   font-size: 1rem;
   font-weight: 400;
   margin-right: 0.5rem;
+}
+
+.storyTitle {
+  font-size: 48px;
+  font-weight: 700;
+  font-family: 'Cambria', 'Georgia', serif;
 }
 
 .chartTitle {

@@ -66,6 +66,8 @@ export default function FilterControl (props) {
             onChange={handleSliderChange}
             sx={{
               width: '200px',
+              // '& .MuiSlider-root': { padding: '0' },
+              // '& .MuiSlider-sizeMedium': { padding: '0' },
               '& .MuiSlider-thumb': {
                 height: '12px',
                 width: '2px',
@@ -79,7 +81,7 @@ export default function FilterControl (props) {
                 }
               },
               '& .MuiSlider-track': { height: '2px', border: 'none', backgroundColor: '#CCCCCC' },
-              '& .MuiSlider-rail': { height: '2px', backgroundColor: '#999999' },
+              '& .MuiSlider-rail': { height: '2px', backgroundColor: '#999999', padding: '0' },
               '& .MuiSlider-mark': { height: '8px', width: '1px', backgroundColor: '#666666', '&.MuiSlider-markActive': { backgroundColor: '#FFFFFF' } },
               '& .MuiSlider-markLabel': { color: '#999999', fontSize: '0.75rem' }
             }}
