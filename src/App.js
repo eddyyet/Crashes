@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import FilterControl from './utils/FilterControl'
 import Stack from '@mui/material/Stack'
 import Divider from '@mui/material/Divider'
-import { BigChart } from './Chart'
+import { BigChart } from './chart'
 import Sunburst from './charts/Sunburst'
 import Network from './charts/Network'
 import Network2 from './charts/Network2'
@@ -66,7 +66,7 @@ export default function App () {
         <BigChart>
           <div>Crash by Side</div>
           <div>
-          <Choropleth style={{ height: '1000px' }}/>
+          <Choropleth style={{ height: '1000px' }} year={yearRange} side={side} />
           </div>
         </BigChart>
       </Stack>

@@ -1,0 +1,227 @@
+[
+  {
+    "CRASH_YEAR": 2018,
+    "SIDE": "Central",
+    "count": 12521
+  },
+  {
+    "CRASH_YEAR": 2018,
+    "SIDE": "Far North Side",
+    "count": 15109
+  },
+  {
+    "CRASH_YEAR": 2018,
+    "SIDE": "Far Southeast Side",
+    "count": 8924
+  },
+  {
+    "CRASH_YEAR": 2018,
+    "SIDE": "Far Southwest Side",
+    "count": 7312
+  },
+  {
+    "CRASH_YEAR": 2018,
+    "SIDE": "North Side",
+    "count": 10992
+  },
+  {
+    "CRASH_YEAR": 2018,
+    "SIDE": "Northwest Side",
+    "count": 10018
+  },
+  {
+    "CRASH_YEAR": 2018,
+    "SIDE": "South Side",
+    "count": 11289
+  },
+  {
+    "CRASH_YEAR": 2018,
+    "SIDE": "Southwest Side",
+    "count": 15755
+  },
+  {
+    "CRASH_YEAR": 2018,
+    "SIDE": "West Side",
+    "count": 26508
+  },
+  {
+    "CRASH_YEAR": 2019,
+    "SIDE": "Central",
+    "count": 12120
+  },
+  {
+    "CRASH_YEAR": 2019,
+    "SIDE": "Far North Side",
+    "count": 14826
+  },
+  {
+    "CRASH_YEAR": 2019,
+    "SIDE": "Far Southeast Side",
+    "count": 9142
+  },
+  {
+    "CRASH_YEAR": 2019,
+    "SIDE": "Far Southwest Side",
+    "count": 6953
+  },
+  {
+    "CRASH_YEAR": 2019,
+    "SIDE": "North Side",
+    "count": 10681
+  },
+  {
+    "CRASH_YEAR": 2019,
+    "SIDE": "Northwest Side",
+    "count": 10065
+  },
+  {
+    "CRASH_YEAR": 2019,
+    "SIDE": "South Side",
+    "count": 11188
+  },
+  {
+    "CRASH_YEAR": 2019,
+    "SIDE": "Southwest Side",
+    "count": 15665
+  },
+  {
+    "CRASH_YEAR": 2019,
+    "SIDE": "West Side",
+    "count": 26144
+  },
+  {
+    "CRASH_YEAR": 2020,
+    "SIDE": "Central",
+    "count": 6000
+  },
+  {
+    "CRASH_YEAR": 2020,
+    "SIDE": "Far North Side",
+    "count": 9681
+  },
+  {
+    "CRASH_YEAR": 2020,
+    "SIDE": "Far Southeast Side",
+    "count": 8834
+  },
+  {
+    "CRASH_YEAR": 2020,
+    "SIDE": "Far Southwest Side",
+    "count": 6816
+  },
+  {
+    "CRASH_YEAR": 2020,
+    "SIDE": "North Side",
+    "count": 6558
+  },
+  {
+    "CRASH_YEAR": 2020,
+    "SIDE": "Northwest Side",
+    "count": 7442
+  },
+  {
+    "CRASH_YEAR": 2020,
+    "SIDE": "South Side",
+    "count": 10561
+  },
+  {
+    "CRASH_YEAR": 2020,
+    "SIDE": "Southwest Side",
+    "count": 13898
+  },
+  {
+    "CRASH_YEAR": 2020,
+    "SIDE": "West Side",
+    "count": 21657
+  },
+  {
+    "CRASH_YEAR": 2021,
+    "SIDE": "Central",
+    "count": 8114
+  },
+  {
+    "CRASH_YEAR": 2021,
+    "SIDE": "Far North Side",
+    "count": 11722
+  },
+  {
+    "CRASH_YEAR": 2021,
+    "SIDE": "Far Southeast Side",
+    "count": 10083
+  },
+  {
+    "CRASH_YEAR": 2021,
+    "SIDE": "Far Southwest Side",
+    "count": 7721
+  },
+  {
+    "CRASH_YEAR": 2021,
+    "SIDE": "North Side",
+    "count": 8543
+  },
+  {
+    "CRASH_YEAR": 2021,
+    "SIDE": "Northwest Side",
+    "count": 8550
+  },
+  {
+    "CRASH_YEAR": 2021,
+    "SIDE": "South Side",
+    "count": 12330
+  },
+  {
+    "CRASH_YEAR": 2021,
+    "SIDE": "Southwest Side",
+    "count": 16435
+  },
+  {
+    "CRASH_YEAR": 2021,
+    "SIDE": "West Side",
+    "count": 24372
+  },
+  {
+    "CRASH_YEAR": 2022,
+    "SIDE": "Central",
+    "count": 9361
+  },
+  {
+    "CRASH_YEAR": 2022,
+    "SIDE": "Far North Side",
+    "count": 12767
+  },
+  {
+    "CRASH_YEAR": 2022,
+    "SIDE": "Far Southeast Side",
+    "count": 9118
+  },
+  {
+    "CRASH_YEAR": 2022,
+    "SIDE": "Far Southwest Side",
+    "count": 6943
+  },
+  {
+    "CRASH_YEAR": 2022,
+    "SIDE": "North Side",
+    "count": 9253
+  },
+  {
+    "CRASH_YEAR": 2022,
+    "SIDE": "Northwest Side",
+    "count": 8907
+  },
+  {
+    "CRASH_YEAR": 2022,
+    "SIDE": "South Side",
+    "count": 10997
+  },
+  {
+    "CRASH_YEAR": 2022,
+    "SIDE": "Southwest Side",
+    "count": 16107
+  },
+  {
+    "CRASH_YEAR": 2022,
+    "SIDE": "West Side",
+    "count": 23896
+  }
+]
