@@ -27,22 +27,22 @@ export default function App () {
       />
       <Stack spacing={3} sx={{ width: '1200px' }}>
         <BigChart height='500px'>
-          <div>Why are the crashes?</div>
+          <div className={'chartTitle'}>Why are the crashes?</div>
           <Sunburst year={yearRange} side={side} />
         </BigChart>
         <BigChart>
-          <div>What are making the crashes deadly?</div>
+          <div className={'chartTitle'}>What are making the crashes deadly?</div>
           <Stack direction='row' divider={<Divider orientation="vertical" sx={{ borderWidth: '0.5px', borderColor: '#383a3e' }} flexItem />} spacing='1.5rem'>
             <Network year={yearRange} side={side} />
             <Network2 year={yearRange} side={side} />
           </Stack>
         </BigChart>
         <BigChart height='500px'>
-          <div>When were the crashes?</div>
+          <div className={'chartTitle'}>When were the crashes?</div>
           <HeatMap year={yearRange} side={side} />
         </BigChart>
         <BigChart>
-          <div>How are the victims?</div>
+          <div className={'chartTitle'}>How are the victims?</div>
           <div className={'subtitle'}>Among the people involved...</div>
           <div style={{ height: '40px' }}>
             <BarInvolved year={yearRange} side={side} />
@@ -58,13 +58,13 @@ export default function App () {
             <Sankey year={yearRange} side={side} />
           </div>
         </BigChart> */}
-        <BigChart>
+        <BigChart className={'chartTitle'}>
           <div>How did it crash?</div>
           <Bubble year={yearRange} side={side} />
         </BigChart>
         <BigChart>6</BigChart>
         <BigChart>
-          <div>Crash by Side</div>
+          <div className={'chartTitle'}>Crash by Side</div>
           <div>
           <Choropleth style={{ height: '1000px' }}/>
           </div>
