@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import FilterControl from './utils/FilterControl'
 import Stack from '@mui/material/Stack'
 import Divider from '@mui/material/Divider'
-import { BigChart } from './Chart'
+import { BigChart, MediumChart, SmallChart } from './Chart'
 import Sunburst from './charts/Sunburst'
 import Network from './charts/Network'
 import Network2 from './charts/Network2'
@@ -66,11 +66,13 @@ export default function App () {
             <Sankey year={yearRange} side={side} />
           </div>
         </BigChart> */}
-        <BigChart>
-          <div className={'chartTitle'}>How did it crash?</div>
-          <Bubble year={yearRange} side={side} />
-        </BigChart>
-        <BigChart>6</BigChart>
+        <Stack direction='row' spacing='1.5rem'>
+          <MediumChart>
+            <div className={'chartTitle'}>How did it crash?</div>
+            <Bubble year={yearRange} side={side} />
+          </MediumChart>
+          <SmallChart>6</SmallChart>
+        </Stack>
         <BigChart>
           <div className={'chartTitle'}>Crash by Side</div>
           <div>
