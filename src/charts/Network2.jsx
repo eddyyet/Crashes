@@ -15,7 +15,9 @@ export default function Network (props) {
       font: {
         size: 10,
         color: '#CCCCCC',
-        face: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif'
+        face: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif',
+        multi: 'html',
+        bold: { mod: 'bold' }
       },
       chosen: {
         node: function (values, id, selected, hovering) {
