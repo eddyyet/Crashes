@@ -11,6 +11,7 @@ export default function HeatMap (props) {
   return (
     <ResponsiveHeatMap
       data={heatMapData}
+      sizeVariation={{ sizes: [0.1, 1] }}
       margin={{ top: 0, right: 0, bottom: 0, left: 50 }}
       forceSquare={true}
       // xInnerPadding={0.05}
@@ -55,9 +56,8 @@ export default function HeatMap (props) {
     fill={[{ id: 'lines' }]}
     borderWidth={1.5}
     borderColor={'#333333'}
-    animate={true}
-    hoverTarget="cell"
-    cellHoverOthersOpacity={0.25}
+    cellHoverOthersOpacity={0.5}
+    cellComponent="circle"
     />
   )
 }
