@@ -55,7 +55,7 @@ export default function FilterControl (props) {
   return (
     <AppBar elevation={0} color='transparent'>
       <Toolbar className={'filterBar'}>
-        <span style={{ width: '300px' }}>
+        <span className={'filter'} style={{ width: '300px' }}>
           <span className={'filterName'}>Year</span>
           <Slider
             min={2018}
@@ -66,9 +66,15 @@ export default function FilterControl (props) {
             valueLabelDisplay="auto"
             sx={
               {
+                '.MuiSlider-root': { padding: '0px!important', margin: '0rem' },
+                '.MuiSlider-marked': { padding: '0px!important', margin: '0rem' },
+                '.MuiSlider-sizeMedium': { padding: '0px!important', margin: '0rem' },
+                '& .MuiSlider-root': { padding: '0rem!important', margin: '0rem' },
+                '& .MuiSlider-marked': { padding: '0rem!important', margin: '0rem' },
+                '& .MuiSlider-sizeMedium': { padding: '0rem!important', margin: '0rem' },
                 '& .MuiSlider-thumb': { height: '0.75rem', width: '0.75rem', backgroundColor: '#CCCCCC' },
                 '& .MuiSlider-rail': { height: '0.25rem', backgroundColor: '#CCCCCC' },
-                '& .MuiSlider-markLabel': { color: '#CCCCCC', fontSize: '0.7rem' }
+                '& .MuiSlider-markLabel': { color: '#CCCCCC', fontSize: '0.75rem' }
               }
             }
           />
