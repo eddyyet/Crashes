@@ -26,13 +26,22 @@ body {
   margin: 1rem auto;
   height: 4rem;
   width: 800px;
-  border-radius: 2rem;
-  background-color: #444746;
+  border: 0.75px solid #999999;
+  border-radius: 2rem; 
+  background-color: rgba(68, 70, 71, 0.5);
+  backdrop-filter: blur(10px);
   margin-bottom: 1rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  color: #8e918f;
+}
+
+.filter {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-right: 1rem;
 }
 
 .filterName {
@@ -41,7 +50,25 @@ body {
   margin-right: 0.5rem;
 }
 
-.bigChartTitle {
-  font-size: 1.5rem;
-  font-weight: 400;
+.chartTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
 }
+
+/* div.vis-tooltip {
+  z-index: 5;
+  visibility: hidden;
+  position: absolute;
+  margin-left: 0.9rem;
+  margin-bottom: -1.2rem;
+  padding: 0.5rem;
+  max-width: 160px;
+  border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  border: 0.75px solid #999999;
+  font-size: 0.75rem;
+  color: #CCCCCC;
+  background-color: rgba(56, 58, 62, 0.7);
+  pointer-events: none;
+} */
