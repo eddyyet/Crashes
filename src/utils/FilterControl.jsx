@@ -56,7 +56,7 @@ export default function FilterControl (props) {
   return (
     <AppBar elevation={0} color='transparent'>
       <Toolbar className={'filterBar'}>
-        <span className={'filter'} style={{ width: '300px' }}>
+        <span className={'filter'}>
           <span className={'filterName'}>Year</span>
           <Slider
             min={2018}
@@ -65,16 +65,17 @@ export default function FilterControl (props) {
             value={yearRangeTemp}
             onChange={handleSliderChange}
             sx={{
+              width: '200px',
               '& .MuiSlider-thumb': {
                 height: '12px',
                 width: '2px',
                 borderRadius: 0,
                 backgroundColor: '#CCCCCC',
                 '&:focus, &:hover, &.Mui-active': {
-                  boxShadow: '0 0 0 4px rgba(204, 204, 204, 0.16)'
+                  boxShadow: '0 0 0 4px rgba(204, 204, 204, 0.1)'
                 },
                 '&.Mui-focusVisible': {
-                  boxShadow: '0 0 0 4px rgba(204, 204, 204, 0.16)'
+                  boxShadow: '0 0 0 4px rgba(204, 204, 204, 0.1)'
                 }
               },
               '& .MuiSlider-track': { height: '2px', border: 'none', backgroundColor: '#CCCCCC' },
@@ -84,12 +85,29 @@ export default function FilterControl (props) {
             }}
           />
         </span>
-        <span style={{ width: '200px' }}>
+        <span className={'filter'}>
           <span className={'filterName'}>Region</span>
           <Select
-              value={sideTemp}
-              onChange={handleSelectChange}
-              inputProps={{ 'aria-label': 'Select side' }}
+            value={sideTemp}
+            onChange={handleSelectChange}
+            inputProps={{ 'aria-label': 'Select side' }}
+            sx={{
+              '&. MuiOutlinedInput-root': { border: 'none' },
+              '&. MuiInputBase-root': { border: 'none' },
+              '&. MuiSelect-root': { border: 'none' },
+              '&.Mui-focused': { border: 'none' },
+              '& .MuiSelect-select': {
+                width: '150px',
+                padding: '12px',
+                borderRadius: '2rem',
+                backgroundColor: 'rgba(204, 204, 204, 0.1)',
+                fontSize: '1rem',
+                color: '#CCCCCC',
+                '&:focus': {
+                  backgroundColor: 'rgba(204, 204, 204, 0.2)'
+                }
+              }
+            }}
           >
             {sides.map((side) => (
               <MenuItem key={side} value={side}>
@@ -98,7 +116,7 @@ export default function FilterControl (props) {
             ))}
           </Select>
         </span>
-        <IconButton onClick={handleReset}>
+        <IconButton sx={{ color: '#CCCCCC', '&:hover, &:focus': { backgroundColor: 'rgba(204, 204, 204, 0.1)' } }} onClick={handleReset}>
           <FilterAltOffIcon />
         </IconButton>
       </Toolbar>
