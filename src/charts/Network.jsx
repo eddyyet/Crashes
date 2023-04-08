@@ -4,6 +4,9 @@ import filter from '../utils/filter'
 import envData from '../data/crash_env.json'
 import NetworkData from '../utils/NetworkData'
 import { v4 } from 'uuid'
+import CarLong150 from '../images/car_top_long_150.svg'
+import CarMid190 from '../images/car_top_mid_190.svg'
+import CarShort230 from '../images/car_top_short_230.svg'
 
 export default function Network (props) {
   const filteredData = filter(envData, props.year, props.side)
@@ -30,18 +33,28 @@ export default function Network (props) {
         }
       }
     },
-    edges: {
-      color: {
-        color: '#CCCCCC',
-        opacity: 0.08
+    groups: {
+      Lighting: {
+        font: { vadjust: -76 },
+        shape: 'image',
+        image: CarLong150,
+        size: 39
       },
+      Weather: {
+        font: { vadjust: -72 },
+        shape: 'image',
+        image: CarMid190,
+        size: 27
+      },
+      Roadway: {
+        font: { vadjust: -56 },
+        shape: 'image',
+        image: CarShort230,
+        size: 37
+      }
+    },
+    edges: {
       arrows: {
-        // middle: {
-        //   enabled: true,
-        //   src: Arrow,
-        //   scaleFactor: -1,
-        //   type: 'image'
-        // },
         to: {
           enabled: false
         }
@@ -52,10 +65,8 @@ export default function Network (props) {
         strokeWidth: 0,
         face: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif'
       },
+      hoverWidth: 0,
       chosen: {
-        edge: function (values, id, selected, hovering) {
-          values.opacity = 0.6
-        },
         label: function (values, id, selected, hovering) {
           values.size = 20
           values.color = '#FFFFFF'

@@ -1,20 +1,17 @@
 import '../format.css'
-import CarLong90 from '../images/car_top_long_90.svg'
-import CarMid210 from '../images/car_top_mid_210.svg'
-import CarShort320 from '../images/car_top_short_320.svg'
 
 export default function NetworkData (data) {
   const nodes = [
-    { id: 'Daylight', label: 'Daylight', font: { vadjust: -34 }, x: 40, y: 115, shape: 'image', image: CarLong90, size: 18 },
-    { id: 'Dawn', label: 'Dawn', font: { vadjust: -34 }, x: 40, y: 170, shape: 'image', image: CarLong90, size: 18 },
-    { id: 'Darkness', label: 'Darkness', font: { vadjust: -34 }, x: 40, y: 225, shape: 'image', image: CarLong90, size: 18 },
-    { id: 'Dusk', label: 'Dusk', font: { vadjust: -34 }, x: 40, y: 280, shape: 'image', image: CarLong90, size: 18 },
-    { id: 'Clear', label: 'Clear', font: { vadjust: -52 }, x: 152, y: 38, shape: 'image', image: CarMid210, size: 27 },
-    { id: 'Cloudy', label: 'Cloudy', font: { vadjust: -52 }, x: 208, y: 68, shape: 'image', image: CarMid210, size: 27 },
-    { id: 'Rain/Snow', label: 'Rain/Snow', font: { vadjust: -52 }, x: 264, y: 98, shape: 'image', image: CarMid210, size: 27 },
-    { id: 'Dry', label: 'Dry', font: { vadjust: -44 }, x: 168, y: 334, shape: 'image', image: CarShort320, size: 27 },
-    { id: 'Wet', label: 'Wet', font: { vadjust: -44 }, x: 216, y: 294, shape: 'image', image: CarShort320, size: 27 },
-    { id: 'Snow/Ice', label: 'Snow/Ice', font: { vadjust: -44 }, x: 264, y: 254, shape: 'image', image: CarShort320, size: 27 }
+    { id: 'Daylight', label: 'Daylight', x: 40, y: 115, group: 'Lighting' },
+    { id: 'Dawn', label: 'Dawn', x: 40, y: 170, group: 'Lighting' },
+    { id: 'Darkness', label: 'Darkness', x: 40, y: 225, group: 'Lighting' },
+    { id: 'Dusk', label: 'Dusk', x: 40, y: 280, group: 'Lighting' },
+    { id: 'Clear', label: 'Clear', x: 152, y: 38, group: 'Weather' },
+    { id: 'Cloudy', label: 'Cloudy', x: 208, y: 68, group: 'Weather' },
+    { id: 'Rain/Snow', label: 'Rain/Snow', x: 264, y: 98, group: 'Weather' },
+    { id: 'Dry', label: 'Dry', x: 168, y: 334, group: 'Roadway' },
+    { id: 'Wet', label: 'Wet', x: 216, y: 294, group: 'Roadway' },
+    { id: 'Snow/Ice', label: 'Snow/Ice', x: 264, y: 254, group: 'Roadway' }
   ]
 
   const totalCrashes = Object.values(data).reduce((acc, val) => acc + val, 0)
