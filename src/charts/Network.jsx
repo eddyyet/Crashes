@@ -66,10 +66,12 @@ export default function Network (props) {
         face: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif'
       },
       hoverWidth: 0,
+      shadow: { enabled: false },
       chosen: {
         label: function (values, id, selected, hovering) {
           values.size = 20
           values.color = '#FFFFFF'
+          values.strokeWidth = 0.5
         }
       }
     },
@@ -78,7 +80,8 @@ export default function Network (props) {
       dragView: false,
       zoomView: false,
       selectable: false,
-      hover: true
+      hover: true,
+      tooltipDelay: 0
     },
     layout: {
       hierarchical: false
@@ -86,12 +89,7 @@ export default function Network (props) {
     physics: false
   }
 
-  // events: {
-  //   //...
-  //   }
-  // }
-
   return (
-    <Graph key={version} graph={graph} options={options} /* events={events} */ style={{ height: '500px', width: '736px' }} />
+    <Graph key={version} graph={graph} options={options} style={{ height: '500px', width: '736px' }} />
   )
 }

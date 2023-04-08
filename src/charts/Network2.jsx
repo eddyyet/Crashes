@@ -78,7 +78,8 @@ export default function Network (props) {
       dragView: false,
       zoomView: false,
       selectable: false,
-      hover: true
+      hover: true,
+      tooltipDelay: 0
     },
     layout: {
       hierarchical: false
@@ -86,12 +87,7 @@ export default function Network (props) {
     physics: false
   }
 
-  // events: {
-  //   //...
-  //   }
-  // }
-
   return (
-    <Graph key={version} graph={graph} options={options} /* events={events} */ style={{ height: '500px', width: '350px' }} />
+    <Graph key={version} graph={graph} options={options} style={{ height: '500px', width: '350px' }} />
   )
 }
