@@ -58,8 +58,8 @@ export default function App () {
             <Sankey year={yearRange} side={side} />
           </div>
         </BigChart> */}
-        <BigChart className={'chartTitle'}>
-          <div>How did it crash?</div>
+        <BigChart>
+          <div className={'chartTitle'}>How did it crash?</div>
           <Bubble year={yearRange} side={side} />
         </BigChart>
         <BigChart>6</BigChart>

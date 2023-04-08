@@ -64,37 +64,24 @@ export default function FilterControl (props) {
             marks={marks}
             value={yearRangeTemp}
             onChange={handleSliderChange}
-            sx={
-              {
-                '.MuiSlider-root': { padding: '0px!important', margin: '0rem', color: '#999999' },
-                '.MuiSlider-marked': { padding: '0px!important', margin: '0rem', color: '#999999' },
-                '.MuiSlider-sizeMedium': { padding: '0px!important', margin: '0rem', color: '#999999' },
-                '& .MuiSlider-root': { padding: '0rem!important', margin: '0rem', color: '#999999' },
-                '& .MuiSlider-marked': { padding: '0rem!important', margin: '0rem', color: '#999999' },
-                '& .MuiSlider-sizeMedium': { padding: '0rem!important', margin: '0rem', color: '#999999' },
-                '& .MuiSlider-thumb': {
-                  height: '12px',
-                  width: '2px',
-                  borderRadius: 0,
-                  backgroundColor: '#CCCCCC',
-                  '&:focus, &:hover, &.Mui-active': {
-                    boxShadow: '0 0 0 4px rgba(204, 204, 204, 0.16)'
-                  }
+            sx={{
+              '& .MuiSlider-thumb': {
+                height: '12px',
+                width: '2px',
+                borderRadius: 0,
+                backgroundColor: '#CCCCCC',
+                '&:focus, &:hover, &.Mui-active': {
+                  boxShadow: '0 0 0 4px rgba(204, 204, 204, 0.16)'
                 },
-                '& .MuiSlider-track': { height: '2px', border: 'none', backgroundColor: '#CCCCCC' },
-                '& .MuiSlider-rail': { height: '2px', backgroundColor: '#999999' },
-                '& .MuiSlider-mark': {
-                  backgroundColor: '#666666',
-                  height: '8px',
-                  width: '1px',
-                  '&.MuiSlider-markActive': {
-                    // opacity: 1,
-                    backgroundColor: '#FFFFFF'
-                  }
-                },
-                '& .MuiSlider-markLabel': { color: '#999999', fontSize: '0.75rem' }
-              }
-            }
+                '&.Mui-focusVisible': {
+                  boxShadow: '0 0 0 4px rgba(204, 204, 204, 0.16)'
+                }
+              },
+              '& .MuiSlider-track': { height: '2px', border: 'none', backgroundColor: '#CCCCCC' },
+              '& .MuiSlider-rail': { height: '2px', backgroundColor: '#999999' },
+              '& .MuiSlider-mark': { height: '8px', width: '1px', backgroundColor: '#666666', '&.MuiSlider-markActive': { backgroundColor: '#FFFFFF' } },
+              '& .MuiSlider-markLabel': { color: '#999999', fontSize: '0.75rem' }
+            }}
           />
         </span>
         <span style={{ width: '200px' }}>
