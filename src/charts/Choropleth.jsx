@@ -118,8 +118,13 @@ function style (feature, filteredData) {
 export default function CrashBySide (props) {
   const [key, setKey] = useState(0)
   const filteredData = ChoroplethFilter(ChoroplethData, props.year, props.side)
+  /*
   useEffect(() => {
     setKey(Object.keys(filteredData).length)
+  }, [filteredData])
+  */
+  useEffect(() => {
+    setKey(prevKey => prevKey + 1)
   }, [filteredData])
   return (
     /*
