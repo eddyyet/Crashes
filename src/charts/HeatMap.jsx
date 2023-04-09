@@ -57,7 +57,49 @@ export default function HeatMap (props) {
     borderWidth={1.5}
     borderColor={'#333333'}
     cellHoverOthersOpacity={0.5}
-    cellComponent="circle"
+    cellShape={({
+      data,
+      value,
+      x,
+      y,
+      width,
+      height,
+      color,
+      opacity,
+      borderWidth,
+      borderColor,
+      enableLabel,
+      textColor,
+      onHover,
+      onLeave,
+      onClick,
+      theme
+    }) => {
+      return (
+        <g
+          transform={`translate(${x}, ${y})`}
+          onMouseEnter={onHover}
+          onMouseMove={onHover}
+          onMouseLeave={onLeave}
+          onClick={e => onClick(data, e)}
+          style={{ cursor: 'pointer' }}
+        >
+          {enableLabel && (
+            <text
+              alignmentBaseline="central"
+              textAnchor="middle"
+              style={{
+                ...theme.labels.text,
+                fill: textColor
+              }}
+              fillOpacity={opacity}
+            >
+              {value}
+            </text>
+          )}
+        </g>
+      )
+    }}
     />
   )
 }
