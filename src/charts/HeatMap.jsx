@@ -11,9 +11,13 @@ export default function HeatMap (props) {
   return (
     <ResponsiveHeatMap
       data={heatMapData}
-      sizeVariation={{ sizes: [0.1, 1] }}
       margin={{ top: 0, right: 0, bottom: 0, left: 50 }}
+      sizeVariation={{ sizes: [0.5, 2] }}
+      cellComponent='circle'
       forceSquare={true}
+      opacity={0.4}
+      activeOpacity={1}
+      inactiveOpacity={0.2}
       // xInnerPadding={0.05}
       // yInnerPadding={0.05}
       axisTop={null}
@@ -35,7 +39,7 @@ export default function HeatMap (props) {
       legendOffset: -40
     }}
     cellOpacity={1}
-    cellBorderColor={{ from: 'color', modifiers: [['darker', 0.4]] }}
+    // cellBorderColor={{ from: 'color', modifiers: [['darker', 0.4]] }}
     labelTextColor={{ from: 'color', modifiers: [['darker', 1.8]] }}
     defs={[
       {
@@ -53,53 +57,49 @@ export default function HeatMap (props) {
       scheme: 'purple_orange',
       divergeAt: 0.5
     }}
-    fill={[{ id: 'lines' }]}
-    borderWidth={1.5}
-    borderColor={'#333333'}
-    cellHoverOthersOpacity={0.5}
-    cellShape={({
-      data,
-      value,
-      x,
-      y,
-      width,
-      height,
-      color,
-      opacity,
-      borderWidth,
-      borderColor,
-      enableLabel,
-      textColor,
-      onHover,
-      onLeave,
-      onClick,
-      theme
-    }) => {
-      return (
-        <g
-          transform={`translate(${x}, ${y})`}
-          onMouseEnter={onHover}
-          onMouseMove={onHover}
-          onMouseLeave={onLeave}
-          onClick={e => onClick(data, e)}
-          style={{ cursor: 'pointer' }}
-        >
-          {enableLabel && (
-            <text
-              alignmentBaseline="central"
-              textAnchor="middle"
-              style={{
-                ...theme.labels.text,
-                fill: textColor
-              }}
-              fillOpacity={opacity}
-            >
-              {value}
-            </text>
-          )}
-        </g>
-      )
-    }}
+    // cellShape={({
+    //   data,
+    //   value,
+    //   x,
+    //   y,
+    //   width,
+    //   height,
+    //   color,
+    //   opacity,
+    //   borderWidth,
+    //   borderColor,
+    //   enableLabel,
+    //   textColor,
+    //   onHover,
+    //   onLeave,
+    //   onClick,
+    //   theme
+    // }) => {
+    //   return (
+    //     <g
+    //       transform={`translate(${x}, ${y})`}
+    //       onMouseEnter={onHover}
+    //       onMouseMove={onHover}
+    //       onMouseLeave={onLeave}
+    //       onClick={e => onClick(data, e)}
+    //       style={{ cursor: 'pointer' }}
+    //     >
+    //       {enableLabel && (
+    //         <text
+    //           alignmentBaseline="central"
+    //           textAnchor="middle"
+    //           style={{
+    //             ...theme.labels.text,
+    //             fill: textColor
+    //           }}
+    //           fillOpacity={opacity}
+    //         >
+    //           {value}
+    //         </text>
+    //       )}
+    //     </g>
+    //   )
+    // }}
     />
   )
 }
