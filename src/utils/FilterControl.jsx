@@ -85,7 +85,7 @@ export default function FilterControl (props) {
               '& .MuiSlider-track': { height: '2px', border: 'none', backgroundColor: '#CCCCCC' },
               '& .MuiSlider-rail': { height: '2px', backgroundColor: '#999999', padding: '0' },
               '& .MuiSlider-mark': { height: '8px', width: '1px', backgroundColor: '#666666', '&.MuiSlider-markActive': { backgroundColor: '#FFFFFF' } },
-              '& .MuiSlider-markLabel': { color: '#999999', fontSize: '0.75rem' }
+              '& .MuiSlider-markLabel': { color: 'rgba(255, 255, 255, 0.8)', fontSize: '0.75rem' }
             }}
           />
         </span>
