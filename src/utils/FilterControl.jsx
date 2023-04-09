@@ -49,7 +49,9 @@ export default function FilterControl (props) {
   )
 
   const handleReset = () => {
+    setYearRangeTemp([2018, 2022])
     props.setYearRange([2018, 2022])
+    setSideTemp('All')
     props.setSide('All')
   }
 
