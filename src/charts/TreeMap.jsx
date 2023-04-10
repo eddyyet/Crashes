@@ -39,13 +39,14 @@ export default function TreeMap (props) {
       identity='cause'
       value='count'
       orientLabel={false}
-      // nodeOpacity={ 0.1 }
+      nodeOpacity={1}
       colors={{ datum: 'data.color' }}
       label={labelStyle}
       labelSkipSize={20}
-      labelTextColor={{ from: 'color', modifiers: [['brighter', 2]] }}
+      labelTextColor={{ from: 'color', modifiers: [['opacity', 1]] }}
+      parentLabelTextColor={{ from: 'color', modifiers: [['opacity', 1]] }}
       borderWidth={1}
-      borderColor={{ from: 'data.color', modifiers: [['opacity', 0.5]] }}
+      borderColor={{ from: 'color', modifiers: [['opacity', 0.5]] }}
     />
   )
 }

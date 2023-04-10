@@ -66,7 +66,6 @@ export default function TreeMapData (data) {
     if (group) {
       const alpha = Math.min(count / total * 10, 1)
       const color = `hsla(${groupColor[group]}, ${alpha})`
-      console.log(color)
       groups.find((g) => g.cause === group).children.push({ cause, count, color })
     } else {
       const alpha = Math.min(count / total * 10, 1)
@@ -75,5 +74,9 @@ export default function TreeMapData (data) {
     }
   }
 
-  return { cause: 'root', children: [...groups, ...topLevelCauses], color: 'hsla(0, 0%, 20%, 70%)', total }
+  for (const group of groups) {
+    group.color = `hsla(${groupColor[group.cause]}, 0.5)`
+  }
+
+  return { cause: 'root', children: [...groups, ...topLevelCauses], color: 'hsla(0, 0%, 50%, 50%)', total }
 }
