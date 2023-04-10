@@ -23,10 +23,10 @@ export default function TreeMap (props) {
       identity='cause'
       value='count'
       colors={{ scheme: 'nivo' }}
-      label={ (node) => (<span width='100'>{node.id}<br />{node.value}</span>) }
+      label={ (node) => (<div><div width='2'>{node.id}</div><div>{node.value}</div></div>) }
       labelComponent={ props => <CustomLabel {...props} /> }
-      labelSkipSize={12}
-      labelTextColor={{ from: 'color', modifiers: [['darker', 1.2]] }}
+      labelSkipSize={20}
+      labelTextColor={{ from: 'color', modifiers: [['brighter', 1.5]] }}
       borderWidth={1}
       borderColor={{ from: 'color', modifiers: [['darker', 0.3]] }}
     />
