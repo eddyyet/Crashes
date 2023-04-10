@@ -73,6 +73,7 @@ body {
 .chartTitle {
   font-size: 1.25rem;
   font-weight: 700;
+  margin-bottom: 1.5rem;
 }
 
 .multiChart {
