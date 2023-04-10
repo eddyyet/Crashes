@@ -41,6 +41,14 @@ export default function TreeMapData (data) {
         'Weather']
   }
 
+  const groupColor = {
+    'Driver-related': '10, 100%, 60%',
+    Environment: '40, 100%, 60%',
+    'Vehicle condition': '342, 90%, 48%',
+    'Not applicable': '0, 0%, 50%',
+    'Unable to determine': '0, 0%, 70%'
+  }
+
   const groups = Object.keys(groupMap).map((group) => ({
     cause: group,
     children: []
@@ -48,18 +56,24 @@ export default function TreeMapData (data) {
 
   const topLevelCauses = []
 
-  let total = 0
+  // find the total of values
+  const total = Object.values(data).reduce((acc, val) => acc + val, 0)
+
   for (const cause in data) {
     const count = data[cause]
     const group = Object.keys(groupMap).find((key) => groupMap[key].includes(cause))
-    total += count
 
     if (group) {
-      groups.find((g) => g.cause === group).children.push({ cause, count })
+      const alpha = Math.min(count / total * 10, 1)
+      const color = `hsla(${groupColor[group]}, ${alpha})`
+      console.log(color)
+      groups.find((g) => g.cause === group).children.push({ cause, count, color })
     } else {
-      topLevelCauses.push({ cause, count })
+      const alpha = Math.min(count / total * 10, 1)
+      const color = `hsla(${groupColor[cause]}, ${alpha})`
+      topLevelCauses.push({ cause, count, color })
     }
   }
 
-  return { cause: 'root', children: [...groups, ...topLevelCauses], total }
+  return { cause: 'root', children: [...groups, ...topLevelCauses], color: 'hsla(0, 0%, 20%, 70%)', total }
 }
