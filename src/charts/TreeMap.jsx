@@ -1,5 +1,5 @@
 import React from 'react'
-import { ResponsiveTreeMap } from '@nivo/treemap'
+import { ResponsiveTreeMapHtml } from '@nivo/treemap'
 import filter from '../utils/filter'
 import TreeMapData from '../utils/TreeMapData'
 import causeData from '../data/crash_cause.json'
@@ -17,18 +17,18 @@ export default function TreeMap (props) {
   const treeMapData = TreeMapData(filteredData)
 
   return (
-    <ResponsiveTreeMap
+    <ResponsiveTreeMapHtml
       height={400}
       data={treeMapData}
       identity='cause'
       value='count'
       colors={{ scheme: 'nivo' }}
-      label={ node => (`${node.id}: ${node.formattedValue}`) }
+      label={ (node) => (<span width='100'>{node.id}<br />{node.value}</span>) }
+      labelComponent={ props => <CustomLabel {...props} /> }
       labelSkipSize={12}
       labelTextColor={{ from: 'color', modifiers: [['darker', 1.2]] }}
-      borderWidth={2}
+      borderWidth={1}
       borderColor={{ from: 'color', modifiers: [['darker', 0.3]] }}
-      renderLabel={props => <CustomLabel {...props} />}
     />
   )
 }
