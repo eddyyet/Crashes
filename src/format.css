@@ -75,6 +75,24 @@ body {
   font-weight: 700;
 }
 
+.multiChart {
+  display: flex;
+  flex-direction: row;
+}
+
+.fullChart {
+  width: 1136px;
+}
+
+.wideChart {
+  width: 718px;
+  margin-right: 1.5rem;
+}
+
+.narrowChart {
+  width: 330px;
+}
+
 /* div.vis-tooltip {
   z-index: 5;
   visibility: hidden;

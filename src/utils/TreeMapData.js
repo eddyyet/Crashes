@@ -1,4 +1,4 @@
-export default function SunburstData (data) {
+export default function TreeMapData (data) {
   const groupMap = {
     'Driver-related':
       ['Bicycle advancing legally on red light',

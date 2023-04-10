@@ -3,13 +3,12 @@ import React, { useState } from 'react'
 import FilterControl from './utils/FilterControl'
 import Stack from '@mui/material/Stack'
 import Divider from '@mui/material/Divider'
-import { BigChart, MediumChart, SmallChart } from './Chart'
-import Sunburst from './charts/Sunburst'
+import { Chart } from './Chart'
+import TreeMap from './charts/TreeMap'
 import Network from './charts/Network'
 import Network2 from './charts/Network2'
 import HeatMap from './charts/HeatMap'
 import { BarInvolved, BarInjured } from './charts/Bar'
-// import Sankey from './charts/Sankey'
 import Bubble from './charts/Bubble'
 import Choropleth from './charts/Choropleth'
 
@@ -26,7 +25,7 @@ export default function App () {
         setSide={setSide}
       />
       <Stack spacing='1.5rem' width='1200px'>
-        <BigChart height='500px'>
+        <Chart className={'fullChart'} height='500px'>
         <div className={'story'}>
           <div>
             <div className={'storyTitle'}>Traffic Crashes<br />In Chicago</div>
@@ -34,51 +33,62 @@ export default function App () {
           </div>
           <div>
             <span>XXX</span>
-            <Sunburst year={yearRange} side={side} />
+            <div>Map area</div>
           </div>
         </div>
-        </BigChart>
-        <BigChart>
+        </Chart>
+        <div className={'multiChart'}>
+          <Chart className={'wideChart'}>
+            <div className={'chartTitle'}>Why were the crashes?</div>
+            <TreeMap year={yearRange} side={side} />
+          </Chart>
+          <Stack direction='column' spacing='1.5rem'>
+            <Chart className={'narrowChart'}>
+              <div className={'chartTitle'}>Were the speed limits useful?</div>
+            </Chart>
+            <Chart className={'narrowChart'}>
+              <div className={'chartTitle'}>How are the victims?</div>
+              <div className={'subtitle'}>Among the people involved...</div>
+              <div style={{ height: '40px' }}>
+                <BarInvolved year={yearRange} side={side} />
+              </div>
+              <div className={'subtitle'}>Among the people injuried...</div>
+              <div style={{ height: '40px' }}>
+                <BarInjured year={yearRange} side={side} />
+              </div>
+            </Chart>
+          </Stack>
+        </div>
+        <Chart className={'fullChart'}>
           <div className={'chartTitle'}>What are making the crashes deadly?</div>
           <Stack direction='row' divider={<Divider orientation="vertical" sx={{ borderWidth: '0.5px', borderColor: '#383a3e' }} flexItem />} spacing='1.5rem'>
-            <Network year={yearRange} side={side} />
+            <div width='736px'>
+              <div>One factor xxx xxxx xxx xxxx xxx xxxx xxx xxxx xxx xxxx</div>
+              <Network year={yearRange} side={side} />
+            </div>
+            <div width='350px'>
+              <div>Two factor xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx</div>
             <Network2 year={yearRange} side={side} />
+            </div>
           </Stack>
-        </BigChart>
-        <BigChart height='500px'>
-          <div className={'chartTitle'}>When were the crashes?</div>
-          <HeatMap year={yearRange} side={side} />
-        </BigChart>
-        <BigChart>
-          <div className={'chartTitle'}>How are the victims?</div>
-          <div className={'subtitle'}>Among the people involved...</div>
-          <div style={{ height: '40px' }}>
-            <BarInvolved year={yearRange} side={side} />
-          </div>
-          <div className={'subtitle'}>Among the people injuried...</div>
-          <div style={{ height: '40px' }}>
-            <BarInjured year={yearRange} side={side} />
-          </div>
-        </BigChart>
-        {/* <BigChart>
-          <div>How was the scene?</div>
-          <div style={{ height: '300px' }}>
-            <Sankey year={yearRange} side={side} />
-          </div>
-        </BigChart> */}
-        <Stack direction='row' spacing='1.5rem'>
-          <MediumChart>
+        </Chart>
+        <div className={'multiChart'}>
+          <Chart className={'wideChart'}>
             <div className={'chartTitle'}>How did it crash?</div>
             <Bubble year={yearRange} side={side} />
-          </MediumChart>
-          <SmallChart>6</SmallChart>
-        </Stack>
-        <BigChart>
+          </Chart>
+          <Chart className={'narrowChart'}>6</Chart>
+        </div>
+        <Chart className={'fullChart'} height='500px'>
+          <div className={'chartTitle'}>When were the crashes?</div>
+          <HeatMap year={yearRange} side={side} />
+        </Chart>
+        <Chart>
           <div className={'chartTitle'}>Crash by Side</div>
           <div>
           <Choropleth style={{ height: '1000px' }} year={yearRange} side={side} />
           </div>
-        </BigChart>
+        </Chart>
       </Stack>
     </div>
   )
