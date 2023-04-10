@@ -1,14 +1,13 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback, useRef } from 'react'
 // import React, { useState, useRef, useMemo, useCallback } from 'react'
-// import { MapContainer, TileLayer } from 'react-leaflet'
 import { MapContainer, TileLayer, GeoJSON } from 'react-leaflet'
-// import L from 'leaflet'
 import * as d3 from 'd3'
 import side from '../data/chicago_side.json'
 import ChoroplethFilter from '../utils/ChoroplethData'
 import ChoroplethData from '../data/choropleth.json'
 import './Choropleth.css'
 import 'leaflet/dist/leaflet.css'
+import isEqual from 'lodash/isEqual'
 
 function MyComponent (props) {
   const { result } = props
@@ -117,7 +116,23 @@ function style (feature, filteredData) {
 
 export default function CrashBySide (props) {
   const [key, setKey] = useState(0)
-  const filteredData = ChoroplethFilter(ChoroplethData, props.year, props.side)
+  const [filteredData, setFilteredData] = useState([])
+  const prevFilteredDataRef = useRef()
+  useEffect(() => {
+    const newFilteredData = ChoroplethFilter(ChoroplethData, props.year, props.side)
+    if (!isEqual(prevFilteredDataRef.current, newFilteredData)) {
+      prevFilteredDataRef.current = newFilteredData
+      setFilteredData(newFilteredData)
+    }
+  }, [props.year, props.side])
+  // const filteredData = ChoroplethFilter(ChoroplethData, props.year, props.side)
+  const choroplethStyle = useCallback((feature) => {
+    return style(feature, filteredData)
+  }, [filteredData])
+
+  const choroplethOnEachFeature = useCallback((feature, layer) => {
+    onEachFeature(feature, layer, filteredData)
+  }, [filteredData])
   /*
   useEffect(() => {
     setKey(Object.keys(filteredData).length)
@@ -144,7 +159,7 @@ export default function CrashBySide (props) {
     <div style={{ height: '1000px' }}>
       <MapContainer center={[41.881832, -87.623177]} zoom={10} scrollWheelZoom={false}>
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-        <GeoJSON key={key} data={side} style={(feature) => style(feature, filteredData)} onEachFeature={(feature, layer) => onEachFeature(feature, layer, filteredData)} />
+        <GeoJSON key={key} data={side} style={choroplethStyle} onEachFeature={choroplethOnEachFeature} />
         </MapContainer>
     </div>
     </div>
