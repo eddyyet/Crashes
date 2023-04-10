@@ -48,9 +48,11 @@ export default function TreeMapData (data) {
 
   const topLevelCauses = []
 
+  let total = 0
   for (const cause in data) {
     const count = data[cause]
     const group = Object.keys(groupMap).find((key) => groupMap[key].includes(cause))
+    total += count
 
     if (group) {
       groups.find((g) => g.cause === group).children.push({ cause, count })
@@ -59,5 +61,5 @@ export default function TreeMapData (data) {
     }
   }
 
-  return { cause: 'root', children: [...groups, ...topLevelCauses] }
+  return { cause: 'root', children: [...groups, ...topLevelCauses], total }
 }
