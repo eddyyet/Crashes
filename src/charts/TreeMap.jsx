@@ -44,7 +44,7 @@ export default function TreeMap (props) {
       label={labelStyle}
       labelSkipSize={20}
       labelTextColor={{ from: 'color', modifiers: [['opacity', 1]] }}
-      parentLabelTextColor={{ from: 'color', modifiers: [['opacity', 1], ['brighter', 3]] }}
+      parentLabelTextColor={{ from: 'color', modifiers: [['opacity', 1], ['brighter', 1]] }}
       borderWidth={1}
       borderColor={{ from: 'color', modifiers: [['opacity', 0.5]] }}
     />

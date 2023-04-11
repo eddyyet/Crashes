@@ -119,6 +119,9 @@ body {
   width: 330px;
 }
 
+#Causes {
+  display: none;
+}
 /* div.vis-tooltip {
   z-index: 5;
   visibility: hidden;
