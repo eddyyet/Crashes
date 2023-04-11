@@ -44,9 +44,9 @@ export default function TreeMapData (data) {
   const groupColor = {
     'Driver-related': '10, 100%, 60%',
     Environment: '40, 70%, 40%',
-    'Vehicle condition': '25, 80%, 50%',
-    'Not applicable': '0, 0%, 50%',
-    'Unable to determine': '0, 0%, 70%'
+    'Vehicle condition': '25, 80%, 55%',
+    'Not applicable': '15, 10%, 55%',
+    'Unable to determine': '0, 0%, 55%'
   }
 
   const causeDict = {}
