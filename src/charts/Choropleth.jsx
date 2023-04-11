@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react'
 // import React, { useState, useRef, useMemo, useCallback } from 'react'
 import { MapContainer, TileLayer, GeoJSON } from 'react-leaflet'
-import * as d3 from 'd3'
+// import * as d3 from 'd3'
 import side from '../data/chicago_side.json'
 import ChoroplethFilter from '../utils/ChoroplethData'
 import ChoroplethData from '../data/choropleth.json'
@@ -21,51 +21,24 @@ function MyComponent (props) {
 
 function getColor (feature, selectedData) {
   // console.log(filteredData)
-  const numKeys = Object.keys(selectedData).length
-  if (numKeys === 1) {
-    // if there is only one key-value pair in filteredData
-    if (selectedData[feature.properties.id] !== undefined) {
-      // if the feature is present in the filteredData object
-      return '#d94701' // default color for single feature
-    } else {
-      return '#ccc' // color for unknown feature
+  // const numKeys = Object.keys(selectedData).length
+  // if there is only one key-value pair in filteredData
+  if (selectedData[feature.properties.id] !== undefined) {
+    const colorClasses = ['#ffffd4', '#fed98e', '#fe9929', '#cc4c02']
+    const value = selectedData[feature.properties.id]
+    let colorIndex = 0
+    if (value >= 50) {
+      colorIndex = 3
+    } else if (value >= 40) {
+      colorIndex = 2
+    } else if (value >= 30) {
+      colorIndex = 1
     }
+    return colorClasses[colorIndex]
+  } else {
+    return '#ccc' // color for unknown feature
   }
-
-  const colorClasses = ['#feedde', '#fdbe85', '#fd8d3c', '#d94701']
-  const value = selectedData[feature.properties.id]
-  const values = Object.values(selectedData)
-  const quantiles = d3.scaleQuantile()
-    .domain(values)
-    .range(colorClasses)
-    .quantiles()
-
-  let colorIndex = 0
-  if (value > quantiles[2]) {
-    colorIndex = 3
-  } else if (value > quantiles[1]) {
-    colorIndex = 2
-  } else if (value > quantiles[0]) {
-    colorIndex = 1
-  }
-  return colorClasses[colorIndex]
-
-  // return value > 50000 ? 'red' : 'green'
 }
-
-/*
-function onMouseOver (event, filteredData) {
-  const layer = event.target
-  layer.setStyle({
-    weight: 3,
-    color: '#666',
-    dashArray: '',
-    fillOpacity: 0.8,
-    fillColor: getColor(layer.feature, filteredData)
-  })
-  layer.bringToFront()
-}
-*/
 
 function onMouseOver (event, selectedData) {
   const layer = event.target
@@ -76,7 +49,7 @@ function onMouseOver (event, selectedData) {
       weight: 3,
       color: '#666',
       dashArray: '',
-      fillOpacity: 0.8,
+      fillOpacity: 1,
       fillColor: getColor(layer.feature, selectedData.crashesPer1000)
     })
     // console.log(selectedData)
@@ -107,7 +80,7 @@ function onMouseOut (event, selectedData) {
     opacity: 1,
     color: 'white',
     dashArray: '2',
-    fillOpacity: 0.7
+    fillOpacity: 0.85
   })
   layer.unbindTooltip()
 }
@@ -126,7 +99,7 @@ function style (feature, selectedData) {
     opacity: 1,
     color: 'white',
     dashArray: '2',
-    fillOpacity: 0.7
+    fillOpacity: 0.85
   }
 }
 
