@@ -70,14 +70,28 @@ function onMouseOver (event, filteredData) {
 function onMouseOver (event, selectedData) {
   const layer = event.target
   const featureId = layer.feature.properties.id
-  if (selectedData[featureId] !== undefined) {
+
+  if (selectedData.crashesPer1000[featureId] !== undefined) {
     layer.setStyle({
       weight: 3,
       color: '#666',
       dashArray: '',
       fillOpacity: 0.8,
-      fillColor: getColor(layer.feature, selectedData)
+      fillColor: getColor(layer.feature, selectedData.crashesPer1000)
     })
+    // console.log(selectedData)
+    const moCrashes = selectedData.crashes[featureId].toLocaleString()
+    const moPpl = selectedData.ppl[featureId].toLocaleString()
+    const moPer1000 = selectedData.crashesPer1000[featureId]
+    const moStartYear = selectedData.yearArray[0]
+    const moEndYear = selectedData.yearArray[1]
+    layer.bindTooltip(`
+      <div class="mo-tooltip">
+          <strong><span class="side-name">${featureId}</span></strong><br>
+          Population: ${moPpl}<br>
+          Total traffic crashes from ${moStartYear} to ${moEndYear}: ${moCrashes}<br>
+          Traffic crashes per 1000 citizens each year: ${moPer1000} 
+      </div>`).openTooltip()
     layer.bringToFront()
   }
 }
@@ -88,13 +102,14 @@ function onMouseOut (event, selectedData) {
   // event.target.setStyle(style(event.target.feature))
   event.target.bringToFront()
   event.target.setStyle({
-    fillColor: getColor(layer.feature, selectedData),
+    fillColor: getColor(layer.feature, selectedData.crashesPer1000),
     weight: 1,
     opacity: 1,
     color: 'white',
     dashArray: '2',
     fillOpacity: 0.7
   })
+  layer.unbindTooltip()
 }
 
 function onEachFeature (feature, layer, selectedData) {
@@ -106,7 +121,7 @@ function onEachFeature (feature, layer, selectedData) {
 
 function style (feature, selectedData) {
   return {
-    fillColor: getColor(feature, selectedData),
+    fillColor: getColor(feature, selectedData.crashesPer1000),
     weight: 1,
     opacity: 1,
     color: 'white',
@@ -151,16 +166,17 @@ export default function CrashBySide (props) {
     newData.crashes = crashes
     newData.ppl = ppl
     newData.crashesPer1000 = per1000
+    newData.yearArray = props.year
     setSideData(newData)
   }, [filteredData])
 
   const choroplethStyle = useCallback((feature) => {
-    return style(feature, sideData.crashesPer1000)
-  }, [sideData.crashesPer1000])
+    return style(feature, sideData)
+  }, [sideData])
 
   const choroplethOnEachFeature = useCallback((feature, layer) => {
-    onEachFeature(feature, layer, sideData.crashesPer1000)
-  }, [sideData.crashesPer1000])
+    onEachFeature(feature, layer, sideData)
+  }, [sideData])
   useEffect(() => {
     setKey(prevKey => prevKey + 1)
   }, [filteredData])

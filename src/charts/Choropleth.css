@@ -9,3 +9,15 @@ html, body {
   .leaflet-container {
     height: 800px;
   }
+
+  .mo-tooltip {
+    background-color: #fff;
+    border: #ccc;
+    padding: 2px;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .mo-tooltip .side-name {
+    font-size: 15px;
+  }
