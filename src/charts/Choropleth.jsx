@@ -19,11 +19,12 @@ function MyComponent (props) {
   )
 }
 
-function getColor (feature, filteredData) {
-  const numKeys = Object.keys(filteredData).length
+function getColor (feature, selectedData) {
+  // console.log(filteredData)
+  const numKeys = Object.keys(selectedData).length
   if (numKeys === 1) {
     // if there is only one key-value pair in filteredData
-    if (filteredData[feature.properties.id] !== undefined) {
+    if (selectedData[feature.properties.id] !== undefined) {
       // if the feature is present in the filteredData object
       return '#d94701' // default color for single feature
     } else {
@@ -32,8 +33,8 @@ function getColor (feature, filteredData) {
   }
 
   const colorClasses = ['#feedde', '#fdbe85', '#fd8d3c', '#d94701']
-  const value = filteredData[feature.properties.id]
-  const values = Object.values(filteredData)
+  const value = selectedData[feature.properties.id]
+  const values = Object.values(selectedData)
   const quantiles = d3.scaleQuantile()
     .domain(values)
     .range(colorClasses)
@@ -66,28 +67,28 @@ function onMouseOver (event, filteredData) {
 }
 */
 
-function onMouseOver (event, filteredData) {
+function onMouseOver (event, selectedData) {
   const layer = event.target
   const featureId = layer.feature.properties.id
-  if (filteredData[featureId] !== undefined) {
+  if (selectedData[featureId] !== undefined) {
     layer.setStyle({
       weight: 3,
       color: '#666',
       dashArray: '',
       fillOpacity: 0.8,
-      fillColor: getColor(layer.feature, filteredData)
+      fillColor: getColor(layer.feature, selectedData)
     })
     layer.bringToFront()
   }
 }
 
-function onMouseOut (event, filteredData) {
+function onMouseOut (event, selectedData) {
   const layer = event.target
   // layer.setStyle(style(layer.feature, filteredData))
   // event.target.setStyle(style(event.target.feature))
   event.target.bringToFront()
   event.target.setStyle({
-    fillColor: getColor(layer.feature, filteredData),
+    fillColor: getColor(layer.feature, selectedData),
     weight: 1,
     opacity: 1,
     color: 'white',
@@ -96,16 +97,16 @@ function onMouseOut (event, filteredData) {
   })
 }
 
-function onEachFeature (feature, layer, filteredData) {
+function onEachFeature (feature, layer, selectedData) {
   layer.on({
-    mouseover: (event) => onMouseOver(event, filteredData),
-    mouseout: (event) => onMouseOut(event, filteredData)
+    mouseover: (event) => onMouseOver(event, selectedData),
+    mouseout: (event) => onMouseOut(event, selectedData)
   })
 }
 
-function style (feature, filteredData) {
+function style (feature, selectedData) {
   return {
-    fillColor: getColor(feature, filteredData),
+    fillColor: getColor(feature, selectedData),
     weight: 1,
     opacity: 1,
     color: 'white',
@@ -117,6 +118,7 @@ function style (feature, filteredData) {
 export default function CrashBySide (props) {
   const [key, setKey] = useState(0)
   const [filteredData, setFilteredData] = useState([])
+  const [sideData, setSideData] = useState({ crashes: {}, ppl: {}, crashesPer1000: {} })
   const prevFilteredDataRef = useRef()
   useEffect(() => {
     const newFilteredData = ChoroplethFilter(ChoroplethData, props.year, props.side)
@@ -125,40 +127,50 @@ export default function CrashBySide (props) {
       setFilteredData(newFilteredData)
     }
   }, [props.year, props.side])
-  // const filteredData = ChoroplethFilter(ChoroplethData, props.year, props.side)
-  const choroplethStyle = useCallback((feature) => {
-    return style(feature, filteredData)
+  useEffect(() => {
+    const ppl = {
+      Central: 176574,
+      'Far North Side': 461735,
+      'Far Southeast Side': 208941,
+      'Far Southwest Side': 170882,
+      'North Side': 316578,
+      'Northwest Side': 274686,
+      'South Side': 272984,
+      'Southwest Side': 380255,
+      'West Side': 483753
+    }
+    const numYears = props.year[1] - props.year[0] + 1
+    const per1000 = {}
+    const crashes = {}
+    for (const side in filteredData) {
+      crashes[side] = filteredData[side]
+      const population = ppl[side]
+      per1000[side] = Math.round(((crashes[side] / numYears) / population) * 1000)
+    }
+    const newData = {}
+    newData.crashes = crashes
+    newData.ppl = ppl
+    newData.crashesPer1000 = per1000
+    setSideData(newData)
   }, [filteredData])
 
+  const choroplethStyle = useCallback((feature) => {
+    return style(feature, sideData.crashesPer1000)
+  }, [sideData.crashesPer1000])
+
   const choroplethOnEachFeature = useCallback((feature, layer) => {
-    onEachFeature(feature, layer, filteredData)
-  }, [filteredData])
-  /*
-  useEffect(() => {
-    setKey(Object.keys(filteredData).length)
-  }, [filteredData])
-  */
+    onEachFeature(feature, layer, sideData.crashesPer1000)
+  }, [sideData.crashesPer1000])
   useEffect(() => {
     setKey(prevKey => prevKey + 1)
   }, [filteredData])
   return (
-    /*
-    <div>
-      <div style={{ height: '1000px' }}>
-        <h1>Choropleth</h1>
-        <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
-          <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-          <GeoJSON data={side} />
-          </MapContainer>
-      </div>
-    </div>
-    */
     <div>
       <MyComponent result={filteredData} />
 
     <div style={{ height: '1000px' }}>
       <MapContainer center={[41.881832, -87.623177]} zoom={10} scrollWheelZoom={false}>
-        <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+        <TileLayer url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png' />
         <GeoJSON key={key} data={side} style={choroplethStyle} onEachFeature={choroplethOnEachFeature} />
         </MapContainer>
     </div>
