@@ -25,18 +25,19 @@ export default function App () {
         setSide={setSide}
       />
       <Stack spacing='1.5rem' width='1200px'>
-        <Chart className={'fullChart'} height='500px'>
-        <div className={'story'}>
-          <div>
+        <div className={'heading'}>
+          <div className={'story'}>
             <div className={'storyTitle'}>Traffic Crashes<br />In Chicago</div>
-            <div className={'storyContent'}>In 2021, there were 1,000 traffic crashes in Chicago. 100 people were killed and 1,000 were injured. The crashes were caused by...</div>
+            <div className={'storyContent'}>In 2021, there were 1,000 traffic crashes in Chicago. 100 people were killed and 1,000 were injured. The crashes were caused by... (just some random text, let&apos;s edit later)</div>
           </div>
-          <div>
-            <span>XXX</span>
-            <div>Map area</div>
+          <div className={'mapBase'}>
+            <div className={'mapArea'}>(Bound the map in this area?)</div>
+            <div className={'mapLegend'}>
+              <div>Map legend line 1</div>
+              <div>Map legend line 2</div>
+            </div>
           </div>
         </div>
-        </Chart>
         <div className={'multiChart'}>
           <Chart className={'wideChart'}>
             <div className={'chartTitle'}>Why were the crashes?</div>

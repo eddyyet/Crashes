@@ -49,10 +49,17 @@ body {
   margin-right: 0.5rem;
 }
 
-.story {
+.heading {
+  width: 1080px;
+  padding: 60px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+}
+
+.story {
+  width: 600px;
 }
 
 .storyTitle {
@@ -68,6 +75,24 @@ body {
   line-height: 1.5;
   font-size: 1.25rem;
   font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.mapBase {
+  width: 400px;
+}
+
+.mapArea {
+  height: 400px;
+  border-radius: 50px;
+  border: #999999 0.75px solid;
+  margin-bottom: 1rem;
+}
+
+.mapLegend {
+  font-size: 0.75rem;
+  font-weight: 200;
+  padding-left: 25px;
 }
 
 .chartTitle {
