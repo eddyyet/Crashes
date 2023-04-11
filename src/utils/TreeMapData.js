@@ -9,7 +9,7 @@ export default function TreeMapData (data) {
         'Disregarding traffic signals',
         'Disregarding yield sign',
         'Driving on wrong side/wrong way',
-        'Driving skills/knowledge/experience',
+        'Driving skills /knowledge /experience',
         'Exceeding authorized speed limit',
         'Exceeding safe speed for conditions',
         'Failing to reduce speed to avoid crash',
@@ -43,10 +43,23 @@ export default function TreeMapData (data) {
 
   const groupColor = {
     'Driver-related': '10, 100%, 60%',
-    Environment: '40, 100%, 60%',
-    'Vehicle condition': '342, 90%, 48%',
+    Environment: '40, 70%, 40%',
+    'Vehicle condition': '25, 80%, 50%',
     'Not applicable': '0, 0%, 50%',
     'Unable to determine': '0, 0%, 70%'
+  }
+
+  const causeDict = {}
+
+  for (const cause in data) {
+    const count = data[cause]
+    const [originalCause, injuryLevel] = cause.split('|')
+    const existingCount = causeDict[originalCause]?.count || 0
+    const existingInjuredCount = causeDict[originalCause]?.injuredCount || 0
+    causeDict[originalCause] = {
+      count: existingCount + count,
+      injuredCount: injuryLevel === 'Injured' ? existingInjuredCount + count : existingInjuredCount
+    }
   }
 
   const groups = Object.keys(groupMap).map((group) => ({
@@ -57,25 +70,36 @@ export default function TreeMapData (data) {
   const topLevelCauses = []
 
   // find the total of values
-  const total = Object.values(data).reduce((acc, val) => acc + val, 0)
+  const total = Object.values(causeDict).reduce((acc, val) => acc + val.count, 0)
 
-  for (const cause in data) {
-    const count = data[cause]
-    const group = Object.keys(groupMap).find((key) => groupMap[key].includes(cause))
+  for (const originalCause in causeDict) {
+    const { count, injuredCount } = causeDict[originalCause]
+    const group = Object.keys(groupMap).find((key) => groupMap[key].includes(originalCause))
+    const injuredPercentage = injuredCount / count
+    // const alpha = Math.max(Math.sqrt(injuredPercentage), 0.01)
+    const alpha = Math.max(Math.min(injuredPercentage * 2, 0.5) + Math.min(Math.max(injuredPercentage - 0.25, 0) * 0.4, 0.3), 0.01)
 
     if (group) {
-      const alpha = Math.min(count / total * 10, 1)
       const color = `hsla(${groupColor[group]}, ${alpha})`
-      groups.find((g) => g.cause === group).children.push({ cause, count, color })
+      groups.find((g) => g.cause === group).children.push({
+        cause: originalCause,
+        count,
+        color,
+        injuredPercentage
+      })
     } else {
-      const alpha = Math.min(count / total * 10, 1)
-      const color = `hsla(${groupColor[cause]}, ${alpha})`
-      topLevelCauses.push({ cause, count, color })
+      const color = `hsla(${groupColor[originalCause]}, ${alpha})`
+      topLevelCauses.push({
+        cause: originalCause,
+        count,
+        color,
+        injuredPercentage
+      })
     }
   }
 
   for (const group of groups) {
-    group.color = `hsla(${groupColor[group.cause]}, 0.5)`
+    group.color = `hsla(${groupColor[group.cause]}, 0.1)`
   }
 
   return { cause: 'TreeMapRoot', children: [...groups, ...topLevelCauses], total }
