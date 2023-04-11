@@ -63,11 +63,11 @@ export default function App () {
           <div className={'chartTitle'}>What are making the crashes deadly?</div>
           <Stack direction='row' divider={<Divider orientation="vertical" sx={{ borderWidth: '0.5px', borderColor: '#383a3e' }} flexItem />} spacing='1.5rem'>
             <div width='736px'>
-              <div>One factor xxx xxxx xxx xxxx xxx xxxx xxx xxxx xxx xxxx</div>
+              <div>The environment condition during a crash does affect the chances of injury...</div>
               <Network year={yearRange} side={side} />
             </div>
             <div width='350px'>
-              <div>Two factor xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx</div>
+              <div>When two environement factors occur together, the chances of injury in a crash will be..</div>
             <Network2 year={yearRange} side={side} />
             </div>
           </Stack>
