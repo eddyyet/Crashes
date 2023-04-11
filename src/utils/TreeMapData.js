@@ -78,5 +78,5 @@ export default function TreeMapData (data) {
     group.color = `hsla(${groupColor[group.cause]}, 0.5)`
   }
 
-  return { cause: 'Causes', children: [...groups, ...topLevelCauses], total }
+  return { cause: 'TreeMapRoot', children: [...groups, ...topLevelCauses], total }
 }
