@@ -8,6 +8,7 @@ import ChoroplethData from '../data/choropleth.json'
 import './Choropleth.css'
 import 'leaflet/dist/leaflet.css'
 import isEqual from 'lodash/isEqual'
+import Control from 'react-leaflet-custom-control'
 
 function MyComponent (props) {
   const { result } = props
@@ -103,6 +104,35 @@ function style (feature, selectedData) {
   }
 }
 
+export function Legend () {
+  const colorClasses = ['#ffffd4', '#fed98e', '#fe9929', '#cc4c02']
+  const ranges = ['<30', '30-39', '40-49', '>50']
+
+  const legendRows = ranges.map((range, i) => {
+    const legendRow = (
+      <tr key={range}>
+        <td><i style={{ background: colorClasses[i] }}></i></td>
+        <td className='leftCol'>{range}</td>
+      </tr>
+    )
+
+    return legendRow
+  })
+
+  return (
+    <Control position="bottomleft">
+      <div className="info legend">
+        <span id="legend-title">Traffic crashes per<br/>1000 citizens each year</span>
+        <table>
+          <tbody>
+            {legendRows}
+          </tbody>
+        </table>
+      </div>
+    </Control>
+  )
+}
+
 export default function CrashBySide (props) {
   const [key, setKey] = useState(0)
   const [filteredData, setFilteredData] = useState([])
@@ -160,6 +190,7 @@ export default function CrashBySide (props) {
     <div style={{ height: '1000px' }}>
       <MapContainer center={[41.881832, -87.623177]} zoom={10} scrollWheelZoom={false}>
         <TileLayer url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png' />
+        <Legend />
         <GeoJSON key={key} data={side} style={choroplethStyle} onEachFeature={choroplethOnEachFeature} />
         </MapContainer>
     </div>
