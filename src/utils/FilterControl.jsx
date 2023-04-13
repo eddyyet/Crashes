@@ -56,7 +56,7 @@ export default function FilterControl (props) {
   }
 
   return (
-    <AppBar elevation={0} color='transparent'>
+    <AppBar elevation={0} color='transparent' sx={{ backgroundColor: 'transparent' }}>
       <Toolbar className={'filterBar'}>
         <span className={'filter'}>
           <span className={'filterName'}>Year</span>
