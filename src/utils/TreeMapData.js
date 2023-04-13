@@ -52,13 +52,9 @@ export default function TreeMapData (data) {
   const causeDict = {}
 
   for (const cause in data) {
-    const count = data[cause]
-    const [originalCause, injuryLevel] = cause.split('|')
-    const existingCount = causeDict[originalCause]?.count || 0
-    const existingInjuredCount = causeDict[originalCause]?.injuredCount || 0
-    causeDict[originalCause] = {
-      count: existingCount + count,
-      injuredCount: injuryLevel === 'Injured' ? existingInjuredCount + count : existingInjuredCount
+    const [causeName, injuryLevel] = cause.split('|')
+    if (injuryLevel === 'Total') {
+      causeDict[causeName] = { count: data[causeName + '|Total'], injuredCount: data[causeName + '|Injured'] || 0 }
     }
   }
 
@@ -76,7 +72,7 @@ export default function TreeMapData (data) {
     const { count, injuredCount } = causeDict[originalCause]
     const group = Object.keys(groupMap).find((key) => groupMap[key].includes(originalCause))
     const injuredPercentage = injuredCount / count
-    const alpha = Math.min(injuredPercentage * 2, 0.8)
+    const alpha = Math.min(injuredPercentage * 2.5, 0.8)
     // const alpha = Math.max(Math.sqrt(injuredPercentage), 0.01)
     // const alpha = Math.max(Math.min(injuredPercentage * 2, 0.5) + Math.min(Math.max(injuredPercentage - 0.25, 0) * 0.4, 0.3), 0.01)
 
@@ -100,7 +96,7 @@ export default function TreeMapData (data) {
   }
 
   for (const group of groups) {
-    group.color = `hsla(${groupColor[group.cause]}, 0.05)`
+    group.color = `hsla(${groupColor[group.cause]}, 0.01)`
   }
 
   return { cause: 'TreeMapRoot', children: [...groups, ...topLevelCauses], total }
