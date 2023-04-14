@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react'
 // import React, { useState, useRef, useMemo, useCallback } from 'react'
-import { MapContainer, TileLayer, GeoJSON } from 'react-leaflet'
+import { MapContainer, TileLayer, GeoJSON, Marker, Popup } from 'react-leaflet'
 // import * as d3 from 'd3'
 import side from '../data/chicago_side.json'
 import ChoroplethFilter from '../utils/ChoroplethData'
@@ -9,6 +9,8 @@ import './Choropleth.css'
 import 'leaflet/dist/leaflet.css'
 import isEqual from 'lodash/isEqual'
 import Control from 'react-leaflet-custom-control'
+import L from 'leaflet'
+import cautionCrashIcon from '../images/choropleth_collision.png'
 
 function MyComponent (props) {
   const { result } = props
@@ -60,8 +62,8 @@ function onMouseOver (event, selectedData) {
     const moStartYear = selectedData.yearArray[0]
     const moEndYear = selectedData.yearArray[1]
     layer.bindTooltip(`
-      <div class="mo-tooltip">
-          <strong><span class="side-name">${featureId}</span></strong><br>
+      <div class='mo-tooltip'>
+          <strong><span class='side-name'>${featureId}</span></strong><br>
           Population: ${moPpl}<br>
           Total traffic crashes from ${moStartYear} to ${moEndYear}: ${moCrashes}<br>
           Traffic crashes per 1000 citizens each year: ${moPer1000} 
@@ -120,9 +122,9 @@ export function Legend () {
   })
 
   return (
-    <Control position="bottomleft">
-      <div className="info legend">
-        <span id="legend-title">Traffic crashes per<br/>1000 citizens each year</span>
+    <Control position='bottomleft'>
+      <div className='info legend'>
+        <span id='legend-title'>Traffic crashes per<br/>1000 citizens each year</span>
         <table>
           <tbody>
             {legendRows}
@@ -131,6 +133,24 @@ export function Legend () {
       </div>
     </Control>
   )
+}
+
+function getCoordinatesForSide (side) {
+  // Define the coordinates for each side of Chicago
+  console.log(side)
+  const sideCoordsMap = {
+    Central: [41.878, -87.626],
+    'Far North Side': [41.979, -87.7636],
+    'Far Southeast Side': [41.6969, -87.5842],
+    'Far Southwest Side': [41.7229, -87.6649],
+    'North Side': [41.931, -87.6767],
+    'Northwest Side': [41.9372, -87.7732],
+    'South Side': [41.7965, -87.6067],
+    'Southwest Side': [41.7925, -87.6959],
+    'West Side': [41.8701, -87.7049]
+  }
+
+  return sideCoordsMap[side]
 }
 
 export default function CrashBySide (props) {
@@ -173,6 +193,23 @@ export default function CrashBySide (props) {
     setSideData(newData)
   }, [filteredData])
 
+  const customIcon = new L.Icon({
+    iconUrl: cautionCrashIcon,
+    iconSize: [40, 40]
+  })
+
+  let maxCrashes = 0
+  let maxCrashesSide = ''
+
+  for (const side in sideData.crashes) {
+    if (sideData.crashes[side] > maxCrashes) {
+      maxCrashes = sideData.crashes[side]
+      maxCrashesSide = side
+    }
+  }
+
+  const sideCoords = getCoordinatesForSide(maxCrashesSide)
+
   const choroplethStyle = useCallback((feature) => {
     return style(feature, sideData)
   }, [sideData])
@@ -185,13 +222,20 @@ export default function CrashBySide (props) {
   }, [filteredData])
   return (
     <div>
-      <MyComponent result={filteredData} />
+      <MyComponent result={sideData} />
 
     <div style={{ height: '1000px' }}>
       <MapContainer center={[41.881832, -87.623177]} zoom={10} scrollWheelZoom={false}>
         <TileLayer url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png' />
         <Legend />
         <GeoJSON key={key} data={side} style={choroplethStyle} onEachFeature={choroplethOnEachFeature} />
+        {sideCoords && (
+        <Marker position={sideCoords} icon={customIcon}>
+          <Popup>
+            {maxCrashesSide} has the highest number of crashes with {maxCrashes} crashes.
+          </Popup>
+        </Marker>
+        )}
         </MapContainer>
     </div>
     </div>
