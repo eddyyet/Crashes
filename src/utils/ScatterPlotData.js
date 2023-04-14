@@ -1,4 +1,4 @@
-export default function SwarmPlotData (data) {
+export default function ScatterPlotData (data) {
   const nivoInputData = []
 
   // Group data by day and time
