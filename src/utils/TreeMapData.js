@@ -71,10 +71,10 @@ export default function TreeMapData (data) {
   for (const originalCause in causeDict) {
     const { count, injuredCount } = causeDict[originalCause]
     const group = Object.keys(groupMap).find((key) => groupMap[key].includes(originalCause))
-    const injuredPercentage = injuredCount / count
-    const alpha = Math.min(injuredPercentage * 2.5, 0.8)
-    // const alpha = Math.max(Math.sqrt(injuredPercentage), 0.01)
-    // const alpha = Math.max(Math.min(injuredPercentage * 2, 0.5) + Math.min(Math.max(injuredPercentage - 0.25, 0) * 0.4, 0.3), 0.01)
+    const injuryRate = injuredCount / count
+    const alpha = Math.min(injuryRate * 2.5, 0.8)
+    // const alpha = Math.max(Math.sqrt(injuryRate), 0.01)
+    // const alpha = Math.max(Math.min(injuryRate * 2, 0.5) + Math.min(Math.max(injuryRate - 0.25, 0) * 0.4, 0.3), 0.01)
 
     if (group) {
       const color = `hsla(${groupColor[group]}, ${alpha})`
@@ -82,7 +82,7 @@ export default function TreeMapData (data) {
         cause: originalCause,
         count,
         color,
-        injuredPercentage
+        injuryRate
       })
     } else {
       const color = `hsla(${groupColor[originalCause]}, ${alpha})`
@@ -90,7 +90,7 @@ export default function TreeMapData (data) {
         cause: originalCause,
         count,
         color,
-        injuredPercentage
+        injuryRate
       })
     }
   }

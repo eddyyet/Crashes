@@ -78,12 +78,11 @@ export default function App () {
             <div className={'chartTitle'}>How did it crash?</div>
             <Bubble year={yearRange} side={side} />
           </Chart>
-          <Chart className={'narrowChart'}>6</Chart>
+          <Chart className={'narrowChart'}>
+            <div className={'chartTitle'}>When were the crashes?</div>
+            <HeatMap year={yearRange} side={side} />
+          </Chart>
         </div>
-        <Chart className={'fullChart'} height='500px'>
-          <div className={'chartTitle'}>When were the crashes?</div>
-          <HeatMap year={yearRange} side={side} />
-        </Chart>
         <Chart>
           <div className={'chartTitle'}>Crash by Side</div>
           <div>
