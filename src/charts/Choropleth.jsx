@@ -21,7 +21,7 @@ function MyComponent (props) {
     </div>
   )
 }
-
+/*
 function getColor (feature, selectedData) {
   // console.log(filteredData)
   // const numKeys = Object.keys(selectedData).length
@@ -38,6 +38,27 @@ function getColor (feature, selectedData) {
       colorIndex = 1
     }
     return colorClasses[colorIndex]
+  } else {
+    return '#ccc' // color for unknown feature
+  }
+}
+*/
+
+function getColor (feature, selectedData) {
+  if (selectedData[feature.properties.id] !== undefined) {
+    const value = selectedData[feature.properties.id]
+
+    const hueStart = 60
+    const hueEnd = 16
+
+    const hue = hueStart - (hueStart - hueEnd) * ((value - 25) / 30)
+    const saturation = 100
+    const lightnessStart = 93
+    const lightnessEnd = 42
+
+    const lightness = lightnessStart - (lightnessStart - lightnessEnd) * ((value - 25) / 30)
+
+    return `hsl(${hue}, ${saturation}%, ${lightness}%)`
   } else {
     return '#ccc' // color for unknown feature
   }
