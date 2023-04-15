@@ -28,8 +28,6 @@ export default function ScatterPlot (props) {
       xScale={{ type: 'point' }}
       yScale={{ type: 'point' }}
       axisTop={{
-        orient: 'top',
-        tickValues: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
         tickSize: 0,
         tickPadding: 25,
         tickRotation: 0,
@@ -38,7 +36,6 @@ export default function ScatterPlot (props) {
         legendOffset: -50
       }}
       axisLeft={{
-        orient: 'left',
         tickSize: 0,
         tickPadding: 35,
         tickRotation: 0,

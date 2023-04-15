@@ -5,6 +5,7 @@ import Stack from '@mui/material/Stack'
 import Divider from '@mui/material/Divider'
 import { Chart } from './Chart'
 import TreeMap from './charts/TreeMap'
+import Line from './charts/Line'
 import Network from './charts/Network'
 import Network2 from './charts/Network2'
 import ScatterPlot from './charts/ScatterPlot'
@@ -46,6 +47,8 @@ export default function App () {
           <Stack direction='column' spacing='1.5rem'>
             <Chart className={'narrowChart'}>
               <div className={'chartTitle'}>Were the speed limits useful?</div>
+              <div>Speed description text...Speed description text...</div>
+              <Line year={yearRange} side={side} />
             </Chart>
             <Chart className={'narrowChart'}>
               <div className={'chartTitle'}>How are the victims?</div>
