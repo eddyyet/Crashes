@@ -4,39 +4,45 @@ import filter from '../utils/filter'
 import ScatterPlotData from '../utils/ScatterPlotData'
 import dayTimeData from '../data/crash_day_time.json'
 
-export default function SwarmPlot (props) {
+export default function ScatterPlot (props) {
   const filteredData = filter(dayTimeData, props.year, props.side)
   const scatterPlotData = ScatterPlotData(filteredData)
-  console.log(scatterPlotData.nivoInputData)
+  const maxCrashes = Math.max(...scatterPlotData.data.map(d => d.crashes))
+  const minCrashes = Math.min(...scatterPlotData.data.map(d => d.crashes))
 
   return (
     <ResponsiveScatterPlot
-      data={scatterPlotData.nivoInputData}
-      margin={{ top: 60, right: 140, bottom: 70, left: 90 }}
-      xScale={{ type: 'linear', min: 'auto', max: 'auto' }}
-      yScale={{ type: 'linear', min: 'auto', max: 'auto' }}
-      blendMode='multiply'
-      axisTop={null}
-      axisRight={null}
-      axisBottom={{
-        orient: 'bottom',
+      height={500}
+      width={350}
+      margin={{ top: 50, right: 50, bottom: 40, left: 40 }}
+      data={[scatterPlotData]}
+      nodeSize={{ key: 'data.crashes', values: [minCrashes, maxCrashes], sizes: [8, 30] }}
+      xScale={{ type: 'point' }}
+      yScale={{ type: 'linear', min: 0, max: 23, reverse: true }}
+      axisTop={{
+        orient: 'top',
+        tickValues: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
         tickSize: 5,
         tickPadding: 5,
         tickRotation: 0,
-        legend: 'Time of Day',
+        legend: 'Day',
         legendPosition: 'middle',
-        legendOffset: 46
+        legendOffset: -35
       }}
       axisLeft={{
         orient: 'left',
         tickSize: 5,
         tickPadding: 5,
         tickRotation: 0,
-        legend: 'Day of Week',
+        legend: 'Time (hour)',
         legendPosition: 'middle',
-        legendOffset: -60
+        legendOffset: -35
       }}
-      colors={{ scheme: 'nivo' }}
+      axisBottom={null}
+      enableGridX={false}
+      enableGridY={false}
+      theme={{ axis: { ticks: { text: { fill: '#999999' } }, legend: { text: { fill: '#999999' } } } }}
+      colors={{ datum: 'color' }}
     />
   )
 }

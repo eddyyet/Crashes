@@ -1,35 +1,41 @@
 export default function ScatterPlotData (data) {
-  const nivoInputData = []
+  const scatterPlotData = []
+  const combination = {}
 
   for (const key in data) {
     const [x, y, type] = key.split(',')
-    const index = nivoInputData.findIndex(item => item.x === x && item.y === y)
     const value = data[key]
+    const dayTime = `${x},${y}`
 
-    if (index >= 0) {
-      nivoInputData[index][type === 'Total' ? 'crashes' : 'injuryRate'] = value
+    if (!combination[dayTime]) {
+      combination[dayTime] = { x, y: +y, crashes: 0, injured: 0, injuryRate: 0, color: '' }
+    }
+
+    if (type === 'Total') {
+      combination[dayTime].crashes = value
     } else {
-      const item = {
-        x: Number(x),
-        y: Number(y),
-        crashes: 0,
-        injuryRate: 0
-      }
-      item[type === 'Total' ? 'crashes' : 'injuryRate'] = value
-      nivoInputData.push(item)
+      combination[dayTime].injured = value
     }
   }
 
-  console.log(nivoInputData)
+  for (const dayTime in combination) {
+    const injuryRateNum = combination[dayTime].injured / combination[dayTime].crashes
+    combination[dayTime].injuryRate = (injuryRateNum * 100).toFixed(1) + '%'
 
-  const maxCrashes = nivoInputData.reduce(
-    (max, obj) => (obj.crashes > max ? obj.crashes : max),
-    -Infinity
-  )
-  const minCrashes = nivoInputData.reduce(
-    (min, obj) => (obj.crashes < min ? obj.crashes : min),
-    Infinity
-  )
+    const saturation = (Math.min(Math.max(injuryRateNum - 0.09, 0) * 20, 0.9) * 100).toFixed(0) + '%'
+    combination[dayTime].color = `hsl(10, ${saturation}, 55%)`
 
-  return [{ id: 'ScatterPlotRoot', data: [nivoInputData] }, maxCrashes, minCrashes]
+    scatterPlotData.push(combination[dayTime])
+  }
+
+  // const maxCrashes = scatterPlotData.reduce(
+  //   (max, obj) => (obj.crashes > max ? obj.crashes : max),
+  //   -Infinity
+  // )
+  // const minCrashes = scatterPlotData.reduce(
+  //   (min, obj) => (obj.crashes < min ? obj.crashes : min),
+  //   Infinity
+  // )
+
+  return { data: scatterPlotData }
 }
