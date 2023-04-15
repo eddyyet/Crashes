@@ -7,7 +7,7 @@ import { Chart } from './Chart'
 import TreeMap from './charts/TreeMap'
 import Network from './charts/Network'
 import Network2 from './charts/Network2'
-import HeatMap from './charts/HeatMap'
+import ScatterPlot from './charts/ScatterPlot'
 import { BarInvolved, BarInjured } from './charts/Bar'
 import Bubble from './charts/Bubble'
 import Choropleth from './charts/Choropleth'
@@ -80,7 +80,7 @@ export default function App () {
           </Chart>
           <Chart className={'narrowChart'}>
             <div className={'chartTitle'}>When were the crashes?</div>
-            <HeatMap year={yearRange} side={side} />
+            <ScatterPlot year={yearRange} side={side} />
           </Chart>
         </div>
         <Chart>

@@ -1,43 +1,26 @@
 export default function ScatterPlotData (data) {
   const nivoInputData = []
 
-  // Group data by day and time
-  const groups = {}
   for (const key in data) {
-    const [day, time, type] = key.split(',')
+    const [x, y, type] = key.split(',')
+    const index = nivoInputData.findIndex(item => item.x === x && item.y === y)
     const value = data[key]
-    const groupKey = `${day},${time}`
 
-    if (!groups[groupKey]) {
-      groups[groupKey] = {
+    if (index >= 0) {
+      nivoInputData[index][type === 'Total' ? 'crashes' : 'injuryRate'] = value
+    } else {
+      const item = {
+        x: Number(x),
+        y: Number(y),
         crashes: 0,
-        injured: 0
+        injuryRate: 0
       }
-    }
-
-    if (type === 'Total') {
-      groups[groupKey].crashes = value
-    } else if (type === 'Injured') {
-      groups[groupKey].injured = value
+      item[type === 'Total' ? 'crashes' : 'injuryRate'] = value
+      nivoInputData.push(item)
     }
   }
 
-  // Transform groups into array of objects
-  for (const groupKey in groups) {
-    const [day, time] = groupKey.split(',')
-    const group = groups[groupKey]
-    const injuryRate = group.injured / group.crashes
-    const saturation = (Math.min(Math.max(injuryRate - 0.09, 0) * 20, 0.9) * 100).toFixed(0) + '%'
-    const color = `hsl(10, ${saturation}, 55%)`
-
-    nivoInputData.push({
-      day,
-      time: parseInt(time),
-      crashes: group.crashes,
-      injuryRate,
-      color
-    })
-  }
+  console.log(nivoInputData)
 
   const maxCrashes = nivoInputData.reduce(
     (max, obj) => (obj.crashes > max ? obj.crashes : max),
@@ -48,5 +31,5 @@ export default function ScatterPlotData (data) {
     Infinity
   )
 
-  return { nivoInputData, maxCrashes, minCrashes }
+  return [{ id: 'ScatterPlotRoot', data: [nivoInputData] }, maxCrashes, minCrashes]
 }
