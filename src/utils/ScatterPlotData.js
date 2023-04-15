@@ -35,8 +35,8 @@ export default function ScatterPlotData (data) {
     const injuryRateNum = combination[dayTime].injured / combination[dayTime].crashes
     combination[dayTime].injuryRate = (injuryRateNum * 100).toFixed(1) + '%'
 
-    const saturation = (Math.min(Math.max(injuryRateNum - 0.09, 0) * 20, 0.9) * 100).toFixed(0) + '%'
-    const alpha = (Math.min(Math.max(injuryRateNum - 0.09, 0) * 15 + 0.3, 1) * 100).toFixed(0) + '%'
+    const saturation = (Math.min(Math.max(injuryRateNum - 0.08, 0) * 15, 0.9) * 100).toFixed(0) + '%'
+    const alpha = (Math.min(Math.max(injuryRateNum - 0.08, 0) * 12 + 0.3, 1) * 100).toFixed(0) + '%'
     combination[dayTime].color = `hsla(10, ${saturation}, 40%, ${alpha})`
     combination[dayTime].toolTipColor = `hsla(10, ${saturation}, 65%, 100%)`
 
