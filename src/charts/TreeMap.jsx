@@ -8,7 +8,6 @@ export default function TreeMap (props) {
   const filteredData = filter(causeData, props.year, props.side)
   const treeMapData = TreeMapData(filteredData)
   const treeMapTotal = treeMapData.total
-  console.log(treeMapData)
 
   const customLabel = (node) => {
     const labelWidth = node.width
