@@ -1,16 +1,16 @@
 import React from 'react'
-import { ResponsiveSwarmPlot } from '@nivo/swarmplot'
+import { ResponsiveScatterPlot } from '@nivo/scatterplot'
 import filter from '../utils/filter'
-import SwarmPlotData from '../utils/SwarmPlotData'
+import ScatterPlotData from '../utils/ScatterPlotData'
 import dayTimeData from '../data/crash_day_time.json'
 
 export default function SwarmPlot (props) {
   const filteredData = filter(dayTimeData, props.year, props.side)
-  const swarmPlotData = SwarmPlotData(filteredData)
-  console.log(swarmPlotData.nivoInputData)
+  const scatterPlotData = ScatterPlotData(filteredData)
+  console.log(scatterPlotData.nivoInputData)
 
   return (
-    <ResponsiveSwarmPlot
+    <ResponsiveScatterPlot
       height={500}
       data={swarmPlotData.nivoInputData}
       groups={['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']}
