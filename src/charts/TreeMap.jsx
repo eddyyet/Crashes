@@ -8,6 +8,7 @@ export default function TreeMap (props) {
   const filteredData = filter(causeData, props.year, props.side)
   const treeMapData = TreeMapData(filteredData)
   const treeMapTotal = treeMapData.total
+  console.log(treeMapData)
 
   const customLabel = (node) => {
     const labelWidth = node.width
@@ -26,25 +27,21 @@ export default function TreeMap (props) {
       injuredSize = '5px'
     }
 
-    const injuredPercentageDisplay = (node.data.injuredPercentage * 100).toFixed(1) + '%'
-
     return (
       <div style={{ textAlign: 'center' }}>
         <div style={{ width: labelWidth, fontSize: causeSize, whiteSpace: 'normal' }}>{node.id}</div>
         <div style={{ fontSize: valueSize }}>{node.value}</div>
-        <div style={{ fontSize: injuredSize }}>Injured: {injuredPercentageDisplay}</div>
+        <div style={{ fontSize: injuredSize }}>Injured: {node.data.injuryRate}</div>
       </div>
     )
   }
 
   const customTooltip = (node) => {
-    const injuredPercentageDisplay = (node.node.data.injuredPercentage * 100).toFixed(1) + '%'
-
     return (
       <div className={'treeMapTooltip'}>
         <div>{node.node.id}</div>
         <div>Count: {node.node.value}</div>
-        <div>Injured: {injuredPercentageDisplay}</div>
+        <div>Injured: {node.node.data.injuryRate}</div>
       </div>
     )
   }

@@ -43,7 +43,7 @@ export default function TreeMapData (data) {
 
   const groupColor = {
     'Driver-related': '10, 100%, 60%',
-    Environment: '40, 70%, 40%',
+    Environment: '40, 70%, 45%',
     'Vehicle condition': '25, 80%, 55%',
     'Not applicable': '15, 10%, 55%',
     'Unable to determine': '0, 0%, 55%'
@@ -71,8 +71,9 @@ export default function TreeMapData (data) {
   for (const originalCause in causeDict) {
     const { count, injuredCount } = causeDict[originalCause]
     const group = Object.keys(groupMap).find((key) => groupMap[key].includes(originalCause))
-    const injuryRate = injuredCount / count
-    const alpha = Math.min(injuryRate * 2.5, 0.8)
+    const injuryRateNum = injuredCount / count
+    const injuryRate = (injuryRateNum * 100).toFixed(1) + '%'
+    const alpha = Math.min(injuryRateNum * 2.5, 0.8)
     // const alpha = Math.max(Math.sqrt(injuryRate), 0.01)
     // const alpha = Math.max(Math.min(injuryRate * 2, 0.5) + Math.min(Math.max(injuryRate - 0.25, 0) * 0.4, 0.3), 0.01)
 
