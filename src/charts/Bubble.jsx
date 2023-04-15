@@ -11,7 +11,7 @@ export default function Bubble (props) {
 
   return (
     <div style={{ position: 'relative' }}>
-      <img src={bgImage} alt="background" style={{ width: '100%', opacity: '25%' }} />
+      <img src={bgImage} alt="background" style={{ width: '100%', opacity: '40%' }} />
       {bubbleData.map((item, index) => (
         <div key={index}>
           <div style={{
