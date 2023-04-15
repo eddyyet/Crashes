@@ -37,7 +37,7 @@ export default function TreeMap (props) {
 
   const customTooltip = (node) => {
     return (
-      <div className={'treeMapTooltip'}>
+      <div className={'tooltip'}>
         <div>{node.node.id}</div>
         <div>Count: {node.node.value}</div>
         <div>Injured: {node.node.data.injuryRate}</div>

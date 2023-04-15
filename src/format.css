@@ -127,7 +127,7 @@ body {
   display: none;
 }
 
-.treeMapTooltip {
+.tooltip {
   border-radius: 0.5rem;
   -moz-border-radius: 0.5rem;
   -webkit-border-radius: 0.5rem;
