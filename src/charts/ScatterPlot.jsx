@@ -8,22 +8,21 @@ export default function ScatterPlot (props) {
   const filteredData = filter(dayTimeData, props.year, props.side)
   const scatterPlotData = ScatterPlotData(filteredData)
   const colors = scatterPlotData.map(d => d.data[0].color).flat()
-  console.log(scatterPlotData)
 
-  // function scale () {}
-  // scale.domain = () => {
-  //   const _colors = colors.slice(0)
-
-  //   return () => {
-  //     return _colors.shift()
-  //   }
-  // }
+  const customTooltip = (node) => {
+    return (
+      <div className='treeMapTooltip'>
+        <div><strong style={{ fontSize: '1.25rem' }}>{node.node.data.crashes}</strong> crashes on <strong>{node.node.data.toolTipDay}</strong> at around <strong>{node.node.data.toolTipTime}</strong>.</div>
+        <div><strong style={{ fontSize: '1.25rem', color: node.node.data.toolTipColor }}>{node.node.data.injuryRate}</strong> of the crashes caused injuries.</div>
+      </div>
+    )
+  }
 
   return (
     <ResponsiveScatterPlot
       height={550}
       width={350}
-      margin={{ top: 60, right: 50, bottom: 40, left: 68 }}
+      margin={{ top: 60, right: 60, bottom: 20, left: 68 }}
       data={scatterPlotData}
       nodeSize={{ key: 'data.radius', values: [0, 1], sizes: [0, 40] }}
       xScale={{ type: 'point' }}
@@ -40,7 +39,6 @@ export default function ScatterPlot (props) {
       }}
       axisLeft={{
         orient: 'left',
-        ticksValues: 1,
         tickSize: 0,
         tickPadding: 35,
         tickRotation: 0,
@@ -53,6 +51,8 @@ export default function ScatterPlot (props) {
       enableGridY={false}
       theme={{ axis: { ticks: { text: { fill: '#999999' } }, legend: { text: { fill: '#999999' } } } }}
       colors={colors}
+      blendMode='screen'
+      tooltip={customTooltip}
     />
   )
 }

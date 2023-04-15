@@ -2,6 +2,15 @@ export default function ScatterPlotData (data) {
   const nivoInputData = []
   const combination = {}
   let maxCrashes = -Infinity
+  const dayMap = {
+    Sun: 'Sunday',
+    Mon: 'Monday',
+    Tue: 'Tuesday',
+    Wed: 'Wednesday',
+    Thu: 'Thursday',
+    Fri: 'Friday',
+    Sat: 'Saturday'
+  }
 
   for (const key in data) {
     const [x, y, type] = key.split(',')
@@ -9,7 +18,7 @@ export default function ScatterPlotData (data) {
     const dayTime = `${x},${y}`
 
     if (!combination[dayTime]) {
-      combination[dayTime] = { x, y: +y, crashes: 0, injured: 0, injuryRate: 0, radius: 1, color: '' }
+      combination[dayTime] = { x, y: +y, crashes: 0, injured: 0, injuryRate: 0, radius: 1, color: '', toolTipColor: '', toolTipDay: '', toolTipTime: '' }
     }
 
     if (type === 'Total') {
@@ -27,8 +36,12 @@ export default function ScatterPlotData (data) {
     combination[dayTime].injuryRate = (injuryRateNum * 100).toFixed(1) + '%'
 
     const saturation = (Math.min(Math.max(injuryRateNum - 0.09, 0) * 20, 0.9) * 100).toFixed(0) + '%'
-    const alpha = (Math.min(Math.max(injuryRateNum - 0.09, 0) * 12 + 0.4, 1) * 100).toFixed(0) + '%'
-    combination[dayTime].color = `hsla(10, ${saturation}, 55%, ${alpha})`
+    const alpha = (Math.min(Math.max(injuryRateNum - 0.09, 0) * 15 + 0.3, 1) * 100).toFixed(0) + '%'
+    combination[dayTime].color = `hsla(10, ${saturation}, 40%, ${alpha})`
+    combination[dayTime].toolTipColor = `hsla(10, ${saturation}, 65%, 100%)`
+
+    combination[dayTime].toolTipDay = dayMap[combination[dayTime].x]
+    combination[dayTime].toolTipTime = combination[dayTime].y + ':00'
 
     nivoInputData.push({ id: dayTime, data: [combination[dayTime]] })
   }
