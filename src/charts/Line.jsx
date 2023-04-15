@@ -7,7 +7,6 @@ import speedData from '../data/crash_speed.json'
 export default function Line (props) {
   const filteredData = filter(speedData, props.year, props.side)
   const lineData = LineData(filteredData)
-  console.log(lineData)
 
   return (
     <ResponsiveLine
