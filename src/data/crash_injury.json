@@ -4,359 +4,404 @@
     "SIDE":"Central",
     "Fatal":6,
     "Incapacitating":229,
-    "Non-incapacitating":1077,
-    "Reported but not evident":540
+    "Moderate":1077,
+    "Not apparent":540,
+    "Not injured":27003
   },
   {
     "CRASH_YEAR":2018,
     "SIDE":"Far North Side",
     "Fatal":8,
     "Incapacitating":265,
-    "Non-incapacitating":1273,
-    "Reported but not evident":722
+    "Moderate":1273,
+    "Not apparent":722,
+    "Not injured":30042
   },
   {
     "CRASH_YEAR":2018,
     "SIDE":"Far Southeast Side",
     "Fatal":18,
     "Incapacitating":193,
-    "Non-incapacitating":1127,
-    "Reported but not evident":655
+    "Moderate":1127,
+    "Not apparent":655,
+    "Not injured":17485
   },
   {
     "CRASH_YEAR":2018,
     "SIDE":"Far Southwest Side",
     "Fatal":7,
     "Incapacitating":154,
-    "Non-incapacitating":824,
-    "Reported but not evident":571
+    "Moderate":824,
+    "Not apparent":571,
+    "Not injured":14568
   },
   {
     "CRASH_YEAR":2018,
     "SIDE":"North Side",
     "Fatal":8,
     "Incapacitating":198,
-    "Non-incapacitating":980,
-    "Reported but not evident":533
+    "Moderate":980,
+    "Not apparent":533,
+    "Not injured":22414
   },
   {
     "CRASH_YEAR":2018,
     "SIDE":"Northwest Side",
     "Fatal":2,
     "Incapacitating":201,
-    "Non-incapacitating":844,
-    "Reported but not evident":549
+    "Moderate":844,
+    "Not apparent":549,
+    "Not injured":19979
   },
   {
     "CRASH_YEAR":2018,
     "SIDE":"South Side",
     "Fatal":18,
     "Incapacitating":306,
-    "Non-incapacitating":1593,
-    "Reported but not evident":869
+    "Moderate":1593,
+    "Not apparent":869,
+    "Not injured":22553
   },
   {
     "CRASH_YEAR":2018,
     "SIDE":"Southwest Side",
     "Fatal":31,
     "Incapacitating":344,
-    "Non-incapacitating":1664,
-    "Reported but not evident":929
+    "Moderate":1664,
+    "Not apparent":929,
+    "Not injured":32611
   },
   {
     "CRASH_YEAR":2018,
     "SIDE":"West Side",
     "Fatal":29,
     "Incapacitating":589,
-    "Non-incapacitating":3196,
-    "Reported but not evident":1872
+    "Moderate":3196,
+    "Not apparent":1872,
+    "Not injured":55130
   },
   {
     "CRASH_YEAR":2019,
     "SIDE":"Central",
     "Fatal":9,
     "Incapacitating":193,
-    "Non-incapacitating":998,
-    "Reported but not evident":637
+    "Moderate":998,
+    "Not apparent":637,
+    "Not injured":26305
   },
   {
     "CRASH_YEAR":2019,
     "SIDE":"Far North Side",
     "Fatal":9,
     "Incapacitating":264,
-    "Non-incapacitating":1142,
-    "Reported but not evident":685
+    "Moderate":1142,
+    "Not apparent":685,
+    "Not injured":29122
   },
   {
     "CRASH_YEAR":2019,
     "SIDE":"Far Southeast Side",
     "Fatal":20,
     "Incapacitating":206,
-    "Non-incapacitating":1209,
-    "Reported but not evident":729
+    "Moderate":1209,
+    "Not apparent":729,
+    "Not injured":17614
   },
   {
     "CRASH_YEAR":2019,
     "SIDE":"Far Southwest Side",
     "Fatal":6,
     "Incapacitating":147,
-    "Non-incapacitating":758,
-    "Reported but not evident":561
+    "Moderate":758,
+    "Not apparent":561,
+    "Not injured":13921
   },
   {
     "CRASH_YEAR":2019,
     "SIDE":"North Side",
     "Fatal":3,
     "Incapacitating":166,
-    "Non-incapacitating":955,
-    "Reported but not evident":560
+    "Moderate":955,
+    "Not apparent":560,
+    "Not injured":21638
   },
   {
     "CRASH_YEAR":2019,
     "SIDE":"Northwest Side",
     "Fatal":9,
     "Incapacitating":212,
-    "Non-incapacitating":977,
-    "Reported but not evident":502
+    "Moderate":977,
+    "Not apparent":502,
+    "Not injured":20008
   },
   {
     "CRASH_YEAR":2019,
     "SIDE":"South Side",
     "Fatal":10,
     "Incapacitating":291,
-    "Non-incapacitating":1495,
-    "Reported but not evident":841
+    "Moderate":1495,
+    "Not apparent":841,
+    "Not injured":22422
   },
   {
     "CRASH_YEAR":2019,
     "SIDE":"Southwest Side",
     "Fatal":10,
     "Incapacitating":304,
-    "Non-incapacitating":1653,
-    "Reported but not evident":928
+    "Moderate":1653,
+    "Not apparent":928,
+    "Not injured":32748
   },
   {
     "CRASH_YEAR":2019,
     "SIDE":"West Side",
     "Fatal":30,
     "Incapacitating":583,
-    "Non-incapacitating":3369,
-    "Reported but not evident":1799
+    "Moderate":3369,
+    "Not apparent":1799,
+    "Not injured":54307
   },
   {
     "CRASH_YEAR":2020,
     "SIDE":"Central",
     "Fatal":7,
     "Incapacitating":125,
-    "Non-incapacitating":685,
-    "Reported but not evident":320
+    "Moderate":685,
+    "Not apparent":320,
+    "Not injured":12368
   },
   {
     "CRASH_YEAR":2020,
     "SIDE":"Far North Side",
     "Fatal":8,
     "Incapacitating":212,
-    "Non-incapacitating":904,
-    "Reported but not evident":513
+    "Moderate":904,
+    "Not apparent":513,
+    "Not injured":18162
   },
   {
     "CRASH_YEAR":2020,
     "SIDE":"Far Southeast Side",
     "Fatal":19,
     "Incapacitating":243,
-    "Non-incapacitating":1300,
-    "Reported but not evident":611
+    "Moderate":1300,
+    "Not apparent":611,
+    "Not injured":16632
   },
   {
     "CRASH_YEAR":2020,
     "SIDE":"Far Southwest Side",
     "Fatal":20,
     "Incapacitating":148,
-    "Non-incapacitating":866,
-    "Reported but not evident":522
+    "Moderate":866,
+    "Not apparent":522,
+    "Not injured":13103
   },
   {
     "CRASH_YEAR":2020,
     "SIDE":"North Side",
     "Fatal":6,
     "Incapacitating":147,
-    "Non-incapacitating":652,
-    "Reported but not evident":351
+    "Moderate":652,
+    "Not apparent":351,
+    "Not injured":12818
   },
   {
     "CRASH_YEAR":2020,
     "SIDE":"Northwest Side",
     "Fatal":4,
     "Incapacitating":134,
-    "Non-incapacitating":719,
-    "Reported but not evident":352
+    "Moderate":719,
+    "Not apparent":352,
+    "Not injured":14298
   },
   {
     "CRASH_YEAR":2020,
     "SIDE":"South Side",
     "Fatal":16,
     "Incapacitating":278,
-    "Non-incapacitating":1550,
-    "Reported but not evident":812
+    "Moderate":1550,
+    "Not apparent":812,
+    "Not injured":20343
   },
   {
     "CRASH_YEAR":2020,
     "SIDE":"Southwest Side",
     "Fatal":30,
     "Incapacitating":344,
-    "Non-incapacitating":1650,
-    "Reported but not evident":864
+    "Moderate":1650,
+    "Not apparent":864,
+    "Not injured":27371
   },
   {
     "CRASH_YEAR":2020,
     "SIDE":"West Side",
     "Fatal":35,
     "Incapacitating":591,
-    "Non-incapacitating":3079,
-    "Reported but not evident":1505
+    "Moderate":3079,
+    "Not apparent":1505,
+    "Not injured":42706
   },
   {
     "CRASH_YEAR":2021,
     "SIDE":"Central",
     "Fatal":8,
     "Incapacitating":160,
-    "Non-incapacitating":954,
-    "Reported but not evident":440
+    "Moderate":954,
+    "Not apparent":440,
+    "Not injured":16841
   },
   {
     "CRASH_YEAR":2021,
     "SIDE":"Far North Side",
     "Fatal":16,
     "Incapacitating":208,
-    "Non-incapacitating":1007,
-    "Reported but not evident":586
+    "Moderate":1007,
+    "Not apparent":586,
+    "Not injured":22166
   },
   {
     "CRASH_YEAR":2021,
     "SIDE":"Far Southeast Side",
     "Fatal":29,
     "Incapacitating":267,
-    "Non-incapacitating":1536,
-    "Reported but not evident":690
+    "Moderate":1536,
+    "Not apparent":690,
+    "Not injured":18545
   },
   {
     "CRASH_YEAR":2021,
     "SIDE":"Far Southwest Side",
     "Fatal":11,
     "Incapacitating":151,
-    "Non-incapacitating":927,
-    "Reported but not evident":571
+    "Moderate":927,
+    "Not apparent":571,
+    "Not injured":14946
   },
   {
     "CRASH_YEAR":2021,
     "SIDE":"North Side",
     "Fatal":9,
     "Incapacitating":156,
-    "Non-incapacitating":805,
-    "Reported but not evident":422
+    "Moderate":805,
+    "Not apparent":422,
+    "Not injured":16510
   },
   {
     "CRASH_YEAR":2021,
     "SIDE":"Northwest Side",
     "Fatal":6,
     "Incapacitating":152,
-    "Non-incapacitating":803,
-    "Reported but not evident":463
+    "Moderate":803,
+    "Not apparent":463,
+    "Not injured":16577
   },
   {
     "CRASH_YEAR":2021,
     "SIDE":"South Side",
     "Fatal":19,
     "Incapacitating":315,
-    "Non-incapacitating":1819,
-    "Reported but not evident":758
+    "Moderate":1819,
+    "Not apparent":758,
+    "Not injured":23586
   },
   {
     "CRASH_YEAR":2021,
     "SIDE":"Southwest Side",
     "Fatal":30,
     "Incapacitating":345,
-    "Non-incapacitating":1937,
-    "Reported but not evident":896
+    "Moderate":1937,
+    "Not apparent":896,
+    "Not injured":32446
   },
   {
     "CRASH_YEAR":2021,
     "SIDE":"West Side",
     "Fatal":36,
     "Incapacitating":602,
-    "Non-incapacitating":3287,
-    "Reported but not evident":1784
+    "Moderate":3287,
+    "Not apparent":1784,
+    "Not injured":47986
   },
   {
     "CRASH_YEAR":2022,
     "SIDE":"Central",
     "Fatal":4,
     "Incapacitating":192,
-    "Non-incapacitating":995,
-    "Reported but not evident":429
+    "Moderate":995,
+    "Not apparent":429,
+    "Not injured":19228
   },
   {
     "CRASH_YEAR":2022,
     "SIDE":"Far North Side",
     "Fatal":10,
     "Incapacitating":218,
-    "Non-incapacitating":1208,
-    "Reported but not evident":553
+    "Moderate":1208,
+    "Not apparent":553,
+    "Not injured":24134
   },
   {
     "CRASH_YEAR":2022,
     "SIDE":"Far Southeast Side",
     "Fatal":27,
     "Incapacitating":205,
-    "Non-incapacitating":1314,
-    "Reported but not evident":659
+    "Moderate":1314,
+    "Not apparent":659,
+    "Not injured":16932
   },
   {
     "CRASH_YEAR":2022,
     "SIDE":"Far Southwest Side",
     "Fatal":13,
     "Incapacitating":137,
-    "Non-incapacitating":782,
-    "Reported but not evident":553
+    "Moderate":782,
+    "Not apparent":553,
+    "Not injured":13306
   },
   {
     "CRASH_YEAR":2022,
     "SIDE":"North Side",
     "Fatal":4,
     "Incapacitating":149,
-    "Non-incapacitating":854,
-    "Reported but not evident":510
+    "Moderate":854,
+    "Not apparent":510,
+    "Not injured":18035
   },
   {
     "CRASH_YEAR":2022,
     "SIDE":"Northwest Side",
     "Fatal":13,
     "Incapacitating":175,
-    "Non-incapacitating":860,
-    "Reported but not evident":481
+    "Moderate":860,
+    "Not apparent":481,
+    "Not injured":17295
   },
   {
     "CRASH_YEAR":2022,
     "SIDE":"South Side",
     "Fatal":26,
     "Incapacitating":294,
-    "Non-incapacitating":1608,
-    "Reported but not evident":785
+    "Moderate":1608,
+    "Not apparent":785,
+    "Not injured":20877
   },
   {
     "CRASH_YEAR":2022,
     "SIDE":"Southwest Side",
     "Fatal":23,
     "Incapacitating":323,
-    "Non-incapacitating":1872,
-    "Reported but not evident":1064
+    "Moderate":1872,
+    "Not apparent":1064,
+    "Not injured":32013
   },
   {
     "CRASH_YEAR":2022,
     "SIDE":"West Side",
     "Fatal":32,
     "Incapacitating":567,
-    "Non-incapacitating":3127,
-    "Reported but not evident":1792
+    "Moderate":3127,
+    "Not apparent":1792,
+    "Not injured":47161
   }
 ]

@@ -6,11 +6,12 @@ import Divider from '@mui/material/Divider'
 import { Chart } from './Chart'
 import TreeMap from './charts/TreeMap'
 import Line from './charts/Line'
+// import { BarInvolved, BarInjured } from './charts/Bar'
+import Waffle from './charts/Waffle'
 import Network from './charts/Network'
 import Network2 from './charts/Network2'
-import ScatterPlot from './charts/ScatterPlot'
-import { BarInvolved, BarInjured } from './charts/Bar'
 import Bubble from './charts/Bubble'
+import ScatterPlot from './charts/ScatterPlot'
 import Choropleth from './charts/Choropleth'
 
 export default function App () {
@@ -52,14 +53,18 @@ export default function App () {
             </Chart>
             <Chart className={'narrowChart'}>
               <div className={'chartTitle'}>How are the victims?</div>
-              <div className={'subtitle'}>Among the people involved...</div>
+              <div>Victim description text...Victim description text...</div>
+              <div>TODO: Bar - injury (crashes)</div>
+              <div>TODO: Bar - injury (people)</div>
+              <Waffle year={yearRange} side={side} />
+              {/* <div className={'subtitle'}>Among the people involved...</div>
               <div style={{ height: '40px' }}>
                 <BarInvolved year={yearRange} side={side} />
               </div>
               <div className={'subtitle'}>Among the people injuried...</div>
               <div style={{ height: '40px' }}>
                 <BarInjured year={yearRange} side={side} />
-              </div>
+              </div> */}
             </Chart>
           </Stack>
         </div>
