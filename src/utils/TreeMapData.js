@@ -71,7 +71,7 @@ export default function TreeMapData (data) {
   for (const originalCause in causeDict) {
     const { count, injuredCount } = causeDict[originalCause]
     const group = Object.keys(groupMap).find((key) => groupMap[key].includes(originalCause))
-    const injuryRateNum = injuredCount / count
+    const injuryRateNum = count === 0 ? 0 : injuredCount / count
     const injuryRate = (injuryRateNum * 100).toFixed(1) + '%'
     const alpha = Math.min(injuryRateNum * 2.5, 0.8) + 0.01
 
