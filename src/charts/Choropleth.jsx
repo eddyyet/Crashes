@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react'
 // import React, { useState, useRef, useMemo, useCallback } from 'react'
-import { MapContainer, TileLayer, GeoJSON, Marker, Popup } from 'react-leaflet'
+import { MapContainer, TileLayer, GeoJSON, Marker, Popup, LayersControl } from 'react-leaflet'
 // import * as d3 from 'd3'
 import side from '../data/chicago_side.json'
+import community from '../data/chicago_community.json'
 import ChoroplethFilter from '../utils/ChoroplethData'
 import ChoroplethData from '../data/choropleth.json'
 import './Choropleth.css'
@@ -11,6 +12,7 @@ import isEqual from 'lodash/isEqual'
 import Control from 'react-leaflet-custom-control'
 import L from 'leaflet'
 import cautionCrashIcon from '../images/choropleth_collision.png'
+// import { area } from 'd3'
 
 function MyComponent (props) {
   const { result } = props
@@ -74,7 +76,7 @@ function onMouseOver (event, selectedData) {
       weight: 3,
       color: '#666',
       dashArray: '',
-      fillOpacity: 1,
+      fillOpacity: 0.85,
       fillColor: getColor(layer.feature, selectedData.crashesPer1000)
     })
     // console.log(selectedData)
@@ -96,17 +98,28 @@ function onMouseOver (event, selectedData) {
 
 function onMouseOut (event, selectedData) {
   const layer = event.target
-  // layer.setStyle(style(layer.feature, filteredData))
-  // event.target.setStyle(style(event.target.feature))
-  event.target.bringToFront()
-  event.target.setStyle({
-    fillColor: getColor(layer.feature, selectedData.crashesPer1000),
-    weight: 1,
-    opacity: 1,
-    color: 'white',
-    dashArray: '2',
-    fillOpacity: 0.85
-  })
+  const fillColor = getColor(layer.feature, selectedData.crashesPer1000)
+
+  if (fillColor === '#ccc') {
+    layer.setStyle({
+      fillColor: '#ccc',
+      weight: 1,
+      opacity: 1,
+      color: 'white',
+      dashArray: '2',
+      fillOpacity: 0.5
+    })
+  } else {
+    layer.setStyle({
+      fillColor,
+      weight: 2,
+      opacity: 1,
+      color: 'white',
+      fillOpacity: 0.85
+    })
+  }
+
+  layer.bringToFront()
   layer.unbindTooltip()
 }
 
@@ -117,14 +130,25 @@ function onEachFeature (feature, layer, selectedData) {
   })
 }
 
-function style (feature, selectedData) {
-  return {
-    fillColor: getColor(feature, selectedData.crashesPer1000),
-    weight: 1,
-    opacity: 1,
-    color: 'white',
-    dashArray: '2',
-    fillOpacity: 0.85
+function styleSide (feature, selectedData) {
+  const fillColor = getColor(feature, selectedData.crashesPer1000)
+  if (fillColor === '#ccc') {
+    return {
+      fillColor: '#ccc',
+      weight: 1,
+      opacity: 1,
+      color: 'white',
+      dashArray: '2',
+      fillOpacity: 0.5
+    }
+  } else {
+    return {
+      fillColor,
+      weight: 2,
+      opacity: 1,
+      color: 'white',
+      fillOpacity: 0.85
+    }
   }
 }
 
@@ -173,6 +197,16 @@ function getCoordinatesForSide (side) {
   }
 
   return sideCoordsMap[side]
+}
+
+function styleCommunity (feature) {
+  return {
+    fillColor: 'transparent',
+    fillOpacity: 0,
+    color: 'grey',
+    weight: 1,
+    stroke: true
+  }
 }
 
 export default function CrashBySide (props) {
@@ -234,8 +268,8 @@ export default function CrashBySide (props) {
 
   const sideCoords = getCoordinatesForSide(maxCrashesSide)
 
-  const choroplethStyle = useCallback((feature) => {
-    return style(feature, sideData)
+  const choroplethStyleSide = useCallback((feature) => {
+    return styleSide(feature, sideData)
   }, [sideData])
 
   const choroplethOnEachFeature = useCallback((feature, layer) => {
@@ -252,7 +286,14 @@ export default function CrashBySide (props) {
       <MapContainer center={[41.881832, -87.623177]} zoom={10} scrollWheelZoom={false}>
         <TileLayer url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png' />
         <Legend />
-        <GeoJSON key={key} data={side} style={choroplethStyle} onEachFeature={choroplethOnEachFeature} />
+        <LayersControl position="topright">
+          <LayersControl.Overlay checked name="Layer Community">
+            <GeoJSON data={community} style={styleCommunity} ref={(layer) => layer?.leafletElement?.bringToFront()} />
+          </LayersControl.Overlay>
+          <LayersControl.Overlay checked name="Layer Side">
+            <GeoJSON key={key} data={side} style={choroplethStyleSide} onEachFeature={choroplethOnEachFeature} ref={(layer) => layer?.leafletElement?.bringToBack()} />
+          </LayersControl.Overlay>
+        </LayersControl>
         {sideCoords && (
         <Marker position={sideCoords} icon={customIcon}>
           <Popup>
