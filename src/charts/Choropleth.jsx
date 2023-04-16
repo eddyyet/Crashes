@@ -11,8 +11,8 @@ import 'leaflet/dist/leaflet.css'
 import isEqual from 'lodash/isEqual'
 import Control from 'react-leaflet-custom-control'
 import L from 'leaflet'
-import cautionCrashIcon from '../images/choropleth_collision.png'
-// import { area } from 'd3'
+// import cautionCrashIcon from '../images/choropleth_collision.png'
+import exclaim from '../images/max_crash_community.png'
 
 function MyComponent (props) {
   const { result } = props
@@ -181,6 +181,7 @@ export function Legend () {
   )
 }
 
+/*
 function getCoordinatesForSide (side) {
   // Define the coordinates for each side of Chicago
   // console.log(side)
@@ -198,22 +199,82 @@ function getCoordinatesForSide (side) {
 
   return sideCoordsMap[side]
 }
+*/
 
 function styleCommunity (feature) {
   return {
     fillColor: 'transparent',
     fillOpacity: 0,
-    color: 'grey',
-    weight: 1,
-    stroke: true
+    color: '#5b5b5b',
+    weight: 0.5,
+    Opacity: 0.5
   }
 }
 
+function calculateCentroid (geojson) {
+  const bounds = new L.LatLngBounds()
+  let centroid = new L.LatLng(0, 0)
+  let area = 0
+
+  // Loop through each polygon in the GeoJSON object
+  geojson.coordinates.forEach(polygon => {
+    // Loop through each ring in the polygon (outer and inner rings)
+    polygon.forEach(ring => {
+      // Loop through each vertex in the ring
+      for (let i = 0; i < ring.length; i++) {
+        const vertex1 = new L.LatLng(ring[i][1], ring[i][0])
+        bounds.extend(vertex1)
+        if (i === 0) continue
+        const vertex2 = new L.LatLng(ring[i - 1][1], ring[i - 1][0])
+        const segmentArea = vertex1.lng * vertex2.lat - vertex2.lng * vertex1.lat
+        centroid = L.latLng(
+          centroid.lat + (vertex1.lat + vertex2.lat) * segmentArea,
+          centroid.lng + (vertex1.lng + vertex2.lng) * segmentArea
+        )
+        area += segmentArea
+      }
+    })
+  })
+
+  centroid = L.latLng(centroid.lat / (3 * area), centroid.lng / (3 * area))
+  return centroid
+}
+/*
+function createMarker (feature, latlng, sideData) {
+  console.log(sideData)
+  const { crashes, ppl, crashesPer1000, maxCrashesCommunity } = sideData
+  const communityName = feature.properties.community
+  if (maxCrashesCommunity[community]) {
+    // const multipolygon = feature.geometry
+    const matchingFeature = community.features.find(f => f.properties.community === communityName)
+    const centroid = calculateCentroid(matchingFeature.geometry)
+    const icon = L.icon({
+      iconUrl: cautionCrashIcon,
+      iconSize: [25, 41],
+      iconAnchor: [12, 41],
+      popupAnchor: [0, -41]
+    })
+    return (
+      <Marker position={[centroid[1], centroid[0]]} icon={icon}>
+        <Popup>
+          <b>{community}</b><br />
+          Crashes: {crashes[community]}<br />
+          Population: {ppl[community]}<br />
+          Crashes per 1000 people: {crashesPer1000[community]}
+        </Popup>
+      </Marker>
+    )
+  } else {
+    return null
+  }
+}
+*/
 export default function CrashBySide (props) {
   const [key, setKey] = useState(0)
   const [filteredData, setFilteredData] = useState([])
-  const [sideData, setSideData] = useState({ crashes: {}, ppl: {}, crashesPer1000: {} })
+  const [sideData, setSideData] = useState({ crashes: {}, ppl: {}, crashesPer1000: {}, maxCrashesCommunity: {} })
   const prevFilteredDataRef = useRef()
+  const [centroidCoords, setCentroidCoords] = useState([])
   useEffect(() => {
     const newFilteredData = ChoroplethFilter(ChoroplethData, props.year, props.side)
     if (!isEqual(prevFilteredDataRef.current, newFilteredData)) {
@@ -236,21 +297,33 @@ export default function CrashBySide (props) {
     const numYears = props.year[1] - props.year[0] + 1
     const per1000 = {}
     const crashes = {}
+    const maxCrashesCommunity = {}
     // console.log(filteredData)
     for (const side in filteredData.totalCount) {
       crashes[side] = filteredData.totalCount[side]
       const population = ppl[side]
       per1000[side] = Math.round(((crashes[side] / numYears) / population) * 1000)
     }
+    for (const side in filteredData.maxCount) {
+      // console.log(side)
+      maxCrashesCommunity[side] = filteredData.maxCount[side]
+    }
     const newData = {}
     newData.crashes = crashes
     newData.ppl = ppl
+    newData.maxCrashesCommunity = maxCrashesCommunity
     newData.crashesPer1000 = per1000
     newData.yearArray = props.year
     // console.log(newData)
     setSideData(newData)
   }, [filteredData])
 
+  const customIcon1 = new L.Icon({
+    iconUrl: exclaim,
+    iconSize: [15, 15]
+  })
+
+  /*
   const customIcon = new L.Icon({
     iconUrl: cautionCrashIcon,
     iconSize: [40, 40]
@@ -267,6 +340,7 @@ export default function CrashBySide (props) {
   }
 
   const sideCoords = getCoordinatesForSide(maxCrashesSide)
+  */
 
   const choroplethStyleSide = useCallback((feature) => {
     return styleSide(feature, sideData)
@@ -278,6 +352,33 @@ export default function CrashBySide (props) {
   useEffect(() => {
     setKey(prevKey => prevKey + 1)
   }, [filteredData])
+  /*
+  for (const communityName of Object.keys(sideData.maxCrashesCommunity)) {
+    // console.log(communityName)
+    const matchingFeature = community.features.find(f => f.properties.community === communityName)
+    if (matchingFeature) {
+      const multipolygon = matchingFeature.geometry
+      const centroid = calculateCentroid(multipolygon)
+      console.log(`Centroid for ${communityName}:`, centroid)
+    }
+  }
+  */
+  useEffect(() => {
+    const coords = []
+    // console.log('useEffect called')
+    for (const communityName of Object.keys(sideData.maxCrashesCommunity)) {
+      // console.log(communityName)
+      const matchingFeature = community.features.find(f => f.properties.community === communityName)
+      if (matchingFeature) {
+        const multipolygon = matchingFeature.geometry
+        const centroid = calculateCentroid(multipolygon)
+        coords.push({ communityName, centroid, maxCrashes: sideData.maxCrashesCommunity[communityName] })
+      }
+    }
+    // console.log(coords)
+    setCentroidCoords(coords)
+  }, [sideData])
+
   return (
     <div>
       <MyComponent result={sideData} />
@@ -294,6 +395,7 @@ export default function CrashBySide (props) {
             <GeoJSON key={key} data={side} style={choroplethStyleSide} onEachFeature={choroplethOnEachFeature} ref={(layer) => layer?.leafletElement?.bringToBack()} />
           </LayersControl.Overlay>
         </LayersControl>
+        {/*
         {sideCoords && (
         <Marker position={sideCoords} icon={customIcon}>
           <Popup>
@@ -301,6 +403,20 @@ export default function CrashBySide (props) {
           </Popup>
         </Marker>
         )}
+        */}
+        {centroidCoords.map(({ communityName, centroid, maxCrashes }, index) => {
+          // console.log(`Rendering marker for community: ${communityName}`)
+          return (
+            <Marker key={index} position={centroid} icon={customIcon1}>
+              <Popup>
+                <div>
+                  <strong>{communityName}</strong>
+                  <p>Max crashes: {maxCrashes.toLocaleString()}</p>
+                </div>
+              </Popup>
+            </Marker>
+          )
+        })}
         </MapContainer>
     </div>
     </div>
