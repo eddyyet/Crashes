@@ -22,7 +22,12 @@ body {
   margin-bottom: 0.8rem;
 }
 
+.MuiAppBar-root {
+  pointer-events: none;
+}
+
 .filterBar {
+  pointer-events: auto;
   position: fixed;
   margin: 1rem auto;
   padding: 0rem;
