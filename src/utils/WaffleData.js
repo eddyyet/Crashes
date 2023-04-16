@@ -4,10 +4,10 @@ export default function WaffleData (data) {
   const totalInjured = Object.keys(data).filter(key => key !== 'Not injured').reduce((acc, cur) => acc + data[cur], 0)
 
   const colorMap = {
-    Fatal: 'hsl(0, 100%, 40%)',
-    Incapacitating: 'hsl(10, 80%, 60%)',
-    Moderate: 'hsl(15, 65%, 70%)',
-    'Not apparent': 'hsl(25, 30%, 70%)'
+    Dead: 'hsl(0, 100%, 40%)',
+    Incapacitated: 'hsl(10, 80%, 60%)',
+    'Moderately injured': 'hsl(15, 65%, 70%)',
+    'Injured but not apparent': 'hsl(25, 30%, 70%)'
   }
 
   for (const key in data) {

@@ -41,9 +41,13 @@ export default function Line (props) {
 
   const customTooltip = (node) => (
     <div className={'tooltip'}>
-      <div><strong>{node.value}</strong> people got a <strong style={{ color: node.color, textTransform: 'lowercase' }}>{node.id}</strong> injury.</div>
-      <div>{node.percentageToInjured} of the people injured</div>
-      <div>{node.percentageToInvolved} of the people involved</div>
+      <div style={{ fontSize: '1.25rem', color: node.color }}><strong>{node.id}</strong></div>
+      <div><span style={{ fontSize: '1.25rem' }}>{node.value}</span><span> people</span></div>
+      <div style={{ marginTop: '0.5rem' }}>
+        equivalent to<br />
+        {node.percentageToInjured} of the people injured<br />
+        {node.percentageToInvolved} of the people involved
+      </div>
     </div>
   )
 

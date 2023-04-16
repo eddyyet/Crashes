@@ -25,7 +25,7 @@ export default function Bar (props) {
 
   return (
     <div>
-      <div style={{ height: '10px' }}>
+      <div style={{ height: '6px' }}>
       <ResponsiveBar
         height={6}
         margin={{ top: 0, right: 0, bottom: 0, left: 0 }}
