@@ -124,6 +124,21 @@ body {
   display: none;
 }
 
+.barFigure {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 0.75rem;
+}
+
+.barFigureInjured {
+  color: 'hsl(10, 100%, 60%)';
+}
+
+.barFigureNotInjured {
+  color: 'hsl(0, 0%, 40%)';
+}
+
 .tooltip {
   border-radius: 0.5rem;
   -moz-border-radius: 0.5rem;

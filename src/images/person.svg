@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 27.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 8 20" style="enable-background:new 0 0 8 20;" xml:space="preserve">
-<circle cx="4" cy="1.63" r="1.63"/>
-<path d="M2.27,3.71c-1.25,0-2.06,1.09-2.06,2.16v5.02c-0.01,0.98,1.4,0.98,1.4,0V6.27h0.35v12.74c-0.02,1.33,1.86,1.29,1.86,0v-7.43
-	h0.3v7.43c0.02,1.29,1.91,1.33,1.91,0V6.27h0.35v4.62c-0.02,0.99,1.39,0.99,1.4,0V5.87C7.77,4.8,6.93,3.73,5.68,3.71H2.27z"/>
+	 viewBox="0 0 9 21" style="enable-background:new 0 0 9 21;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0;}
+</style>
+<rect class="st0" width="9" height="21"/>
+<circle cx="4.5" cy="2.13" r="1.63"/>
+<path d="M2.77,4.21c-1.25,0-2.06,1.09-2.06,2.16v5.02c-0.01,0.98,1.4,0.98,1.4,0V6.77h0.35v12.74c-0.02,1.33,1.86,1.29,1.86,0v-7.43
+	h0.3v7.43c0.02,1.29,1.91,1.33,1.91,0V6.77h0.35v4.62c-0.02,0.99,1.39,0.99,1.4,0V6.37C8.27,5.3,7.43,4.23,6.18,4.21H2.77z"/>
 </svg>

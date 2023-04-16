@@ -25,12 +25,12 @@ export default function Line (props) {
     onClick
   }) => (
     <Person
-      height={ size }
-      x={x + size / 2 - 160}
-      y={y}
-      fill={fill || color}
-      strokeWidth={borderWidth}
-      stroke={borderColor}
+      height={ size * 2.5 }
+      x={ x - 159 }
+      y={ y + Math.floor(position / 25) * 5 - 19 }
+      fill={color}
+      strokeWidth={0.25}
+      stroke={'#28292a'}
       opacity={opacity}
       onMouseEnter={onHover}
       onMouseMove={onHover}
@@ -42,11 +42,11 @@ export default function Line (props) {
   return (
     <ResponsiveWaffle
       height={90}
-      width={320}
-      total={waffleData.total}
+      width={330}
+      total={waffleData.totalInjured}
       data={waffleData.nivoInputData}
-      rows={5}
-      columns={20}
+      rows={4}
+      columns={25}
       colors={{ datum: 'color' }}
       fillDirection='top'
       cellComponent={CustomCell}
