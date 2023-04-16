@@ -39,6 +39,14 @@ export default function Line (props) {
     />
   )
 
+  const customTooltip = (node) => (
+    <div className={'tooltip'}>
+      <div><strong>{node.value}</strong> people got a <strong style={{ color: node.color, textTransform: 'lowercase' }}>{node.id}</strong> injury.</div>
+      <div>{node.percentageToInjured} of the people injured</div>
+      <div>{node.percentageToInvolved} of the people involved</div>
+    </div>
+  )
+
   return (
     <ResponsiveWaffle
       height={90}
@@ -50,6 +58,8 @@ export default function Line (props) {
       colors={{ datum: 'color' }}
       fillDirection='top'
       cellComponent={CustomCell}
+      tooltip={customTooltip}
+      theme={{ tooltip: { container: null } }}
     />
   )
 }

@@ -7,7 +7,7 @@ export default function WaffleData (data) {
     Fatal: 'hsl(0, 100%, 40%)',
     Incapacitating: 'hsl(10, 80%, 60%)',
     Moderate: 'hsl(15, 65%, 70%)',
-    'Not apparent': 'hsl(25, 20%, 70%)'
+    'Not apparent': 'hsl(25, 30%, 70%)'
   }
 
   for (const key in data) {

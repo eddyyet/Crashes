@@ -43,17 +43,18 @@ export default function App () {
         <div className={'multiChart'}>
           <Chart className={'wideChart'}>
             <div className={'chartTitle'}>Why were the crashes?</div>
+            <div className={'chartDescription'}>Cause description text...Cause description text...</div>
             <TreeMap year={yearRange} side={side} />
           </Chart>
           <Stack direction='column' spacing='1.5rem'>
             <Chart className={'narrowChart'}>
               <div className={'chartTitle'}>Were the speed limits useful?</div>
-              <div>Speed description text...Speed description text...</div>
+              <div className={'chartDescription'}>Speed description text...Speed description text...</div>
               <Line year={yearRange} side={side} />
             </Chart>
             <Chart className={'narrowChart'}>
               <div className={'chartTitle'}>How are the victims?</div>
-              <div>Victim description text...Victim description text...</div>
+              <div className={'chartDescription'}>Victim description text...Victim description text...</div>
               <Bar year={yearRange} side={side} />
               <div className={'subtitle'}>Among the people injuried...</div>
               <div style={{ height: '86px' }}><Waffle year={yearRange} side={side} /></div>
@@ -64,11 +65,11 @@ export default function App () {
           <div className={'chartTitle'}>What are making the crashes deadly?</div>
           <Stack direction='row' divider={<Divider orientation="vertical" sx={{ borderWidth: '0.5px', borderColor: '#383a3e' }} flexItem />} spacing='1.5rem'>
             <div width='736px'>
-              <div>The environment condition during a crash does affect the chances of injury...</div>
+              <div className={'chartDescription'}>The environment condition during a crash does affect the chances of injury...</div>
               <Network year={yearRange} side={side} />
             </div>
             <div width='350px'>
-              <div>When two environement factors occur together, the chances of injury in a crash will be..</div>
+              <div className={'chartDescription'}>When two environement factors occur together, the chances of injury in a crash will be..</div>
             <Network2 year={yearRange} side={side} />
             </div>
           </Stack>
