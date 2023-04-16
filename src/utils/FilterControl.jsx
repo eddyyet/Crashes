@@ -68,8 +68,6 @@ export default function FilterControl (props) {
             onChange={handleSliderChange}
             sx={{
               width: '200px',
-              // '& .MuiSlider-root': { padding: '0' },
-              // '& .MuiSlider-sizeMedium': { padding: '0' },
               '& .MuiSlider-thumb': {
                 height: '12px',
                 width: '2px',
@@ -83,9 +81,9 @@ export default function FilterControl (props) {
                 }
               },
               '& .MuiSlider-track': { height: '2px', border: 'none', backgroundColor: '#CCCCCC' },
-              '& .MuiSlider-rail': { height: '2px', backgroundColor: '#999999', padding: '0' },
+              '& .MuiSlider-rail': { height: '2px', backgroundColor: '#666666', padding: '0' },
               '& .MuiSlider-mark': { height: '8px', width: '1px', backgroundColor: '#666666', '&.MuiSlider-markActive': { backgroundColor: '#FFFFFF' } },
-              '& .MuiSlider-markLabel': { color: 'rgba(255, 255, 255, 0.8)', fontSize: '0.75rem' }
+              '& .MuiSlider-markLabel': { top: '12px', color: 'rgba(255, 255, 255, 0.8)', fontSize: '0.75rem' }
             }}
           />
         </span>
@@ -95,23 +93,7 @@ export default function FilterControl (props) {
             value={sideTemp}
             onChange={handleSelectChange}
             inputProps={{ 'aria-label': 'Select side' }}
-            sx={{
-              '&. MuiOutlinedInput-root': { border: 'none' },
-              '&. MuiInputBase-root': { border: 'none' },
-              '&. MuiSelect-root': { border: 'none' },
-              '&.Mui-focused': { border: 'none' },
-              '& .MuiSelect-select': {
-                width: '150px',
-                padding: '12px',
-                borderRadius: '2rem',
-                backgroundColor: 'rgba(204, 204, 204, 0.1)',
-                fontSize: '1rem',
-                color: '#CCCCCC',
-                '&:focus': {
-                  backgroundColor: 'rgba(204, 204, 204, 0.2)'
-                }
-              }
-            }}
+            disableScrollLock={true}
           >
             {sides.map((side) => (
               <MenuItem key={side} value={side}>
