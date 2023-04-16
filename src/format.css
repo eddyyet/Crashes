@@ -57,7 +57,7 @@ body {
 }
 
 .MuiSlider-root { 
-  margin: 0px 20px 16px!important;
+  margin: 0px 20px 14px!important;
   padding: 0!important;
 }
 
@@ -67,7 +67,7 @@ body {
   border-radius: 2rem!important;
   background-color: rgba(204, 204, 204, 0.1)!important;
   font-size: 1rem!important;
-  color: #CCCCCC!important;
+  color: #d3d3d3!important;
 }
 
 .MuiSelect-select:focus {
@@ -80,6 +80,10 @@ body {
 
 .MuiOutlinedInput-notchedOutline {
   border: none!important;
+}
+
+.MuiSelect-icon {
+  color: #d3d3d3!important;
 }
 
 .MuiInputBase-root, .MuiMenuItem-root {
@@ -100,6 +104,10 @@ body {
 
 .MuiMenuItem-root.Mui-selected {
   background-color: #333438!important;
+}
+
+.MuiMenuItem-root:hover {
+  background-color: #383a3e!important;
 }
 
 .heading {
