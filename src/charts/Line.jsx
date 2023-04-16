@@ -8,6 +8,25 @@ export default function Line (props) {
   const filteredData = filter(speedData, props.year, props.side)
   const lineData = LineData(filteredData)
 
+  // const generateLegends = (data) => {
+  //   return data.map((dataset) => {
+  //     return {
+  //       anchor: 'right',
+  //       direction: 'column',
+  //       justify: false,
+  //       translateX: 100,
+  //       translateY: 0,
+  //       items: [
+  //         {
+  //           id: dataset.id,
+  //           label: dataset.id,
+  //           color: dataset.color
+  //         }
+  //       ]
+  //     }
+  //   })
+  // }
+
   return (
     <ResponsiveLine
       height={250}
@@ -31,8 +50,18 @@ export default function Line (props) {
         legendOffset: 30
       }}
       enableGridX={false}
-      theme={{ axis: { ticks: { text: { fill: '#999999' } }, legend: { text: { fill: '#999999' } } }, grid: { line: { stroke: 'rgba(204, 204, 204, 0.2)' } } }}
+      theme={{
+        axis: {
+          ticks: { text: { fill: '#999999' } },
+          legend: { text: { fill: '#999999' } }
+        },
+        grid: { line: { stroke: 'rgba(204, 204, 204, 0.2)' } },
+        crosshair: { line: { stroke: 'rgba(204, 204, 204, 0.2)', strokeDasharray: null } }
+      }}
       enableSlices='x'
+      // legends={ (series) => {
+      //   console.log(series)
+      // }}
     />
   )
 }
