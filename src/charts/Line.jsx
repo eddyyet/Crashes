@@ -29,9 +29,9 @@ export default function Line (props) {
 
   return (
     <ResponsiveLine
-      height={250}
+      height={200}
       width={320}
-      margin={{ top: 20, right: 20, bottom: 38, left: 42 }}
+      margin={{ top: 20, right: 20, bottom: 35, left: 41 }}
       data={lineData}
       xScale={{ type: 'point' }}
       yScale={{ type: 'linear', min: 0, max: 'auto', stacked: false }}
@@ -41,13 +41,13 @@ export default function Line (props) {
         tickSize: 0,
         legend: 'Injury rate',
         legendPosition: 'middle',
-        legendOffset: -38
+        legendOffset: -37
       }}
       axisBottom={{
         tickSize: 0,
         legend: 'Speed limit (mph)',
         legendPosition: 'middle',
-        legendOffset: 30
+        legendOffset: 27
       }}
       enableGridX={false}
       theme={{
