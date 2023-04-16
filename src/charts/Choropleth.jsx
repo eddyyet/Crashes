@@ -45,6 +45,7 @@ function getColor (feature, selectedData) {
 */
 
 function getColor (feature, selectedData) {
+  // console.log(selectedData)
   if (selectedData[feature.properties.id] !== undefined) {
     const value = selectedData[feature.properties.id]
 
@@ -158,7 +159,7 @@ export function Legend () {
 
 function getCoordinatesForSide (side) {
   // Define the coordinates for each side of Chicago
-  console.log(side)
+  // console.log(side)
   const sideCoordsMap = {
     Central: [41.878, -87.626],
     'Far North Side': [41.979, -87.7636],
@@ -201,8 +202,9 @@ export default function CrashBySide (props) {
     const numYears = props.year[1] - props.year[0] + 1
     const per1000 = {}
     const crashes = {}
-    for (const side in filteredData) {
-      crashes[side] = filteredData[side]
+    // console.log(filteredData)
+    for (const side in filteredData.totalCount) {
+      crashes[side] = filteredData.totalCount[side]
       const population = ppl[side]
       per1000[side] = Math.round(((crashes[side] / numYears) / population) * 1000)
     }
@@ -211,6 +213,7 @@ export default function CrashBySide (props) {
     newData.ppl = ppl
     newData.crashesPer1000 = per1000
     newData.yearArray = props.year
+    // console.log(newData)
     setSideData(newData)
   }, [filteredData])
 

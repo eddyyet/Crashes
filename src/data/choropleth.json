@@ -1,227 +1,2312 @@
 [
   {
-    "CRASH_YEAR": 2018,
-    "SIDE": "Central",
-    "count": 12521
+    "CRASH_YEAR":2018,
+    "SIDE":"Central",
+    "COMMUNITY":"LOOP",
+    "count":4835
   },
   {
-    "CRASH_YEAR": 2018,
-    "SIDE": "Far North Side",
-    "count": 15109
+    "CRASH_YEAR":2018,
+    "SIDE":"Central",
+    "COMMUNITY":"NEAR NORTH SIDE",
+    "count":6241
   },
   {
-    "CRASH_YEAR": 2018,
-    "SIDE": "Far Southeast Side",
-    "count": 8924
+    "CRASH_YEAR":2018,
+    "SIDE":"Central",
+    "COMMUNITY":"NEAR SOUTH SIDE",
+    "count":1445
   },
   {
-    "CRASH_YEAR": 2018,
-    "SIDE": "Far Southwest Side",
-    "count": 7312
+    "CRASH_YEAR":2018,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"ALBANY PARK",
+    "count":1280
   },
   {
-    "CRASH_YEAR": 2018,
-    "SIDE": "North Side",
-    "count": 10992
+    "CRASH_YEAR":2018,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"EDGEWATER",
+    "count":1803
   },
   {
-    "CRASH_YEAR": 2018,
-    "SIDE": "Northwest Side",
-    "count": 10018
+    "CRASH_YEAR":2018,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"EDISON PARK",
+    "count":345
   },
   {
-    "CRASH_YEAR": 2018,
-    "SIDE": "South Side",
-    "count": 11289
+    "CRASH_YEAR":2018,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"FOREST GLEN",
+    "count":925
   },
   {
-    "CRASH_YEAR": 2018,
-    "SIDE": "Southwest Side",
-    "count": 15755
+    "CRASH_YEAR":2018,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"JEFFERSON PARK",
+    "count":1082
   },
   {
-    "CRASH_YEAR": 2018,
-    "SIDE": "West Side",
-    "count": 26508
+    "CRASH_YEAR":2018,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"LINCOLN SQUARE",
+    "count":1262
   },
   {
-    "CRASH_YEAR": 2019,
-    "SIDE": "Central",
-    "count": 12120
+    "CRASH_YEAR":2018,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"NORTH PARK",
+    "count":900
   },
   {
-    "CRASH_YEAR": 2019,
-    "SIDE": "Far North Side",
-    "count": 14826
+    "CRASH_YEAR":2018,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"NORWOOD PARK",
+    "count":1220
   },
   {
-    "CRASH_YEAR": 2019,
-    "SIDE": "Far Southeast Side",
-    "count": 9142
+    "CRASH_YEAR":2018,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"OHARE",
+    "count":623
   },
   {
-    "CRASH_YEAR": 2019,
-    "SIDE": "Far Southwest Side",
-    "count": 6953
+    "CRASH_YEAR":2018,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"ROGERS PARK",
+    "count":1472
   },
   {
-    "CRASH_YEAR": 2019,
-    "SIDE": "North Side",
-    "count": 10681
+    "CRASH_YEAR":2018,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"UPTOWN",
+    "count":1570
   },
   {
-    "CRASH_YEAR": 2019,
-    "SIDE": "Northwest Side",
-    "count": 10065
+    "CRASH_YEAR":2018,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"WEST RIDGE",
+    "count":2627
   },
   {
-    "CRASH_YEAR": 2019,
-    "SIDE": "South Side",
-    "count": 11188
+    "CRASH_YEAR":2018,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"AVALON PARK",
+    "count":642
   },
   {
-    "CRASH_YEAR": 2019,
-    "SIDE": "Southwest Side",
-    "count": 15665
+    "CRASH_YEAR":2018,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"BURNSIDE",
+    "count":88
   },
   {
-    "CRASH_YEAR": 2019,
-    "SIDE": "West Side",
-    "count": 26144
+    "CRASH_YEAR":2018,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"CALUMET HEIGHTS",
+    "count":668
   },
   {
-    "CRASH_YEAR": 2020,
-    "SIDE": "Central",
-    "count": 6000
+    "CRASH_YEAR":2018,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"CHATHAM",
+    "count":2097
   },
   {
-    "CRASH_YEAR": 2020,
-    "SIDE": "Far North Side",
-    "count": 9681
+    "CRASH_YEAR":2018,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"EAST SIDE",
+    "count":546
   },
   {
-    "CRASH_YEAR": 2020,
-    "SIDE": "Far Southeast Side",
-    "count": 8834
+    "CRASH_YEAR":2018,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"HEGEWISCH",
+    "count":269
   },
   {
-    "CRASH_YEAR": 2020,
-    "SIDE": "Far Southwest Side",
-    "count": 6816
+    "CRASH_YEAR":2018,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"PULLMAN",
+    "count":353
   },
   {
-    "CRASH_YEAR": 2020,
-    "SIDE": "North Side",
-    "count": 6558
+    "CRASH_YEAR":2018,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"RIVERDALE",
+    "count":243
   },
   {
-    "CRASH_YEAR": 2020,
-    "SIDE": "Northwest Side",
-    "count": 7442
+    "CRASH_YEAR":2018,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"ROSELAND",
+    "count":1485
   },
   {
-    "CRASH_YEAR": 2020,
-    "SIDE": "South Side",
-    "count": 10561
+    "CRASH_YEAR":2018,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"SOUTH CHICAGO",
+    "count":679
   },
   {
-    "CRASH_YEAR": 2020,
-    "SIDE": "Southwest Side",
-    "count": 13898
+    "CRASH_YEAR":2018,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"SOUTH DEERING",
+    "count":1009
   },
   {
-    "CRASH_YEAR": 2020,
-    "SIDE": "West Side",
-    "count": 21657
+    "CRASH_YEAR":2018,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"WEST PULLMAN",
+    "count":845
   },
   {
-    "CRASH_YEAR": 2021,
-    "SIDE": "Central",
-    "count": 8114
+    "CRASH_YEAR":2018,
+    "SIDE":"Far Southwest Side",
+    "COMMUNITY":"ASHBURN",
+    "count":1517
   },
   {
-    "CRASH_YEAR": 2021,
-    "SIDE": "Far North Side",
-    "count": 11722
+    "CRASH_YEAR":2018,
+    "SIDE":"Far Southwest Side",
+    "COMMUNITY":"AUBURN GRESHAM",
+    "count":2229
   },
   {
-    "CRASH_YEAR": 2021,
-    "SIDE": "Far Southeast Side",
-    "count": 10083
+    "CRASH_YEAR":2018,
+    "SIDE":"Far Southwest Side",
+    "COMMUNITY":"BEVERLY",
+    "count":795
   },
   {
-    "CRASH_YEAR": 2021,
-    "SIDE": "Far Southwest Side",
-    "count": 7721
+    "CRASH_YEAR":2018,
+    "SIDE":"Far Southwest Side",
+    "COMMUNITY":"MORGAN PARK",
+    "count":962
   },
   {
-    "CRASH_YEAR": 2021,
-    "SIDE": "North Side",
-    "count": 8543
+    "CRASH_YEAR":2018,
+    "SIDE":"Far Southwest Side",
+    "COMMUNITY":"MOUNT GREENWOOD",
+    "count":556
   },
   {
-    "CRASH_YEAR": 2021,
-    "SIDE": "Northwest Side",
-    "count": 8550
+    "CRASH_YEAR":2018,
+    "SIDE":"Far Southwest Side",
+    "COMMUNITY":"WASHINGTON HEIGHTS",
+    "count":1253
   },
   {
-    "CRASH_YEAR": 2021,
-    "SIDE": "South Side",
-    "count": 12330
+    "CRASH_YEAR":2018,
+    "SIDE":"North Side",
+    "COMMUNITY":"AVONDALE",
+    "count":1630
   },
   {
-    "CRASH_YEAR": 2021,
-    "SIDE": "Southwest Side",
-    "count": 16435
+    "CRASH_YEAR":2018,
+    "SIDE":"North Side",
+    "COMMUNITY":"LAKE VIEW",
+    "count":2751
   },
   {
-    "CRASH_YEAR": 2021,
-    "SIDE": "West Side",
-    "count": 24372
+    "CRASH_YEAR":2018,
+    "SIDE":"North Side",
+    "COMMUNITY":"LINCOLN PARK",
+    "count":2472
   },
   {
-    "CRASH_YEAR": 2022,
-    "SIDE": "Central",
-    "count": 9361
+    "CRASH_YEAR":2018,
+    "SIDE":"North Side",
+    "COMMUNITY":"LOGAN SQUARE",
+    "count":2996
   },
   {
-    "CRASH_YEAR": 2022,
-    "SIDE": "Far North Side",
-    "count": 12767
+    "CRASH_YEAR":2018,
+    "SIDE":"North Side",
+    "COMMUNITY":"NORTH CENTER",
+    "count":1143
   },
   {
-    "CRASH_YEAR": 2022,
-    "SIDE": "Far Southeast Side",
-    "count": 9118
+    "CRASH_YEAR":2018,
+    "SIDE":"Northwest Side",
+    "COMMUNITY":"BELMONT CRAGIN",
+    "count":2946
   },
   {
-    "CRASH_YEAR": 2022,
-    "SIDE": "Far Southwest Side",
-    "count": 6943
+    "CRASH_YEAR":2018,
+    "SIDE":"Northwest Side",
+    "COMMUNITY":"DUNNING",
+    "count":1417
   },
   {
-    "CRASH_YEAR": 2022,
-    "SIDE": "North Side",
-    "count": 9253
+    "CRASH_YEAR":2018,
+    "SIDE":"Northwest Side",
+    "COMMUNITY":"HERMOSA",
+    "count":676
   },
   {
-    "CRASH_YEAR": 2022,
-    "SIDE": "Northwest Side",
-    "count": 8907
+    "CRASH_YEAR":2018,
+    "SIDE":"Northwest Side",
+    "COMMUNITY":"IRVING PARK",
+    "count":2063
   },
   {
-    "CRASH_YEAR": 2022,
-    "SIDE": "South Side",
-    "count": 10997
+    "CRASH_YEAR":2018,
+    "SIDE":"Northwest Side",
+    "COMMUNITY":"MONTCLARE",
+    "count":494
   },
   {
-    "CRASH_YEAR": 2022,
-    "SIDE": "Southwest Side",
-    "count": 16107
+    "CRASH_YEAR":2018,
+    "SIDE":"Northwest Side",
+    "COMMUNITY":"PORTAGE PARK",
+    "count":2422
   },
   {
-    "CRASH_YEAR": 2022,
-    "SIDE": "West Side",
-    "count": 23896
+    "CRASH_YEAR":2018,
+    "SIDE":"South Side",
+    "COMMUNITY":"ARMOUR SQUARE",
+    "count":707
+  },
+  {
+    "CRASH_YEAR":2018,
+    "SIDE":"South Side",
+    "COMMUNITY":"BRIDGEPORT",
+    "count":820
+  },
+  {
+    "CRASH_YEAR":2018,
+    "SIDE":"South Side",
+    "COMMUNITY":"DOUGLAS",
+    "count":796
+  },
+  {
+    "CRASH_YEAR":2018,
+    "SIDE":"South Side",
+    "COMMUNITY":"FULLER PARK",
+    "count":447
+  },
+  {
+    "CRASH_YEAR":2018,
+    "SIDE":"South Side",
+    "COMMUNITY":"GRAND BOULEVARD",
+    "count":976
+  },
+  {
+    "CRASH_YEAR":2018,
+    "SIDE":"South Side",
+    "COMMUNITY":"GREATER GRAND CROSSING",
+    "count":2175
+  },
+  {
+    "CRASH_YEAR":2018,
+    "SIDE":"South Side",
+    "COMMUNITY":"HYDE PARK",
+    "count":1053
+  },
+  {
+    "CRASH_YEAR":2018,
+    "SIDE":"South Side",
+    "COMMUNITY":"KENWOOD",
+    "count":507
+  },
+  {
+    "CRASH_YEAR":2018,
+    "SIDE":"South Side",
+    "COMMUNITY":"OAKLAND",
+    "count":184
+  },
+  {
+    "CRASH_YEAR":2018,
+    "SIDE":"South Side",
+    "COMMUNITY":"SOUTH SHORE",
+    "count":1889
+  },
+  {
+    "CRASH_YEAR":2018,
+    "SIDE":"South Side",
+    "COMMUNITY":"WASHINGTON PARK",
+    "count":756
+  },
+  {
+    "CRASH_YEAR":2018,
+    "SIDE":"South Side",
+    "COMMUNITY":"WOODLAWN",
+    "count":979
+  },
+  {
+    "CRASH_YEAR":2018,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"ARCHER HEIGHTS",
+    "count":1001
+  },
+  {
+    "CRASH_YEAR":2018,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"BRIGHTON PARK",
+    "count":1681
+  },
+  {
+    "CRASH_YEAR":2018,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"CHICAGO LAWN",
+    "count":1985
+  },
+  {
+    "CRASH_YEAR":2018,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"CLEARING",
+    "count":785
+  },
+  {
+    "CRASH_YEAR":2018,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"ENGLEWOOD",
+    "count":1339
+  },
+  {
+    "CRASH_YEAR":2018,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"GAGE PARK",
+    "count":1292
+  },
+  {
+    "CRASH_YEAR":2018,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"GARFIELD RIDGE",
+    "count":1705
+  },
+  {
+    "CRASH_YEAR":2018,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"MCKINLEY PARK",
+    "count":815
+  },
+  {
+    "CRASH_YEAR":2018,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"NEW CITY",
+    "count":1554
+  },
+  {
+    "CRASH_YEAR":2018,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"WEST ELSDON",
+    "count":727
+  },
+  {
+    "CRASH_YEAR":2018,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"WEST ENGLEWOOD",
+    "count":1485
+  },
+  {
+    "CRASH_YEAR":2018,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"WEST LAWN",
+    "count":1386
+  },
+  {
+    "CRASH_YEAR":2018,
+    "SIDE":"West Side",
+    "COMMUNITY":"AUSTIN",
+    "count":5074
+  },
+  {
+    "CRASH_YEAR":2018,
+    "SIDE":"West Side",
+    "COMMUNITY":"EAST GARFIELD PARK",
+    "count":1281
+  },
+  {
+    "CRASH_YEAR":2018,
+    "SIDE":"West Side",
+    "COMMUNITY":"HUMBOLDT PARK",
+    "count":2620
+  },
+  {
+    "CRASH_YEAR":2018,
+    "SIDE":"West Side",
+    "COMMUNITY":"LOWER WEST SIDE",
+    "count":1873
+  },
+  {
+    "CRASH_YEAR":2018,
+    "SIDE":"West Side",
+    "COMMUNITY":"NEAR WEST SIDE",
+    "count":6329
+  },
+  {
+    "CRASH_YEAR":2018,
+    "SIDE":"West Side",
+    "COMMUNITY":"NORTH LAWNDALE",
+    "count":1995
+  },
+  {
+    "CRASH_YEAR":2018,
+    "SIDE":"West Side",
+    "COMMUNITY":"SOUTH LAWNDALE",
+    "count":2128
+  },
+  {
+    "CRASH_YEAR":2018,
+    "SIDE":"West Side",
+    "COMMUNITY":"WEST GARFIELD PARK",
+    "count":1430
+  },
+  {
+    "CRASH_YEAR":2018,
+    "SIDE":"West Side",
+    "COMMUNITY":"WEST TOWN",
+    "count":3778
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Central",
+    "COMMUNITY":"LOOP",
+    "count":4507
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Central",
+    "COMMUNITY":"NEAR NORTH SIDE",
+    "count":6028
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Central",
+    "COMMUNITY":"NEAR SOUTH SIDE",
+    "count":1585
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"ALBANY PARK",
+    "count":1221
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"EDGEWATER",
+    "count":1711
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"EDISON PARK",
+    "count":351
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"FOREST GLEN",
+    "count":772
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"JEFFERSON PARK",
+    "count":986
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"LINCOLN SQUARE",
+    "count":1254
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"NORTH PARK",
+    "count":876
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"NORWOOD PARK",
+    "count":1324
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"OHARE",
+    "count":747
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"ROGERS PARK",
+    "count":1430
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"UPTOWN",
+    "count":1597
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"WEST RIDGE",
+    "count":2557
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"AVALON PARK",
+    "count":710
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"BURNSIDE",
+    "count":105
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"CALUMET HEIGHTS",
+    "count":626
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"CHATHAM",
+    "count":2178
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"EAST SIDE",
+    "count":537
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"HEGEWISCH",
+    "count":328
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"PULLMAN",
+    "count":325
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"RIVERDALE",
+    "count":259
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"ROSELAND",
+    "count":1475
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"SOUTH CHICAGO",
+    "count":691
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"SOUTH DEERING",
+    "count":1072
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"WEST PULLMAN",
+    "count":836
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Far Southwest Side",
+    "COMMUNITY":"ASHBURN",
+    "count":1576
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Far Southwest Side",
+    "COMMUNITY":"AUBURN GRESHAM",
+    "count":2022
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Far Southwest Side",
+    "COMMUNITY":"BEVERLY",
+    "count":840
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Far Southwest Side",
+    "COMMUNITY":"MORGAN PARK",
+    "count":828
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Far Southwest Side",
+    "COMMUNITY":"MOUNT GREENWOOD",
+    "count":548
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Far Southwest Side",
+    "COMMUNITY":"WASHINGTON HEIGHTS",
+    "count":1139
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"North Side",
+    "COMMUNITY":"AVONDALE",
+    "count":1526
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"North Side",
+    "COMMUNITY":"LAKE VIEW",
+    "count":2820
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"North Side",
+    "COMMUNITY":"LINCOLN PARK",
+    "count":2455
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"North Side",
+    "COMMUNITY":"LOGAN SQUARE",
+    "count":2798
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"North Side",
+    "COMMUNITY":"NORTH CENTER",
+    "count":1082
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Northwest Side",
+    "COMMUNITY":"BELMONT CRAGIN",
+    "count":3026
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Northwest Side",
+    "COMMUNITY":"DUNNING",
+    "count":1444
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Northwest Side",
+    "COMMUNITY":"HERMOSA",
+    "count":725
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Northwest Side",
+    "COMMUNITY":"IRVING PARK",
+    "count":1995
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Northwest Side",
+    "COMMUNITY":"MONTCLARE",
+    "count":492
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Northwest Side",
+    "COMMUNITY":"PORTAGE PARK",
+    "count":2383
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"South Side",
+    "COMMUNITY":"ARMOUR SQUARE",
+    "count":752
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"South Side",
+    "COMMUNITY":"BRIDGEPORT",
+    "count":795
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"South Side",
+    "COMMUNITY":"DOUGLAS",
+    "count":725
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"South Side",
+    "COMMUNITY":"FULLER PARK",
+    "count":424
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"South Side",
+    "COMMUNITY":"GRAND BOULEVARD",
+    "count":908
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"South Side",
+    "COMMUNITY":"GREATER GRAND CROSSING",
+    "count":2290
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"South Side",
+    "COMMUNITY":"HYDE PARK",
+    "count":1032
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"South Side",
+    "COMMUNITY":"KENWOOD",
+    "count":504
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"South Side",
+    "COMMUNITY":"OAKLAND",
+    "count":166
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"South Side",
+    "COMMUNITY":"SOUTH SHORE",
+    "count":1898
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"South Side",
+    "COMMUNITY":"WASHINGTON PARK",
+    "count":720
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"South Side",
+    "COMMUNITY":"WOODLAWN",
+    "count":974
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"ARCHER HEIGHTS",
+    "count":937
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"BRIGHTON PARK",
+    "count":1685
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"CHICAGO LAWN",
+    "count":1891
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"CLEARING",
+    "count":816
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"ENGLEWOOD",
+    "count":1319
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"GAGE PARK",
+    "count":1323
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"GARFIELD RIDGE",
+    "count":1605
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"MCKINLEY PARK",
+    "count":873
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"NEW CITY",
+    "count":1603
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"WEST ELSDON",
+    "count":654
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"WEST ENGLEWOOD",
+    "count":1553
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"WEST LAWN",
+    "count":1406
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"West Side",
+    "COMMUNITY":"AUSTIN",
+    "count":5208
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"West Side",
+    "COMMUNITY":"EAST GARFIELD PARK",
+    "count":1319
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"West Side",
+    "COMMUNITY":"HUMBOLDT PARK",
+    "count":2422
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"West Side",
+    "COMMUNITY":"LOWER WEST SIDE",
+    "count":1914
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"West Side",
+    "COMMUNITY":"NEAR WEST SIDE",
+    "count":6056
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"West Side",
+    "COMMUNITY":"NORTH LAWNDALE",
+    "count":1997
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"West Side",
+    "COMMUNITY":"SOUTH LAWNDALE",
+    "count":2095
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"West Side",
+    "COMMUNITY":"WEST GARFIELD PARK",
+    "count":1431
+  },
+  {
+    "CRASH_YEAR":2019,
+    "SIDE":"West Side",
+    "COMMUNITY":"WEST TOWN",
+    "count":3702
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Central",
+    "COMMUNITY":"LOOP",
+    "count":2086
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Central",
+    "COMMUNITY":"NEAR NORTH SIDE",
+    "count":3064
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Central",
+    "COMMUNITY":"NEAR SOUTH SIDE",
+    "count":850
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"ALBANY PARK",
+    "count":916
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"EDGEWATER",
+    "count":1149
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"EDISON PARK",
+    "count":224
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"FOREST GLEN",
+    "count":480
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"JEFFERSON PARK",
+    "count":650
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"LINCOLN SQUARE",
+    "count":763
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"NORTH PARK",
+    "count":523
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"NORWOOD PARK",
+    "count":815
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"OHARE",
+    "count":483
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"ROGERS PARK",
+    "count":1009
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"UPTOWN",
+    "count":1019
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"WEST RIDGE",
+    "count":1650
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"AVALON PARK",
+    "count":654
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"BURNSIDE",
+    "count":81
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"CALUMET HEIGHTS",
+    "count":618
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"CHATHAM",
+    "count":1982
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"EAST SIDE",
+    "count":508
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"HEGEWISCH",
+    "count":298
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"PULLMAN",
+    "count":309
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"RIVERDALE",
+    "count":272
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"ROSELAND",
+    "count":1583
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"SOUTH CHICAGO",
+    "count":781
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"SOUTH DEERING",
+    "count":855
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"WEST PULLMAN",
+    "count":893
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Far Southwest Side",
+    "COMMUNITY":"ASHBURN",
+    "count":1398
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Far Southwest Side",
+    "COMMUNITY":"AUBURN GRESHAM",
+    "count":2206
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Far Southwest Side",
+    "COMMUNITY":"BEVERLY",
+    "count":648
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Far Southwest Side",
+    "COMMUNITY":"MORGAN PARK",
+    "count":847
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Far Southwest Side",
+    "COMMUNITY":"MOUNT GREENWOOD",
+    "count":441
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Far Southwest Side",
+    "COMMUNITY":"WASHINGTON HEIGHTS",
+    "count":1276
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"North Side",
+    "COMMUNITY":"AVONDALE",
+    "count":1094
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"North Side",
+    "COMMUNITY":"LAKE VIEW",
+    "count":1591
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"North Side",
+    "COMMUNITY":"LINCOLN PARK",
+    "count":1343
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"North Side",
+    "COMMUNITY":"LOGAN SQUARE",
+    "count":1831
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"North Side",
+    "COMMUNITY":"NORTH CENTER",
+    "count":699
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Northwest Side",
+    "COMMUNITY":"BELMONT CRAGIN",
+    "count":2335
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Northwest Side",
+    "COMMUNITY":"DUNNING",
+    "count":1028
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Northwest Side",
+    "COMMUNITY":"HERMOSA",
+    "count":553
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Northwest Side",
+    "COMMUNITY":"IRVING PARK",
+    "count":1383
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Northwest Side",
+    "COMMUNITY":"MONTCLARE",
+    "count":390
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Northwest Side",
+    "COMMUNITY":"PORTAGE PARK",
+    "count":1753
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"South Side",
+    "COMMUNITY":"ARMOUR SQUARE",
+    "count":443
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"South Side",
+    "COMMUNITY":"BRIDGEPORT",
+    "count":546
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"South Side",
+    "COMMUNITY":"DOUGLAS",
+    "count":622
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"South Side",
+    "COMMUNITY":"FULLER PARK",
+    "count":396
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"South Side",
+    "COMMUNITY":"GRAND BOULEVARD",
+    "count":960
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"South Side",
+    "COMMUNITY":"GREATER GRAND CROSSING",
+    "count":2383
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"South Side",
+    "COMMUNITY":"HYDE PARK",
+    "count":809
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"South Side",
+    "COMMUNITY":"KENWOOD",
+    "count":407
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"South Side",
+    "COMMUNITY":"OAKLAND",
+    "count":172
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"South Side",
+    "COMMUNITY":"SOUTH SHORE",
+    "count":2133
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"South Side",
+    "COMMUNITY":"WASHINGTON PARK",
+    "count":674
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"South Side",
+    "COMMUNITY":"WOODLAWN",
+    "count":1016
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"ARCHER HEIGHTS",
+    "count":707
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"BRIGHTON PARK",
+    "count":1295
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"CHICAGO LAWN",
+    "count":1890
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"CLEARING",
+    "count":645
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"ENGLEWOOD",
+    "count":1577
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"GAGE PARK",
+    "count":1013
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"GARFIELD RIDGE",
+    "count":1221
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"MCKINLEY PARK",
+    "count":687
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"NEW CITY",
+    "count":1519
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"WEST ELSDON",
+    "count":529
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"WEST ENGLEWOOD",
+    "count":1837
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"WEST LAWN",
+    "count":978
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"West Side",
+    "COMMUNITY":"AUSTIN",
+    "count":5435
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"West Side",
+    "COMMUNITY":"EAST GARFIELD PARK",
+    "count":1319
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"West Side",
+    "COMMUNITY":"HUMBOLDT PARK",
+    "count":2306
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"West Side",
+    "COMMUNITY":"LOWER WEST SIDE",
+    "count":1309
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"West Side",
+    "COMMUNITY":"NEAR WEST SIDE",
+    "count":3516
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"West Side",
+    "COMMUNITY":"NORTH LAWNDALE",
+    "count":2085
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"West Side",
+    "COMMUNITY":"SOUTH LAWNDALE",
+    "count":1748
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"West Side",
+    "COMMUNITY":"WEST GARFIELD PARK",
+    "count":1805
+  },
+  {
+    "CRASH_YEAR":2020,
+    "SIDE":"West Side",
+    "COMMUNITY":"WEST TOWN",
+    "count":2134
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Central",
+    "COMMUNITY":"LOOP",
+    "count":2760
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Central",
+    "COMMUNITY":"NEAR NORTH SIDE",
+    "count":4157
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Central",
+    "COMMUNITY":"NEAR SOUTH SIDE",
+    "count":1197
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"ALBANY PARK",
+    "count":1076
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"EDGEWATER",
+    "count":1380
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"EDISON PARK",
+    "count":264
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"FOREST GLEN",
+    "count":569
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"JEFFERSON PARK",
+    "count":772
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"LINCOLN SQUARE",
+    "count":810
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"NORTH PARK",
+    "count":652
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"NORWOOD PARK",
+    "count":1046
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"OHARE",
+    "count":617
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"ROGERS PARK",
+    "count":1198
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"UPTOWN",
+    "count":1301
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"WEST RIDGE",
+    "count":2037
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"AVALON PARK",
+    "count":786
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"BURNSIDE",
+    "count":104
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"CALUMET HEIGHTS",
+    "count":752
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"CHATHAM",
+    "count":2323
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"EAST SIDE",
+    "count":509
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"HEGEWISCH",
+    "count":287
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"PULLMAN",
+    "count":329
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"RIVERDALE",
+    "count":321
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"ROSELAND",
+    "count":1752
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"SOUTH CHICAGO",
+    "count":863
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"SOUTH DEERING",
+    "count":1040
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"WEST PULLMAN",
+    "count":1017
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Far Southwest Side",
+    "COMMUNITY":"ASHBURN",
+    "count":1646
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Far Southwest Side",
+    "COMMUNITY":"AUBURN GRESHAM",
+    "count":2501
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Far Southwest Side",
+    "COMMUNITY":"BEVERLY",
+    "count":794
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Far Southwest Side",
+    "COMMUNITY":"MORGAN PARK",
+    "count":1001
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Far Southwest Side",
+    "COMMUNITY":"MOUNT GREENWOOD",
+    "count":465
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Far Southwest Side",
+    "COMMUNITY":"WASHINGTON HEIGHTS",
+    "count":1314
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"North Side",
+    "COMMUNITY":"AVONDALE",
+    "count":1270
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"North Side",
+    "COMMUNITY":"LAKE VIEW",
+    "count":2280
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"North Side",
+    "COMMUNITY":"LINCOLN PARK",
+    "count":1822
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"North Side",
+    "COMMUNITY":"LOGAN SQUARE",
+    "count":2292
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"North Side",
+    "COMMUNITY":"NORTH CENTER",
+    "count":879
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Northwest Side",
+    "COMMUNITY":"BELMONT CRAGIN",
+    "count":2675
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Northwest Side",
+    "COMMUNITY":"DUNNING",
+    "count":1152
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Northwest Side",
+    "COMMUNITY":"HERMOSA",
+    "count":606
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Northwest Side",
+    "COMMUNITY":"IRVING PARK",
+    "count":1712
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Northwest Side",
+    "COMMUNITY":"MONTCLARE",
+    "count":440
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Northwest Side",
+    "COMMUNITY":"PORTAGE PARK",
+    "count":1965
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"South Side",
+    "COMMUNITY":"ARMOUR SQUARE",
+    "count":621
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"South Side",
+    "COMMUNITY":"BRIDGEPORT",
+    "count":696
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"South Side",
+    "COMMUNITY":"DOUGLAS",
+    "count":768
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"South Side",
+    "COMMUNITY":"FULLER PARK",
+    "count":462
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"South Side",
+    "COMMUNITY":"GRAND BOULEVARD",
+    "count":1060
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"South Side",
+    "COMMUNITY":"GREATER GRAND CROSSING",
+    "count":2719
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"South Side",
+    "COMMUNITY":"HYDE PARK",
+    "count":977
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"South Side",
+    "COMMUNITY":"KENWOOD",
+    "count":491
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"South Side",
+    "COMMUNITY":"OAKLAND",
+    "count":230
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"South Side",
+    "COMMUNITY":"SOUTH SHORE",
+    "count":2317
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"South Side",
+    "COMMUNITY":"WASHINGTON PARK",
+    "count":801
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"South Side",
+    "COMMUNITY":"WOODLAWN",
+    "count":1188
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"ARCHER HEIGHTS",
+    "count":864
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"BRIGHTON PARK",
+    "count":1584
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"CHICAGO LAWN",
+    "count":2174
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"CLEARING",
+    "count":774
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"ENGLEWOOD",
+    "count":1757
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"GAGE PARK",
+    "count":1295
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"GARFIELD RIDGE",
+    "count":1532
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"MCKINLEY PARK",
+    "count":813
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"NEW CITY",
+    "count":1701
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"WEST ELSDON",
+    "count":586
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"WEST ENGLEWOOD",
+    "count":1964
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"WEST LAWN",
+    "count":1391
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"West Side",
+    "COMMUNITY":"AUSTIN",
+    "count":5702
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"West Side",
+    "COMMUNITY":"EAST GARFIELD PARK",
+    "count":1458
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"West Side",
+    "COMMUNITY":"HUMBOLDT PARK",
+    "count":2387
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"West Side",
+    "COMMUNITY":"LOWER WEST SIDE",
+    "count":1602
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"West Side",
+    "COMMUNITY":"NEAR WEST SIDE",
+    "count":4346
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"West Side",
+    "COMMUNITY":"NORTH LAWNDALE",
+    "count":2305
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"West Side",
+    "COMMUNITY":"SOUTH LAWNDALE",
+    "count":2052
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"West Side",
+    "COMMUNITY":"WEST GARFIELD PARK",
+    "count":1723
+  },
+  {
+    "CRASH_YEAR":2021,
+    "SIDE":"West Side",
+    "COMMUNITY":"WEST TOWN",
+    "count":2797
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Central",
+    "COMMUNITY":"LOOP",
+    "count":3308
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Central",
+    "COMMUNITY":"NEAR NORTH SIDE",
+    "count":4687
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Central",
+    "COMMUNITY":"NEAR SOUTH SIDE",
+    "count":1366
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"ALBANY PARK",
+    "count":1154
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"EDGEWATER",
+    "count":1540
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"EDISON PARK",
+    "count":262
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"FOREST GLEN",
+    "count":664
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"JEFFERSON PARK",
+    "count":787
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"LINCOLN SQUARE",
+    "count":882
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"NORTH PARK",
+    "count":729
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"NORWOOD PARK",
+    "count":1157
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"OHARE",
+    "count":720
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"ROGERS PARK",
+    "count":1249
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"UPTOWN",
+    "count":1454
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Far North Side",
+    "COMMUNITY":"WEST RIDGE",
+    "count":2169
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"AVALON PARK",
+    "count":697
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"BURNSIDE",
+    "count":90
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"CALUMET HEIGHTS",
+    "count":676
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"CHATHAM",
+    "count":1986
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"EAST SIDE",
+    "count":536
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"HEGEWISCH",
+    "count":335
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"PULLMAN",
+    "count":350
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"RIVERDALE",
+    "count":304
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"ROSELAND",
+    "count":1491
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"SOUTH CHICAGO",
+    "count":748
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"SOUTH DEERING",
+    "count":976
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Far Southeast Side",
+    "COMMUNITY":"WEST PULLMAN",
+    "count":929
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Far Southwest Side",
+    "COMMUNITY":"ASHBURN",
+    "count":1465
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Far Southwest Side",
+    "COMMUNITY":"AUBURN GRESHAM",
+    "count":1996
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Far Southwest Side",
+    "COMMUNITY":"BEVERLY",
+    "count":768
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Far Southwest Side",
+    "COMMUNITY":"MORGAN PARK",
+    "count":947
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Far Southwest Side",
+    "COMMUNITY":"MOUNT GREENWOOD",
+    "count":510
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Far Southwest Side",
+    "COMMUNITY":"WASHINGTON HEIGHTS",
+    "count":1257
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"North Side",
+    "COMMUNITY":"AVONDALE",
+    "count":1404
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"North Side",
+    "COMMUNITY":"LAKE VIEW",
+    "count":2454
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"North Side",
+    "COMMUNITY":"LINCOLN PARK",
+    "count":2039
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"North Side",
+    "COMMUNITY":"LOGAN SQUARE",
+    "count":2436
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"North Side",
+    "COMMUNITY":"NORTH CENTER",
+    "count":920
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Northwest Side",
+    "COMMUNITY":"BELMONT CRAGIN",
+    "count":2769
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Northwest Side",
+    "COMMUNITY":"DUNNING",
+    "count":1233
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Northwest Side",
+    "COMMUNITY":"HERMOSA",
+    "count":632
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Northwest Side",
+    "COMMUNITY":"IRVING PARK",
+    "count":1815
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Northwest Side",
+    "COMMUNITY":"MONTCLARE",
+    "count":478
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Northwest Side",
+    "COMMUNITY":"PORTAGE PARK",
+    "count":1980
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"South Side",
+    "COMMUNITY":"ARMOUR SQUARE",
+    "count":625
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"South Side",
+    "COMMUNITY":"BRIDGEPORT",
+    "count":732
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"South Side",
+    "COMMUNITY":"DOUGLAS",
+    "count":678
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"South Side",
+    "COMMUNITY":"FULLER PARK",
+    "count":411
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"South Side",
+    "COMMUNITY":"GRAND BOULEVARD",
+    "count":925
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"South Side",
+    "COMMUNITY":"GREATER GRAND CROSSING",
+    "count":2232
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"South Side",
+    "COMMUNITY":"HYDE PARK",
+    "count":1010
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"South Side",
+    "COMMUNITY":"KENWOOD",
+    "count":521
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"South Side",
+    "COMMUNITY":"OAKLAND",
+    "count":207
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"South Side",
+    "COMMUNITY":"SOUTH SHORE",
+    "count":1874
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"South Side",
+    "COMMUNITY":"WASHINGTON PARK",
+    "count":749
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"South Side",
+    "COMMUNITY":"WOODLAWN",
+    "count":1033
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"ARCHER HEIGHTS",
+    "count":938
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"BRIGHTON PARK",
+    "count":1627
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"CHICAGO LAWN",
+    "count":1967
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"CLEARING",
+    "count":885
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"ENGLEWOOD",
+    "count":1432
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"GAGE PARK",
+    "count":1406
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"GARFIELD RIDGE",
+    "count":1697
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"MCKINLEY PARK",
+    "count":818
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"NEW CITY",
+    "count":1679
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"WEST ELSDON",
+    "count":644
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"WEST ENGLEWOOD",
+    "count":1629
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"Southwest Side",
+    "COMMUNITY":"WEST LAWN",
+    "count":1385
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"West Side",
+    "COMMUNITY":"AUSTIN",
+    "count":5086
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"West Side",
+    "COMMUNITY":"EAST GARFIELD PARK",
+    "count":1204
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"West Side",
+    "COMMUNITY":"HUMBOLDT PARK",
+    "count":2354
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"West Side",
+    "COMMUNITY":"LOWER WEST SIDE",
+    "count":1826
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"West Side",
+    "COMMUNITY":"NEAR WEST SIDE",
+    "count":4795
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"West Side",
+    "COMMUNITY":"NORTH LAWNDALE",
+    "count":1963
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"West Side",
+    "COMMUNITY":"SOUTH LAWNDALE",
+    "count":2127
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"West Side",
+    "COMMUNITY":"WEST GARFIELD PARK",
+    "count":1373
+  },
+  {
+    "CRASH_YEAR":2022,
+    "SIDE":"West Side",
+    "COMMUNITY":"WEST TOWN",
+    "count":3168
   }
 ]

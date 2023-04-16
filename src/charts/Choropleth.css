@@ -1,52 +1,44 @@
-html, body {
-    height: 100px;
-  }
-  
-  #root, .mapContainer {
-    height: 100px;
-  }
-  
-  .leaflet-container {
-    height: 800px;
-  }
+.leaflet-container {
+  height: 800px;
+}
 
-  .mo-tooltip {
-    background-color: #fff;
-    border: #ccc;
-    padding: 2px;
-    font-size: 12px;
-    line-height: 1.5;
-  }
+.mo-tooltip {
+  background-color: #fff;
+  border: #ccc;
+  padding: 2px;
+  font-size: 12px;
+  line-height: 1.5;
+}
 
-  .mo-tooltip .side-name {
-    font-size: 15px;
-  }
+.mo-tooltip .side-name {
+  font-size: 15px;
+}
 
-  .info.legend {
-    background-color: white;
-    color: black;
-    width: 150px;
-  }
-  
-  .legend i {
-    width: 20px;
-    height: 18px;
-    margin-right: 8px;
-    opacity: 0.7;
-    display: inline-block;
-    vertical-align: middle;
-  }
-  
-  .legendRow {
-    letter-spacing: 0.2px;
-    text-align: right;
-  }
-      
-  .legend #legend-title {
-    font-size: 12px;
-    display: block;
-    margin-top: 5px;
-    font-weight: bold;
-    text-align: center;
-  }
+.info.legend {
+  background-color: white;
+  color: black;
+  width: 150px;
+}
+
+.legend i {
+  width: 20px;
+  height: 18px;
+  margin-right: 8px;
+  opacity: 0.7;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.legendRow {
+  letter-spacing: 0.2px;
+  text-align: right;
+}
+    
+.legend #legend-title {
+  font-size: 12px;
+  display: block;
+  margin-top: 5px;
+  font-weight: bold;
+  text-align: center;
+}
 
