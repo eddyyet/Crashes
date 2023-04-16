@@ -1,6 +1,14 @@
-.leaflet-container {
-  height: 800px;
-}
+html, body {
+    height: 100px;
+  }
+  
+  #root, .mapContainer {
+    height: 100px;
+  }
+  
+  .leaflet-container {
+    height: 800px;
+  }
 
 .mo-tooltip {
   background-color: #fff;

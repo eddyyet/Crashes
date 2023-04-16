@@ -1,9 +1,6 @@
 body {
-  /* background: linear-gradient(rgba(31, 31, 31, 0.1) 0px, rgba(31, 31, 31, 1) 500px, rgba(31, 31, 31, 1) 100%) top/cover,
-    url('./images/crash_photo_bg_gray.jpg') top/cover no-repeat;
-  background-blend-mode: multiply; */
-  background: rgba(31, 31, 31, 1);
-  height: 100vh;
+  background: linear-gradient(rgba(31, 31, 31, 0.8) 0px, rgba(31, 31, 31, 1) 600px, rgba(31, 31, 31, 1) 100%),
+    url('./images/crash_photo_bg_gray.jpg') top center no-repeat;
   margin: 0rem;
   border: 0rem;
   padding: 6rem 1.5rem 1.5rem;
