@@ -1,4 +1,4 @@
-import '../format.css'
+import '../format/format.css'
 import SeveritySevere from '../images/severity_severe.svg'
 import SeverityModerate from '../images/severity_moderate.svg'
 import SeverityNo from '../images/severity_no.svg'

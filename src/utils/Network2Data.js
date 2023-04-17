@@ -1,4 +1,4 @@
-import '../format.css'
+import '../format/format.css'
 
 export default function NetworkData (data) {
   const nodes = [

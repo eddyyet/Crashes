@@ -1,4 +1,4 @@
-import '../format.css'
+import '../format/filter.css'
 import React, { useState, useCallback } from 'react'
 import { AppBar, Toolbar, Slider, Select, MenuItem, IconButton, debounce } from '@mui/material'
 import FilterAltOffIcon from '@mui/icons-material/FilterAltOff'
@@ -101,7 +101,7 @@ export default function FilterControl (props) {
             ))}
           </Select>
         </span>
-        <IconButton sx={{ color: '#CCCCCC', '&:hover, &:focus': { backgroundColor: 'rgba(204, 204, 204, 0.1)' } }} onClick={handleReset}>
+        <IconButton sx={{ height: '3rem', width: '3rem', color: 'rgba(255, 255, 255, 0.7)', '&:hover, &:focus': { backgroundColor: 'rgba(204, 204, 204, 0.1)' } }} onClick={handleReset}>
           <FilterAltOffIcon />
         </IconButton>
       </Toolbar>
