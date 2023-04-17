@@ -34,9 +34,7 @@ export default function App () {
           </div>
           <div className={'mapBase'}>
             <div className={'mapArea'}>
-              <Chart>
-                <div><Choropleth year={yearRange} side={side} /></div>
-              </Chart>
+              <div><Choropleth year={yearRange} side={side} /></div>
             </div>
             <div className={'mapLegend'}>
               <div>Map legend line 1</div>

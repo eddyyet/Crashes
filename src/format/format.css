@@ -60,6 +60,9 @@ body {
   border-radius: 50px;
   border: #999999 0.75px solid;
   margin-bottom: 1rem;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
 }
 
 .mapLegend {
@@ -117,6 +120,12 @@ body {
   font-size: 0.75rem;
   color: #CCCCCC;
   background-color: rgba(56, 58, 62, 0.7);
+}
+
+.lineTooltipRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 /* div.vis-tooltip {
