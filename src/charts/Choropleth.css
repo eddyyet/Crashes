@@ -1,12 +1,12 @@
 .leaflet-container {
-  height: 330px;
+  height: 400px;
   border-Radius: 10px;
 }
 
 .mo-tooltip {
   background-color: #fff;
   border: #ccc;
-  padding: 2px;
+  padding: 1px;
   font-size: 12px;
   line-height: 1.5;
 }

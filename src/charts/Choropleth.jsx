@@ -113,9 +113,9 @@ function onMouseOver (event, selectedData) {
       <div class='mo-tooltip'>
           <strong><span class='side-name'>${featureId}</span></strong><br>
           <span class='details'><strong>Population:</strong> ${moPpl}<br>
-          <strong>Total traffic crashes from ${moStartYear} to ${moEndYear}:</strong> ${moCrashes}<br>
-          <strong>Traffic crashes per 1000 citizens each year:</strong> ${moPer1000} <br>
-          <strong>Top crash area:</strong> ${maxCommunityDisplay} with ${maxCommunityCrashesDisplay}
+          <strong>Total crashes from ${moStartYear} to ${moEndYear}:</strong> ${moCrashes}<br>
+          <strong>Crashes per 1000 citizens each year:</strong> ${moPer1000} <br>
+          <strong>Top crash area:</strong> ${maxCommunityDisplay} ${maxCommunityCrashesDisplay}
           </span>
       </div>`).openTooltip()
     layer.bringToFront()
@@ -272,7 +272,7 @@ export default function CrashBySide (props) {
   const [sideData, setSideData] = useState({ crashes: {}, ppl: {}, crashesPer1000: {}, maxCrashesCommunity: {} })
   const prevFilteredDataRef = useRef()
   const [centroidCoords, setCentroidCoords] = useState([])
-  const [mapCenter, setMapCenter] = useState([41.881832, -87.623177 + 0.2])
+  const [mapCenter, setMapCenter] = useState([41.881832, -87.623177 + 0.22])
   const [mapZoom, setMapZoom] = useState(9)
   useEffect(() => {
     const newFilteredData = ChoroplethFilter(ChoroplethData, props.year, props.side)
@@ -405,7 +405,7 @@ export default function CrashBySide (props) {
       'West Side': 10
     }
     // Update the map center point and zoom level based on the current side
-    setMapCenter(centerMap[props.side] || [41.881832, -87.623177 + 0.2])
+    setMapCenter(centerMap[props.side] || [41.881832, -87.623177 + 0.22])
     setMapZoom(zoomMap[props.side] || 9)
   }, [props.side])
   // console.log(mapZoom)
