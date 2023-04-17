@@ -16,8 +16,8 @@ export default function LineData (data) {
     })
 
   const nivoInputData = [
-    { id: 'Injured', data: injuredData },
-    { id: 'Severe', data: severeData }
+    { id: 'Fatal or incapacitating', data: severeData, color: 'hsl(10, 80%, 60%)' },
+    { id: 'Injurious', data: injuredData, color: 'hsl(20, 20%, 75%)' }
   ]
 
   return nivoInputData

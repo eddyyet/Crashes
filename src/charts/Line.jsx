@@ -8,34 +8,19 @@ export default function Line (props) {
   const filteredData = filter(speedData, props.year, props.side)
   const lineData = LineData(filteredData)
 
-  // const generateLegends = (data) => {
-  //   return data.map((dataset) => {
-  //     return {
-  //       anchor: 'right',
-  //       direction: 'column',
-  //       justify: false,
-  //       translateX: 100,
-  //       translateY: 0,
-  //       items: [
-  //         {
-  //           id: dataset.id,
-  //           label: dataset.id,
-  //           color: dataset.color
-  //         }
-  //       ]
-  //     }
-  //   })
-  // }
-
   return (
     <ResponsiveLine
       height={200}
       width={320}
-      margin={{ top: 20, right: 20, bottom: 35, left: 41 }}
+      margin={{ top: 20, right: 20, bottom: 60, left: 41 }}
       data={lineData}
       xScale={{ type: 'point' }}
       yScale={{ type: 'linear', min: 0, max: 'auto', stacked: false }}
       yFormat= '>-0.2%'
+      colors={{ datum: 'color' }}
+      enableArea={true}
+      areaOpacity={0.05}
+      areaBlendMode='screen'
       axisLeft={{
         format: '>-0.0%',
         tickSize: 0,
@@ -56,12 +41,26 @@ export default function Line (props) {
           legend: { text: { fill: '#999999' } }
         },
         grid: { line: { stroke: 'rgba(204, 204, 204, 0.2)' } },
-        crosshair: { line: { stroke: 'rgba(204, 204, 204, 0.2)', strokeDasharray: null } }
+        crosshair: { line: { stroke: 'rgba(204, 204, 204, 0.2)', strokeDasharray: null } },
+        legends: { text: { fill: '#999999' } }
       }}
       enableSlices='x'
-      // legends={ (series) => {
-      //   console.log(series)
-      // }}
+      legends={[
+        {
+          anchor: 'bottom',
+          direction: 'row',
+          justify: false,
+          translateX: -25,
+          translateY: 52,
+          itemsSpacing: 4,
+          itemDirection: 'left-to-right',
+          itemWidth: 70,
+          itemHeight: 10,
+          itemOpacity: 0.75,
+          symbolSize: 6,
+          symbolShape: 'circle'
+        }
+      ]}
     />
   )
 }

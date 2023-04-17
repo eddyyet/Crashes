@@ -6,8 +6,8 @@ export default function WaffleData (data) {
   const colorMap = {
     Dead: 'hsl(0, 100%, 40%)',
     Incapacitated: 'hsl(10, 80%, 60%)',
-    'Moderately injured': 'hsl(15, 65%, 70%)',
-    'Injured but not apparent': 'hsl(25, 30%, 70%)'
+    'Moderately injured': 'hsl(13, 55%, 70%)',
+    'Injured but not apparent': 'hsl(20, 20%, 75%)'
   }
 
   for (const key in data) {

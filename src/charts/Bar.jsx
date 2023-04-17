@@ -25,20 +25,19 @@ export default function Bar (props) {
 
   return (
     <div>
-      <div style={{ height: '6px' }}>
-      <ResponsiveBar
-        height={6}
-        margin={{ top: 0, right: 0, bottom: 0, left: 0 }}
-        padding={0}
-        layout='horizontal'
-        keys={['Injured', 'Not injured']}
-        data={barData.nivoInputData}
-        colors={({ id, data }) => data[`${id}Color`]}
-        label={null}
-        enableGridX={false}
-        enableGridY={false}
-        tooltip={customTooltip}
-      />
+      <div style={{ height: '15px' }}>
+        <ResponsiveBar
+          height={15}
+          innerPadding={1}
+          layout='horizontal'
+          keys={['Injured', 'Not injured']}
+          data={barData.nivoInputData}
+          colors={({ id, data }) => data[`${id}Color`]}
+          label={null}
+          enableGridX={false}
+          enableGridY={false}
+          tooltip={customTooltip}
+        />
       </div>
       <div className={'barFigure'}>
         <div style={{ color: injuredColor }}>
