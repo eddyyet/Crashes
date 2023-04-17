@@ -1,0 +1,97 @@
+{
+    "Central": [
+        "NEAR NORTH SIDE",
+        "LOOP",
+        "NEAR SOUTH SIDE"
+    ],
+    "Far North Side": [
+        "UPTOWN",
+        "WEST RIDGE",
+        "EDISON PARK",
+        "ROGERS PARK",
+        "EDGEWATER",
+        "ALBANY PARK",
+        "OHARE",
+        "FOREST GLEN",
+        "NORWOOD PARK",
+        "JEFFERSON PARK",
+        "LINCOLN SQUARE",
+        "NORTH PARK"
+    ],
+    "Far Southeast Side": [
+        "WEST PULLMAN",
+        "SOUTH DEERING",
+        "BURNSIDE",
+        "AVALON PARK",
+        "ROSELAND",
+        "PULLMAN",
+        "RIVERDALE",
+        "CALUMET HEIGHTS",
+        "HEGEWISCH",
+        "CHATHAM",
+        "EAST SIDE",
+        "SOUTH CHICAGO"
+    ],
+    "Far Southwest Side": [
+        "BEVERLY",
+        "ASHBURN",
+        "WASHINGTON HEIGHTS",
+        "MOUNT GREENWOOD",
+        "MORGAN PARK",
+        "AUBURN GRESHAM"
+    ],
+    "North Side": [
+        "NORTH CENTER",
+        "AVONDALE",
+        "LAKE VIEW",
+        "LINCOLN PARK",
+        "LOGAN SQUARE"
+    ],
+    "Northwest Side": [
+        "BELMONT CRAGIN",
+        "DUNNING",
+        "MONTCLARE",
+        "IRVING PARK",
+        "HERMOSA",
+        "PORTAGE PARK"
+    ],
+    "South Side": [
+        "OAKLAND",
+        "HYDE PARK",
+        "DOUGLAS",
+        "BRIDGEPORT",
+        "GRAND BOULEVARD",
+        "ARMOUR SQUARE",
+        "GREATER GRAND CROSSING",
+        "WASHINGTON PARK",
+        "WOODLAWN",
+        "SOUTH SHORE",
+        "KENWOOD",
+        "FULLER PARK"
+    ],
+    "Southwest Side": [
+        "GAGE PARK",
+        "CLEARING",
+        "ARCHER HEIGHTS",
+        "WEST ELSDON",
+        "GARFIELD RIDGE",
+        "WEST LAWN",
+        "ENGLEWOOD",
+        "MCKINLEY PARK",
+        "WEST ENGLEWOOD",
+        "BRIGHTON PARK",
+        "CHICAGO LAWN",
+        "NEW CITY"
+    ],
+    "West Side": [
+        "AUSTIN",
+        "EAST GARFIELD PARK",
+        "NEAR WEST SIDE",
+        "LOWER WEST SIDE",
+        "SOUTH LAWNDALE",
+        "WEST GARFIELD PARK",
+        "WEST TOWN",
+        "NORTH LAWNDALE",
+        "HUMBOLDT PARK"
+    ]
+}

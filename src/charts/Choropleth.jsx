@@ -13,6 +13,7 @@ import Control from 'react-leaflet-custom-control'
 import L from 'leaflet'
 // import cautionCrashIcon from '../images/choropleth_collision.png'
 import exclaim from '../images/max_crash_community.png'
+import sideCommunityLookup from '../data/chicago_side_communityarea_lookup.json'
 
 function MyComponent (props) {
   const { result } = props
@@ -85,12 +86,34 @@ function onMouseOver (event, selectedData) {
     const moPer1000 = selectedData.crashesPer1000[featureId]
     const moStartYear = selectedData.yearArray[0]
     const moEndYear = selectedData.yearArray[1]
+    let maxCommunity = ''
+    let maxCrashes = 0
+    const areas = selectedData.sideCommunity[featureId]
+    if (areas) {
+      for (const area of areas) {
+        const crashes = selectedData.maxCrashesCommunity[area]
+        if (crashes && crashes > maxCrashes) {
+          maxCrashes = crashes
+          maxCommunity = area
+        }
+      }
+    }
+    let maxCommunityDisplay = ''
+    if (typeof maxCommunity === 'string' && maxCommunity.trim().length > 0) {
+      const communityParts = maxCommunity.trim().split(' ')
+      const capitalizedParts = communityParts.map(part => part.charAt(0).toUpperCase() + part.slice(1).toLowerCase())
+      maxCommunityDisplay = capitalizedParts.join(' ')
+    } else {
+      maxCommunityDisplay = 'N/A'
+    }
+    const maxCommunityCrashesDisplay = maxCrashes.toLocaleString()
     layer.bindTooltip(`
       <div class='mo-tooltip'>
           <strong><span class='side-name'>${featureId}</span></strong><br>
-          Population: ${moPpl}<br>
-          Total traffic crashes from ${moStartYear} to ${moEndYear}: ${moCrashes}<br>
-          Traffic crashes per 1000 citizens each year: ${moPer1000} 
+          <strong>Population:</strong> ${moPpl}<br>
+          <strong>Total traffic crashes from ${moStartYear} to ${moEndYear}:</strong> ${moCrashes}<br>
+          <strong>Traffic crashes per 1000 citizens each year:</strong> ${moPer1000} <br>
+          <strong>Top crash area:</strong> ${maxCommunityDisplay} with ${maxCommunityCrashesDisplay}
       </div>`).openTooltip()
     layer.bringToFront()
   }
@@ -239,36 +262,7 @@ function calculateCentroid (geojson) {
   centroid = L.latLng(centroid.lat / (3 * area), centroid.lng / (3 * area))
   return centroid
 }
-/*
-function createMarker (feature, latlng, sideData) {
-  console.log(sideData)
-  const { crashes, ppl, crashesPer1000, maxCrashesCommunity } = sideData
-  const communityName = feature.properties.community
-  if (maxCrashesCommunity[community]) {
-    // const multipolygon = feature.geometry
-    const matchingFeature = community.features.find(f => f.properties.community === communityName)
-    const centroid = calculateCentroid(matchingFeature.geometry)
-    const icon = L.icon({
-      iconUrl: cautionCrashIcon,
-      iconSize: [25, 41],
-      iconAnchor: [12, 41],
-      popupAnchor: [0, -41]
-    })
-    return (
-      <Marker position={[centroid[1], centroid[0]]} icon={icon}>
-        <Popup>
-          <b>{community}</b><br />
-          Crashes: {crashes[community]}<br />
-          Population: {ppl[community]}<br />
-          Crashes per 1000 people: {crashesPer1000[community]}
-        </Popup>
-      </Marker>
-    )
-  } else {
-    return null
-  }
-}
-*/
+
 export default function CrashBySide (props) {
   const [key, setKey] = useState(0)
   const [filteredData, setFilteredData] = useState([])
@@ -314,6 +308,7 @@ export default function CrashBySide (props) {
     newData.maxCrashesCommunity = maxCrashesCommunity
     newData.crashesPer1000 = per1000
     newData.yearArray = props.year
+    newData.sideCommunity = sideCommunityLookup
     // console.log(newData)
     setSideData(newData)
   }, [filteredData])
@@ -381,7 +376,7 @@ export default function CrashBySide (props) {
 
   return (
     <div>
-      <MyComponent result={sideData} />
+      <MyComponent result={sideData.crashes} />
 
     <div style={{ height: '1000px' }}>
       <MapContainer center={[41.881832, -87.623177]} zoom={10} scrollWheelZoom={false}>
