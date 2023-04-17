@@ -83,7 +83,7 @@ export default function FilterControl (props) {
               '& .MuiSlider-track': { height: '2px', border: 'none', backgroundColor: '#CCCCCC' },
               '& .MuiSlider-rail': { height: '2px', backgroundColor: '#666666', padding: '0' },
               '& .MuiSlider-mark': { height: '8px', width: '1px', backgroundColor: '#666666', '&.MuiSlider-markActive': { backgroundColor: '#FFFFFF' } },
-              '& .MuiSlider-markLabel': { top: '12px', color: 'rgba(255, 255, 255, 0.8)', fontSize: '0.75rem' }
+              '& .MuiSlider-markLabel': { top: '12px', color: 'rgba(255, 255, 255, 0.8)', fontSize: '0.7rem' }
             }}
           />
         </span>
@@ -93,7 +93,6 @@ export default function FilterControl (props) {
             value={sideTemp}
             onChange={handleSelectChange}
             inputProps={{ 'aria-label': 'Select side' }}
-            disableScrollLock={true}
           >
             {sides.map((side) => (
               <MenuItem key={side} value={side}>
