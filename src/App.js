@@ -33,7 +33,11 @@ export default function App () {
             <div className={'storyContent'}>In 2021, there were 1,000 traffic crashes in Chicago. 100 people were killed and 1,000 were injured. The crashes were caused by... (just some random text, let&apos;s edit later)</div>
           </div>
           <div className={'mapBase'}>
-            <div className={'mapArea'}>(Bound the map in this area?)</div>
+            <div className={'mapArea'}>
+              <Chart>
+                <div><Choropleth year={yearRange} side={side} /></div>
+              </Chart>
+            </div>
             <div className={'mapLegend'}>
               <div>Map legend line 1</div>
               <div>Map legend line 2</div>
@@ -84,12 +88,6 @@ export default function App () {
             <ScatterPlot year={yearRange} side={side} />
           </Chart>
         </div>
-        <Chart>
-          <div className={'chartTitle'}>Crash by Side</div>
-          <div>
-          <Choropleth style={{ height: '1000px' }} year={yearRange} side={side} />
-          </div>
-        </Chart>
       </Stack>
     </div>
   )

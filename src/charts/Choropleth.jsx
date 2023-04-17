@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react'
-// import React, { useState, useRef, useMemo, useCallback } from 'react'
-import { MapContainer, TileLayer, GeoJSON, Marker, Popup, LayersControl } from 'react-leaflet'
+// import { MapContainer, TileLayer, GeoJSON, Marker, Popup, LayersControl } from 'react-leaflet'
+import { MapContainer, TileLayer, GeoJSON, Marker } from 'react-leaflet'
 // import * as d3 from 'd3'
 import side from '../data/chicago_side.json'
 import community from '../data/chicago_community.json'
@@ -9,12 +9,13 @@ import ChoroplethData from '../data/choropleth.json'
 import './Choropleth.css'
 import 'leaflet/dist/leaflet.css'
 import isEqual from 'lodash/isEqual'
-import Control from 'react-leaflet-custom-control'
+// import Control from 'react-leaflet-custom-control'
 import L from 'leaflet'
 // import cautionCrashIcon from '../images/choropleth_collision.png'
 import exclaim from '../images/max_crash_community.png'
 import sideCommunityLookup from '../data/chicago_side_communityarea_lookup.json'
 
+/*
 function MyComponent (props) {
   const { result } = props
   // console.log(result)
@@ -24,6 +25,7 @@ function MyComponent (props) {
     </div>
   )
 }
+*/
 /*
 function getColor (feature, selectedData) {
   // console.log(filteredData)
@@ -74,7 +76,7 @@ function onMouseOver (event, selectedData) {
 
   if (selectedData.crashesPer1000[featureId] !== undefined) {
     layer.setStyle({
-      weight: 3,
+      weight: 2.5,
       color: '#666',
       dashArray: '',
       fillOpacity: 0.85,
@@ -110,10 +112,11 @@ function onMouseOver (event, selectedData) {
     layer.bindTooltip(`
       <div class='mo-tooltip'>
           <strong><span class='side-name'>${featureId}</span></strong><br>
-          <strong>Population:</strong> ${moPpl}<br>
+          <span class='details'><strong>Population:</strong> ${moPpl}<br>
           <strong>Total traffic crashes from ${moStartYear} to ${moEndYear}:</strong> ${moCrashes}<br>
           <strong>Traffic crashes per 1000 citizens each year:</strong> ${moPer1000} <br>
           <strong>Top crash area:</strong> ${maxCommunityDisplay} with ${maxCommunityCrashesDisplay}
+          </span>
       </div>`).openTooltip()
     layer.bringToFront()
   }
@@ -174,7 +177,7 @@ function styleSide (feature, selectedData) {
     }
   }
 }
-
+/*
 export function Legend () {
   const colorClasses = ['#ffffd4', '#fed98e', '#fe9929', '#cc4c02']
   const ranges = ['<30', '30-39', '40-49', '>50']
@@ -203,7 +206,7 @@ export function Legend () {
     </Control>
   )
 }
-
+*/
 /*
 function getCoordinatesForSide (side) {
   // Define the coordinates for each side of Chicago
@@ -269,6 +272,8 @@ export default function CrashBySide (props) {
   const [sideData, setSideData] = useState({ crashes: {}, ppl: {}, crashesPer1000: {}, maxCrashesCommunity: {} })
   const prevFilteredDataRef = useRef()
   const [centroidCoords, setCentroidCoords] = useState([])
+  const [mapCenter, setMapCenter] = useState([41.881832, -87.623177 + 0.2])
+  const [mapZoom, setMapZoom] = useState(9)
   useEffect(() => {
     const newFilteredData = ChoroplethFilter(ChoroplethData, props.year, props.side)
     if (!isEqual(prevFilteredDataRef.current, newFilteredData)) {
@@ -315,7 +320,7 @@ export default function CrashBySide (props) {
 
   const customIcon1 = new L.Icon({
     iconUrl: exclaim,
-    iconSize: [15, 15]
+    iconSize: [8, 8]
   })
 
   /*
@@ -374,15 +379,60 @@ export default function CrashBySide (props) {
     setCentroidCoords(coords)
   }, [sideData])
 
+  useEffect(() => {
+    // Define the center and zoom level for each side
+    const centerMap = {
+      Central: [41.878, -87.626 + 0.05],
+      'Far North Side': [41.979, -87.7636 + 0.05],
+      'Far Southeast Side': [41.6969, -87.5842 + 0.1],
+      'Far Southwest Side': [41.7229, -87.6649 + 0.1],
+      'North Side': [41.931, -87.6767 + 0.1],
+      'Northwest Side': [41.9372, -87.7732 + 0.1],
+      'South Side': [41.7965, -87.6067 + 0.13],
+      'Southwest Side': [41.7925, -87.6959 + 0.1],
+      'West Side': [41.8701, -87.7049 + 0.1]
+    }
+
+    const zoomMap = {
+      Central: 11,
+      'Far North Side': 10,
+      'Far Southeast Side': 10,
+      'Far Southwest Side': 10,
+      'North Side': 10,
+      'Northwest Side': 10,
+      'South Side': 10,
+      'Southwest Side': 10,
+      'West Side': 10
+    }
+    // Update the map center point and zoom level based on the current side
+    setMapCenter(centerMap[props.side] || [41.881832, -87.623177 + 0.2])
+    setMapZoom(zoomMap[props.side] || 9)
+  }, [props.side])
+  // console.log(mapZoom)
   return (
     <div>
+      {/*
       <MyComponent result={sideData.crashes} />
+      */}
 
-    <div style={{ height: '1000px' }}>
-      <MapContainer center={[41.881832, -87.623177]} zoom={10} scrollWheelZoom={false}>
-        <TileLayer url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png' />
+    <div>
+    <MapContainer
+      key={key}
+      center={mapCenter}
+      zoom={mapZoom}
+      zoomControl={false}
+      scrollWheelZoom={false}
+      doubleClickZoom={false}
+      dragging={false}
+    >
+        <TileLayer attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png' />
+        {/*
         <Legend />
-        <LayersControl position="topright">
+        */}
+        <GeoJSON data={community} style={styleCommunity} ref={(layer) => layer?.leafletElement?.bringToFront()} />
+        <GeoJSON key={key} data={side} style={choroplethStyleSide} onEachFeature={choroplethOnEachFeature} ref={(layer) => layer?.leafletElement?.bringToBack()} />
+        {/*
+        <LayersControl>
           <LayersControl.Overlay checked name="Layer Community">
             <GeoJSON data={community} style={styleCommunity} ref={(layer) => layer?.leafletElement?.bringToFront()} />
           </LayersControl.Overlay>
@@ -390,6 +440,7 @@ export default function CrashBySide (props) {
             <GeoJSON key={key} data={side} style={choroplethStyleSide} onEachFeature={choroplethOnEachFeature} ref={(layer) => layer?.leafletElement?.bringToBack()} />
           </LayersControl.Overlay>
         </LayersControl>
+        */}
         {/*
         {sideCoords && (
         <Marker position={sideCoords} icon={customIcon}>
@@ -403,12 +454,14 @@ export default function CrashBySide (props) {
           // console.log(`Rendering marker for community: ${communityName}`)
           return (
             <Marker key={index} position={centroid} icon={customIcon1}>
+              {/*
               <Popup>
                 <div>
                   <strong>{communityName}</strong>
                   <p>Max crashes: {maxCrashes.toLocaleString()}</p>
                 </div>
               </Popup>
+              */}
             </Marker>
           )
         })}

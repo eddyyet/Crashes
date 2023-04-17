@@ -1,9 +1,6 @@
-.mapContainer {
-    height: 100px;
-  }
-  
 .leaflet-container {
-  height: 800px;
+  height: 330px;
+  border-Radius: 10px;
 }
 
 .mo-tooltip {
@@ -15,7 +12,11 @@
 }
 
 .mo-tooltip .side-name {
-  font-size: 15px;
+  font-size: 12px;
+}
+
+.mo-tooltip .details {
+  font-size: 10.5px;
 }
 
 .info.legend {
