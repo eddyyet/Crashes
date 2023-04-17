@@ -21,7 +21,7 @@ export default function Bubble (props) {
             transform: 'translate(-50%, -50%)'
           }}>
             <img src={bubbleImage} alt={item.type} style={{
-              width: `${item.size}%`,
+              width: `${item.size * 2}px`,
               opacity: item.opacity * 0.5
             }} />
           </div>
