@@ -6,12 +6,12 @@ export default function NetworkData (data) {
     { id: 'Dawn', label: 'Dawn', x: 40, y: 170, group: 'Lighting' },
     { id: 'Darkness', label: 'Darkness', x: 40, y: 225, group: 'Lighting' },
     { id: 'Dusk', label: 'Dusk', x: 40, y: 280, group: 'Lighting' },
-    { id: 'Clear', label: 'Clear', x: 152, y: 38, group: 'Weather' },
-    { id: 'Cloudy', label: 'Cloudy', x: 208, y: 68, group: 'Weather' },
-    { id: 'Rain/Snow', label: 'Rain/Snow', x: 264, y: 98, group: 'Weather' },
-    { id: 'Dry', label: 'Dry', x: 168, y: 334, group: 'Roadway' },
-    { id: 'Wet', label: 'Wet', x: 216, y: 294, group: 'Roadway' },
-    { id: 'Snow/Ice', label: 'Snow/Ice', x: 264, y: 254, group: 'Roadway' }
+    { id: 'Clear', label: 'Clear', x: 162, y: 32, group: 'Weather' },
+    { id: 'Cloudy', label: 'Cloudy', x: 218, y: 62, group: 'Weather' },
+    { id: 'Rain/Snow', label: 'Rain/Snow', x: 274, y: 92, group: 'Weather' },
+    { id: 'Dry', label: 'Dry', x: 184, y: 338, group: 'Roadway' },
+    { id: 'Wet', label: 'Wet', x: 232, y: 300, group: 'Roadway' },
+    { id: 'Snow/Ice', label: 'Snow/Ice', x: 278, y: 262, group: 'Roadway' }
   ]
 
   const totalCrashes = Object.values(data).reduce((acc, val) => acc + val, 0)
@@ -64,8 +64,10 @@ export default function NetworkData (data) {
       : { enabled: true, type: 'curvedCW', roundness: 0.1 })
     const hue = lift >= 1 ? 10 : 140
     const saturation = lift >= 1 ? Math.min((lift - 1), 1.6) * 150 : Math.min((1 - lift), 0.2) * 150
-    const color = `hsl(${hue}, ${saturation}%, 50%, 0.15)`
-    const colorHover = `hsl(${hue}, ${saturation}%, 50%, 0.75)`
+    const opacity = lift >= 1 ? Math.min((lift - 1), 1.6) * 0.15 + 0.15 : Math.min((1 - lift), 0.2) * 0.15 + 0.15
+    const opacityHover = lift >= 1 ? Math.min((lift - 1), 1.6) * 0.2 + 0.72 : Math.min((1 - lift), 0.2) * 0.2 + 0.72
+    const color = `hsl(${hue}, ${saturation}%, 50%, ${opacity})`
+    const colorHover = `hsl(${hue}, ${saturation}%, 50%, ${opacityHover})`
 
     edges.push({
       from: condition1,

@@ -4,9 +4,9 @@ import filter from '../utils/filter'
 import envData from '../data/crash_env.json'
 import NetworkData from '../utils/NetworkData'
 import { v4 } from 'uuid'
-import CarLong150 from '../images/car_top_long_150.svg'
-import CarMid190 from '../images/car_top_mid_190.svg'
-import CarShort230 from '../images/car_top_short_230.svg'
+import CarLong150 from '../images/car_top_long_150.png'
+import CarMid190 from '../images/car_top_mid_190.png'
+import CarShort230 from '../images/car_top_short_230.png'
 
 export default function Network (props) {
   const filteredData = filter(envData, props.year, props.side)
@@ -24,7 +24,7 @@ export default function Network (props) {
         node: function (values, id, selected, hovering) {
           values.shadow = true
           values.shadowColor = '#AA4422'
-          values.shadowSize = 2
+          values.shadowSize = 6
           values.shadowX = 0
           values.shadowY = 0
         },
@@ -35,22 +35,22 @@ export default function Network (props) {
     },
     groups: {
       Lighting: {
-        font: { vadjust: -76 },
-        shape: 'image',
-        image: CarLong150,
-        size: 39
-      },
-      Weather: {
         font: { vadjust: -72 },
         shape: 'image',
+        image: CarLong150,
+        size: 40
+      },
+      Weather: {
+        font: { vadjust: -78 },
+        shape: 'image',
         image: CarMid190,
-        size: 27
+        size: 29
       },
       Roadway: {
-        font: { vadjust: -56 },
+        font: { vadjust: -60 },
         shape: 'image',
         image: CarShort230,
-        size: 37
+        size: 40
       }
     },
     edges: {

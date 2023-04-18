@@ -1,7 +1,7 @@
 import '../format/format.css'
-import SeveritySevere from '../images/severity_severe.svg'
-import SeverityModerate from '../images/severity_moderate.svg'
-import SeverityNo from '../images/severity_no.svg'
+import SeveritySevere from '../images/severity_severe.png'
+import SeverityModerate from '../images/severity_moderate.png'
+import SeverityNo from '../images/severity_no.png'
 
 export default function NetworkData (data) {
   const nodes = [
@@ -66,14 +66,14 @@ export default function NetworkData (data) {
     // const severityFormatted = severityFormat[severity]
     // const conditionFormatted = conditionFormat[condition]
     // const title = htmlTitle(`${lift}x chance of a crash causing ${severityFormatted} ${conditionFormatted}.`)
-    const width = 70 * (Math.max(Math.min(lift, 1.3), 0.9) - 0.9) + 8
+    const width = 80 * (Math.max(Math.min(lift, 1.3), 0.9) - 0.9) + 6
     const smooth = (severity === 'Severe injury'
       ? { enabled: true, type: 'curvedCW', roundness: 0.1 }
       : severity === 'Moderate injury'
         ? { enabled: false }
         : { enabled: true, type: 'curvedCCW', roundness: 0.1 })
-    const alpha = 0.05 + 0.4 * (Math.max(Math.min(lift, 1.3), 0.9) - 0.9)
-    const alphaHover = 0.2 + 1.2 * (Math.max(Math.min(lift, 1.3), 0.9) - 0.9)
+    const alpha = 0.05 + 0.5 * (Math.max(Math.min(lift, 1.3), 0.9) - 0.9)
+    const alphaHover = 0.2 + 1.5 * (Math.max(Math.min(lift, 1.3), 0.9) - 0.9)
     const color = `rgba(204, 204, 204, ${alpha})`
     const colorHover = `rgba(204, 204, 204, ${alphaHover})`
 
