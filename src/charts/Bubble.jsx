@@ -11,7 +11,7 @@ export default function Bubble (props) {
 
   return (
     <div style={{ position: 'relative' }}>
-      <img src={bgImage} alt="background" style={{ width: '100%', opacity: '30%' }} />
+      <img src={bgImage} alt="background" style={{ width: '100%', opacity: '40%' }} />
       {bubbleData.map((item, index) => {
         const bubbleTypeClass = item.size > 0.7 ? 'bubbleTypeLarge' : item.size > 0.4 ? 'bubbleTypeMid' : 'bubbleTypeSmall'
         const bubbleCountClass = item.size > 0.7 ? 'bubbleCountLarge' : item.size > 0.4 ? 'bubbleCountMid' : 'bubbleCountSmall'
@@ -26,7 +26,7 @@ export default function Bubble (props) {
             }}>
               <img src={bubbleImage} alt={item.type} style={{
                 width: `${item.size * 200}px`,
-                opacity: item.opacity * 0.5
+                opacity: item.opacity * 0.35
               }} />
             </div>
             <div style={{
