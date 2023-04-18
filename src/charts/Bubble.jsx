@@ -13,8 +13,8 @@ export default function Bubble (props) {
     <div style={{ position: 'relative' }}>
       <img src={bgImage} alt="background" style={{ width: '100%', opacity: '30%' }} />
       {bubbleData.map((item, index) => {
-        const bubbleTypeClass = item.size > 0.5 ? 'bubbleTypeLarge' : 'bubbleTypeSmall'
-        const bubbleCountClass = item.size > 0.5 ? 'bubbleCountLarge' : 'bubbleCountSmall'
+        const bubbleTypeClass = item.size > 0.7 ? 'bubbleTypeLarge' : item.size > 0.4 ? 'bubbleTypeMid' : 'bubbleTypeSmall'
+        const bubbleCountClass = item.size > 0.7 ? 'bubbleCountLarge' : item.size > 0.4 ? 'bubbleCountMid' : 'bubbleCountSmall'
 
         return (
           <div key={index}>

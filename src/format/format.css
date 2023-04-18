@@ -135,6 +135,11 @@ body {
   font-weight: 700;
 }
 
+.bubbleTypeMid {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
 .bubbleTypeSmall {
   font-size: 0.75rem;
   font-weight: 700;
@@ -144,8 +149,12 @@ body {
   font-size: 1.4rem;
 }
 
-.bubbleCountSmall {
+.bubbleCountMid {
   font-size: 1.2rem;
+}
+
+.bubbleCountSmall {
+  font-size: 1rem;
 }
 
 /* div.vis-tooltip {
