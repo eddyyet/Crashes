@@ -1,4 +1,3 @@
-import '../format/format.css'
 import SeveritySevere from '../images/severity_severe.png'
 import SeverityModerate from '../images/severity_moderate.png'
 import SeverityNo from '../images/severity_no.png'

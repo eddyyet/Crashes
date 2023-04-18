@@ -1,4 +1,3 @@
-import '../format/format.css'
 import React from 'react'
 import { ResponsiveBar } from '@nivo/bar'
 import filter from '../utils/filter'

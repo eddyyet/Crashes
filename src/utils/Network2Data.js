@@ -1,5 +1,3 @@
-import '../format/format.css'
-
 export default function NetworkData (data) {
   const nodes = [
     { id: 'Daylight', label: 'Daylight', x: 40, y: 115, group: 'Lighting' },

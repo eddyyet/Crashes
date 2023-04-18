@@ -1,4 +1,5 @@
-import './format/format.css'
+import './format/general.css'
+import './format/specific.css'
 import React, { useState } from 'react'
 import FilterControl from './utils/FilterControl'
 import Stack from '@mui/material/Stack'
