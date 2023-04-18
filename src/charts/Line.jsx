@@ -8,18 +8,18 @@ export default function Line (props) {
   const filteredData = filter(speedData, props.year, props.side)
   const lineData = LineData(filteredData)
 
-  const customSliceTooltip = ({ slice }) => {
+  const customSliceTooltip = ({ slice }) => (
     <div className={'tooltip'}>
-      <div>Speed limit: {slice.id}</div>
+      <div>Speed limit: {slice.points[0].data.x}</div>
       <div>
         {slice.points.map(point =>
           (<div key={point.id} className={'lineTooltipRow'}>
-            <span style={{ color: point.serieColor }}><strong>{point.serieId}</strong></span>
+            <span style={{ paddingRight: '16px', color: point.serieColor }}><strong>{point.serieId}</strong></span>
             <span>{point.data.yFormatted}</span>
           </div>))}
       </div>
     </div>
-  }
+  )
 
   return (
     <ResponsiveLine
@@ -34,7 +34,6 @@ export default function Line (props) {
       enableArea={true}
       areaOpacity={0.05}
       areaBlendMode='screen'
-      sliceTooltip={customSliceTooltip}
       axisLeft={{
         format: '>-0.0%',
         tickSize: 0,
@@ -59,6 +58,7 @@ export default function Line (props) {
         legends: { text: { fill: '#999999' } }
       }}
       enableSlices='x'
+      sliceTooltip={customSliceTooltip}
       legends={[
         {
           anchor: 'bottom',
