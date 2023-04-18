@@ -6,8 +6,8 @@ import SeverityNo from '../images/severity_no.png'
 export default function NetworkData (data) {
   const nodes = [
     { id: 'Severe injury', label: 'Severe injury', font: { vadjust: -85 }, x: -180, y: 0, shape: 'image', image: SeveritySevere, size: 66 },
-    { id: 'Moderate injury', label: 'Moderate injury', font: { vadjust: -64 }, x: 0, y: 0, shape: 'image', image: SeverityModerate, size: 44 },
-    { id: 'No injury', label: 'No injury', font: { vadjust: -48 }, x: 180, y: 0, shape: 'image', image: SeverityNo, size: 20 },
+    { id: 'Moderate injury', label: 'Moderate injury', font: { vadjust: -64 }, x: 0, y: 0, shape: 'image', image: SeverityModerate, size: 40 },
+    { id: 'No injury', label: 'No injury', font: { vadjust: -48 }, x: 180, y: 0, shape: 'image', image: SeverityNo, size: 18 },
     { id: 'Dusk', label: 'Dusk', x: -310, y: -180, group: 'Lighting' },
     { id: 'Daylight', label: 'Daylight', x: -240, y: -210, group: 'Lighting' },
     { id: 'Dawn', label: 'Dawn', x: -170, y: -240, group: 'Lighting' },
