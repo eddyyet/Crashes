@@ -14,6 +14,7 @@ import Network2 from './charts/Network2'
 import Bubble from './charts/Bubble'
 import ScatterPlot from './charts/ScatterPlot'
 import Choropleth from './charts/Choropleth'
+import Legend from './charts/Legend'
 
 export default function App () {
   const [yearRange, setYearRange] = useState([2018, 2022])
@@ -38,7 +39,7 @@ export default function App () {
               <div><Choropleth year={yearRange} side={side} /></div>
             </div>
             <div className={'mapLegend'}>
-              <div>Map legend line 1</div>
+              <div><Legend /></div>
               <div>Map legend line 2</div>
             </div>
           </div>
