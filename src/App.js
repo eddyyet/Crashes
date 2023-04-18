@@ -87,6 +87,11 @@ export default function App () {
             <ScatterPlot year={yearRange} side={side} />
           </Chart>
         </div>
+        <div className={'footer'}>
+          <div>Data from XXXXXX</div>
+          <div>Illustration for HKUST MSBD5005 Data Visualization (Group 11, Spring 2022/23)</div>
+          <div>All rights reserved</div>
+        </div>
       </Stack>
     </div>
   )

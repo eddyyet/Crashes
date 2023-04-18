@@ -110,3 +110,9 @@ body {
   color: #CCCCCC;
   background-color: rgba(56, 58, 62, 0.7);
 }
+
+.footer {
+  text-align: center;
+  font-size: 0.75rem;
+  color: #666666;
+}
