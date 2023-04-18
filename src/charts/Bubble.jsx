@@ -26,7 +26,7 @@ export default function Bubble (props) {
             }}>
               <img src={bubbleImage} alt={item.type} style={{
                 width: `${item.size * 200}px`,
-                opacity: item.opacity * 0.35
+                opacity: item.opacity * 0.45
               }} />
             </div>
             <div style={{

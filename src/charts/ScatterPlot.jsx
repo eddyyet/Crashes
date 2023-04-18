@@ -48,7 +48,6 @@ export default function ScatterPlot (props) {
       enableGridY={false}
       theme={{ axis: { ticks: { text: { fill: '#999999' } }, legend: { text: { fill: '#999999' } } } }}
       colors={colors}
-      blendMode='screen'
       tooltip={customTooltip}
     />
   )

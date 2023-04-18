@@ -15,7 +15,7 @@ export default function BubbleData (data) {
         break
       case 'Head-on':
         x = 0.74
-        y = 0.55
+        y = 0.6
         break
       case 'Other/Unknown':
         x = 0.55
@@ -23,23 +23,23 @@ export default function BubbleData (data) {
         break
       case 'Parked motor vehicle':
         x = 0.21
-        y = 0.21
+        y = 0.26
         break
       case 'Pedestrian/Cyclist':
         x = 0.85
-        y = 0.68
+        y = 0.72
         break
       case 'Rear-end':
         x = 0.35
-        y = 0.61
+        y = 0.75
         break
       case 'Side':
         x = 0.38
-        y = 0.45
+        y = 0.52
         break
       case 'Turning/Angle':
         x = 0.57
-        y = 0.31
+        y = 0.33
         break
       // extra case for exceptional data
       default:
