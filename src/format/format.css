@@ -109,6 +109,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   font-size: 0.75rem;
+  font-weight: 700;
 }
 
 .tooltip {

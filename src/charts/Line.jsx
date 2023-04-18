@@ -10,7 +10,7 @@ export default function Line (props) {
 
   const customSliceTooltip = ({ slice }) => (
     <div className={'tooltip'}>
-      <div>Speed limit: {slice.points[0].data.x}</div>
+      <div style={{ marginBottom: '0.5rem' }}>Crashes on roads with a speed limit of <strong>{slice.points[0].data.x}</strong>:</div>
       <div>
         {slice.points.map(point =>
           (<div key={point.id} className={'lineTooltipRow'}>
@@ -29,7 +29,7 @@ export default function Line (props) {
       data={lineData}
       xScale={{ type: 'point' }}
       yScale={{ type: 'linear', min: 0, max: 'auto', stacked: false }}
-      yFormat= '>-0.2%'
+      yFormat= '>-0.1%'
       colors={{ datum: 'color' }}
       enableArea={true}
       areaOpacity={0.05}

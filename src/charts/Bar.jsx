@@ -15,10 +15,16 @@ export default function Bar (props) {
 
   const customTooltip = ({ data, id, value }) => {
     const percentage = data[`${id}Percentage`]
+    const injuredDescription = id === 'Injured'
+      ? (<div>including the people dead, incapacitated, moderately injured and injured but not apparent</div>)
+      : null
 
     return (
       <div className={'tooltip'}>
-        <strong>{value}</strong> ({percentage}) people are <span style={{ textTransform: 'lowercase' }}>{id}</span>.
+        <div style={{ fontSize: '1rem', color: data[`${id}Color`] }}><strong>{id}</strong></div>
+        <div style={{ fontSize: '1rem' }}>{value}</div>
+        <div><br />equivalent to {percentage} of the people involved</div>
+        {injuredDescription}
       </div>
     )
   }
