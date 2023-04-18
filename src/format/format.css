@@ -130,6 +130,24 @@ body {
   font-size: 1rem;
 }
 
+.bubbleTypeLarge {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.bubbleTypeSmall {
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.bubbleCountLarge {
+  font-size: 1.4rem;
+}
+
+.bubbleCountSmall {
+  font-size: 1.2rem;
+}
+
 /* div.vis-tooltip {
   z-index: 5;
   visibility: hidden;

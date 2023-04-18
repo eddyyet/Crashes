@@ -48,8 +48,8 @@ export default function BubbleData (data) {
     }
 
     // calculate size and opacity based on count
-    const size = ((Math.sqrt(count) - Math.sqrt(minCount)) / (Math.sqrt(maxCount) - Math.sqrt(minCount))) * 80 + 20
-    const opacity = ((count - minCount) / (maxCount - minCount)) * 0.5 + 0.5
+    const size = ((Math.sqrt(count) - Math.sqrt(minCount)) / (Math.sqrt(maxCount) - Math.sqrt(minCount))) * 0.7 + 0.3
+    const opacity = ((count - minCount) / (maxCount - minCount)) * 0.3 + 0.7
 
     // return modified element
     return {

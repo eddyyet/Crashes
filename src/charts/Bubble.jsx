@@ -11,33 +11,39 @@ export default function Bubble (props) {
 
   return (
     <div style={{ position: 'relative' }}>
-      <img src={bgImage} alt="background" style={{ width: '100%', opacity: '40%' }} />
-      {bubbleData.map((item, index) => (
-        <div key={index}>
-          <div style={{
-            position: 'absolute',
-            left: `${item.x * 100}%`,
-            top: `${item.y * 100}%`,
-            transform: 'translate(-50%, -50%)'
-          }}>
-            <img src={bubbleImage} alt={item.type} style={{
-              width: `${item.size * 2}px`,
-              opacity: item.opacity * 0.5
-            }} />
-          </div>
-          <div style={{
-            position: 'absolute',
-            left: `${item.x * 100}%`,
-            top: `${item.y * 100}%`,
-            transform: 'translate(-50%, -50%)'
-          }}>
-            <div style={{ textAlign: 'center' }}>
-              <div>{item.type}</div>
-              <div>{item.count}</div>
+      <img src={bgImage} alt="background" style={{ width: '100%', opacity: '30%' }} />
+      {bubbleData.map((item, index) => {
+        const bubbleTypeClass = item.size > 0.5 ? 'bubbleTypeLarge' : 'bubbleTypeSmall'
+        const bubbleCountClass = item.size > 0.5 ? 'bubbleCountLarge' : 'bubbleCountSmall'
+
+        return (
+          <div key={index}>
+            <div style={{
+              position: 'absolute',
+              left: `${item.x * 100}%`,
+              top: `${item.y * 100}%`,
+              transform: 'translate(-50%, -50%)'
+            }}>
+              <img src={bubbleImage} alt={item.type} style={{
+                width: `${item.size * 200}px`,
+                opacity: item.opacity * 0.5
+              }} />
+            </div>
+            <div style={{
+              position: 'absolute',
+              left: `${item.x * 100}%`,
+              top: `${item.y * 100}%`,
+              transform: 'translate(-50%, -50%)'
+            }}>
+              <div style={{ textAlign: 'center' }}>
+                <div className={bubbleTypeClass}>{item.type}</div>
+                <div className={bubbleCountClass}>{item.count}</div>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        )
+      }
+      )}
     </div>
   )
 }
