@@ -130,10 +130,10 @@ function onMouseOut (event, selectedData) {
     layer.setStyle({
       fillColor: '#ccc',
       weight: 1,
-      opacity: 1,
+      opacity: 0.2,
       color: 'white',
       dashArray: '2',
-      fillOpacity: 0.5
+      fillOpacity: 0.05
     })
   } else {
     layer.setStyle({
@@ -162,10 +162,10 @@ function styleSide (feature, selectedData) {
     return {
       fillColor: '#ccc',
       weight: 1,
-      opacity: 1,
+      opacity: 0.2,
       color: 'white',
       dashArray: '2',
-      fillOpacity: 0.5
+      fillOpacity: 0.05
     }
   } else {
     return {
@@ -426,6 +426,9 @@ export default function CrashBySide (props) {
       dragging={false}
     >
         <TileLayer attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png' />
+        {/*
+        <TileLayer attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' url='https://api.mapbox.com/styles/v1/mapbox/dark-v10/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibXNiZDUwMDUiLCJhIjoiY2xnbWI1MXpmMDQ1cjNlanFycjE4NDUzdyJ9.Ghc_wgUqyPqJgQXwj-p_tw' />
+        */}
         {/*
         <Legend />
         */}
