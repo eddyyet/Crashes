@@ -15,6 +15,7 @@ import Bubble from './charts/Bubble'
 import ScatterPlot from './charts/ScatterPlot'
 import Choropleth from './charts/Choropleth'
 import Legend from './charts/Legend'
+import Legend2 from './charts/Legend2'
 
 export default function App () {
   const [yearRange, setYearRange] = useState([2018, 2022])
@@ -40,7 +41,7 @@ export default function App () {
             </div>
             <div className={'mapLegend'}>
               <div><Legend /></div>
-              <div>Map legend line 2</div>
+              <div><Legend2 /></div>
             </div>
           </div>
         </div>

@@ -12,7 +12,7 @@ import isEqual from 'lodash/isEqual'
 // import Control from 'react-leaflet-custom-control'
 import L from 'leaflet'
 // import cautionCrashIcon from '../images/choropleth_collision.png'
-import exclaim from '../images/max_crash_community.png'
+import exclam from '../images/max_crash_community5.png'
 import sideCommunityLookup from '../data/chicago_side_communityarea_lookup.json'
 
 /*
@@ -76,7 +76,7 @@ function onMouseOver (event, selectedData) {
 
   if (selectedData.crashesPer1000[featureId] !== undefined) {
     layer.setStyle({
-      weight: 2.5,
+      weight: 2,
       color: '#666',
       dashArray: '',
       fillOpacity: 0.85,
@@ -138,7 +138,7 @@ function onMouseOut (event, selectedData) {
   } else {
     layer.setStyle({
       fillColor,
-      weight: 2,
+      weight: 1.5,
       opacity: 1,
       color: 'white',
       fillOpacity: 0.85
@@ -170,7 +170,7 @@ function styleSide (feature, selectedData) {
   } else {
     return {
       fillColor,
-      weight: 2,
+      weight: 1.5,
       opacity: 1,
       color: 'white',
       fillOpacity: 0.85
@@ -231,9 +231,10 @@ function styleCommunity (feature) {
   return {
     fillColor: 'transparent',
     fillOpacity: 0,
-    color: '#5b5b5b',
+    // color: '#5b5b5b',
+    color: '#e8dfdf',
     weight: 0.5,
-    Opacity: 0.5
+    Opacity: 0.3
   }
 }
 
@@ -319,7 +320,7 @@ export default function CrashBySide (props) {
   }, [filteredData])
 
   const customIcon1 = new L.Icon({
-    iconUrl: exclaim,
+    iconUrl: exclam,
     iconSize: [8, 8]
   })
 
@@ -345,6 +346,12 @@ export default function CrashBySide (props) {
   const choroplethStyleSide = useCallback((feature) => {
     return styleSide(feature, sideData)
   }, [sideData])
+
+  /*
+  const choroplethStyleCommunity = useCallback((feature) => {
+    return styleCommunity(feature, sideData)
+  }, [sideData])
+  */
 
   const choroplethOnEachFeature = useCallback((feature, layer) => {
     onEachFeature(feature, layer, sideData)
