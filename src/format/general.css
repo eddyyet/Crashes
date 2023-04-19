@@ -116,3 +116,8 @@ body {
   font-size: 0.75rem;
   color: #666666;
 }
+
+a {
+  color: #999999;
+  text-decoration: none;
+}
