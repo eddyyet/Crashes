@@ -1,9 +1,9 @@
 export default function NetworkData (data) {
   const nodes = [
-    { id: 'Daylight', label: 'Daylight', x: 40, y: 115, group: 'Lighting' },
-    { id: 'Dawn', label: 'Dawn', x: 40, y: 170, group: 'Lighting' },
-    { id: 'Darkness', label: 'Darkness', x: 40, y: 225, group: 'Lighting' },
-    { id: 'Dusk', label: 'Dusk', x: 40, y: 280, group: 'Lighting' },
+    { id: 'Dusk', label: 'Dusk', x: 40, y: 115, group: 'Lighting' },
+    { id: 'Daylight', label: 'Daylight', x: 40, y: 170, group: 'Lighting' },
+    { id: 'Dawn', label: 'Dawn', x: 40, y: 225, group: 'Lighting' },
+    { id: 'Darkness', label: 'Darkness', x: 40, y: 280, group: 'Lighting' },
     { id: 'Clear', label: 'Clear', x: 162, y: 32, group: 'Weather' },
     { id: 'Cloudy', label: 'Cloudy', x: 218, y: 62, group: 'Weather' },
     { id: 'Rain/Snow', label: 'Rain/Snow', x: 274, y: 92, group: 'Weather' },
