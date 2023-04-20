@@ -73,7 +73,7 @@ export default function TreeMapData (data) {
     const group = Object.keys(groupMap).find((key) => groupMap[key].includes(originalCause))
     const injuryRateNum = count === 0 ? 0 : injuredCount / count
     const injuryRate = (injuryRateNum * 100).toFixed(1) + '%'
-    const alpha = Math.min(injuryRateNum * 2.5, 0.8) + 0.01
+    const alpha = Math.min(injuryRateNum * 2.2, 0.8) + 0.01
 
     if (group) {
       const color = `hsla(${groupColor[group]}, ${alpha})`
