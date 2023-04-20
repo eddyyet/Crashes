@@ -40,10 +40,18 @@
 }
 
 .lineTooltipRow {
-  display: flex;
+  /* display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-between; */
   font-size: 1rem;
+}
+
+.lineTooltipLevel {
+  padding-right: 16px, 
+}
+
+.lineTooltipFigure {
+  float: right;
 }
 
 .bubbleTypeLarge {

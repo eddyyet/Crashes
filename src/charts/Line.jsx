@@ -14,8 +14,8 @@ export default function Line (props) {
       <div>
         {slice.points.map(point =>
           (<div key={point.id} className={'lineTooltipRow'}>
-            <span style={{ paddingRight: '16px', color: point.serieColor }}><strong>{point.serieId}</strong></span>
-            <span>{point.data.yFormatted}</span>
+            <span className={'lineTooltipLevel'} style={{ color: point.serieColor }}><strong>{point.serieId}</strong></span>
+            <span className={'lineTooltipFigure'}>{point.data.yFormatted}</span>
           </div>))}
       </div>
     </div>
