@@ -3,6 +3,8 @@ import { ResponsiveTreeMapHtml } from '@nivo/treemap'
 import filter from '../utils/filter'
 import TreeMapData from '../utils/TreeMapData'
 import causeData from '../data/crash_cause.json'
+import MinorCrashOutlinedIcon from '@mui/icons-material/MinorCrashOutlined'
+import MedicalServicesOutlinedIcon from '@mui/icons-material/MedicalServicesOutlined'
 
 export default function TreeMap (props) {
   const filteredData = filter(causeData, props.year, props.side)
@@ -13,42 +15,30 @@ export default function TreeMap (props) {
     const labelWidth = node.width
     const labelHeight = node.height
     const causeLength = node.id.length
+    let scale, boxWidth
 
-    let sizeGroup
-    if (node.value > 0.04 * treeMapTotal && causeLength * 100 < labelWidth * (labelHeight - 48)) {
-      sizeGroup = 'Large'
+    if (node.value > 0.05 * treeMapTotal && causeLength * 100 < labelWidth * (labelHeight - 48)) {
+      scale = 'scale(1)'
+      boxWidth = labelWidth - 12
+    } else if (node.value > 0.03 * treeMapTotal && causeLength * 100 < labelWidth * (labelHeight - 36)) {
+      scale = 'scale(0.7)'
+      boxWidth = labelWidth * 1.43 - 4
     } else if (node.value > 0.01 * treeMapTotal && causeLength * 25 < labelWidth * (labelHeight - 24)) {
-      sizeGroup = 'Med'
+      scale = 'scale(0.4)'
+      boxWidth = labelWidth * 2.5
     } else if (node.value > 0.005 * treeMapTotal && causeLength * 6 < labelWidth * (labelHeight - 12)) {
-      sizeGroup = 'Small'
+      scale = 'scale(0.25)'
+      boxWidth = labelWidth * 4
     } else {
-      sizeGroup = 'Tiny'
+      scale = 'scale(0.1)'
+      boxWidth = labelWidth * 10
     }
 
-    const causeClass = 'treeMapCause' + sizeGroup
-    const crashesClass = 'treeMapCrashes' + sizeGroup
-    const injuryRateClass = 'treeMapInjuryRate' + sizeGroup
-
-    // let causeSize, valueSize, injuredSize
-    // if (node.value > 0.04 * treeMapTotal) {
-    //   causeSize = '16px'
-    //   valueSize = '30px'
-    //   injuredSize = '10px'
-    // } else if (node.value > 0.01 * treeMapTotal) {
-    //   causeSize = '10px'
-    //   valueSize = '20px'
-    //   injuredSize = '8px'
-    // } else {
-    //   causeSize = '6px'
-    //   valueSize = '8px'
-    //   injuredSize = '5px'
-    // }
-
     return (
-      <div className={'treeMapContent'}>
-        <div className={causeClass} style={{ width: labelWidth, whiteSpace: 'normal' }}>{node.id}</div>
-        <div className={crashesClass}>{node.value}</div>
-        <div className={injuryRateClass} >Injured: {node.data.injuryRate}</div>
+      <div className={'treeMapContent'} style={{ transform: scale, WebkitTransform: scale }}>
+        <div className={'treeMapCause'} style={{ width: boxWidth, whiteSpace: 'normal' }}>{node.id}</div>
+        <div className={'treeMapCrashes'}><MinorCrashOutlinedIcon className={'treeMapIcon'} /> {node.value}</div>
+        <div className={'treeMapInjuryRate'} ><MedicalServicesOutlinedIcon className={'treeMapIcon'} /> {node.data.injuryRate}</div>
       </div>
     )
   }
@@ -75,7 +65,6 @@ export default function TreeMap (props) {
       borderWidth={1}
       borderColor={{ from: 'color', modifiers: [['opacity', 0.5], ['brighter', 0.5]] }}
       label={customLabel}
-      labelSkipSize={20}
       labelTextColor={{ from: 'color', modifiers: [['opacity', 1], ['brighter', 0.5]] }}
       parentLabelTextColor={{ from: 'color', modifiers: [['opacity', 1], ['brighter', 1]] }}
       tooltip={customTooltip}
