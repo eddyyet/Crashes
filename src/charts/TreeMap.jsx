@@ -11,26 +11,44 @@ export default function TreeMap (props) {
 
   const customLabel = (node) => {
     const labelWidth = node.width
-    let causeSize, valueSize, injuredSize
-    if (node.value > 0.04 * treeMapTotal) {
-      causeSize = '16px'
-      valueSize = '30px'
-      injuredSize = '10px'
-    } else if (node.value > 0.01 * treeMapTotal) {
-      causeSize = '10px'
-      valueSize = '20px'
-      injuredSize = '8px'
+    const labelHeight = node.height
+    const causeLength = node.id.length
+
+    let sizeGroup
+    if (node.value > 0.04 * treeMapTotal && causeLength * 100 < labelWidth * (labelHeight - 48)) {
+      sizeGroup = 'Large'
+    } else if (node.value > 0.01 * treeMapTotal && causeLength * 25 < labelWidth * (labelHeight - 24)) {
+      sizeGroup = 'Med'
+    } else if (node.value > 0.005 * treeMapTotal && causeLength * 6 < labelWidth * (labelHeight - 12)) {
+      sizeGroup = 'Small'
     } else {
-      causeSize = '6px'
-      valueSize = '8px'
-      injuredSize = '5px'
+      sizeGroup = 'Tiny'
     }
 
+    const causeClass = 'treeMapCause' + sizeGroup
+    const crashesClass = 'treeMapCrashes' + sizeGroup
+    const injuryRateClass = 'treeMapInjuryRate' + sizeGroup
+
+    // let causeSize, valueSize, injuredSize
+    // if (node.value > 0.04 * treeMapTotal) {
+    //   causeSize = '16px'
+    //   valueSize = '30px'
+    //   injuredSize = '10px'
+    // } else if (node.value > 0.01 * treeMapTotal) {
+    //   causeSize = '10px'
+    //   valueSize = '20px'
+    //   injuredSize = '8px'
+    // } else {
+    //   causeSize = '6px'
+    //   valueSize = '8px'
+    //   injuredSize = '5px'
+    // }
+
     return (
-      <div style={{ textAlign: 'center' }}>
-        <div style={{ width: labelWidth, fontSize: causeSize, whiteSpace: 'normal' }}>{node.id}</div>
-        <div style={{ fontSize: valueSize }}>{node.value}</div>
-        <div style={{ fontSize: injuredSize }}>Injured: {node.data.injuryRate}</div>
+      <div className={'treeMapContent'}>
+        <div className={causeClass} style={{ width: labelWidth, whiteSpace: 'normal' }}>{node.id}</div>
+        <div className={crashesClass}>{node.value}</div>
+        <div className={injuryRateClass} >Injured: {node.data.injuryRate}</div>
       </div>
     )
   }

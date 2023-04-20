@@ -2,6 +2,30 @@
   display: none;
 }
 
+.treeMapContent {
+  text-align:center;
+}
+
+.treeMapCauseLarge {
+  transform: scale(2);
+  -webkit-transform: scale(2);
+}
+
+.treeMapCauseMid {
+  transform: scale(1.25);
+  -webkit-transform: scale(1.25);
+}
+
+.treeMapCauseSmall {
+  transform: scale(0.5);
+  -webkit-transform: scale(0.5);
+}
+
+.treeMapCauseTiny {
+  transform: scale(0.2);
+  -webkit-transform: scale(0.2);
+}
+
 .barFigure {
   display: flex;
   flex-direction: row;
