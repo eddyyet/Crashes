@@ -1,5 +1,5 @@
 import '../format/filter.css'
-import React, { useState, useCallback } from 'react'
+import React, { useState, useCallback, useRef } from 'react'
 import { AppBar, Toolbar, Slider, Select, MenuItem, IconButton, debounce } from '@mui/material'
 import PlayArrowOutlinedIcon from '@mui/icons-material/PlayArrowOutlined'
 import FilterAltOffOutlinedIcon from '@mui/icons-material/FilterAltOffOutlined'
@@ -31,6 +31,7 @@ const sides = [
 export default function FilterControl (props) {
   const [yearRangeTemp, setYearRangeTemp] = useState([minYear, maxYear])
   const [sideTemp, setSideTemp] = useState('All')
+  const playButton = useRef(null)
 
   const playThroughYears = () => {
     let year = minYear
@@ -45,6 +46,9 @@ export default function FilterControl (props) {
         props.setYearRange([year, year])
       }
     }, 1500)
+    if (playButton.current) {
+      playButton.current.blur()
+    }
   }
 
   const handleSliderChange = (event, newYearRange) => {
@@ -79,7 +83,7 @@ export default function FilterControl (props) {
       <Toolbar className={'filterBar'}>
         <span className={'filter'}>
           <span className={'filterName'}>Year</span>
-          <IconButton sx={{ height: '3rem', width: '3rem', color: 'rgba(255, 255, 255, 0.7)', '&:hover, &:focus': { backgroundColor: 'rgba(204, 204, 204, 0.1)' } }} onClick={playThroughYears}>
+          <IconButton ref={playButton} sx={{ height: '3rem', width: '3rem', color: 'rgba(255, 255, 255, 0.7)', '&:hover, &:focus': { backgroundColor: 'rgba(204, 204, 204, 0.1)' } }} onClick={playThroughYears}>
             <PlayArrowOutlinedIcon />
           </IconButton>
           <Slider
