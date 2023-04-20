@@ -90,18 +90,18 @@ export default function App () {
           </Chart>
         </div>
         <div className={'footer'}>
-          <div>Data from <a href='https://data.cityofchicago.org/Transportation/Traffic-Crashes-Crashes/85ca-t3if'>Chicago Data Portal</a></div>
+          <div>Data from <a href='https://data.cityofchicago.org/Transportation/Traffic-Crashes-Crashes/85ca-t3if' target='_blank' rel='noreferrer'>Chicago Data Portal</a></div>
           <div><span>Map engine from </span>
-          <a href='https://leafletjs.com'>Leaflet</a><span> and </span>
-          <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors
+          <a href='https://leafletjs.com' target='_blank' rel='noreferrer'>Leaflet</a><span> and </span>
+          <a href='https://www.openstreetmap.org/copyright' target='_blank' rel='noreferrer'>OpenStreetMap</a> contributors
           </div>
           <div>
             Images from Vecteezy (
-            <a href='https://www.vecteezy.com/vector-art/7798695-graphics-drawing-businessman-standing-and-using-smartphone-for-connection-online-technology-vector-illustration'>man</a><span>, </span>
-            <a href='https://www.vecteezy.com/vector-art/113748-free-illustration-of-hybrid-car'>cars (3D)</a><span>, </span>
-            <a href='https://www.vecteezy.com/vector-art/13037262-collection-of-various-isolated-cars-icons-car-top-view-illustration-vector'>cars (top view)</a><span> and </span>
-            <a href='https://www.vecteezy.com/members/104122094326139728765'>trees</a>) and clipartix.com (
-            <a href='https://clipartix.com/motorcycle-clipart-image-8614/'>motorcycle</a>)
+            <a href='https://www.vecteezy.com/vector-art/7798695-graphics-drawing-businessman-standing-and-using-smartphone-for-connection-online-technology-vector-illustration' target='_blank' rel='noreferrer'>man</a><span>, </span>
+            <a href='https://www.vecteezy.com/vector-art/113748-free-illustration-of-hybrid-car' target='_blank' rel='noreferrer'>cars (3D)</a><span>, </span>
+            <a href='https://www.vecteezy.com/vector-art/13037262-collection-of-various-isolated-cars-icons-car-top-view-illustration-vector' target='_blank' rel='noreferrer'>cars (top view)</a><span> and </span>
+            <a href='https://www.vecteezy.com/members/104122094326139728765' target='_blank' rel='noreferrer'>trees</a>) and clipartix.com (
+            <a href='https://clipartix.com/motorcycle-clipart-image-8614/' target='_blank' rel='noreferrer'>motorcycle</a>)
           </div>
           <div>Illustration for HKUST MSBD5005 Data Visualization (Group 11, Spring 2022/23)</div>
           <div>All rights reserved</div>
