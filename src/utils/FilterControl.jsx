@@ -1,7 +1,8 @@
 import '../format/filter.css'
 import React, { useState, useCallback } from 'react'
 import { AppBar, Toolbar, Slider, Select, MenuItem, IconButton, debounce } from '@mui/material'
-import FilterAltOffIcon from '@mui/icons-material/FilterAltOff'
+import PlayArrowOutlinedIcon from '@mui/icons-material/PlayArrowOutlined'
+import FilterAltOffOutlinedIcon from '@mui/icons-material/FilterAltOffOutlined'
 
 const marks = [
   { value: 2018, label: '2018' },
@@ -10,6 +11,9 @@ const marks = [
   { value: 2021, label: '2021' },
   { value: 2022, label: '2022' }
 ]
+
+const minYear = 2018
+const maxYear = 2022
 
 const sides = [
   'All',
@@ -25,8 +29,23 @@ const sides = [
 ]
 
 export default function FilterControl (props) {
-  const [yearRangeTemp, setYearRangeTemp] = useState([2018, 2022])
+  const [yearRangeTemp, setYearRangeTemp] = useState([minYear, maxYear])
   const [sideTemp, setSideTemp] = useState('All')
+
+  const playThroughYears = () => {
+    let year = minYear
+    setYearRangeTemp([year, year])
+    props.setYearRange([year, year])
+    const intervalId = setInterval(() => {
+      if (year >= maxYear) {
+        clearInterval(intervalId)
+      } else {
+        year++
+        setYearRangeTemp([year, year])
+        props.setYearRange([year, year])
+      }
+    }, 1500)
+  }
 
   const handleSliderChange = (event, newYearRange) => {
     setYearRangeTemp(newYearRange)
@@ -49,8 +68,8 @@ export default function FilterControl (props) {
   )
 
   const handleReset = () => {
-    setYearRangeTemp([2018, 2022])
-    props.setYearRange([2018, 2022])
+    setYearRangeTemp([minYear, maxYear])
+    props.setYearRange([minYear, maxYear])
     setSideTemp('All')
     props.setSide('All')
   }
@@ -60,9 +79,12 @@ export default function FilterControl (props) {
       <Toolbar className={'filterBar'}>
         <span className={'filter'}>
           <span className={'filterName'}>Year</span>
+          <IconButton sx={{ height: '3rem', width: '3rem', color: 'rgba(255, 255, 255, 0.7)', '&:hover, &:focus': { backgroundColor: 'rgba(204, 204, 204, 0.1)' } }} onClick={playThroughYears}>
+            <PlayArrowOutlinedIcon />
+          </IconButton>
           <Slider
-            min={2018}
-            max={2022}
+            min={minYear}
+            max={maxYear}
             marks={marks}
             value={yearRangeTemp}
             onChange={handleSliderChange}
@@ -102,7 +124,7 @@ export default function FilterControl (props) {
           </Select>
         </span>
         <IconButton sx={{ height: '3rem', width: '3rem', color: 'rgba(255, 255, 255, 0.7)', '&:hover, &:focus': { backgroundColor: 'rgba(204, 204, 204, 0.1)' } }} onClick={handleReset}>
-          <FilterAltOffIcon />
+          <FilterAltOffOutlinedIcon />
         </IconButton>
       </Toolbar>
     </AppBar>
