@@ -31,6 +31,18 @@
   -webkit-transform: scale(0.8);
 }
 
+.treeMapTooltip {
+  font-size: 1rem;
+}
+
+.treeMapTooltipMeasure {
+  padding-right: 16px;
+}
+
+.treeMapTooltipFigure {
+  float: right;
+}
+
 .barFigure {
   display: flex;
   flex-direction: row;
@@ -40,14 +52,11 @@
 }
 
 .lineTooltipRow {
-  /* display: flex;
-  flex-direction: row;
-  justify-content: space-between; */
   font-size: 1rem;
 }
 
 .lineTooltipLevel {
-  padding-right: 16px, 
+  padding-right: 16px;
 }
 
 .lineTooltipFigure {

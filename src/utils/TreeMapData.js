@@ -76,40 +76,48 @@ export default function TreeMapData (data) {
   // find the total of values
   const total = Object.values(causeDict).reduce((acc, val) => acc + val.count, 0)
 
-  for (const originalCause in causeDict) {
-    const { count, injuredCount } = causeDict[originalCause]
-    const group = Object.keys(groupMap).find((key) => groupMap[key].includes(originalCause))
+  for (const cause in causeDict) {
+    const { count, injuredCount } = causeDict[cause]
+    const group = Object.keys(groupMap).find((key) => groupMap[key].includes(cause))
     const injuryRateNum = count === 0 ? 0 : injuredCount / count
     const injuryRate = (injuryRateNum * 100).toFixed(1) + '%'
     const alpha = Math.min(injuryRateNum * 2.5, 0.8) + 0.01
-    const textAlpha = Math.min(1.5 - (1 - alpha) * 0.9, 1)
+    const textAlpha = Math.min(alpha + 0.6, 1)
+    let nodeTextColor
 
     if (group) {
-      const color = `hsla(${groupColor[group]}, ${alpha})`
-      const textColor = `hsla(${groupTextColor[group]}, ${textAlpha})`
+      const nodeColor = `hsla(${groupColor[group]}, ${alpha})`
+      if (injuryRateNum < 0.2) {
+        nodeTextColor = `hsla(${groupTextColor[group]}, ${textAlpha})`
+      } else { nodeTextColor = 'rgba(30, 31, 32, 0.4)' }
+      const tooltipTitleColor = `hsla(${groupTextColor[group]}, 1)`
       groups.find((g) => g.cause === group).children.push({
-        cause: originalCause,
+        cause,
         count,
-        color,
-        textColor,
-        injuryRate
+        injuryRate,
+        nodeColor,
+        nodeTextColor,
+        tooltipTitleColor
       })
     } else {
-      const color = `hsla(${groupColor[originalCause]}, ${alpha})`
-      const textColor = `hsla(${groupTextColor[originalCause]}, ${textAlpha})`
+      const nodeColor = `hsla(${groupColor[cause]}, ${alpha})`
+      if (injuryRateNum < 0.2) {
+        nodeTextColor = `hsla(${groupTextColor[cause]}, ${textAlpha})`
+      } else { nodeTextColor = 'rgba(30, 31, 32, 0.4)' }
+      const tooltipTitleColor = `hsla(${groupTextColor[cause]}, 1)`
       topLevelCauses.push({
-        cause: originalCause,
+        cause,
         count,
-        color,
-        textColor,
-        textAlpha,
-        injuryRate
+        injuryRate,
+        nodeColor,
+        nodeTextColor,
+        tooltipTitleColor
       })
     }
   }
 
   for (const group of groups) {
-    group.color = `hsla(${groupColor[group.cause]}, 0.01)`
+    group.nodeColor = `hsla(${groupColor[group.cause]}, 0.01)`
   }
 
   return { cause: 'TreeMapRoot', children: [...groups, ...topLevelCauses], total }

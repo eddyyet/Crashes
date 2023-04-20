@@ -35,7 +35,7 @@ export default function TreeMap (props) {
     }
 
     return (
-      <div className={'treeMapContent'} style={{ transform: scale, WebkitTransform: scale, color: node.data.textColor }}>
+      <div className={'treeMapContent'} style={{ transform: scale, WebkitTransform: scale, color: node.data.nodeTextColor }}>
         <div className={'treeMapCause'} style={{ width: boxWidth, whiteSpace: 'normal' }}>{node.id}</div>
         <div className={'treeMapCrashes'}><MinorCrashOutlinedIcon className={'treeMapIcon'} /> {node.value.toLocaleString('en-US')}</div>
         <div className={'treeMapInjuryRate'} ><MedicalServicesOutlinedIcon className={'treeMapIcon'} /> {node.data.injuryRate}</div>
@@ -45,10 +45,12 @@ export default function TreeMap (props) {
 
   const customTooltip = (node) => {
     return (
-      <div className={'tooltip'}>
-        <div style={{ fontSize: '1rem' }}><strong>{node.node.id}</strong></div>
-        <div>Crashes: {node.node.value.toLocaleString('en-US')}</div>
-        <div>Injury rate: {node.node.data.injuryRate}</div>
+      <div className={'tooltip treeMapTooltip'}>
+        <div style={{ color: node.node.data.tooltipTitleColor }}><strong>{node.node.id}</strong></div>
+        <div style={{ width: '150px' }}>
+          <div><span className={'treeMapTooltipMeasure'}>Crashes</span><span className={'treeMapTooltipFigure'}>{node.node.value.toLocaleString('en-US')}</span></div>
+          <div><span className={'treeMapTooltipMeasure'}>Injury rate</span><span className={'treeMapTooltipFigure'}>{node.node.data.injuryRate}</span></div>
+        </div>
       </div>
     )
   }
@@ -61,7 +63,7 @@ export default function TreeMap (props) {
       value='count'
       orientLabel={false}
       nodeOpacity={1}
-      colors={{ datum: 'data.color' }}
+      colors={{ datum: 'data.nodeColor' }}
       borderWidth={1}
       borderColor={{ from: 'color', modifiers: [['opacity', 0.6], ['brighter', 0.3]] }}
       label={customLabel}
