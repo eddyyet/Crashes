@@ -37,7 +37,7 @@ export default function Bubble (props) {
             }}>
               <div style={{ textAlign: 'center' }}>
                 <div className={bubbleTypeClass}>{item.type}</div>
-                <div className={bubbleCountClass}>{item.count}</div>
+                <div className={bubbleCountClass}>{item.count.toLocaleString('en-US')}</div>
               </div>
             </div>
           </div>

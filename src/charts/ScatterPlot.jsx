@@ -12,7 +12,7 @@ export default function ScatterPlot (props) {
   const customTooltip = (node) => {
     return (
       <div className='tooltip'>
-        <div><strong style={{ fontSize: '1.25rem' }}>{node.node.data.crashes}</strong> crashes on <strong>{node.node.data.toolTipDay}</strong> at around <strong>{node.node.data.toolTipTime}</strong>.</div>
+        <div><strong style={{ fontSize: '1.25rem' }}>{node.node.data.crashes.toLocaleString('en-US')}</strong> crashes on <strong>{node.node.data.toolTipDay}</strong> at around <strong>{node.node.data.toolTipTime}</strong>.</div>
         <div><strong style={{ fontSize: '1.25rem', color: node.node.data.toolTipColor }}>{node.node.data.injuryRate}</strong> of the crashes caused injuries.</div>
       </div>
     )

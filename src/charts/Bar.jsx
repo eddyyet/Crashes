@@ -21,7 +21,7 @@ export default function Bar (props) {
     return (
       <div className={'tooltip'}>
         <div style={{ fontSize: '1rem', color: data[`${id}Color`] }}><strong>{id}</strong></div>
-        <div style={{ fontSize: '1rem' }}>{value}</div>
+        <div style={{ fontSize: '1rem' }}>{value.toLocaleString('en-US')}</div>
         <div><br />equivalent to {percentage} of the people involved</div>
         {injuredDescription}
       </div>
@@ -47,11 +47,11 @@ export default function Bar (props) {
       <div className={'barFigure'}>
         <div style={{ color: injuredColor }}>
           <div>Injured</div>
-          <div>{injured}</div>
+          <div>{injured.toLocaleString('en-US')}</div>
         </div>
         <div style={{ textAlign: 'right', color: notInjuredColor }}>
           <div>Not injured</div>
-          <div>{notInjured}</div>
+          <div>{notInjured.toLocaleString('en-US')}</div>
         </div>
       </div>
     </div>
