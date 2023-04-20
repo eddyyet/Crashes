@@ -35,9 +35,9 @@ export default function TreeMap (props) {
     }
 
     return (
-      <div className={'treeMapContent'} style={{ transform: scale, WebkitTransform: scale }}>
+      <div className={'treeMapContent'} style={{ transform: scale, WebkitTransform: scale, color: node.data.textColor }}>
         <div className={'treeMapCause'} style={{ width: boxWidth, whiteSpace: 'normal' }}>{node.id}</div>
-        <div className={'treeMapCrashes'}><MinorCrashOutlinedIcon className={'treeMapIcon'} /> {node.value}</div>
+        <div className={'treeMapCrashes'}><MinorCrashOutlinedIcon className={'treeMapIcon'} /> {node.value.toLocaleString('en-US')}</div>
         <div className={'treeMapInjuryRate'} ><MedicalServicesOutlinedIcon className={'treeMapIcon'} /> {node.data.injuryRate}</div>
       </div>
     )
@@ -46,9 +46,9 @@ export default function TreeMap (props) {
   const customTooltip = (node) => {
     return (
       <div className={'tooltip'}>
-        <div>{node.node.id}</div>
-        <div>Count: {node.node.value}</div>
-        <div>Injured: {node.node.data.injuryRate}</div>
+        <div style={{ fontSize: '1rem' }}><strong>{node.node.id}</strong></div>
+        <div>Crashes: {node.node.value.toLocaleString('en-US')}</div>
+        <div>Injury rate: {node.node.data.injuryRate}</div>
       </div>
     )
   }
@@ -63,9 +63,8 @@ export default function TreeMap (props) {
       nodeOpacity={1}
       colors={{ datum: 'data.color' }}
       borderWidth={1}
-      borderColor={{ from: 'color', modifiers: [['opacity', 0.5], ['brighter', 0.4]] }}
+      borderColor={{ from: 'color', modifiers: [['opacity', 0.6], ['brighter', 0.3]] }}
       label={customLabel}
-      labelTextColor={{ from: 'color', modifiers: [['opacity', 1], ['brighter', 0.5]] }}
       parentLabelTextColor={{ from: 'color', modifiers: [['opacity', 1], ['brighter', 1]] }}
       tooltip={customTooltip}
     />

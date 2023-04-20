@@ -9,7 +9,7 @@ export default function TreeMapData (data) {
         'Disregarding traffic signals',
         'Disregarding yield sign',
         'Driving on wrong side/wrong way',
-        'Driving skills /knowledge /experience',
+        'Driving skills / knowledge / experience',
         'Exceeding authorized speed limit',
         'Exceeding safe speed for conditions',
         'Failing to reduce speed to avoid crash',
@@ -18,8 +18,8 @@ export default function TreeMapData (data) {
         'Had been drinking (not arrested)',
         'Improper backing',
         'Improper lane usage',
-        'Improper overtaking/passing',
-        'Improper turning/no signal',
+        'Improper overtaking / passing',
+        'Improper turning / no signal',
         'Motorcycle advancing legally on red light',
         'Operating vehicle in erratic, reckless, careless, negligent or aggressive manner',
         'Passing stopped school bus',
@@ -42,11 +42,19 @@ export default function TreeMapData (data) {
   }
 
   const groupColor = {
-    'Driver-related': '10, 100%, 60%',
+    'Driver-related': '10, 95%, 60%',
     Environment: '40, 70%, 45%',
     'Vehicle condition': '25, 80%, 55%',
     'Not applicable': '15, 10%, 55%',
     'Unable to determine': '0, 0%, 55%'
+  }
+
+  const groupTextColor = {
+    'Driver-related': '10, 100%, 65%',
+    Environment: '40, 75%, 50%',
+    'Vehicle condition': '25, 85%, 60%',
+    'Not applicable': '15, 15%, 60%',
+    'Unable to determine': '0, 0%, 60%'
   }
 
   const causeDict = {}
@@ -73,22 +81,28 @@ export default function TreeMapData (data) {
     const group = Object.keys(groupMap).find((key) => groupMap[key].includes(originalCause))
     const injuryRateNum = count === 0 ? 0 : injuredCount / count
     const injuryRate = (injuryRateNum * 100).toFixed(1) + '%'
-    const alpha = Math.min(injuryRateNum * 2.2, 0.8) + 0.01
+    const alpha = Math.min(injuryRateNum * 2.5, 0.8) + 0.01
+    const textAlpha = Math.min(1.5 - (1 - alpha) * 0.9, 1)
 
     if (group) {
       const color = `hsla(${groupColor[group]}, ${alpha})`
+      const textColor = `hsla(${groupTextColor[group]}, ${textAlpha})`
       groups.find((g) => g.cause === group).children.push({
         cause: originalCause,
         count,
         color,
+        textColor,
         injuryRate
       })
     } else {
       const color = `hsla(${groupColor[originalCause]}, ${alpha})`
+      const textColor = `hsla(${groupTextColor[originalCause]}, ${textAlpha})`
       topLevelCauses.push({
         cause: originalCause,
         count,
         color,
+        textColor,
+        textAlpha,
         injuryRate
       })
     }
