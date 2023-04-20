@@ -47,19 +47,19 @@ export default function App () {
         </div>
         <div className={'multiChart'}>
           <Chart className={'wideChart'}>
-            <div className={'chartTitle'}>Why were the crashes?</div>
-            <div className={'chartDescription'}>Cause description text...Cause description text...</div>
+            <div className={'chartTitle'}>Causes</div>
+            <div className={'chartDescription'}>What were the main reasons behind the traffic crashes? How likely were they causing injuries?</div>
             <TreeMap year={yearRange} side={side} />
           </Chart>
           <Stack direction='column' spacing='1.5rem'>
             <Chart className={'narrowChart'}>
-              <div className={'chartTitle'}>Were the speed limits useful?</div>
-              <div className={'chartDescription'}>Speed description text...Speed description text...</div>
+              <div className={'chartTitle'}>Speed limits</div>
+              <div className={'chartDescription'}>Did the speed limit affect the chance of injuries in a crash?</div>
               <Line year={yearRange} side={side} />
             </Chart>
             <Chart className={'narrowChart'}>
-              <div className={'chartTitle'}>How are the victims?</div>
-              <div className={'chartDescription'}>Victim description text...Victim description text...</div>
+              <div className={'chartTitle'}>Victims</div>
+              <div className={'chartDescription'}>How many people were injured?</div>
               <Bar year={yearRange} side={side} />
               <div className={'subtitle'}>Among the people injuried...</div>
               <div style={{ height: '86px' }}><Waffle year={yearRange} side={side} /></div>
@@ -67,7 +67,7 @@ export default function App () {
           </Stack>
         </div>
         <Chart className={'fullChart'}>
-          <div className={'chartTitle'}>What are making the crashes deadly?</div>
+          <div className={'chartTitle'}>Environmental factors</div>
           <Stack direction='row' divider={<Divider orientation="vertical" sx={{ borderWidth: '0.5px', borderColor: '#383a3e' }} flexItem />} spacing='1.5rem'>
             <div width='736px'>
               <div className={'chartDescription'}>The environment condition during a crash does affect the chances of injury...</div>
@@ -81,11 +81,13 @@ export default function App () {
         </Chart>
         <div className={'multiChart'}>
           <Chart className={'wideChart'}>
-            <div className={'chartTitle'}>How did it crash?</div>
+            <div className={'chartTitle'}>Crashs forms</div>
+            <div className={'chartDescription'}>Some forms of crashes were more common than the others...</div>
             <Bubble year={yearRange} side={side} />
           </Chart>
           <Chart className={'narrowChart'}>
-            <div className={'chartTitle'}>When were the crashes?</div>
+            <div className={'chartTitle'}>Time</div>
+            <div className={'chartDescription'}>How common and how injurious were crashes in different time?</div>
             <ScatterPlot year={yearRange} side={side} />
           </Chart>
         </div>
