@@ -109,6 +109,20 @@ function onMouseOver (event, selectedData) {
       maxCommunityDisplay = 'N/A'
     }
     const maxCommunityCrashesDisplay = maxCrashes.toLocaleString()
+
+    let direction1 = 'auto'
+    if (Object.keys(selectedData.crashesPer1000).length === 9) {
+      if (['Far North Side', 'Northwest Side', 'North Side', 'West Side'].includes(featureId)) {
+        direction1 = 'bottom'
+      } else if (['Southwest Side'].includes(featureId)) {
+        direction1 = 'top'
+      } else if (['South Side', 'Central', 'Far Southeast Side', 'Far Southwest Side'].includes(featureId)) {
+        direction1 = 'left'
+      }
+    } else if (Object.keys(selectedData.crashesPer1000).length === 1) {
+      direction1 = 'bottom'
+    }
+    // console.log(direction1)
     layer.bindTooltip(`
       <div class='mo-tooltip'>
           <strong><span class='side-name'>${featureId}</span></strong><br>
@@ -117,7 +131,7 @@ function onMouseOver (event, selectedData) {
           <strong>Crashes per 1000 citizens each year:</strong> ${moPer1000} <br>
           <strong>Top crash area:</strong> ${maxCommunityDisplay} ${maxCommunityCrashesDisplay}
           </span>
-      </div>`).openTooltip()
+      </div>`, { sticky: false, keepInView: true, direction: direction1 }).openTooltip()
     layer.bringToFront()
   }
 }
@@ -273,8 +287,8 @@ export default function CrashBySide (props) {
   const [sideData, setSideData] = useState({ crashes: {}, ppl: {}, crashesPer1000: {}, maxCrashesCommunity: {} })
   const prevFilteredDataRef = useRef()
   const [centroidCoords, setCentroidCoords] = useState([])
-  const [mapCenter, setMapCenter] = useState([41.881832, -87.623177 + 0.22])
-  const [mapZoom, setMapZoom] = useState(9)
+  const [mapCenter, setMapCenter] = useState([41.881832 - 0.05, -87.623177 - 0.01])
+  const [mapZoom, setMapZoom] = useState(10)
   useEffect(() => {
     const newFilteredData = ChoroplethFilter(ChoroplethData, props.year, props.side)
     if (!isEqual(prevFilteredDataRef.current, newFilteredData)) {
@@ -389,31 +403,31 @@ export default function CrashBySide (props) {
   useEffect(() => {
     // Define the center and zoom level for each side
     const centerMap = {
-      Central: [41.878, -87.626 + 0.05],
-      'Far North Side': [41.979, -87.7636 + 0.05],
-      'Far Southeast Side': [41.6969, -87.5842 + 0.1],
-      'Far Southwest Side': [41.7229, -87.6649 + 0.1],
-      'North Side': [41.931, -87.6767 + 0.1],
-      'Northwest Side': [41.9372, -87.7732 + 0.1],
-      'South Side': [41.7965, -87.6067 + 0.13],
-      'Southwest Side': [41.7925, -87.6959 + 0.1],
-      'West Side': [41.8701, -87.7049 + 0.1]
+      Central: [41.878, -87.626],
+      'Far North Side': [41.979, -87.7636],
+      'Far Southeast Side': [41.6969, -87.5842],
+      'Far Southwest Side': [41.7229, -87.6649 - 0.01],
+      'North Side': [41.931, -87.6767],
+      'Northwest Side': [41.9372, -87.7732],
+      'South Side': [41.7965, -87.6067],
+      'Southwest Side': [41.7925, -87.6959 - 0.01],
+      'West Side': [41.8701, -87.7049]
     }
 
     const zoomMap = {
-      Central: 11,
+      Central: 12,
       'Far North Side': 10,
-      'Far Southeast Side': 10,
-      'Far Southwest Side': 10,
-      'North Side': 10,
-      'Northwest Side': 10,
-      'South Side': 10,
-      'Southwest Side': 10,
-      'West Side': 10
+      'Far Southeast Side': 11,
+      'Far Southwest Side': 11,
+      'North Side': 12,
+      'Northwest Side': 11,
+      'South Side': 11,
+      'Southwest Side': 11,
+      'West Side': 11
     }
     // Update the map center point and zoom level based on the current side
-    setMapCenter(centerMap[props.side] || [41.881832, -87.623177 + 0.22])
-    setMapZoom(zoomMap[props.side] || 9)
+    setMapCenter(centerMap[props.side] || [41.881832 - 0.05, -87.623177 - 0.1])
+    setMapZoom(zoomMap[props.side] || 10)
   }, [props.side])
   // console.log(mapZoom)
   return (
