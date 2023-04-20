@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { ResponsiveWaffle } from '@nivo/waffle'
 import filter from '../utils/filter'
 import WaffleData from '../utils/WaffleData'
@@ -23,21 +23,33 @@ export default function Line (props) {
     onHover,
     onLeave,
     onClick
-  }) => (
-    <Person
-      height={ size * 2.5 }
-      x={ x - 159 }
-      y={ y + Math.floor(position / 25) * 5 - 19 }
-      fill={color}
-      strokeWidth={0.25}
-      stroke={'#28292a'}
-      opacity={opacity}
-      onMouseEnter={onHover}
-      onMouseMove={onHover}
-      onMouseLeave={onLeave}
-      onClick={event => { onClick({ position, color, x, y, data }, event) }}
-    />
-  )
+  }) => {
+    const [hovering, setHovering] = useState(false)
+    const handleHover = (event) => {
+      setHovering(true)
+      onHover(event)
+    }
+    const handleLeave = (event) => {
+      setHovering(false)
+      onLeave(event)
+    }
+
+    return (
+      <Person
+        height={hovering ? size * 3 : size * 2.5 }
+        x={ x - 159 }
+        y={hovering ? y + Math.floor(position / 25) * 3 - 13 - size * 0.5 : y + Math.floor(position / 25) * 3 - 13 }
+        fill={color}
+        strokeWidth={0.25}
+        stroke={'#28292a'}
+        opacity={hovering ? 1 : 0.6}
+        onMouseEnter={handleHover}
+        onMouseMove={handleHover}
+        onMouseLeave={handleLeave}
+        onClick={event => { onClick({ position, color, x, y, data }, event) }}
+      />
+    )
+  }
 
   const customTooltip = (node) => (
     <div className={'tooltip'}>
