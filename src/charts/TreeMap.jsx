@@ -22,10 +22,10 @@ export default function TreeMap (props) {
       boxWidth = labelWidth - 12
     } else if (node.value > 0.03 * treeMapTotal && causeLength * 100 < labelWidth * (labelHeight - 36)) {
       scale = 'scale(0.7)'
-      boxWidth = labelWidth * 1.43 - 4
+      boxWidth = labelWidth * 1.43 - 12
     } else if (node.value > 0.01 * treeMapTotal && causeLength * 25 < labelWidth * (labelHeight - 24)) {
-      scale = 'scale(0.4)'
-      boxWidth = labelWidth * 2.5
+      scale = 'scale(0.5)'
+      boxWidth = labelWidth * 2
     } else if (node.value > 0.005 * treeMapTotal && causeLength * 6 < labelWidth * (labelHeight - 12)) {
       scale = 'scale(0.25)'
       boxWidth = labelWidth * 4
