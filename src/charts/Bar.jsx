@@ -21,7 +21,7 @@ export default function Bar (props) {
     return (
       <div className={'tooltip'}>
         <div className={'tooltipLargeText'} style={{ color: data[`${id}Color`] }}><strong>{id}</strong></div>
-        <div className={'tooltipLargeText'}>{value.toLocaleString('en-US')}</div>
+        <div><span className={'tooltipLargeText'}>{value.toLocaleString('en-US')}</span> people</div>
         <div><br />equivalent to {percentage} of the people involved</div>
         {injuredDescription}
       </div>
