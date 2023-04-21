@@ -110,6 +110,10 @@ body {
   background-color: rgba(56, 58, 62, 0.7);
 }
 
+.tooltipLargeText {
+  font-size: 1rem;
+}
+
 .footer {
   text-align: center;
   font-size: 0.75rem;

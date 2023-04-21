@@ -13,7 +13,7 @@ export default function Line (props) {
       <div style={{ marginBottom: '0.5rem' }}>Crashes on roads with a speed limit of <strong>{slice.points[0].data.x}</strong>:</div>
       <div>
         {slice.points.map(point =>
-          (<div key={point.id} className={'lineTooltipRow'}>
+          (<div key={point.id} className={'tooltipLargeText'}>
             <span className={'lineTooltipLevel'} style={{ color: point.serieColor }}><strong>{point.serieId}</strong></span>
             <span className={'lineTooltipFigure'}>{point.data.yFormatted}</span>
           </div>))}
