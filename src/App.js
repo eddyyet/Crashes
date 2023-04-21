@@ -4,7 +4,6 @@ import React, { useState } from 'react'
 import FilterControl from './utils/FilterControl'
 import Stack from '@mui/material/Stack'
 import Divider from '@mui/material/Divider'
-import { Chart } from './Chart'
 import TreeMap from './charts/TreeMap'
 import Line from './charts/Line'
 import Bar from './charts/Bar'
@@ -46,27 +45,27 @@ export default function App () {
           </div>
         </div>
         <div className={'multiChart'}>
-          <Chart className={'wideChart'}>
+          <div className={'chart wideChart'}>
             <div className={'chartTitle'}>Causes</div>
             <div className={'chartDescription'}>What caused the crashes? How likely were they to cause injuries?</div>
             <TreeMap year={yearRange} side={side} />
-          </Chart>
+          </div>
           <Stack direction='column' spacing='1.5rem'>
-            <Chart className={'narrowChart'}>
+            <div className={'chart narrowChart'}>
               <div className={'chartTitle'}>Speed limits</div>
               <div className={'chartDescription'}>Did the speed limit affect the chance of injuries in a crash?</div>
               <Line year={yearRange} side={side} />
-            </Chart>
-            <Chart className={'narrowChart'}>
+            </div>
+            <div className={'chart narrowChart'}>
               <div className={'chartTitle'}>Victims</div>
               <div className={'chartDescription'}>How many people were injured?</div>
               <Bar year={yearRange} side={side} />
               <div className={'subtitle'}>Among the people injured...</div>
               <div style={{ height: '86px' }}><Waffle year={yearRange} side={side} /></div>
-            </Chart>
+            </div>
           </Stack>
         </div>
-        <Chart className={'fullChart'}>
+        <div className={'chart fullChart'}>
           <div className={'chartTitle'}>Environmental factors</div>
           <Stack direction='row' divider={<Divider orientation="vertical" sx={{ borderWidth: '0.5px', borderColor: '#383a3e' }} flexItem />} spacing='1.5rem'>
             <div width='736px'>
@@ -78,18 +77,18 @@ export default function App () {
             <Network2 year={yearRange} side={side} />
             </div>
           </Stack>
-        </Chart>
+        </div>
         <div className={'multiChart'}>
-          <Chart className={'wideChart'}>
+          <div className={'chart wideChart'}>
             <div className={'chartTitle'}>Crashs forms</div>
             <div className={'chartDescription'}>Some forms of crashes were more common than the others...</div>
             <Bubble year={yearRange} side={side} />
-          </Chart>
-          <Chart className={'narrowChart'}>
+          </div>
+          <div className={'chart narrowChart'}>
             <div className={'chartTitle'}>Time</div>
             <div className={'chartDescription'}>How common and how injurious were the crashes in different time?</div>
             <ScatterPlot year={yearRange} side={side} />
-          </Chart>
+          </div>
         </div>
         <div className={'footer'}>
           <div>Data from <a href='https://data.cityofchicago.org/Transportation/Traffic-Crashes-Crashes/85ca-t3if' target='_blank' rel='noreferrer'>Chicago Data Portal</a></div>

@@ -69,6 +69,16 @@ body {
   padding-left: 25px;
 }
 
+.chart {
+  padding: 2rem;
+  border-radius: 1.5rem;
+  background-color: #28292a;
+}
+
+.chart:hover { 
+  background-color: #2d2f31;
+}
+
 .chartTitle {
   font-size: 1.25rem;
   font-weight: 700;
