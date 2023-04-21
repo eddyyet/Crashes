@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import FilterControl from './utils/FilterControl'
 import Stack from '@mui/material/Stack'
 import Divider from '@mui/material/Divider'
+// import Icon from '@mui/material/Icon'
 import TreeMap from './charts/TreeMap'
 import Line from './charts/Line'
 import Bar from './charts/Bar'
@@ -15,6 +16,7 @@ import ScatterPlot from './charts/ScatterPlot'
 import Choropleth from './charts/Choropleth'
 import Legend from './charts/Legend'
 import Legend2 from './charts/Legend2'
+import StraightenOutlinedIcon from '@mui/icons-material/StraightenOutlined'
 
 export default function App () {
   const [yearRange, setYearRange] = useState([2018, 2022])
@@ -80,12 +82,16 @@ export default function App () {
         </div>
         <div className={'multiChart'}>
           <div className={'chart wideChart'}>
-            <div className={'chartTitle'}>Crashs forms</div>
+            <div className={'chartTitle'}>Crash forms</div>
             <div className={'chartDescription'}>Some forms of crashes were more common than the others...</div>
             <Bubble year={yearRange} side={side} />
           </div>
           <div className={'chart narrowChart'}>
-            <div className={'chartTitle'}>Time</div>
+            <div className={'chartTitle'}>
+              <span>Time</span>
+              <span id='ScatterPlotLegendTrigger' className={'legendSymbolOutline'}><StraightenOutlinedIcon className={'legendSymbol'} /></span>
+              <div className={'floatingLegend'}>XXXXX</div>
+            </div>
             <div className={'chartDescription'}>How common and how injurious were the crashes in different time?</div>
             <ScatterPlot year={yearRange} side={side} />
           </div>
