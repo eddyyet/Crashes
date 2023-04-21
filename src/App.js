@@ -1,5 +1,6 @@
 import './format/general.css'
 import './format/specific.css'
+import './format/Legend.css'
 import React, { useState } from 'react'
 import FilterControl from './utils/FilterControl'
 import Stack from '@mui/material/Stack'
@@ -69,9 +70,51 @@ export default function App () {
         </div>
         <div className={'chart fullChart'}>
           <div className={'chartTitle'}>
-            <span>Environmental factors</span>
-            <span id='ScatterPlotLegendTrigger' className={'legendSymbolOutline'}><StraightenOutlinedIcon className={'legendSymbol'} /></span>
-            <div id='ScatterPlotLegend' className={'floatingLegend'}></div>
+            <span>Environmental conditions</span>
+            <span id='NetworkLegendTrigger' className={'legendSymbolOutline'}><StraightenOutlinedIcon className={'legendSymbol'} /></span>
+            <div id='NetworkLegend' className={'floatingLegend'}>
+              <Stack direction='row' divider={<Divider orientation="vertical" sx={{ borderWidth: '0.5px', borderColor: '#383a3e' }} flexItem />} spacing='1rem'>
+                <div id='NetworkOneFactor'>
+                  <div className={'legendTitle'}>One-factor lift</div>
+                  <div className={'NetworkFormula'}>
+                    <span>Lift</span>
+                    <span className={'NetworkFormulaElement'}>=</span>
+                    <Stack className={'NetworkFraction'} direction='column' divider={<Divider orientation="horizontal" sx={{ borderWidth: '0.5px', borderColor: '#d3d3d3' }} flexItem />} spacing='2px'>
+                      <span className={'NetworkFormulaElement'}>P(Injury level in a crash)</span>
+                      <span className={'NetworkFormulaElement'}>P(Injury level in a crash | Condition)</span>
+                    </Stack>
+                  </div>
+                  <div>
+                    <div>Severy injury: Fatal or incapacitating</div>
+                    <div>Moderate injury: Moderate or injured but not apparent</div>
+                  </div>
+                  <div className={'legendSeparator'}></div>
+                  <div>TODO: Lines in one-factor diagram</div>
+                  <div>TODO: Lines in one-factor diagram</div>
+                  <div>TODO: Lines in one-factor diagram</div>
+                  <div>TODO: Lines in one-factor diagram</div>
+                  <div>TODO: Lines in one-factor diagram</div>
+                </div>
+                <div id='NetworkTwoFactor'>
+                  <div className={'legendTitle'}>Two-factor lift</div>
+                  <div className={'NetworkFormula'}>
+                    <span>Lift</span>
+                    <span className={'NetworkFormulaElement'}>=</span>
+                    <Stack className={'NetworkFraction'} direction='column' divider={<Divider orientation="horizontal" sx={{ borderWidth: '0.5px', borderColor: '#d3d3d3' }} flexItem />} spacing='2px'>
+                      <span className={'NetworkFormulaElement'}>P(Crash is injurious)</span>
+                      <span className={'NetworkFormulaElement'}>P(Crash is injurious | Condition 1 ∩ Condition 2)</span>
+                    </Stack>
+                  </div>
+                  <div>The injuries can be fatal, incapacitating, moderate or injured but not apparent</div>
+                  <div className={'legendSeparator'}></div>
+                  <div>TODO: Lines in one-factor diagram</div>
+                  <div>TODO: Lines in one-factor diagram</div>
+                  <div>TODO: Lines in one-factor diagram</div>
+                  <div>TODO: Lines in one-factor diagram</div>
+                  <div>TODO: Lines in one-factor diagram</div>
+                </div>
+              </Stack>
+            </div>
           </div>
           <Stack direction='row' divider={<Divider orientation="vertical" sx={{ borderWidth: '0.5px', borderColor: '#383a3e' }} flexItem />} spacing='1.5rem'>
             <div width='736px'>

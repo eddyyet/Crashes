@@ -105,6 +105,37 @@
 .legendSeparator {
   height: 1rem;
 }
+
+#NetworkLegend {
+  display: none;
+}
+
+#NetworkLegendTrigger:hover + #NetworkLegend, #NetworkLegend:hover {
+  display: inline-block;
+}
+
+#NetworkOneFactor {
+  width: 350px;
+}
+
+#NetworkTwoFactor {
+  width: 350px;
+}
+
+.NetworkFormula {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.75rem 0;
+}
+
+.NetworkFormulaElement {
+  padding: 0px 6px;
+}
+.NetworkFraction {
+  text-align: center;
+}
+
 #ScatterPlotLegend {
   display: none;
   width: 250px;
