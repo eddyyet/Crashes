@@ -37,6 +37,12 @@
   padding: 0!important;
 }
 
+.MuiSlider-markLabel {
+  top: 12px;
+  font-size: 0.7rem;
+  font-family: 'Google Sans', 'Roboto', 'Helvetica Neue', sans-serif;
+  color: rgba(255, 255, 255, 0.8);
+}
 .MuiSelect-select {
   width: 160px!important;
   margin-left: 0.5rem!important;
@@ -64,9 +70,7 @@
 }
 
 .MuiInputBase-root, .MuiMenuItem-root {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif!important;
+  font-family: 'Google Sans', 'Roboto', 'Helvetica Neue', sans-serif!important;
 }
 
 .MuiList-root {

@@ -3,10 +3,8 @@
 }
 
 .treeMapContent {
-  text-align:center;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  text-align: center;
+  font-family: 'Google Sans', 'Roboto', 'Helvetica Neue', sans-serif;
 }
 
 .treeMapCause {
