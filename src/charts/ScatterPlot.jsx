@@ -22,31 +22,36 @@ export default function ScatterPlot (props) {
     <ResponsiveScatterPlot
       height={494}
       width={350}
-      margin={{ top: 60, right: 60, bottom: 20, left: 68 }}
+      margin={{ top: 50, right: 55, bottom: 20, left: 59 }}
       data={scatterPlotData}
       nodeSize={{ key: 'data.radius', values: [0, 1], sizes: [0, 40] }}
       xScale={{ type: 'point' }}
       yScale={{ type: 'point' }}
       axisTop={{
         tickSize: 0,
-        tickPadding: 25,
+        tickPadding: 23,
         tickRotation: 0,
         legend: 'Day of week',
         legendPosition: 'middle',
-        legendOffset: -50
+        legendOffset: -44
       }}
       axisLeft={{
         tickSize: 0,
-        tickPadding: 35,
+        tickPadding: 30,
         tickRotation: 0,
         legend: 'Time (hour)',
         legendPosition: 'middle',
-        legendOffset: -63
+        legendOffset: -54
       }}
       axisBottom={null}
       enableGridX={false}
       enableGridY={false}
-      theme={{ axis: { ticks: { text: { fill: '#999999' } }, legend: { text: { fill: '#999999' } } } }}
+      theme={{
+        axis: {
+          ticks: { text: { fill: '#999999', fontFamily: '"Google Sans", "Roboto", "Helvetica Neue", sans-serif' } },
+          legend: { text: { fill: '#999999', fontFamily: '"Google Sans", "Roboto", "Helvetica Neue", sans-serif' } }
+        }
+      }}
       colors={colors}
       tooltip={customTooltip}
     />

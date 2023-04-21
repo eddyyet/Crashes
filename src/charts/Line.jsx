@@ -50,12 +50,12 @@ export default function Line (props) {
       enableGridX={false}
       theme={{
         axis: {
-          ticks: { text: { fill: '#999999' } },
-          legend: { text: { fill: '#999999' } }
+          ticks: { text: { fill: '#999999', fontFamily: '"Google Sans", "Roboto", "Helvetica Neue", sans-serif' } },
+          legend: { text: { fill: '#999999', fontFamily: '"Google Sans", "Roboto", "Helvetica Neue", sans-serif' } }
         },
         grid: { line: { stroke: 'rgba(204, 204, 204, 0.2)' } },
         crosshair: { line: { stroke: 'rgba(204, 204, 204, 0.2)', strokeDasharray: null } },
-        legends: { text: { fill: '#999999' } }
+        legends: { text: { fill: '#999999', fontFamily: '"Google Sans", "Roboto", "Helvetica Neue", sans-serif' } }
       }}
       enableSlices='x'
       sliceTooltip={customSliceTooltip}
