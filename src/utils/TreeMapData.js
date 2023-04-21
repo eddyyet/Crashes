@@ -43,7 +43,7 @@ export default function TreeMapData (data) {
 
   const groupColor = {
     'Driver-related': '10, 95%, 60%',
-    Environment: '40, 70%, 45%',
+    Environment: '40, 70%, 50%',
     'Vehicle condition': '25, 80%, 55%',
     'Not applicable': '15, 10%, 55%',
     'Unable to determine': '0, 0%, 55%'
@@ -51,7 +51,7 @@ export default function TreeMapData (data) {
 
   const groupTextColor = {
     'Driver-related': '10, 100%, 65%',
-    Environment: '40, 75%, 50%',
+    Environment: '40, 70%, 50%',
     'Vehicle condition': '25, 85%, 60%',
     'Not applicable': '15, 15%, 60%',
     'Unable to determine': '0, 0%, 60%'
@@ -68,6 +68,8 @@ export default function TreeMapData (data) {
 
   const groups = Object.keys(groupMap).map((group) => ({
     cause: group,
+    count: 0,
+    injuredCount: 0,
     children: []
   }))
 
@@ -99,6 +101,10 @@ export default function TreeMapData (data) {
         nodeTextColor,
         tooltipTitleColor
       })
+
+      const groupObj = groups.find((g) => g.cause === group)
+      groupObj.count += count
+      groupObj.injuredCount += injuredCount
     } else {
       const nodeColor = `hsla(${groupColor[cause]}, ${alpha})`
       if (injuryRateNum < 0.2) {
@@ -117,7 +123,13 @@ export default function TreeMapData (data) {
   }
 
   for (const group of groups) {
+    group.injuryRateNum = group.count === 0 ? 0 : group.injuredCount / group.count
+    group.injuryRate = (group.injuryRateNum * 100).toFixed(1) + '%'
     group.nodeColor = `hsla(${groupColor[group.cause]}, 0.01)`
+    group.nodeTextColor = `hsla(${groupColor[group.cause]}, 1)`
+    group.tooltipTitleColor = `hsla(${groupTextColor[group.cause]}, 1)`
+
+    delete group.count
   }
 
   return { cause: 'TreeMapRoot', children: [...groups, ...topLevelCauses], total }

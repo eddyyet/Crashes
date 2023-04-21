@@ -47,10 +47,8 @@ export default function ScatterPlot (props) {
       enableGridX={false}
       enableGridY={false}
       theme={{
-        axis: {
-          ticks: { text: { fill: '#999999', fontFamily: '"Google Sans", "Roboto", "Helvetica Neue", sans-serif' } },
-          legend: { text: { fill: '#999999', fontFamily: '"Google Sans", "Roboto", "Helvetica Neue", sans-serif' } }
-        }
+        fontFamily: '"Google Sans", "Roboto", "Helvetica Neue", sans-serif',
+        textColor: '#999999'
       }}
       colors={colors}
       tooltip={customTooltip}

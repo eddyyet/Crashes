@@ -49,13 +49,10 @@ export default function Line (props) {
       }}
       enableGridX={false}
       theme={{
-        axis: {
-          ticks: { text: { fill: '#999999', fontFamily: '"Google Sans", "Roboto", "Helvetica Neue", sans-serif' } },
-          legend: { text: { fill: '#999999', fontFamily: '"Google Sans", "Roboto", "Helvetica Neue", sans-serif' } }
-        },
+        fontFamily: '"Google Sans", "Roboto", "Helvetica Neue", sans-serif',
+        textColor: '#999999',
         grid: { line: { stroke: 'rgba(204, 204, 204, 0.2)' } },
-        crosshair: { line: { stroke: 'rgba(204, 204, 204, 0.2)', strokeDasharray: null } },
-        legends: { text: { fill: '#999999', fontFamily: '"Google Sans", "Roboto", "Helvetica Neue", sans-serif' } }
+        crosshair: { line: { stroke: 'rgba(204, 204, 204, 0.2)', strokeDasharray: null } }
       }}
       enableSlices='x'
       sliceTooltip={customSliceTooltip}

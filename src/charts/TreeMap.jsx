@@ -9,6 +9,7 @@ import MedicalServicesOutlinedIcon from '@mui/icons-material/MedicalServicesOutl
 export default function TreeMap (props) {
   const filteredData = filter(causeData, props.year, props.side)
   const treeMapData = TreeMapData(filteredData)
+  console.log(treeMapData)
   const treeMapTotal = treeMapData.total
 
   const customLabel = (node) => {
@@ -69,6 +70,7 @@ export default function TreeMap (props) {
       label={customLabel}
       parentLabelTextColor={{ from: 'color', modifiers: [['opacity', 1], ['brighter', 1]] }}
       tooltip={customTooltip}
+      theme={{ fontFamily: '"Google Sans", "Roboto", "Helvetica Neue", sans-serif' }}
     />
   )
 }
