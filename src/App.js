@@ -72,7 +72,7 @@ export default function App () {
             <span>Environmental conditions</span>
             <span id='NetworkLegendTrigger' className={'legendSymbolOutline'}><StraightenOutlinedIcon className={'legendSymbol'} /></span>
             <div id='NetworkLegend' className={'floatingLegend'}>
-              <Stack direction='row' divider={<Divider orientation="vertical" sx={{ borderWidth: '0.5px', borderColor: '#383a3e' }} flexItem />} spacing='1rem'>
+              <Stack direction='row' divider={<Divider orientation="vertical" sx={{ borderWidth: '0.5px', borderColor: '#383a3e' }} flexItem />} spacing='1.5rem'>
                 <div id='NetworkOneFactor'>
                   <div className={'legendTitle'}>One-factor lift</div>
                   <div className={'NetworkFormula'}>
@@ -88,11 +88,30 @@ export default function App () {
                     <div>Moderate injury: Moderate or injured but not apparent</div>
                   </div>
                   <div className={'legendSeparator'}></div>
-                  <div>TODO: Lines in one-factor diagram</div>
-                  <div>TODO: Lines in one-factor diagram</div>
-                  <div>TODO: Lines in one-factor diagram</div>
-                  <div>TODO: Lines in one-factor diagram</div>
-                  <div>TODO: Lines in one-factor diagram</div>
+                  <div className={'NetworkLines'}>
+                    <div>
+                      <div className={'NetworkLine'}>
+                        <span className={'NetworkLineSample'} style={{ height: '38px', backgroundColor: 'rgba(204, 204, 204, 0.8)' }}></span>
+                        <span>1.3x or above</span>
+                      </div>
+                      <div className={'NetworkLine'}>
+                        <span className={'NetworkLineSample'} style={{ height: '30px', backgroundColor: 'rgba(204, 204, 204, 0.65)' }}></span>
+                        <span>1.2x</span>
+                      </div>
+                      <div className={'NetworkLine'}>
+                        <span className={'NetworkLineSample'} style={{ height: '22px', backgroundColor: 'rgba(204, 204, 204, 0.5)' }}></span>
+                        <span>1.1x</span>
+                      </div>
+                      <div className={'NetworkLine'}>
+                        <span className={'NetworkLineSample'} style={{ height: '14px', backgroundColor: 'rgba(204, 204, 204, 0.35)' }}></span>
+                        <span>1.0x</span>
+                      </div>
+                      <div className={'NetworkLine'}>
+                        <span className={'NetworkLineSample'} style={{ height: '6px', backgroundColor: 'rgba(204, 204, 204, 0.2)' }}></span>
+                        <span>0.9x or below</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div id='NetworkTwoFactor'>
                   <div className={'legendTitle'}>Two-factor lift</div>
@@ -106,11 +125,30 @@ export default function App () {
                   </div>
                   <div>The injuries can be fatal, incapacitating, moderate or injured but not apparent</div>
                   <div className={'legendSeparator'}></div>
-                  <div>TODO: Lines in one-factor diagram</div>
-                  <div>TODO: Lines in one-factor diagram</div>
-                  <div>TODO: Lines in one-factor diagram</div>
-                  <div>TODO: Lines in one-factor diagram</div>
-                  <div>TODO: Lines in one-factor diagram</div>
+                  <div className={'NetworkLines'}>
+                    <div>
+                      <div className={'NetworkLine'}>
+                        <span className={'NetworkLineSample'} style={{ height: '20px', backgroundColor: 'hsla(10, 90%, 50%, 0.84)' }}></span>
+                        <span>1.6x or above</span>
+                      </div>
+                      <div className={'NetworkLine'}>
+                        <span className={'NetworkLineSample'} style={{ height: '16px', backgroundColor: 'hsla(10, 60%, 50%, 0.80)' }}></span>
+                        <span>1.4x</span>
+                      </div>
+                      <div className={'NetworkLine'}>
+                        <span className={'NetworkLineSample'} style={{ height: '12px', backgroundColor: 'hsla(10, 30%, 50%, 0.76)' }}></span>
+                        <span>1.2x</span>
+                      </div>
+                      <div className={'NetworkLine'}>
+                        <span className={'NetworkLineSample'} style={{ height: '8px', backgroundColor: 'hsla(10, 0%, 50%, 0.72)' }}></span>
+                        <span>1.0x</span>
+                      </div>
+                      <div className={'NetworkLine'}>
+                        <span className={'NetworkLineSample'} style={{ height: '4px', backgroundColor: 'hsla(140, 30%, 50%, 0.76)' }}></span>
+                        <span>0.8x or below</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </Stack>
             </div>

@@ -61,9 +61,9 @@ export default function NetworkData (data) {
       ? { enabled: true, type: 'curvedCCW', roundness: 0.1 }
       : { enabled: true, type: 'curvedCW', roundness: 0.1 })
     const hue = lift >= 1 ? 10 : 140
-    const saturation = lift >= 1 ? Math.min((lift - 1), 1.6) * 150 : Math.min((1 - lift), 0.2) * 150
-    const opacity = lift >= 1 ? Math.min((lift - 1), 1.6) * 0.15 + 0.15 : Math.min((1 - lift), 0.2) * 0.15 + 0.15
-    const opacityHover = lift >= 1 ? Math.min((lift - 1), 1.6) * 0.2 + 0.72 : Math.min((1 - lift), 0.2) * 0.2 + 0.72
+    const saturation = lift >= 1 ? Math.min((lift - 1), 0.6) * 150 : Math.min((1 - lift), 0.2) * 150
+    const opacity = lift >= 1 ? Math.min((lift - 1), 0.6) * 0.15 + 0.15 : Math.min((1 - lift), 0.2) * 0.15 + 0.15
+    const opacityHover = lift >= 1 ? Math.min((lift - 1), 0.6) * 0.2 + 0.72 : Math.min((1 - lift), 0.2) * 0.2 + 0.72
     const color = `hsl(${hue}, ${saturation}%, 50%, ${opacity})`
     const colorHover = `hsl(${hue}, ${saturation}%, 50%, ${opacityHover})`
 
