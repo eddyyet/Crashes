@@ -68,7 +68,11 @@ export default function App () {
           </Stack>
         </div>
         <div className={'chart fullChart'}>
-          <div className={'chartTitle'}>Environmental factors</div>
+          <div className={'chartTitle'}>
+            <span>Environmental factors</span>
+            <span id='ScatterPlotLegendTrigger' className={'legendSymbolOutline'}><StraightenOutlinedIcon className={'legendSymbol'} /></span>
+            <div id='ScatterPlotLegend' className={'floatingLegend'}></div>
+          </div>
           <Stack direction='row' divider={<Divider orientation="vertical" sx={{ borderWidth: '0.5px', borderColor: '#383a3e' }} flexItem />} spacing='1.5rem'>
             <div width='736px'>
               <div className={'chartDescription'}>How does the environment affect the likelihood of injury in a crash?</div>
@@ -86,15 +90,7 @@ export default function App () {
             <div className={'chartDescription'}>Some forms of crashes were more common than the others...</div>
             <Bubble year={yearRange} side={side} />
           </div>
-          <div className={'chart narrowChart'}>
-            <div className={'chartTitle'}>
-              <span>Time</span>
-              <span id='ScatterPlotLegendTrigger' className={'legendSymbolOutline'}><StraightenOutlinedIcon className={'legendSymbol'} /></span>
-              <div className={'floatingLegend'}>XXXXX</div>
-            </div>
-            <div className={'chartDescription'}>How common and how injurious were the crashes in different time?</div>
-            <ScatterPlot year={yearRange} side={side} />
-          </div>
+          <ScatterPlot year={yearRange} side={side} />
         </div>
         <div className={'footer'}>
           <div>Data from <a href='https://data.cityofchicago.org/Transportation/Traffic-Crashes-Crashes/85ca-t3if' target='_blank' rel='noreferrer'>Chicago Data Portal</a></div>
