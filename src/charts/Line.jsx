@@ -25,7 +25,7 @@ export default function Line (props) {
     <ResponsiveLine
       height={200}
       width={320}
-      margin={{ top: 20, right: 20, bottom: 60, left: 41 }}
+      margin={{ top: 20, right: 20, bottom: 54, left: 41 }}
       data={lineData}
       xScale={{ type: 'point' }}
       yScale={{ type: 'linear', min: 0, max: 'auto', stacked: false }}
