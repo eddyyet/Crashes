@@ -92,25 +92,6 @@ export default function FilterControl (props) {
             marks={marks}
             value={yearRangeTemp}
             onChange={handleSliderChange}
-            sx={{
-              width: '200px',
-              '& .MuiSlider-thumb': {
-                height: '12px',
-                width: '2px',
-                borderRadius: 0,
-                backgroundColor: '#CCCCCC',
-                '&:focus, &:hover, &.Mui-active': {
-                  boxShadow: '0 0 0 4px rgba(204, 204, 204, 0.1)'
-                },
-                '&.Mui-focusVisible': {
-                  boxShadow: '0 0 0 4px rgba(204, 204, 204, 0.1)'
-                }
-              },
-              '& .MuiSlider-track': { height: '2px', border: 'none', backgroundColor: '#CCCCCC' },
-              '& .MuiSlider-rail': { height: '2px', backgroundColor: '#666666', padding: '0' },
-              '& .MuiSlider-mark': { height: '8px', width: '1px', backgroundColor: '#666666', '&.MuiSlider-markActive': { backgroundColor: '#FFFFFF' } },
-              '& .MuiSlider-markLabel': { top: '12px', color: 'rgba(255, 255, 255, 0.8)', fontSize: '0.7rem' }
-            }}
           />
         </span>
         <span className={'filter'}>

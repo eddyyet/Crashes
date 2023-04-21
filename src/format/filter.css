@@ -35,13 +35,51 @@
 .MuiSlider-root { 
   margin: 0px 20px 14px 10px!important;
   padding: 0!important;
+  width: 200px!important;
+}
+
+.MuiSlider-thumb {
+  height: 12px!important;
+  width: 2px!important;
+  border-radius: 0!important;
+  background-color: #CCCCCC!important
+}
+
+.MuiSlider-thumb:focus, .MuiSlider-thumb:hover, .MuiSlider-thumb.Mui-active {
+  box-shadow: 0 0 0 4px rgba(204, 204, 204, 0.1)!important;
+}
+
+.MuiSlider-thumb.Mui-focusVisible {
+  box-shadow: 0 0 0 4px rgba(204, 204, 204, 0.1)!important;
+}
+
+.MuiSlider-track { 
+  height: 2px!important; 
+  border: none!important;
+  background-color: #CCCCCC!important;
+}
+
+.MuiSlider-rail { 
+  height: 2px!important; 
+  background-color: #666666!important;
+  padding: 0!important;
+}
+
+.MuiSlider-mark {
+  height: 8px!important;
+  width: 1px!important;
+  background-color: #666666!important;
+}
+
+.MuiSlider-mark.MuiSlider-markActive {
+  background-color: #CCCCCC!important;
 }
 
 .MuiSlider-markLabel {
-  top: 12px;
-  font-size: 0.7rem;
-  font-family: 'Google Sans', 'Roboto', 'Helvetica Neue', sans-serif;
-  color: rgba(255, 255, 255, 0.8);
+  top: 12px!important;
+  font-size: 0.7rem!important;
+  font-family: 'Google Sans', 'Roboto', 'Helvetica Neue', sans-serif!important;
+  color: rgba(255, 255, 255, 0.8)!important;
 }
 .MuiSelect-select {
   width: 160px!important;
