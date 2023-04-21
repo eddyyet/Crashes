@@ -20,7 +20,7 @@ export default function ScatterPlot (props) {
 
   return (
     <ResponsiveScatterPlot
-      height={494}
+      height={470}
       width={350}
       margin={{ top: 50, right: 55, bottom: 20, left: 59 }}
       data={scatterPlotData}
