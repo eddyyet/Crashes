@@ -1,0 +1,8 @@
+#TreeMapLegend {
+  display: none;
+  width: 250px;
+}
+
+#TreeMapLegendTrigger:hover + #TreeMapLegend, #TreeMapLegend:hover {
+  display: inline-block;
+}

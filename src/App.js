@@ -1,6 +1,8 @@
 import './format/general.css'
 import './format/specific.css'
 import './format/Legend.css'
+import './format/TreeMapLegend.css'
+import './format/NetworkLegend.css'
 import React, { useState } from 'react'
 import FilterControl from './utils/FilterControl'
 import Stack from '@mui/material/Stack'
@@ -48,7 +50,19 @@ export default function App () {
         </div>
         <div className={'multiChart'}>
           <div className={'chart wideChart'}>
-            <div className={'chartTitle'}>Causes</div>
+            <div className={'chartTitle'}>
+              <span>Causes</span>
+              <span id='TreeMapLegendTrigger' className={'legendSymbolOutline'}><StraightenOutlinedIcon className={'legendSymbol'} /></span>
+              <div id='TreeMapLegend' className={'floatingLegend'}>
+                <div className={'legendTitle'} style={{ marginBottom: '0.25rem' }}>Injury rate</div>
+                <div className={'legendTextLine'}>The proportion of crashes that caused injuries</div>
+                <div>TODO: gradients</div>
+                <div>TODO: gradients</div>
+                <div>TODO: gradients</div>
+                <div>TODO: gradients</div>
+                <div>TODO: gradients</div>
+              </div>
+            </div>
             <div className={'chartDescription'}>What caused the crashes? How likely were they to cause injuries?</div>
             <TreeMap year={yearRange} side={side} />
           </div>
