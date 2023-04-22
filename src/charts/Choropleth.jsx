@@ -73,14 +73,14 @@ function getColor (feature, selectedData) {
 function onMouseOver (event, selectedData) {
   const layer = event.target
   const featureId = layer.feature.properties.id
-
+  const hslColor = getColor(layer.feature, selectedData.crashesPer1000)
   if (selectedData.crashesPer1000[featureId] !== undefined) {
     layer.setStyle({
       weight: 2,
       color: '#666',
       dashArray: '',
       fillOpacity: 0.85,
-      fillColor: getColor(layer.feature, selectedData.crashesPer1000)
+      fillColor: hslColor
     })
     // console.log(selectedData)
     const moCrashes = selectedData.crashes[featureId].toLocaleString()
@@ -111,27 +111,50 @@ function onMouseOver (event, selectedData) {
     const maxCommunityCrashesDisplay = maxCrashes.toLocaleString()
 
     let direction1 = 'auto'
+    let offset1 = [0, 0]
     if (Object.keys(selectedData.crashesPer1000).length === 9) {
       if (['Far North Side', 'Northwest Side', 'North Side', 'West Side'].includes(featureId)) {
         direction1 = 'bottom'
+        if (['West Side'].includes(featureId)) {
+          offset1 = [-70, 0]
+        }
       } else if (['Southwest Side', 'Far Southwest Side'].includes(featureId)) {
         direction1 = 'top'
+        offset1 = [-60, 0]
       } else if (['South Side', 'Central', 'Far Southeast Side'].includes(featureId)) {
         direction1 = 'left'
+        offset1 = [20, -30]
       }
     } else if (Object.keys(selectedData.crashesPer1000).length === 1) {
       direction1 = 'bottom'
+      offset1 = [0, 20]
     }
-    // console.log(direction1)
-    layer.bindTooltip(`
+
+    const tooltipContent = `
       <div class='mo-tooltip'>
-          <strong><span class='side-name'>${featureId}</span></strong><br>
-          <span class='details'><strong>Population:</strong> ${moPpl}<br>
-          <strong>Total crashes from ${moStartYear} to ${moEndYear}:</strong> ${moCrashes}<br>
-          <strong>Crashes per 1000 citizens each year:</strong> ${moPer1000} <br>
-          <strong>Top crash area:</strong> ${maxCommunityDisplay} ${maxCommunityCrashesDisplay}
-          </span>
-      </div>`, { className: 'my-tooltip-class', sticky: false, keepInView: true, direction: direction1, permanent: true }).openTooltip()
+        <div class='title'>
+          <strong><span class='side-name'>${featureId} </span>(Population: ${moPpl})</strong>
+        </div>
+        <div class='details'>
+          <div class='detail-row'>
+            <span class='detail-label'>Total crashes (${moStartYear} - ${moEndYear}): </span>
+            <span class='detail-value'>${moCrashes}</span>
+          </div>
+          <div class='detail-row'>
+            <span class='detail-label'>Crashes per 1K citizens each year: </span>
+            <span class='citizens' style='color:${hslColor}'>${moPer1000}</span>
+          </div>
+          <div class='detail-row'>
+            <span class='detail-label'>
+            <!--<i class='icon' style="background-image: url(${exclam});"></i>-->
+            Top crash area:</span>
+            <span class='detail-value'>${maxCommunityDisplay} ${maxCommunityCrashesDisplay}</span>
+          </div>
+        </div>
+      </div>
+    `
+    layer.bindTooltip(tooltipContent, { className: 'my-tooltip-class', sticky: false, offset: offset1, keepInView: true, direction: direction1, permanent: true })
+    layer.openTooltip()
     layer.bringToFront()
   }
 }

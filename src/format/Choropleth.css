@@ -1,8 +1,10 @@
 .leaflet-container {
   height: 400px;
   border-Radius: 10px;
+ 
 }
 .my-tooltip-class {
+  min-width: 250px !important;
   max-width: 300px !important;
   border-radius: 0.5rem !important;
   -moz-border-radius: 0.5rem  !important;
@@ -12,46 +14,44 @@
   /*font-size: 0.75rem !important;*/
   color: #CCCCCC !important;
   overflow: hidden !important;
-  background-color: rgba(56, 58, 62, 0.7) !important;
+  background-color: rgba(56, 58, 62, 0.9) !important;
+  font-family: 'Google Sans', 'Roboto', 'Helvetica Neue', sans-serif;
+}
+.mo-tooltip .title {
+  margin-bottom: 7px;
+  /*text-align: center;*/
+}
+.mo-tooltip .icon {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 10px;
 }
 .mo-tooltip .side-name {
-  font-size: 15px;
+  font-size: 18px;
 }
 
 .mo-tooltip .details {
-  font-size: 12px;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
 }
-/*
-.mo-tooltip {
-  background-color: #fff;
-  border: #ccc;
-  padding: 1px;
-  font-size: 12px;
-  line-height: 1.5;
+.mo-tooltip .detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 1.2;
 }
-*/
-
-/*
-.mo-tooltip {
-  max-width: 300px;
-  border-radius: 0.5rem;
-  -moz-border-radius: 0.5rem;
-  -webkit-border-radius: 0.5rem;
-  border: 0.75px solid #999999;
-  padding: 0.5rem;
-  font-size: 0.75rem;
-  color: #CCCCCC;
-  background-color: rgba(56, 58, 62, 0.7);
+.mo-tooltip .detail-label {
+  margin-right: 10px;
+}
+.mo-tooltip .citizens {
+  font-size: 20px;
+  float: right;
 }
 
-.mo-tooltip .side-name {
-  font-size: 12px;
-}
-
-.mo-tooltip .details {
-  font-size: 10.5px;
-}
-*/
 /*
 .info.legend {
   background-color: white;
