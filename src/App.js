@@ -93,8 +93,8 @@ export default function App () {
                     <span>Lift</span>
                     <span className={'NetworkFormulaElement'}>=</span>
                     <Stack className={'NetworkFraction'} direction='column' divider={<Divider orientation="horizontal" sx={{ borderWidth: '0.5px', borderColor: '#d3d3d3' }} flexItem />} spacing='2px'>
-                      <span className={'NetworkFormulaElement'}>P(Injury level in a crash)</span>
-                      <span className={'NetworkFormulaElement'}>P(Injury level in a crash | Condition)</span>
+                      <span className={'NetworkFormulaElement'}>P( Injury level in a crash | Condition )</span>
+                      <span className={'NetworkFormulaElement'}>P( Injury level in a crash )</span>
                     </Stack>
                   </div>
                   <div>
@@ -133,8 +133,8 @@ export default function App () {
                     <span>Lift</span>
                     <span className={'NetworkFormulaElement'}>=</span>
                     <Stack className={'NetworkFraction'} direction='column' divider={<Divider orientation="horizontal" sx={{ borderWidth: '0.5px', borderColor: '#d3d3d3' }} flexItem />} spacing='2px'>
-                      <span className={'NetworkFormulaElement'}>P(Crash is injurious)</span>
-                      <span className={'NetworkFormulaElement'}>P(Crash is injurious | Condition 1 ∩ Condition 2)</span>
+                      <span className={'NetworkFormulaElement'}>P( Crash is injurious | Condition 1 ∩ Condition 2 )</span>
+                      <span className={'NetworkFormulaElement'}>P( Crash is injurious )</span>
                     </Stack>
                   </div>
                   <div>The injuries can be fatal, incapacitating, moderate or injured but not apparent</div>
