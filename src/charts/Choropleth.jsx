@@ -241,15 +241,41 @@ function getCoordinatesForSide (side) {
 }
 */
 
-function styleCommunity (feature) {
-  return {
+function styleCommunity (feature, selectedData) {
+  const matchResultStyle = {
     fillColor: 'transparent',
     fillOpacity: 0,
     // color: '#5b5b5b',
     color: '#e8dfdf',
+    // color: '#000000',
     weight: 0.5,
-    Opacity: 0.3
+    Opacity: 0.7
   }
+
+  const unMatchResultStyle = {
+    fillColor: 'transparent',
+    fillOpacity: 0,
+    // color: '#5b5b5b',
+    color: '#e8dfdf',
+    weight: 0,
+    Opacity: 0
+  }
+
+  for (const [community, maxCrashCommunity] of Object.entries(selectedData.maxCrashesCommunity)) {
+    const side = Object.keys(selectedData.sideCommunity).find(key => selectedData.sideCommunity[key].includes(community))
+    const communities = selectedData.sideCommunity[side]
+
+    if (community === maxCrashCommunity) {
+      // The feature's community is the maxCrashCommunity for this side
+      return matchResultStyle
+    } else if (communities.some(c => c === feature.properties.community)) {
+      // The feature's community is in the same side as the maxCrashCommunity
+      return matchResultStyle
+    }
+  }
+
+  // The feature's community is NOT in selectedData.maxCrashesCommunity
+  return unMatchResultStyle
 }
 
 function calculateCentroid (geojson) {
@@ -335,7 +361,8 @@ export default function CrashBySide (props) {
 
   const customIcon1 = new L.Icon({
     iconUrl: exclam,
-    iconSize: [8, 8]
+    // iconSize: [8, 8]
+    iconSize: [15, 15]
   })
 
   /*
@@ -361,11 +388,9 @@ export default function CrashBySide (props) {
     return styleSide(feature, sideData)
   }, [sideData])
 
-  /*
   const choroplethStyleCommunity = useCallback((feature) => {
     return styleCommunity(feature, sideData)
   }, [sideData])
-  */
 
   const choroplethOnEachFeature = useCallback((feature, layer) => {
     onEachFeature(feature, layer, sideData)
@@ -453,7 +478,7 @@ export default function CrashBySide (props) {
         {/*
         <Legend />
         */}
-        <GeoJSON data={community} style={styleCommunity} ref={(layer) => layer?.leafletElement?.bringToFront()} />
+        <GeoJSON data={community} style={choroplethStyleCommunity} ref={(layer) => layer?.leafletElement?.bringToFront()} />
         <GeoJSON key={key} data={side} style={choroplethStyleSide} onEachFeature={choroplethOnEachFeature} ref={(layer) => layer?.leafletElement?.bringToBack()} />
         {/*
         <LayersControl>
