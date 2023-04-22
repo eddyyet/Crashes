@@ -16,8 +16,8 @@ import Network2 from './charts/Network2'
 import Bubble from './charts/Bubble'
 import ScatterPlot from './charts/ScatterPlot'
 import Choropleth from './charts/Choropleth'
-import Legend from './charts/Legend'
-import Legend2 from './charts/Legend2'
+import ChoroplethLegend from './charts/ChoroplethLegend'
+import ChoroplethLegend2 from './charts/ChoroplethLegend2'
 import StraightenOutlinedIcon from '@mui/icons-material/StraightenOutlined'
 
 export default function App () {
@@ -43,8 +43,8 @@ export default function App () {
               <div><Choropleth year={yearRange} side={side} /></div>
             </div>
             <div className={'mapLegend'}>
-              <div><Legend /></div>
-              <div><Legend2 /></div>
+              <div><ChoroplethLegend /></div>
+              <div><ChoroplethLegend2 /></div>
             </div>
           </div>
         </div>
