@@ -114,9 +114,9 @@ function onMouseOver (event, selectedData) {
     if (Object.keys(selectedData.crashesPer1000).length === 9) {
       if (['Far North Side', 'Northwest Side', 'North Side', 'West Side'].includes(featureId)) {
         direction1 = 'bottom'
-      } else if (['Southwest Side'].includes(featureId)) {
+      } else if (['Southwest Side', 'Far Southwest Side'].includes(featureId)) {
         direction1 = 'top'
-      } else if (['South Side', 'Central', 'Far Southeast Side', 'Far Southwest Side'].includes(featureId)) {
+      } else if (['South Side', 'Central', 'Far Southeast Side'].includes(featureId)) {
         direction1 = 'left'
       }
     } else if (Object.keys(selectedData.crashesPer1000).length === 1) {
@@ -131,7 +131,7 @@ function onMouseOver (event, selectedData) {
           <strong>Crashes per 1000 citizens each year:</strong> ${moPer1000} <br>
           <strong>Top crash area:</strong> ${maxCommunityDisplay} ${maxCommunityCrashesDisplay}
           </span>
-      </div>`, { sticky: false, keepInView: true, direction: direction1 }).openTooltip()
+      </div>`, { className: 'my-tooltip-class', sticky: false, keepInView: true, direction: direction1, permanent: true }).openTooltip()
     layer.bringToFront()
   }
 }
