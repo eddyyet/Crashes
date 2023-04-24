@@ -1,3 +1,5 @@
+import '../format/Legend.css'
+import '../format/TreeMapLegend.css'
 import React from 'react'
 import { ResponsiveTreeMapHtml } from '@nivo/treemap'
 import filter from '../utils/filter'
@@ -5,6 +7,7 @@ import TreeMapData from '../utils/TreeMapData'
 import causeData from '../data/crash_cause.json'
 import MinorCrashOutlinedIcon from '@mui/icons-material/MinorCrashOutlined'
 import MedicalServicesOutlinedIcon from '@mui/icons-material/MedicalServicesOutlined'
+import StraightenOutlinedIcon from '@mui/icons-material/StraightenOutlined'
 
 export default function TreeMap (props) {
   const filteredData = filter(causeData, props.year, props.side)
@@ -57,20 +60,56 @@ export default function TreeMap (props) {
   }
 
   return (
-    <ResponsiveTreeMapHtml
-      height={600}
-      data={treeMapData}
-      identity='cause'
-      value='count'
-      orientLabel={false}
-      nodeOpacity={1}
-      colors={{ datum: 'data.nodeColor' }}
-      borderWidth={1}
-      borderColor={{ from: 'color', modifiers: [['opacity', 0.6], ['brighter', 0.3]] }}
-      label={customLabel}
-      parentLabelTextColor={{ from: 'color', modifiers: [['opacity', 1], ['brighter', 1]] }}
-      tooltip={customTooltip}
-      theme={{ fontFamily: '"Google Sans", "Roboto", "Helvetica Neue", sans-serif' }}
-    />
+    <div className={'chart wideChart'}>
+      <div className={'chartTitle'}>
+        <span>Causes</span>
+        <span id='TreeMapLegendTrigger' className={'legendSymbolOutline'}><StraightenOutlinedIcon className={'legendSymbol'} /></span>
+        <div id='TreeMapLegend' className={'floatingLegend'}>
+          <div className={'legendTitle'} style={{ marginBottom: '0.25rem' }}>Injury rate</div>
+          <div className={'legendTextLine'}>The proportion of crashes that caused injuries</div>
+          <div className={'TreeMapGradients'}>
+            <div className={'TreeMapGradients'}>
+              <div className={'TreeMapGradient TreeMapGradientRed'}></div>
+              <div className={'TreeMapGradient TreeMapGradientYellow'}></div>
+              <div className={'TreeMapGradient TreeMapGradientOrange'}></div>
+              <div className={'TreeMapGradient TreeMapGradientBrown'}></div>
+              <div className={'TreeMapGradient TreeMapGradientGray'}></div>
+              <span className={'TreeMapGradientLine'} style={{ left: '0%' }}></span>
+              <span className={'TreeMapGradientLine'} style={{ left: '25%' }}></span>
+              <span className={'TreeMapGradientLine'} style={{ left: '50%' }}></span>
+              <span className={'TreeMapGradientLine'} style={{ left: '75%' }}></span>
+              <span className={'TreeMapGradientLine'} style={{ left: '100%' }}></span>
+            </div>
+            <div className={'TreeMapGradientFigures'}>
+              <span className={'TreeMapGradientFigure'}>32%+</span>
+              <span className={'TreeMapGradientFigure'}>24％</span>
+              <span className={'TreeMapGradientFigure'}>16％</span>
+              <span className={'TreeMapGradientFigure'}>8％</span>
+              <span className={'TreeMapGradientFigure'}>0％</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className={'chartDescription'}>What caused the crashes? How likely were they to cause injuries?</div>
+      <div className={'treeMapParent'}>
+        <div className={'treeMap'}>
+          <ResponsiveTreeMapHtml
+            height={600}
+            data={treeMapData}
+            identity='cause'
+            value='count'
+            orientLabel={false}
+            nodeOpacity={1}
+            colors={{ datum: 'data.nodeColor' }}
+            borderWidth={1}
+            borderColor={{ from: 'color', modifiers: [['opacity', 0.6], ['brighter', 0.3]] }}
+            label={customLabel}
+            parentLabelTextColor={{ from: 'color', modifiers: [['opacity', 1], ['brighter', 1]] }}
+            tooltip={customTooltip}
+            theme={{ fontFamily: '"Google Sans", "Roboto", "Helvetica Neue", sans-serif' }}
+          />
+        </div>
+      </div>
+    </div>
   )
 }

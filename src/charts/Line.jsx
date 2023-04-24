@@ -23,7 +23,7 @@ export default function Line (props) {
 
   return (
     <ResponsiveLine
-      height={200}
+      height={201}
       width={320}
       margin={{ top: 20, right: 20, bottom: 54, left: 41 }}
       data={lineData}

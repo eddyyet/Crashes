@@ -1,3 +1,12 @@
+.treeMapParent {
+  height: 580px;
+}
+
+.treeMap {
+  height: 600px;
+  transform: translatey(-20px);
+}
+
 #TreeMapRoot {
   display: none;
 }
