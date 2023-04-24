@@ -1,8 +1,11 @@
 .leaflet-container {
   height: 400px;
-  border-Radius: 10px;
- 
 }
+
+.dark-mode {
+  filter: brightness(0.6) invert(1) contrast(1.5) hue-rotate(200deg) saturate(0.1) brightness(0.35);
+}
+
 .my-tooltip-class {
   min-width: 250px !important;
   max-width: 300px !important;
@@ -50,6 +53,10 @@
 .mo-tooltip .citizens {
   font-size: 20px;
   float: right;
+}
+
+.leaflet-control-attribution {
+  display: none;
 }
 
 /*

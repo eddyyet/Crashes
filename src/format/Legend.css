@@ -1,5 +1,4 @@
 .legend-container {
-  font-family: Arial, sans-serif;
   font-size: 14px;
   color: #d3d3d3;
   margin-top: 0px;
@@ -23,7 +22,7 @@
 
 .legend-gradient {
   width: 200px;
-  height: 20px;
+  height: 10px;
   border-radius: 5px;
   margin-right: 10px;
   background-image: linear-gradient(to right, #ffffff, #fff2a8, #ffa238, #c72b00, #4d0000);

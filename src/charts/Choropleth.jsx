@@ -494,7 +494,7 @@ export default function CrashBySide (props) {
       doubleClickZoom={false}
       dragging={false}
     >
-        <TileLayer attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png' />
+        <TileLayer className={'dark-mode'} url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png' />
         {/*
         <TileLayer attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' url='https://api.mapbox.com/styles/v1/mapbox/dark-v10/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibXNiZDUwMDUiLCJhIjoiY2xnbWI1MXpmMDQ1cjNlanFycjE4NDUzdyJ9.Ghc_wgUqyPqJgQXwj-p_tw' />
         */}
