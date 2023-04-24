@@ -1,6 +1,7 @@
 import './format/general.css'
 import './format/specific.css'
 import './format/Legend.css'
+import './format/legend_floating.css'
 import './format/TreeMapLegend.css'
 import './format/NetworkLegend.css'
 import React, { useState } from 'react'

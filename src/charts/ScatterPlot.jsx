@@ -1,4 +1,4 @@
-import '../format/Legend.css'
+import '../format/legend_floating.css'
 import '../format/ScatterPlotLegend.css'
 import React from 'react'
 import { ResponsiveScatterPlot } from '@nivo/scatterplot'

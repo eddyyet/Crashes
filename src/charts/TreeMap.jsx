@@ -1,4 +1,4 @@
-import '../format/Legend.css'
+import '../format/legend_floating.css'
 import '../format/TreeMapLegend.css'
 import React from 'react'
 import { ResponsiveTreeMapHtml } from '@nivo/treemap'
