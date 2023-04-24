@@ -37,6 +37,14 @@
   -webkit-transform: scale(0.8);
 }
 
+.lineTooltipLevel {
+  padding-right: 16px;
+}
+
+.lineTooltipFigure {
+  float: right;
+}
+
 .barFigure {
   display: flex;
   flex-direction: row;
@@ -45,12 +53,63 @@
   font-weight: 700;
 }
 
-.lineTooltipLevel {
-  padding-right: 16px;
+.NetworkCategory {
+  font-size: 8px;
+  letter-spacing: .15rem;
+  color: #777777;
 }
 
-.lineTooltipFigure {
-  float: right;
+#Network {
+  position: relative;
+  height: 475px;
+}
+
+#NetworkLighting {
+  position: absolute;
+  top: 132px;
+  left: 120px;
+  transform: rotate(-24deg);
+}
+
+#NetworkWeather {
+  position: absolute;
+  top: 36px;
+  left: 420px;
+  transform: rotate(20deg);
+}
+
+#NetworkRoadway {
+  position: absolute;
+  top: 200px;
+  left: 630px;
+  transform: rotate(42deg);
+}
+
+#Network2 {
+  position: relative;
+  top: 25px;
+  left: 25px;
+}
+
+#Network2Lighting {
+  position: absolute;
+  top: 205px;
+  left: -40px;
+  transform: rotate(-90deg);
+}
+
+#Network2Weather {
+  position: absolute;
+  top: 32px;
+  left: 215px;
+  transform: rotate(27deg);
+}
+
+#Network2Roadway {
+  position: absolute;
+  top: 343px;
+  left: 230px;
+  transform: rotate(-40deg);
 }
 
 .bubbleTypeLarge {

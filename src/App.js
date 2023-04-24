@@ -152,13 +152,23 @@ export default function App () {
             </div>
           </div>
           <Stack direction='row' divider={<Divider orientation="vertical" sx={{ borderWidth: '0.5px', borderColor: '#383a3e' }} flexItem />} spacing='1.5rem'>
-            <div width='736px'>
+            <div>
               <div className={'chartDescription'}>How does the environment affect the likelihood of injury in a crash?</div>
-              <Network year={yearRange} side={side} />
+              <div id='Network'>
+                <Network year={yearRange} side={side} />
+                <span id='NetworkLighting' className={'NetworkCategory'}>LIGHTING</span>
+                <span id='NetworkWeather' className={'NetworkCategory'}>WEATHER</span>
+                <span id='NetworkRoadway' className={'NetworkCategory'}>ROADWAY</span>
+              </div>
             </div>
-            <div width='350px'>
+            <div>
               <div className={'chartDescription'}>When two environement factors occur together, the chances of injury will be...</div>
-            <Network2 year={yearRange} side={side} />
+              <div id='Network2'>
+                <Network2 year={yearRange} side={side} />
+                <span id='Network2Lighting' className={'NetworkCategory'}>LIGHTING</span>
+                <span id='Network2Weather' className={'NetworkCategory'}>WEATHER</span>
+                <span id='Network2Roadway' className={'NetworkCategory'}>ROADWAY</span>
+              </div>
             </div>
           </Stack>
         </div>

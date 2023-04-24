@@ -88,6 +88,6 @@ export default function Network (props) {
   }
 
   return (
-    <Graph key={version} graph={graph} options={options} style={{ height: '500px', width: '350px' }} />
+    <Graph key={version} graph={graph} options={options} style={{ height: '400px', width: '330px' }} />
   )
 }
