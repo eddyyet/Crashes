@@ -89,9 +89,9 @@ export default function TreeMapData (data) {
 
     if (group) {
       const nodeColor = `hsla(${groupColor[group]}, ${alpha})`
-      if (injuryRateNum < 0.2) {
+      if (injuryRateNum < 0.22) {
         nodeTextColor = `hsla(${groupTextColor[group]}, ${textAlpha})`
-      } else { nodeTextColor = 'rgba(30, 31, 32, 0.4)' }
+      } else { nodeTextColor = 'rgba(30, 31, 32, 0.45)' }
       const tooltipTitleColor = `hsla(${groupTextColor[group]}, 1)`
       groups.find((g) => g.cause === group).children.push({
         cause,
