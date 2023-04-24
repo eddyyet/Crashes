@@ -54,17 +54,19 @@ function getColor (feature, selectedData) {
   if (selectedData[feature.properties.id] !== undefined) {
     const value = selectedData[feature.properties.id]
 
-    const hueStart = 60
-    const hueEnd = 16
+    // const hueStart = 60
+    // const hueEnd = 16
+    const hue = 80 - value * 1.2
+    // const hue = 10
+    // const hue = hueStart - (hueStart - hueEnd) * ((value - 25) / 30)
+    const saturation = Math.min(value * 3 - 80, 100)
+    // const lightnessStart = 93
+    // const lightnessEnd = 42
+    const lightness = 60
+    // const lightness = lightnessStart - (lightnessStart - lightnessEnd) * ((value - 25) / 30)
+    const alpha = Math.min(value + 20, 100)
 
-    const hue = hueStart - (hueStart - hueEnd) * ((value - 25) / 30)
-    const saturation = 100
-    const lightnessStart = 93
-    const lightnessEnd = 42
-
-    const lightness = lightnessStart - (lightnessStart - lightnessEnd) * ((value - 25) / 30)
-
-    return `hsl(${hue}, ${saturation}%, ${lightness}%)`
+    return `hsla(${hue}, ${saturation}%, ${lightness}%, ${alpha}%)`
   } else {
     return '#ccc' // color for unknown feature
   }
@@ -76,8 +78,8 @@ function onMouseOver (event, selectedData) {
   const hslColor = getColor(layer.feature, selectedData.crashesPer1000)
   if (selectedData.crashesPer1000[featureId] !== undefined) {
     layer.setStyle({
-      weight: 2,
-      color: '#666',
+      weight: 1.5,
+      color: '#FFF',
       dashArray: '',
       fillOpacity: 0.85,
       fillColor: hslColor
@@ -166,18 +168,18 @@ function onMouseOut (event, selectedData) {
   if (fillColor === '#ccc') {
     layer.setStyle({
       fillColor: '#ccc',
-      weight: 1,
-      opacity: 0.2,
-      color: 'white',
+      weight: 0.5,
+      opacity: 0.8,
+      color: '#2d2f31',
       dashArray: '2',
       fillOpacity: 0.05
     })
   } else {
     layer.setStyle({
       fillColor,
-      weight: 1.5,
+      weight: 0.5,
       opacity: 1,
-      color: 'white',
+      color: '#2d2f31',
       fillOpacity: 0.85
     })
   }
@@ -198,18 +200,18 @@ function styleSide (feature, selectedData) {
   if (fillColor === '#ccc') {
     return {
       fillColor: '#ccc',
-      weight: 1,
-      opacity: 0.2,
-      color: 'white',
+      weight: 0.5,
+      opacity: 0.8,
+      color: '#2d2f31',
       dashArray: '2',
       fillOpacity: 0.05
     }
   } else {
     return {
       fillColor,
-      weight: 1.5,
+      weight: 0.5,
       opacity: 1,
-      color: 'white',
+      color: '#2d2f31',
       fillOpacity: 0.85
     }
   }
@@ -269,7 +271,7 @@ function styleCommunity (feature, selectedData) {
     fillColor: 'transparent',
     fillOpacity: 0,
     // color: '#5b5b5b',
-    color: '#e8dfdf',
+    color: '#666666',
     // color: '#000000',
     weight: 0.5,
     Opacity: 0.7
@@ -279,7 +281,7 @@ function styleCommunity (feature, selectedData) {
     fillColor: 'transparent',
     fillOpacity: 0,
     // color: '#5b5b5b',
-    color: '#e8dfdf',
+    color: '#666666',
     weight: 0,
     Opacity: 0
   }
