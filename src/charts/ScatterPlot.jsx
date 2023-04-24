@@ -45,19 +45,15 @@ export default function ScatterPlot (props) {
           <div className={'legendSeparator'}></div>
           <div className={'legendTitle'} style={{ marginBottom: '0.25rem' }}>Injury rate</div>
           <div className={'legendTextLine'}>The proportion of crashes that caused injuries</div>
-          <div className={'ScatterPlotLegendRow'}>
-            <div className={'ScatterPlotLegendElement'}>
-              <span className={'ScatterPlotLegendCircle HighInjury'}></span>
-              <span className={'ScatterPlotLegendFigure'}>14%+</span>
-            </div>
-            <div className={'ScatterPlotLegendElement'}>
-              <span className={'ScatterPlotLegendCircle MidInjury'}></span>
-              <span className={'ScatterPlotLegendFigure'}>11%</span>
-            </div>
-            <div className={'ScatterPlotLegendElement'}>
-              <span className={'ScatterPlotLegendCircle LowInjury'}></span>
-              <span className={'ScatterPlotLegendFigure'}>8%-</span>
-            </div>
+          <div className={'ScatterPlotLegendInjuryColor'}></div>
+          <div className={'ScatterPlotLegendInjuryFigures'}>
+            <span>20%+</span>
+            <span>18%</span>
+            <span>16%</span>
+            <span>14%</span>
+            <span>12%</span>
+            <span>10%</span>
+            <span>8%-</span>
           </div>
         </div>
       </div>

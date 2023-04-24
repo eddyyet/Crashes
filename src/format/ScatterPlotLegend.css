@@ -44,24 +44,19 @@
   border: 1px solid #666666;
 }
 
-.ScatterPlotLegendCircle.HighInjury {
-  height: 20px;
-  width: 20px;
-  background-color: hsla(10, 90%, 65%, 75%);
-}
-
-.ScatterPlotLegendCircle.MidInjury {
-  height: 20px;
-  width: 20px;
-  background-color: hsla(10, 45%, 65%, 45%);
-}
-
-.ScatterPlotLegendCircle.LowInjury {
-  height: 20px;
-  width: 20px;
-  background-color: hsla(10, 0%, 65%, 15%);
-}
-
 .ScatterPlotLegendFigure {
   padding: 6px;
+}
+
+.ScatterPlotLegendInjuryColor {
+  margin-bottom: 0.5rem;
+  height: 16px;
+  border-radius: 8px;
+  background: linear-gradient(to right, hsla(10, 90%, 45%, 0.75) 0, hsla(10, 90%, 55%, 0.75) 33.3%, hsla(10, 90%, 60%, 0.6) 50%, hsla(10, 0%, 60%, 0.15) 100%)
+}
+
+.ScatterPlotLegendInjuryFigures {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
