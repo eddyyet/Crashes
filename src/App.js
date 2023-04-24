@@ -36,7 +36,7 @@ export default function App () {
         <div className={'heading'}>
           <div className={'story'}>
             <div className={'storyTitle'}>Traffic Crashes<br />In Chicago</div>
-            <div className={'storyContent'}>In 2021, there were 1,000 traffic crashes in Chicago. 100 people were killed and 1,000 were injured. The crashes were caused by... (just some random text, let&apos;s edit later)</div>
+            <div className={'storyContent'}>Chicago traffic crashes remain a pressing concern for public safety, with fatalities and injuries continuing to occur every day. Learn more...</div>
           </div>
           <div className={'mapBase'}>
             <div className={'mapArea'}>

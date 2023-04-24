@@ -12,7 +12,6 @@ import StraightenOutlinedIcon from '@mui/icons-material/StraightenOutlined'
 export default function TreeMap (props) {
   const filteredData = filter(causeData, props.year, props.side)
   const treeMapData = TreeMapData(filteredData)
-  console.log(treeMapData)
   const treeMapTotal = treeMapData.total
 
   const customLabel = (node) => {
@@ -59,12 +58,28 @@ export default function TreeMap (props) {
     )
   }
 
+  const TreeMapSmallCount = (treeMapTotal * (40 * 40) / (718 * 580)).toFixed(0)
+  const TreeMapMidCount = (treeMapTotal * (100 * 100) / (718 * 580)).toFixed(0)
+  const TreeMapLargeCount = (treeMapTotal * (160 * 160) / (718 * 580)).toFixed(0)
+
   return (
     <div className={'chart wideChart'}>
       <div className={'chartTitle'}>
         <span>Causes</span>
         <span id='TreeMapLegendTrigger' className={'legendSymbolOutline'}><StraightenOutlinedIcon className={'legendSymbol'} /></span>
         <div id='TreeMapLegend' className={'floatingLegend'}>
+          <div className={'legendTitle'}>Number of crashes</div>
+          <div className={'TreeMapSquares'}>
+            <div className={'TreeMapSquare TreeMapSquareLarge'}>
+              <div className={'TreeMapSquare TreeMapSquareMid'}>
+                <div className={'TreeMapSquare TreeMapSquareSmall'}>
+                  <span className={'TreeMapSquareFigure'}>{TreeMapSmallCount.toLocaleString('en-US')}</span>
+                </div>
+                <span className={'TreeMapSquareFigure'}>{TreeMapMidCount.toLocaleString('en-US')}</span>
+              </div>
+              <span className={'TreeMapSquareFigure'}>{TreeMapLargeCount.toLocaleString('en-US')}</span>
+            </div>
+          </div>
           <div className={'legendTitle'} style={{ marginBottom: '0.25rem' }}>Injury rate</div>
           <div className={'legendTextLine'}>The proportion of crashes that caused injuries</div>
           <div className={'TreeMapGradients'}>

@@ -7,6 +7,42 @@
   display: inline-block;
 }
 
+.TreeMapSquares {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.75rem 0 1.5rem;
+}
+
+.TreeMapSquare {
+  position: relative;
+  display: inline-block!important;
+  border: 0.5px solid #666666;
+  padding: 8px;
+}
+
+.TreeMapSquareLarge {
+  height: 160px;
+  width: 160px;
+}
+
+.TreeMapSquareMid {
+  height: 100px;
+  width: 100px;
+}
+
+.TreeMapSquareSmall {
+  height: 40px;
+  width: 40px;
+}
+
+.TreeMapSquareFigure {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  font-size: 0.75rem;
+}
+
 .TreeMapGradients {
   position: relative;
   display: flex;
