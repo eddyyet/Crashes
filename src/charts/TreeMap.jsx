@@ -117,7 +117,7 @@ export default function TreeMap (props) {
             nodeOpacity={1}
             colors={{ datum: 'data.nodeColor' }}
             borderWidth={1}
-            borderColor={{ from: 'color', modifiers: [['opacity', 0.6], ['brighter', 0.3]] }}
+            borderColor={{ from: 'color', modifiers: [['opacity', 0.7], ['brighter', 0.25]] }}
             label={customLabel}
             parentLabelTextColor={{ from: 'color', modifiers: [['opacity', 1], ['brighter', 1]] }}
             tooltip={customTooltip}
