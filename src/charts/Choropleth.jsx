@@ -54,17 +54,10 @@ function getColor (feature, selectedData) {
   if (selectedData[feature.properties.id] !== undefined) {
     const value = selectedData[feature.properties.id]
 
-    // const hueStart = 60
-    // const hueEnd = 16
-    const hue = value > 60 ? 10 : 70 - Math.max(value, 15) * 1.33
-    // const hue = 10
-    // const hue = hueStart - (hueStart - hueEnd) * ((value - 25) / 30)
-    const saturation = Math.min(value * 2 - 42, 100)
-    // const lightnessStart = 93
-    // const lightnessEnd = 42
-    const lightness = value > 60 ? 120 - Math.min(value, 75) : 55
-    // const lightness = lightnessStart - (lightnessStart - lightnessEnd) * ((value - 25) / 30)
-    const alpha = Math.min(value * 0.8 + 42, 90)
+    const hue = value > 60 ? 15 : 75 - Math.max(value, 15)
+    const saturation = Math.max(Math.min(value, 75), 15) * 1.66 - 25
+    const lightness = value > 60 ? 115 - Math.min(value, 75) : 55
+    const alpha = Math.min(value * 1.2 + 13, 85)
 
     return `hsla(${hue}, ${saturation}%, ${lightness}%, ${alpha}%)`
   } else {

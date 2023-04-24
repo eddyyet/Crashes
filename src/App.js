@@ -18,7 +18,6 @@ import Bubble from './charts/Bubble'
 import ScatterPlot from './charts/ScatterPlot'
 import Choropleth from './charts/Choropleth'
 import ChoroplethLegend from './charts/ChoroplethLegend'
-import ChoroplethLegend2 from './charts/ChoroplethLegend2'
 import StraightenOutlinedIcon from '@mui/icons-material/StraightenOutlined'
 
 export default function App () {
@@ -45,7 +44,6 @@ export default function App () {
             </div>
             <div className={'mapLegend'}>
               <div><ChoroplethLegend /></div>
-              <div><ChoroplethLegend2 /></div>
             </div>
           </div>
         </div>

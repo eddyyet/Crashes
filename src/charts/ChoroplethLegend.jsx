@@ -1,10 +1,9 @@
 import React from 'react'
 import '../format/Legend.css'
+import exclam from '../images/max_crash_community5.png'
 
-function Legend () {
-  const dataValues = [18, 31, 44, 57, 70]
-  const gradient =
-    'linear-gradient(to right, #ffffff, #fff2a8, #ffa238, #c72b00, #4d0000)'
+export default function Legend () {
+  const dataValues = [15, 30, 45, 60, 75]
   const legendLabels = dataValues.map((value, index) => (
     <div key={index} className="legend-label">
       {value}
@@ -13,17 +12,15 @@ function Legend () {
 
   return (
     <div className="legend-container">
-      <div className="legend-text">
-        Crashes per 1000 citizens each year
-      </div>
-      <div className="legend-wrapper">
-        <div
-          className="legend-gradient"
-          style={{ background: gradient }}
-        ></div>
+      <div className='legend-transform'>
+        <div>Crashes per 1000 citizens each year</div>
+        <div className='legend-gradient'></div>
         <div className="legend-labels">{legendLabels}</div>
+      </div>
+      <div className='legend-transform'>
+        <img src={exclam} alt="Exclamation Icon" style={{ width: '15px', height: '15px', marginRight: '5px', marginTop: '1px' }} />
+        <span className="legend-text">Top crash area</span>
       </div>
     </div>
   )
 }
-export default Legend
