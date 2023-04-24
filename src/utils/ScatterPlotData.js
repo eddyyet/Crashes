@@ -41,9 +41,10 @@ export default function ScatterPlotData (data) {
 
     const saturation = (Math.min(Math.max(injuryRateNum - 0.08, 0) * 15, 0.9) * 100) + '%'
     const lightness = injuryRateNum > 0.14 ? (60 - Math.min(Math.max(injuryRateNum - 0.14, 0), 0.06) * 250) + '%' : '60%'
+    const lightnessTooltip = injuryRateNum > 0.14 ? (65 - Math.min(Math.max(injuryRateNum - 0.14, 0), 0.06) * 250) + '%' : '65%'
     const alpha = (Math.min(Math.max(injuryRateNum - 0.08, 0) * 7.5 + 0.15, 0.75) * 100) + '%'
     combination[dayTime].color = `hsla(10, ${saturation}, ${lightness}, ${alpha})`
-    combination[dayTime].toolTipColor = `hsla(10, ${saturation}, ${lightness}, 100%)`
+    combination[dayTime].toolTipColor = `hsla(10, ${saturation}, ${lightnessTooltip}, 100%)`
 
     combination[dayTime].toolTipDay = dayMap[combination[dayTime].x]
     combination[dayTime].toolTipTime = combination[dayTime].y + ':00'

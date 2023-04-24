@@ -56,15 +56,15 @@ function getColor (feature, selectedData) {
 
     // const hueStart = 60
     // const hueEnd = 16
-    const hue = 80 - value * 1.2
+    const hue = value > 60 ? 10 : 70 - Math.max(value, 15) * 1.33
     // const hue = 10
     // const hue = hueStart - (hueStart - hueEnd) * ((value - 25) / 30)
-    const saturation = Math.min(value * 3 - 80, 100)
+    const saturation = Math.min(value * 2 - 42, 100)
     // const lightnessStart = 93
     // const lightnessEnd = 42
-    const lightness = 60
+    const lightness = value > 60 ? 120 - Math.min(value, 75) : 55
     // const lightness = lightnessStart - (lightnessStart - lightnessEnd) * ((value - 25) / 30)
-    const alpha = Math.min(value + 20, 100)
+    const alpha = Math.min(value * 0.8 + 42, 90)
 
     return `hsla(${hue}, ${saturation}%, ${lightness}%, ${alpha}%)`
   } else {
@@ -168,7 +168,7 @@ function onMouseOut (event, selectedData) {
   if (fillColor === '#ccc') {
     layer.setStyle({
       fillColor: '#ccc',
-      weight: 0.5,
+      weight: 1,
       opacity: 0.8,
       color: '#2d2f31',
       dashArray: '2',
@@ -177,7 +177,7 @@ function onMouseOut (event, selectedData) {
   } else {
     layer.setStyle({
       fillColor,
-      weight: 0.5,
+      weight: 1,
       opacity: 1,
       color: '#2d2f31',
       fillOpacity: 0.85
@@ -200,7 +200,7 @@ function styleSide (feature, selectedData) {
   if (fillColor === '#ccc') {
     return {
       fillColor: '#ccc',
-      weight: 0.5,
+      weight: 1,
       opacity: 0.8,
       color: '#2d2f31',
       dashArray: '2',
@@ -209,7 +209,7 @@ function styleSide (feature, selectedData) {
   } else {
     return {
       fillColor,
-      weight: 0.5,
+      weight: 1,
       opacity: 1,
       color: '#2d2f31',
       fillOpacity: 0.85
@@ -271,7 +271,7 @@ function styleCommunity (feature, selectedData) {
     fillColor: 'transparent',
     fillOpacity: 0,
     // color: '#5b5b5b',
-    color: '#666666',
+    color: '#2d2f31',
     // color: '#000000',
     weight: 0.5,
     Opacity: 0.7
@@ -281,7 +281,7 @@ function styleCommunity (feature, selectedData) {
     fillColor: 'transparent',
     fillOpacity: 0,
     // color: '#5b5b5b',
-    color: '#666666',
+    color: '#2d2f31',
     weight: 0,
     Opacity: 0
   }
