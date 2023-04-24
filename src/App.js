@@ -56,11 +56,27 @@ export default function App () {
               <div id='TreeMapLegend' className={'floatingLegend'}>
                 <div className={'legendTitle'} style={{ marginBottom: '0.25rem' }}>Injury rate</div>
                 <div className={'legendTextLine'}>The proportion of crashes that caused injuries</div>
-                <div>TODO: gradients</div>
-                <div>TODO: gradients</div>
-                <div>TODO: gradients</div>
-                <div>TODO: gradients</div>
-                <div>TODO: gradients</div>
+                <div className={'TreeMapGradients'}>
+                  <div className={'TreeMapGradients'}>
+                    <div className={'TreeMapGradient TreeMapGradientRed'}></div>
+                    <div className={'TreeMapGradient TreeMapGradientYellow'}></div>
+                    <div className={'TreeMapGradient TreeMapGradientOrange'}></div>
+                    <div className={'TreeMapGradient TreeMapGradientBrown'}></div>
+                    <div className={'TreeMapGradient TreeMapGradientGray'}></div>
+                    <span className={'TreeMapGradientLine'} style={{ left: '0%' }}></span>
+                    <span className={'TreeMapGradientLine'} style={{ left: '25%' }}></span>
+                    <span className={'TreeMapGradientLine'} style={{ left: '50%' }}></span>
+                    <span className={'TreeMapGradientLine'} style={{ left: '75%' }}></span>
+                    <span className={'TreeMapGradientLine'} style={{ left: '100%' }}></span>
+                  </div>
+                  <div className={'TreeMapGradientFigures'}>
+                    <span className={'TreeMapGradientFigure'}>32%+</span>
+                    <span className={'TreeMapGradientFigure'}>24％</span>
+                    <span className={'TreeMapGradientFigure'}>16％</span>
+                    <span className={'TreeMapGradientFigure'}>8％</span>
+                    <span className={'TreeMapGradientFigure'}>0％</span>
+                  </div>
+                </div>
               </div>
             </div>
             <div className={'chartDescription'}>What caused the crashes? How likely were they to cause injuries?</div>

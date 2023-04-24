@@ -6,3 +6,54 @@
 #TreeMapLegendTrigger:hover + #TreeMapLegend, #TreeMapLegend:hover {
   display: inline-block;
 }
+
+.TreeMapGradients {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.TreeMapGradient {
+  height: 10px;
+  width: 200px;
+}
+
+.TreeMapGradientRed {
+  background: linear-gradient(to right, hsla(10, 95%, 60%, 0.8), hsla(10, 95%, 60%, 0));
+}
+
+.TreeMapGradientYellow {
+  background: linear-gradient(to right, hsla(40, 70%, 50%, 0.8), hsla(40, 70%, 50%, 0));
+}
+
+.TreeMapGradientOrange {
+  background: linear-gradient(to right, hsla(25, 80%, 55%, 0.8), hsla(25, 80%, 55%, 0));
+}
+
+.TreeMapGradientBrown {
+  background: linear-gradient(to right, hsla(15, 10%, 55%, 0.8), hsla(15, 10%, 55%, 0));
+}
+
+.TreeMapGradientGray {
+  background: linear-gradient(to right, hsla(0, 0%, 55%, 0.8), hsla(0, 0%, 55%, 0));
+}
+
+.TreeMapGradientLine {
+  position: absolute;
+  height: 100%;
+  width: 0.25px;
+  background-color: rgba(204, 204, 204, 0.25);
+}
+
+.TreeMapGradientFigures {
+  width: 250px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.TreeMapGradientFigure {
+  width:50px;
+  text-align: center;
+}
