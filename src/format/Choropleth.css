@@ -24,14 +24,7 @@
 .mo-tooltip .title {
   margin-bottom: 0.5rem;
 }
-.mo-tooltip .icon {
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  margin-right: 10px;
-}
+
 .mo-tooltip .side-name {
   font-size: 1rem;
   font-weight: 700;
@@ -43,9 +36,11 @@
   align-items: center;
   line-height: 1.5;
 }
+
 .mo-tooltip .detail-label {
   margin-right: 10px;
 }
+
 .mo-tooltip .crash-rate {
   font-size: 1rem;
   font-weight: 700;
