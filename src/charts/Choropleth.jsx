@@ -87,6 +87,8 @@ function onMouseOver (event, selectedData) {
       offset1 = [0, 20]
     }
 
+    const yearRangeTooltip = moStartYear === moEndYear ? `${moStartYear}` : `${moStartYear} - ${moEndYear}`
+
     const tooltipContent = `
       <div class='mo-tooltip'>
         <div class='title'>
@@ -94,7 +96,7 @@ function onMouseOver (event, selectedData) {
           <div>Population: ${moPpl}</div>
         </div>
         <div class='detail-row'>
-          <span class='detail-label'>Number of crashes (${moStartYear} - ${moEndYear}) </span>
+          <span class='detail-label'>Number of crashes (${yearRangeTooltip}) </span>
           <span class='detail-value'>${moCrashes}</span>
         </div>
         <div class='detail-row'>
