@@ -1,6 +1,6 @@
 import React from 'react'
-import '../format/Legend.css'
-import exclam from '../images/max_crash_community5.png'
+import '../format/ChoroplethLegend.css'
+import topCrashSymbol from '../images/crash_icon_white.png'
 
 export default function Legend () {
   const dataValues = [15, 30, 45, 60, 75]
@@ -11,15 +11,19 @@ export default function Legend () {
   ))
 
   return (
-    <div className="legend-container">
-      <div className='legend-transform'>
-        <div>Crashes per 1000 citizens each year</div>
-        <div className='legend-gradient'></div>
-        <div className="legend-labels">{legendLabels}</div>
+    <div className='mapLegend'>
+      <div style={{ width: '220px', marginRight: '25px' }}>
+        <div className='legend-transform' style={{ width: '280px' }}>
+          <div>Crashes per 1000 citizens each year</div>
+          <div className='legend-gradient'></div>
+          <div className="legend-labels">{legendLabels}</div>
+        </div>
       </div>
-      <div className='legend-transform'>
-        <img src={exclam} alt="Exclamation Icon" style={{ width: '15px', height: '15px', marginRight: '5px', marginTop: '1px' }} />
-        <span className="legend-text">Top crash area</span>
+      <div style={{ width: '160px' }}>
+        <div className='mapLegend legend-transform' style={{ width: '160px' }}>
+          <img src={topCrashSymbol} alt="Crash Icon" style={{ width: '20px', height: '20px', marginRight: '8px' }} />
+          <span>Top crash area</span>
+        </div>
       </div>
     </div>
   )

@@ -1,7 +1,5 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react'
-// import { MapContainer, TileLayer, GeoJSON, Marker, Popup, LayersControl } from 'react-leaflet'
 import { MapContainer, TileLayer, GeoJSON, Marker } from 'react-leaflet'
-// import * as d3 from 'd3'
 import side from '../data/chicago_side.json'
 import community from '../data/chicago_community.json'
 import ChoroplethFilter from '../utils/ChoroplethData'
@@ -9,54 +7,17 @@ import ChoroplethData from '../data/choropleth.json'
 import '../format/Choropleth.css'
 import 'leaflet/dist/leaflet.css'
 import isEqual from 'lodash/isEqual'
-// import Control from 'react-leaflet-custom-control'
 import L from 'leaflet'
-// import cautionCrashIcon from '../images/choropleth_collision.png'
-import exclam from '../images/max_crash_community5.png'
+import topCrashSymbol from '../images/crash_icon_white.png'
 import sideCommunityLookup from '../data/chicago_side_communityarea_lookup.json'
 
-/*
-function MyComponent (props) {
-  const { result } = props
-  // console.log(result)
-  return (
-    <div>
-      <h4>{JSON.stringify(result)} Test</h4>
-    </div>
-  )
-}
-*/
-/*
 function getColor (feature, selectedData) {
-  // console.log(filteredData)
-  // const numKeys = Object.keys(selectedData).length
-  // if there is only one key-value pair in filteredData
-  if (selectedData[feature.properties.id] !== undefined) {
-    const colorClasses = ['#ffffd4', '#fed98e', '#fe9929', '#cc4c02']
-    const value = selectedData[feature.properties.id]
-    let colorIndex = 0
-    if (value >= 50) {
-      colorIndex = 3
-    } else if (value >= 40) {
-      colorIndex = 2
-    } else if (value >= 30) {
-      colorIndex = 1
-    }
-    return colorClasses[colorIndex]
-  } else {
-    return '#ccc' // color for unknown feature
-  }
-}
-*/
-
-function getColor (feature, selectedData) {
-  // console.log(selectedData)
   if (selectedData[feature.properties.id] !== undefined) {
     const value = selectedData[feature.properties.id]
 
-    const hue = value > 60 ? 15 : 75 - Math.max(value, 15)
-    const saturation = Math.max(Math.min(value, 75), 15) * 1.66 - 25
-    const lightness = value > 60 ? 115 - Math.min(value, 75) : 55
+    const hue = value > 60 ? 5 : 53 - Math.max(value, 15) * 0.8
+    const saturation = (Math.max(Math.min(value, 60), 20) - 20) * 2.5
+    const lightness = value > 60 ? 115 - Math.min(value, 75) : 73 - Math.max(value, 15) * 0.3
     const alpha = Math.min(value * 1.2 + 13, 85)
 
     return `hsla(${hue}, ${saturation}%, ${lightness}%, ${alpha}%)`
@@ -132,18 +93,17 @@ function onMouseOver (event, selectedData) {
         </div>
         <div class='details'>
           <div class='detail-row'>
-            <span class='detail-label'>Total crashes (${moStartYear} - ${moEndYear}): </span>
+            <span class='detail-label'>Total crashes (${moStartYear} - ${moEndYear}) </span>
             <span class='detail-value'>${moCrashes}</span>
           </div>
           <div class='detail-row'>
-            <span class='detail-label'>Crashes per 1K citizens each year: </span>
+            <span class='detail-label'>Crashes per 1K citizens each year </span>
             <span class='citizens' style='color:${hslColor}'>${moPer1000}</span>
           </div>
           <div class='detail-row'>
             <span class='detail-label'>
-            <!--<i class='icon' style="background-image: url(${exclam});"></i>-->
-            Top crash area:</span>
-            <span class='detail-value'>${maxCommunityDisplay} ${maxCommunityCrashesDisplay}</span>
+            Top crash area</span>
+            <span class='detail-value'>${maxCommunityDisplay} (${maxCommunityCrashesDisplay})</span>
           </div>
         </div>
       </div>
@@ -209,63 +169,12 @@ function styleSide (feature, selectedData) {
     }
   }
 }
-/*
-export function Legend () {
-  const colorClasses = ['#ffffd4', '#fed98e', '#fe9929', '#cc4c02']
-  const ranges = ['<30', '30-39', '40-49', '>50']
-
-  const legendRows = ranges.map((range, i) => {
-    const legendRow = (
-      <tr key={range}>
-        <td><i style={{ background: colorClasses[i] }}></i></td>
-        <td className='leftCol'>{range}</td>
-      </tr>
-    )
-
-    return legendRow
-  })
-
-  return (
-    <Control position='bottomleft'>
-      <div className='info legend'>
-        <span id='legend-title'>Traffic crashes per<br/>1000 citizens each year</span>
-        <table>
-          <tbody>
-            {legendRows}
-          </tbody>
-        </table>
-      </div>
-    </Control>
-  )
-}
-*/
-/*
-function getCoordinatesForSide (side) {
-  // Define the coordinates for each side of Chicago
-  // console.log(side)
-  const sideCoordsMap = {
-    Central: [41.878, -87.626],
-    'Far North Side': [41.979, -87.7636],
-    'Far Southeast Side': [41.6969, -87.5842],
-    'Far Southwest Side': [41.7229, -87.6649],
-    'North Side': [41.931, -87.6767],
-    'Northwest Side': [41.9372, -87.7732],
-    'South Side': [41.7965, -87.6067],
-    'Southwest Side': [41.7925, -87.6959],
-    'West Side': [41.8701, -87.7049]
-  }
-
-  return sideCoordsMap[side]
-}
-*/
 
 function styleCommunity (feature, selectedData) {
   const matchResultStyle = {
     fillColor: 'transparent',
     fillOpacity: 0,
-    // color: '#5b5b5b',
     color: '#2d2f31',
-    // color: '#000000',
     weight: 0.5,
     Opacity: 0.7
   }
@@ -273,7 +182,6 @@ function styleCommunity (feature, selectedData) {
   const unMatchResultStyle = {
     fillColor: 'transparent',
     fillOpacity: 0,
-    // color: '#5b5b5b',
     color: '#2d2f31',
     weight: 0,
     Opacity: 0
@@ -356,14 +264,13 @@ export default function CrashBySide (props) {
     const per1000 = {}
     const crashes = {}
     const maxCrashesCommunity = {}
-    // console.log(filteredData)
+
     for (const side in filteredData.totalCount) {
       crashes[side] = filteredData.totalCount[side]
       const population = ppl[side]
       per1000[side] = Math.round(((crashes[side] / numYears) / population) * 1000)
     }
     for (const side in filteredData.maxCount) {
-      // console.log(side)
       maxCrashesCommunity[side] = filteredData.maxCount[side]
     }
     const newData = {}
@@ -373,34 +280,13 @@ export default function CrashBySide (props) {
     newData.crashesPer1000 = per1000
     newData.yearArray = props.year
     newData.sideCommunity = sideCommunityLookup
-    // console.log(newData)
     setSideData(newData)
   }, [filteredData])
 
   const customIcon1 = new L.Icon({
-    iconUrl: exclam,
-    // iconSize: [8, 8]
-    iconSize: [15, 15]
+    iconUrl: topCrashSymbol,
+    iconSize: [25, 25]
   })
-
-  /*
-  const customIcon = new L.Icon({
-    iconUrl: cautionCrashIcon,
-    iconSize: [40, 40]
-  })
-
-  let maxCrashes = 0
-  let maxCrashesSide = ''
-
-  for (const side in sideData.crashes) {
-    if (sideData.crashes[side] > maxCrashes) {
-      maxCrashes = sideData.crashes[side]
-      maxCrashesSide = side
-    }
-  }
-
-  const sideCoords = getCoordinatesForSide(maxCrashesSide)
-  */
 
   const choroplethStyleSide = useCallback((feature) => {
     return styleSide(feature, sideData)
@@ -416,17 +302,7 @@ export default function CrashBySide (props) {
   useEffect(() => {
     setKey(prevKey => prevKey + 1)
   }, [filteredData])
-  /*
-  for (const communityName of Object.keys(sideData.maxCrashesCommunity)) {
-    // console.log(communityName)
-    const matchingFeature = community.features.find(f => f.properties.community === communityName)
-    if (matchingFeature) {
-      const multipolygon = matchingFeature.geometry
-      const centroid = calculateCentroid(multipolygon)
-      console.log(`Centroid for ${communityName}:`, centroid)
-    }
-  }
-  */
+
   useEffect(() => {
     const coords = []
     // console.log('useEffect called')
@@ -439,7 +315,7 @@ export default function CrashBySide (props) {
         coords.push({ communityName, centroid, maxCrashes: sideData.maxCrashesCommunity[communityName] })
       }
     }
-    // console.log(coords)
+
     setCentroidCoords(coords)
   }, [sideData])
 
@@ -472,68 +348,28 @@ export default function CrashBySide (props) {
     setMapCenter(centerMap[props.side] || [41.881832 - 0.05, -87.623177 - 0.1])
     setMapZoom(zoomMap[props.side] || 10)
   }, [props.side])
-  // console.log(mapZoom)
   return (
     <div>
-      {/*
-      <MyComponent result={sideData.crashes} />
-      */}
-
-    <div>
-    <MapContainer
-      key={key}
-      center={mapCenter}
-      zoom={mapZoom}
-      zoomControl={false}
-      scrollWheelZoom={false}
-      doubleClickZoom={false}
-      dragging={false}
-    >
+      <div>
+        <MapContainer
+          key={key}
+          center={mapCenter}
+          zoom={mapZoom}
+          zoomControl={false}
+          scrollWheelZoom={false}
+          doubleClickZoom={false}
+          dragging={false}
+        >
         <TileLayer className={'dark-mode'} url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png' />
-        {/*
-        <TileLayer attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' url='https://api.mapbox.com/styles/v1/mapbox/dark-v10/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibXNiZDUwMDUiLCJhIjoiY2xnbWI1MXpmMDQ1cjNlanFycjE4NDUzdyJ9.Ghc_wgUqyPqJgQXwj-p_tw' />
-        */}
-        {/*
-        <Legend />
-        */}
         <GeoJSON data={community} style={choroplethStyleCommunity} ref={(layer) => layer?.leafletElement?.bringToFront()} />
         <GeoJSON key={key} data={side} style={choroplethStyleSide} onEachFeature={choroplethOnEachFeature} ref={(layer) => layer?.leafletElement?.bringToBack()} />
-        {/*
-        <LayersControl>
-          <LayersControl.Overlay checked name="Layer Community">
-            <GeoJSON data={community} style={styleCommunity} ref={(layer) => layer?.leafletElement?.bringToFront()} />
-          </LayersControl.Overlay>
-          <LayersControl.Overlay checked name="Layer Side">
-            <GeoJSON key={key} data={side} style={choroplethStyleSide} onEachFeature={choroplethOnEachFeature} ref={(layer) => layer?.leafletElement?.bringToBack()} />
-          </LayersControl.Overlay>
-        </LayersControl>
-        */}
-        {/*
-        {sideCoords && (
-        <Marker position={sideCoords} icon={customIcon}>
-          <Popup>
-            {maxCrashesSide} has the highest number of crashes with {maxCrashes} crashes.
-          </Popup>
-        </Marker>
-        )}
-        */}
         {centroidCoords.map(({ communityName, centroid, maxCrashes }, index) => {
-          // console.log(`Rendering marker for community: ${communityName}`)
           return (
-            <Marker key={index} position={centroid} icon={customIcon1}>
-              {/*
-              <Popup>
-                <div>
-                  <strong>{communityName}</strong>
-                  <p>Max crashes: {maxCrashes.toLocaleString()}</p>
-                </div>
-              </Popup>
-              */}
-            </Marker>
+            <Marker key={index} position={centroid} icon={customIcon1}></Marker>
           )
         })}
         </MapContainer>
-    </div>
+      </div>
     </div>
   )
 }

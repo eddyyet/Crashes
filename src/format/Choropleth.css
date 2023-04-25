@@ -14,15 +14,15 @@
   -webkit-border-radius: 0.5rem !important;
   border: 0.75px solid #999999 !important;
   padding: 0.5rem !important;
-  /*font-size: 0.75rem !important;*/
+  font-size: 0.75rem !important;
   color: #CCCCCC !important;
   overflow: hidden !important;
-  background-color: rgba(56, 58, 62, 0.9) !important;
+  background-color: rgba(56, 58, 62, 0.7) !important;
   font-family: 'Google Sans', 'Roboto', 'Helvetica Neue', sans-serif;
 }
+
 .mo-tooltip .title {
   margin-bottom: 7px;
-  /*text-align: center;*/
 }
 .mo-tooltip .icon {
   display: inline-block;
@@ -33,7 +33,7 @@
   margin-right: 10px;
 }
 .mo-tooltip .side-name {
-  font-size: 18px;
+  font-size: 1rem;
 }
 
 .mo-tooltip .details {
@@ -58,33 +58,3 @@
 .leaflet-control-attribution {
   display: none;
 }
-
-/*
-.info.legend {
-  background-color: white;
-  color: black;
-  width: 150px;
-}
-
-.legend i {
-  width: 20px;
-  height: 18px;
-  margin-right: 8px;
-  opacity: 0.7;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.legendRow {
-  letter-spacing: 0.2px;
-  text-align: right;
-}
-    
-.legend #legend-title {
-  font-size: 12px;
-  display: block;
-  margin-top: 5px;
-  font-weight: bold;
-  text-align: center;
-}
-*/
