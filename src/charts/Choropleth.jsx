@@ -176,7 +176,7 @@ function styleCommunity (feature, selectedData) {
   const matchResultStyle = {
     fillColor: 'transparent',
     fillOpacity: 0,
-    color: '#2d2f31',
+    color: '#28292a',
     weight: 0.5,
     Opacity: 0.7
   }
@@ -184,7 +184,7 @@ function styleCommunity (feature, selectedData) {
   const unMatchResultStyle = {
     fillColor: 'transparent',
     fillOpacity: 0,
-    color: '#2d2f31',
+    color: '#28292a',
     weight: 0,
     Opacity: 0
   }
