@@ -17,12 +17,12 @@
   font-size: 0.75rem !important;
   color: #CCCCCC !important;
   overflow: hidden !important;
-  background-color: rgba(56, 58, 62, 0.7) !important;
+  background-color: rgba(56, 58, 62, 0.9)!important;
   font-family: 'Google Sans', 'Roboto', 'Helvetica Neue', sans-serif;
 }
 
 .mo-tooltip .title {
-  margin-bottom: 7px;
+  margin-bottom: 0.5rem;
 }
 .mo-tooltip .icon {
   display: inline-block;
@@ -34,25 +34,21 @@
 }
 .mo-tooltip .side-name {
   font-size: 1rem;
+  font-weight: 700;
 }
 
-.mo-tooltip .details {
-  font-size: 13px;
-  display: flex;
-  flex-direction: column;
-}
 .mo-tooltip .detail-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  line-height: 1.2;
+  line-height: 1.5;
 }
 .mo-tooltip .detail-label {
   margin-right: 10px;
 }
-.mo-tooltip .citizens {
-  font-size: 20px;
-  float: right;
+.mo-tooltip .crash-rate {
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 .leaflet-control-attribution {

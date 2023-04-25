@@ -54,7 +54,7 @@
 }
 
 .NetworkCategory {
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: .15rem;
   color: #777777;
 }
@@ -66,23 +66,23 @@
 
 #NetworkLighting {
   position: absolute;
-  top: 132px;
-  left: 120px;
-  transform: rotate(-24deg);
+  top: 128px;
+  left: 116px;
+  transform: scale(0.8) rotate(-24deg);
 }
 
 #NetworkWeather {
   position: absolute;
-  top: 36px;
-  left: 420px;
-  transform: rotate(20deg);
+  top: 34px;
+  left: 410px;
+  transform: scale(0.8) rotate(18deg);
 }
 
 #NetworkRoadway {
   position: absolute;
   top: 200px;
-  left: 630px;
-  transform: rotate(42deg);
+  left: 622px;
+  transform: scale(0.8) rotate(44deg);
 }
 
 #Network2 {
@@ -94,22 +94,22 @@
 #Network2Lighting {
   position: absolute;
   top: 205px;
-  left: -40px;
-  transform: rotate(-90deg);
+  left: -48px;
+  transform: scale(0.7) rotate(-90deg);
 }
 
 #Network2Weather {
   position: absolute;
-  top: 32px;
-  left: 215px;
-  transform: rotate(27deg);
+  top: 30px;
+  left: 208px;
+  transform: scale(0.7) rotate(28deg);
 }
 
 #Network2Roadway {
   position: absolute;
-  top: 343px;
-  left: 230px;
-  transform: rotate(-40deg);
+  top: 340px;
+  left: 223px;
+  transform: scale(0.7) rotate(-42deg);
 }
 
 .bubbleTypeLarge {

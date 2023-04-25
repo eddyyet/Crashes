@@ -14,7 +14,7 @@ export default function Legend () {
     <div className='mapLegend'>
       <div style={{ width: '220px', marginRight: '20px' }}>
         <div className='legend-transform' style={{ width: '280px' }}>
-          <div>Crashes per 1000 citizens each year</div>
+          <div>Crashes per 1000 population per year</div>
           <div className='legend-gradient'></div>
           <div className="legend-labels">{legendLabels}</div>
         </div>

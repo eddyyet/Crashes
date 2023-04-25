@@ -69,17 +69,18 @@ function onMouseOver (event, selectedData) {
     let direction1 = 'auto'
     let offset1 = [0, 0]
     if (Object.keys(selectedData.crashesPer1000).length === 9) {
-      if (['Far North Side', 'Northwest Side', 'North Side', 'West Side'].includes(featureId)) {
+      if (['Far North Side', 'Northwest Side', 'North Side'].includes(featureId)) {
         direction1 = 'bottom'
-        if (['West Side'].includes(featureId)) {
-          offset1 = [-70, 0]
-        }
-      } else if (['Southwest Side', 'Far Southwest Side'].includes(featureId)) {
+        offset1 = [10, 20]
+      } else if (['West Side'].includes(featureId)) {
+        direction1 = 'bottom'
+        offset1 = [0, 20]
+      } else if (['Central'].includes(featureId)) {
+        direction1 = 'bottom'
+        offset1 = [-20, 20]
+      } else if (['South Side', 'Far Southeast Side', 'Southwest Side', 'Far Southwest Side'].includes(featureId)) {
         direction1 = 'top'
-        offset1 = [-60, 0]
-      } else if (['South Side', 'Central', 'Far Southeast Side'].includes(featureId)) {
-        direction1 = 'left'
-        offset1 = [20, -30]
+        offset1 = [-50, -20]
       }
     } else if (Object.keys(selectedData.crashesPer1000).length === 1) {
       direction1 = 'bottom'
@@ -89,22 +90,21 @@ function onMouseOver (event, selectedData) {
     const tooltipContent = `
       <div class='mo-tooltip'>
         <div class='title'>
-          <strong><span class='side-name'>${featureId} </span>(Population: ${moPpl})</strong>
+          <div class='side-name'>${featureId}</div>
+          <div>Population: ${moPpl}</div>
         </div>
-        <div class='details'>
-          <div class='detail-row'>
-            <span class='detail-label'>Total crashes (${moStartYear} - ${moEndYear}) </span>
-            <span class='detail-value'>${moCrashes}</span>
-          </div>
-          <div class='detail-row'>
-            <span class='detail-label'>Crashes per 1K citizens each year </span>
-            <span class='citizens' style='color:${hslColor}'>${moPer1000}</span>
-          </div>
-          <div class='detail-row'>
-            <span class='detail-label'>
-            Top crash area</span>
-            <span class='detail-value'>${maxCommunityDisplay} (${maxCommunityCrashesDisplay})</span>
-          </div>
+        <div class='detail-row'>
+          <span class='detail-label'>Number of crashes (${moStartYear} - ${moEndYear}) </span>
+          <span class='detail-value'>${moCrashes}</span>
+        </div>
+        <div class='detail-row'>
+          <span class='detail-label'>Crashes per 1000 population per year </span>
+          <span class='crash-rate' style='color:${hslColor}'>${moPer1000}</span>
+        </div>
+        <div class='detail-row'>
+          <span class='detail-label'>
+          Top crash area</span>
+          <span class='detail-value'>${maxCommunityDisplay} (${maxCommunityCrashesDisplay})</span>
         </div>
       </div>
     `
