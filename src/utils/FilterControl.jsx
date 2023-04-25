@@ -45,7 +45,7 @@ export default function FilterControl (props) {
         setYearRangeTemp([year, year])
         props.setYearRange([year, year])
       }
-    }, 1500)
+    }, 2000)
     if (playButton.current) {
       playButton.current.blur()
     }
