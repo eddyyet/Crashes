@@ -34,7 +34,7 @@ function getColor (feature, selectedData) {
 function onMouseOver (event, selectedData) {
   const layer = event.target
   const featureId = layer.feature.properties.id
-  const hslColor = [getColor(layer.feature, selectedData.crashesPer1000)].fillColor
+  const hslColor = getColor(layer.feature, selectedData.crashesPer1000).fillColor
   const hslColorText = getColor(layer.feature, selectedData.crashesPer1000).textColor
   if (selectedData.crashesPer1000[featureId] !== undefined) {
     layer.setStyle({
@@ -44,7 +44,6 @@ function onMouseOver (event, selectedData) {
       fillOpacity: 0.85,
       fillColor: hslColor
     })
-    // console.log(selectedData)
     const moCrashes = selectedData.crashes[featureId].toLocaleString()
     const moPpl = selectedData.ppl[featureId].toLocaleString()
     const moPer1000 = selectedData.crashesPer1000[featureId]
