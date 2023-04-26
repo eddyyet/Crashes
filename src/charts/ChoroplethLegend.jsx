@@ -11,19 +11,15 @@ export default function Legend () {
   ))
 
   return (
-    <div className='mapLegend'>
-      <div style={{ width: '220px', marginRight: '20px' }}>
-        <div className='legend-transform' style={{ width: '280px' }}>
-          <div>Crashes per 1000 population per year</div>
-          <div className='legend-gradient'></div>
-          <div className="legend-labels">{legendLabels}</div>
-        </div>
+    <div className='mapLegend' style={{ marginTop: '6px' }}>
+      <div className='legend-transform' style={{ width: '225px', marginRight: '23px' }}>
+        <div>Crashes per 1000 population per year</div>
+        <div className='legend-gradient'></div>
+        <div className="legend-labels">{legendLabels}</div>
       </div>
-      <div style={{ width: '165px' }}>
-        <div className='mapLegend legend-transform' style={{ width: '160px' }}>
-          <img src={topCrashSymbol} alt="Crash Icon" style={{ width: '20px', height: '20px', marginRight: '8px' }} />
-          <span>Top crash area</span>
-        </div>
+      <div className='mapLegend'>
+        <img src={topCrashSymbol} alt="Crash Icon" style={{ width: '16px', height: '16px', marginRight: '4px' }} />
+        <span>Top crash area</span>
       </div>
     </div>
   )

@@ -1,6 +1,6 @@
 #ScatterPlotLegend {
   display: none;
-  width: 250px;
+  width: 280px;
 }
 
 #ScatterPlotLegendTrigger:hover + #ScatterPlotLegend, #ScatterPlotLegend:hover {
