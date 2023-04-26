@@ -18,18 +18,24 @@ function getColor (feature, selectedData) {
     const hue = value > 60 ? 5 : 53 - Math.max(value, 15) * 0.8
     const saturation = (Math.max(Math.min(value, 60), 20) - 20) * 2.5
     const lightness = value > 60 ? 115 - Math.min(value, 75) : 73 - Math.max(value, 15) * 0.3
+    const lightnessText = value > 60 ? 125 - Math.min(value, 75) : 83 - Math.max(value, 15) * 0.3
     const alpha = Math.min(value * 1.2 + 13, 85)
+    const alphaText = Math.min(value * 0.8 + 47, 95)
 
-    return `hsla(${hue}, ${saturation}%, ${lightness}%, ${alpha}%)`
+    return {
+      fillColor: `hsla(${hue}, ${saturation}%, ${lightness}%, ${alpha}%)`,
+      textColor: `hsla(${hue}, ${saturation}%, ${lightnessText}%, ${alphaText}%)`
+    }
   } else {
-    return '#ccc' // color for unknown feature
+    return { fillColor: '#ccc', textColor: '#ccc' } // color for unknown feature
   }
 }
 
 function onMouseOver (event, selectedData) {
   const layer = event.target
   const featureId = layer.feature.properties.id
-  const hslColor = getColor(layer.feature, selectedData.crashesPer1000)
+  const hslColor = [getColor(layer.feature, selectedData.crashesPer1000)].fillColor
+  const hslColorText = getColor(layer.feature, selectedData.crashesPer1000).textColor
   if (selectedData.crashesPer1000[featureId] !== undefined) {
     layer.setStyle({
       weight: 1.5,
@@ -101,7 +107,7 @@ function onMouseOver (event, selectedData) {
         </div>
         <div class='detail-row'>
           <span class='detail-label'>Crashes per 1000 population per year </span>
-          <span class='crash-rate' style='color:${hslColor}'>${moPer1000}</span>
+          <span class='crash-rate' style='color:${hslColorText}'>${moPer1000}</span>
         </div>
         <div class='detail-row'>
           <span class='detail-label'>
@@ -118,7 +124,7 @@ function onMouseOver (event, selectedData) {
 
 function onMouseOut (event, selectedData) {
   const layer = event.target
-  const fillColor = getColor(layer.feature, selectedData.crashesPer1000)
+  const fillColor = getColor(layer.feature, selectedData.crashesPer1000).fillColor
 
   if (fillColor === '#ccc') {
     layer.setStyle({
@@ -151,7 +157,7 @@ function onEachFeature (feature, layer, selectedData) {
 }
 
 function styleSide (feature, selectedData) {
-  const fillColor = getColor(feature, selectedData.crashesPer1000)
+  const fillColor = getColor(feature, selectedData.crashesPer1000).fillColor
   if (fillColor === '#ccc') {
     return {
       fillColor: '#ccc',
