@@ -58,7 +58,7 @@ export default function ScatterPlot (props) {
         </div>
       </div>
       <div className={'chartDescription'}>How common and how injurious were the crashes in different time?</div>
-      <div style={{ height: '470px', overflow: 'hidden' }}>
+      <div style={{ height: '470px' }}>
         <ResponsiveScatterPlot
           height={470}
           width={350}
