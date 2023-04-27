@@ -182,9 +182,9 @@ export default function App () {
           <div>
             <span>Data from Chicago Data Portal (</span>
             <a href='https://data.cityofchicago.org/Transportation/Traffic-Crashes-Crashes/85ca-t3if' target='_blank' rel='noreferrer'>traffic crashes</a>
-            <span>), </span>
+            <span>, </span>
             <a href='https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Boundaries-Community-Areas-current-/cauq-8yn6' target='_blank' rel='noreferrer'>boundaries</a>
-            <span> and Chicago Metropolitan Agency for Planning (</span>
+            <span>) and Chicago Metropolitan Agency for Planning (</span>
             <a href='https://www.cmap.illinois.gov/documents/10180/126764/_Combined_AllCCAs.pdf/' target='_blank' rel='noreferrer'>population</a>
             <span>)</span>
           </div>
