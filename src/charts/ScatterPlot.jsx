@@ -58,40 +58,42 @@ export default function ScatterPlot (props) {
         </div>
       </div>
       <div className={'chartDescription'}>How common and how injurious were the crashes in different time?</div>
-      <ResponsiveScatterPlot
-        height={470}
-        width={350}
-        margin={{ top: 50, right: 55, bottom: 20, left: 59 }}
-        data={scatterPlotData.nivoInputData}
-        nodeSize={{ key: 'data.radius', values: [0, 1], sizes: [0, 40] }}
-        xScale={{ type: 'point' }}
-        yScale={{ type: 'point' }}
-        axisTop={{
-          tickSize: 0,
-          tickPadding: 23,
-          tickRotation: 0,
-          legend: 'Day of week',
-          legendPosition: 'middle',
-          legendOffset: -44
-        }}
-        axisLeft={{
-          tickSize: 0,
-          tickPadding: 30,
-          tickRotation: 0,
-          legend: 'Time (hour)',
-          legendPosition: 'middle',
-          legendOffset: -54
-        }}
-        axisBottom={null}
-        enableGridX={false}
-        enableGridY={false}
-        theme={{
-          fontFamily: '"Google Sans", "Roboto", "Helvetica Neue", sans-serif',
-          textColor: '#999999'
-        }}
-        colors={colors}
-        tooltip={customTooltip}
-      />
+      <div style={{ height: '470px', overflow: 'hidden' }}>
+        <ResponsiveScatterPlot
+          height={470}
+          width={350}
+          margin={{ top: 50, right: 55, bottom: 20, left: 59 }}
+          data={scatterPlotData.nivoInputData}
+          nodeSize={{ key: 'data.radius', values: [0, 1], sizes: [0, 40] }}
+          xScale={{ type: 'point' }}
+          yScale={{ type: 'point' }}
+          axisTop={{
+            tickSize: 0,
+            tickPadding: 23,
+            tickRotation: 0,
+            legend: 'Day of week',
+            legendPosition: 'middle',
+            legendOffset: -44
+          }}
+          axisLeft={{
+            tickSize: 0,
+            tickPadding: 30,
+            tickRotation: 0,
+            legend: 'Time (hour)',
+            legendPosition: 'middle',
+            legendOffset: -54
+          }}
+          axisBottom={null}
+          enableGridX={false}
+          enableGridY={false}
+          theme={{
+            fontFamily: '"Google Sans", "Roboto", "Helvetica Neue", sans-serif',
+            textColor: '#999999'
+          }}
+          colors={colors}
+          tooltip={customTooltip}
+        />
+      </div>
     </div>
   )
 }

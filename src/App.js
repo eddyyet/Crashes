@@ -179,13 +179,23 @@ export default function App () {
           <ScatterPlot year={yearRange} side={side} />
         </div>
         <div className={'footer'}>
-          <div>Data from <a href='https://data.cityofchicago.org/Transportation/Traffic-Crashes-Crashes/85ca-t3if' target='_blank' rel='noreferrer'>Chicago Data Portal</a></div>
+          <div>
+            <span>Data from Chicago Data Portal (</span>
+            <a href='https://data.cityofchicago.org/Transportation/Traffic-Crashes-Crashes/85ca-t3if' target='_blank' rel='noreferrer'>traffic crashes</a>
+            <span>), </span>
+            <a href='https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Boundaries-Community-Areas-current-/cauq-8yn6' target='_blank' rel='noreferrer'>boundaries</a>
+            <span> and Chicago Metropolitan Agency for Planning (</span>
+            <a href='https://www.cmap.illinois.gov/documents/10180/126764/_Combined_AllCCAs.pdf/' target='_blank' rel='noreferrer'>population</a>
+            <span>)</span>
+          </div>
           <div><span>Map engine from </span>
           <a href='https://leafletjs.com' target='_blank' rel='noreferrer'>Leaflet</a><span> and </span>
           <a href='https://www.openstreetmap.org/copyright' target='_blank' rel='noreferrer'>OpenStreetMap</a> contributors
           </div>
           <div>
-            Images from Vecteezy (
+            <span>Images from NBC Chicago (</span>
+            <a href='https://www.nbcchicago.com/news/local/stolen-car-was-driving-wrong-way-before-fiery-chicago-crash-that-left-2-dead-16-hurt-police/3005211/' target='_blank' rel='noreferrer'>scene</a>
+            <span>), Vecteezy (</span>
             <a href='https://www.vecteezy.com/vector-art/7798695-graphics-drawing-businessman-standing-and-using-smartphone-for-connection-online-technology-vector-illustration' target='_blank' rel='noreferrer'>man</a><span>, </span>
             <a href='https://www.vecteezy.com/vector-art/113748-free-illustration-of-hybrid-car' target='_blank' rel='noreferrer'>cars (3D)</a><span>, </span>
             <a href='https://www.vecteezy.com/vector-art/13037262-collection-of-various-isolated-cars-icons-car-top-view-illustration-vector' target='_blank' rel='noreferrer'>cars (top view)</a><span> and </span>

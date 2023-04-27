@@ -1,6 +1,6 @@
 body {
-  background: linear-gradient(rgba(31, 31, 31, 0.8) 0px, rgba(31, 31, 31, 1) 600px, rgba(31, 31, 31, 1) 100%),
-    url('../images/crash_photo_bg_gray.jpg') top center no-repeat;
+  background: linear-gradient(rgba(31, 31, 31, 0.85) 0px, rgba(31, 31, 31, 1) 900px, rgba(31, 31, 31, 1) 100%),
+    url('../images/crash_web_bg.jpg') top center no-repeat;
   margin: 0rem;
   border: 0rem;
   padding: 6rem 1.5rem 1.5rem;
