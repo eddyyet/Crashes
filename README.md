@@ -6,14 +6,23 @@
 ![D3.js Badge](https://img.shields.io/badge/D3.js-F9A03C?logo=d3dotjs&logoColor=fff&style=flat-square)
 ![Leaflet Badge](https://img.shields.io/badge/Leaflet-199900?logo=leaflet&logoColor=fff&style=flat-square)
 
-<style>
-    .preview-image {
-        border: 1px solid #666666;
-        border-radius: 24px;
-    }
-</style>
+<img src='./public/preview.jpg'>
 
-<img src='./public/preview.jpg' class='preview-image'>
+Data visualization of traffic crashes identifies patterns and trends, which can help prevent accidents and save lives. In a city as busy as Chicago, traffic crashes are unfortunately common, and understanding the data is crucial to improve traffic safety.
+
+This project showcases the use of Python for data processing and React with various visualization packages, including Nivo (based on D3), Vis.js, and Leaflet. The skills used in this project demonstrate the power of combining data processing and visualization to find effective solutions for complex problems.
+
+>  <font size="1">This is a course project for MSBD5005 Data Visualization in The Hong Kong University of Science and Technology (HKUST) in Spring 2022-23.</font>
+
+## Data visualization
+
+- Map (Choropleth) with crash rate (per 1000 people per year) by region and top crash areas
+- Treemap of crash causes and injury rates
+- Line chart of injury rates by speed limit
+- Bar chart and waffle chart of people involved by injury level
+- Network graph of environemental conditions and injury level, measured by lift ratio
+- Bubble chart of crash forms with image illustration
+- Cobination of heatmap and bubble chart of crash counts and injury rates by time of day and day of week
 
 ## Visit
 
@@ -26,17 +35,18 @@ Dashboard website: https://????.vercel.app
 3. Use `npm install` to install the dependencies.
 4. Use `npm start` to start the application in your browser.
 
-## Source of data, tools and images
+## Source of data, map engine and images
 
 #### Data
-- Traffic Crashes in Chicago: [Chicago Data Portal](https://data.cityofchicago.org/Transportation/Traffic-Crashes-Crashes/85ca-t3if)
-- Chicago Community Areas: [Chicago Data Portal](https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Boundaries-Neighborhoods/bbvz-uum9)
-- Chicago Population: [Chicago Metropolitan Agency for Planning](https://www.cmap.illinois.gov/documents/10180/126764/_Combined_AllCCAs.pdf/)
+- Chicago data portal ([traffic crashes](https://data.cityofchicago.org/Transportation/Traffic-Crashes-Crashes/85ca-t3if), [boundaries](https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Boundaries-Community-Areas-current-/cauq-8yn6))
+- Chicago Metropolitan Agency for Planning ([population](https://www.cmap.illinois.gov/documents/10180/126764/_Combined_AllCCAs.pdf/))
 
 #### Map engine
-- Leaflet: [Leaflet](https://leafletjs.com/)
-- OpenStreetMap: [OpenStreetMap](https://www.openstreetmap.org/copyright)
+- [Leaflet](https://leafletjs.com/)
+- [OpenStreetMap](https://www.openstreetmap.org/copyright)
 
 #### Images
-Images are deviated from the following:
-- Crash scene photo: [NBC Chicago](https://www.nbcchicago.com/news/local/stolen-car-was-driving-wrong-way-before-fiery-chicago-crash-that-left-2-dead-16-hurt-police/3005211/)
+Images are deviated from the following sources:
+- NBC Chicago ([scene](https://www.nbcchicago.com/news/local/stolen-car-was-driving-wrong-way-before-fiery-chicago-crash-that-left-2-dead-16-hurt-police/3005211/))
+- Vecteezy ([man](https://www.vecteezy.com/vector-art/7798695-graphics-drawing-businessman-standing-and-using-smartphone-for-connection-online-technology-vector-illustration), [cars (3D)](https://www.vecteezy.com/vector-art/113748-free-illustration-of-hybrid-car), [cars (top view)](https://www.vecteezy.com/vector-art/13037262-collection-of-various-isolated-cars-icons-car-top-view-illustration-vector), [trees](https://www.vecteezy.com/members/104122094326139728765))
+- Clipartix.com ([motorcycle](https://clipartix.com/motorcycle-clipart-image-8614/))
