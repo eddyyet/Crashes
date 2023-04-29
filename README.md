@@ -8,9 +8,9 @@
 
 <img src='./public/preview.jpg'>
 
-Data visualization of traffic crashes identifies patterns and trends, which can help prevent accidents and save lives. In a city as busy as Chicago, traffic crashes are unfortunately common, and understanding the data is crucial to improve traffic safety.
+Data visualization of traffic crashes identifies patterns and trends, which helps prevent accidents and save lives. In a city as busy as Chicago, traffic crashes are unfortunately common, and understanding the data is crucial to improve traffic safety.
 
-This project showcases the use of Python for data processing and React with various visualization packages, including Nivo (based on D3), Vis.js, and Leaflet. The skills used in this project demonstrate the power of combining data processing and visualization to find effective solutions for complex problems.
+This project showcases the use of Python for data processing and React with various visualization packages, including Nivo (based on D3), Vis.js, and Leaflet. It demonstrates the power of combining data processing and visualization to find effective solutions for complex real-life problems.
 
 > This is a course project for MSBD5005 Data Visualization in The Hong Kong University of Science and Technology (HKUST) in Spring 2022-23.
 <br />
@@ -29,6 +29,7 @@ This project showcases the use of Python for data processing and React with vari
 ## Visit
 
 Dashboard website: https://????.vercel.app
+<br />
 <br />
 
 ## Local installation 
