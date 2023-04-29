@@ -6,9 +6,7 @@
 ![D3.js Badge](https://img.shields.io/badge/D3.js-F9A03C?logo=d3dotjs&logoColor=fff&style=flat-square)
 ![Leaflet Badge](https://img.shields.io/badge/Leaflet-199900?logo=leaflet&logoColor=fff&style=flat-square)
 
-![Screenshot](./public/preview.jpg)
-
-<img src='./public/preview.jpg' border='0.5px solid #666666' border-radius='24px'>
+<img src='./public/preview.jpg' style='border: 1px solid #666666; border-radius: 24px;'>
 
 ## Visit
 
