@@ -14,6 +14,7 @@ This project showcases the use of Python for data processing and React with vari
 
 >  <font size="1">This is a course project for MSBD5005 Data Visualization in The Hong Kong University of Science and Technology (HKUST) in Spring 2022-23.</font>
 
+
 ## Data visualization
 
 - Map (Choropleth) with crash rate (per 1000 people per year) by region and top crash areas
@@ -22,11 +23,13 @@ This project showcases the use of Python for data processing and React with vari
 - Bar chart and waffle chart of people involved by injury level
 - Network graph of environemental conditions and injury level, measured by lift ratio
 - Bubble chart of crash forms with image illustration
-- Cobination of heatmap and bubble chart of crash counts and injury rates by time of day and day of week
+- Combination of heatmap and bubble chart of crash counts and injury rates by time of day and day of week
+
 
 ## Visit
 
 Dashboard website: https://????.vercel.app
+
 
 ## Local installation 
 
