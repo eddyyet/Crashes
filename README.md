@@ -8,7 +8,7 @@
 
 ![Screenshot](./public/preview.jpg)
 
-<img src='./public/preview.jpg' style='border-radius: 24px'>
+<img src='./public/preview.jpg' style='border:0.5px solid #666666;border-radius:24px'>
 
 ## Visit
 
