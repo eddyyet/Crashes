@@ -12,8 +12,8 @@ Data visualization of traffic crashes identifies patterns and trends, which can 
 
 This project showcases the use of Python for data processing and React with various visualization packages, including Nivo (based on D3), Vis.js, and Leaflet. The skills used in this project demonstrate the power of combining data processing and visualization to find effective solutions for complex problems.
 
->  <font size="1">This is a course project for MSBD5005 Data Visualization in The Hong Kong University of Science and Technology (HKUST) in Spring 2022-23.</font>
-
+> This is a course project for MSBD5005 Data Visualization in The Hong Kong University of Science and Technology (HKUST) in Spring 2022-23.
+<br />
 
 ## Data visualization
 
@@ -24,12 +24,12 @@ This project showcases the use of Python for data processing and React with vari
 - Network graph of environemental conditions and injury level, measured by lift ratio
 - Bubble chart of crash forms with image illustration
 - Combination of heatmap and bubble chart of crash counts and injury rates by time of day and day of week
-
+<br />
 
 ## Visit
 
 Dashboard website: https://????.vercel.app
-
+<br />
 
 ## Local installation 
 
@@ -37,6 +37,7 @@ Dashboard website: https://????.vercel.app
 2. The repo root directory contains 1 folder, `????`. Use `cd ????` to enter the folder.
 3. Use `npm install` to install the dependencies.
 4. Use `npm start` to start the application in your browser.
+<br />
 
 ## Source of data, map engine and images
 
