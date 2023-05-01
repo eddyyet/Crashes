@@ -20,9 +20,9 @@ This project showcases the use of Python for data processing and React with vari
 ## Data visualization
 
 The data are collected from the sources listed in the session "Source of data, map engine and images". They are processed by the following steps:
-1. Combined to form one single dataset with all required attributes.
+1. Combined to form a single dataset with all required attributes.
 2. Pre-processed and aggregated by year and region with Python in `./src/data/data_slicing.ipynb`.
-3. Loaded into the React application and aggregated by `./src/utils/filter.js` according to the selected year range and region
+3. Loaded into the React application and aggregated by `./src/utils/filter.js` according to the selected year range and region.
 4. Transformed by functions under `./src/utils/` to meet chart-specific requirements.
 
 The following visualizations are implemented:
