@@ -7,7 +7,6 @@ import TreeMapData from '../utils/TreeMapData'
 import causeData from '../data/crash_cause.json'
 import MinorCrashOutlinedIcon from '@mui/icons-material/MinorCrashOutlined'
 import MedicalServicesOutlinedIcon from '@mui/icons-material/MedicalServicesOutlined'
-import StraightenOutlinedIcon from '@mui/icons-material/StraightenOutlined'
 
 export default function TreeMap (props) {
   const filteredData = filter(causeData, props.year, props.side)
@@ -66,7 +65,7 @@ export default function TreeMap (props) {
     <div className={'chart wideChart'}>
       <div className={'chartTitle'}>
         <span>Causes</span>
-        <span id='TreeMapLegendTrigger' className={'legendSymbolOutline'}><StraightenOutlinedIcon className={'legendSymbol'} /></span>
+        <span id='TreeMapLegendTrigger' className={'legendSymbolOutline'}><span className={'legendSymbol'}>?</span></span>
         <div id='TreeMapLegend' className={'floatingLegend'}>
           <div className={'legendTitle'}>Number of crashes</div>
           <div className={'TreeMapSquares'}>

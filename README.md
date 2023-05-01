@@ -6,6 +6,8 @@
 ![D3.js Badge](https://img.shields.io/badge/D3.js-F9A03C?logo=d3dotjs&logoColor=fff&style=flat-square)
 ![Leaflet Badge](https://img.shields.io/badge/Leaflet-199900?logo=leaflet&logoColor=fff&style=flat-square)
 
+Available at https://crashes.vercel.app
+
 <img src='./public/preview.jpg'>
 
 Data visualization of traffic crashes identifies patterns and trends, which helps prevent accidents and save lives. In a city as busy as Chicago, traffic crashes are unfortunately common, and understanding the data is crucial to improve traffic safety.
@@ -17,25 +19,22 @@ This project showcases the use of Python for data processing and React with vari
 
 ## Data visualization
 
+The raw data files (refer to the session "Source of data, map engine and images") are combined and pre-processed with Python in `./src/data/data_slicing.ipynb`. The data are loaded into the React application and aggregated by `./src/utils/filter.js` according to the selected year range and region, and then transformed to meet chart-specific requirements.
+
+The following visualizations are implemented:
 - Map (Choropleth) with crash rate (per 1000 people per year) by region and top crash areas
 - Treemap of crash causes and injury rates
 - Line chart of injury rates by speed limit
-- Bar chart and waffle chart of people involved by injury level
+- Bar chart and waffle chart of people involved by injury levels
 - Network graph of environemental conditions and injury level, measured by lift ratio
 - Bubble chart of crash forms with image illustration
 - Combination of heatmap and bubble chart of crash counts and injury rates by time of day and day of week
 <br />
 
-## Visit
-
-Dashboard website: https://????.vercel.app
-<br />
-<br />
-
 ## Local installation 
 
-1. Clone the files down to your directory, `git clone https://github.com/eddyyet/????.git`
-2. The repo root directory contains 1 folder, `????`. Use `cd ????` to enter the folder.
+1. Clone the files down to your directory, `git clone https://github.com/eddyyet/Crashes.git`
+2. The repo root directory contains 1 folder, `Crashes`. Use `cd Crashes` to enter the folder.
 3. Use `npm install` to install the dependencies.
 4. Use `npm start` to start the application in your browser.
 <br />

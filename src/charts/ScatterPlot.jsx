@@ -5,7 +5,6 @@ import { ResponsiveScatterPlot } from '@nivo/scatterplot'
 import filter from '../utils/filter'
 import ScatterPlotData from '../utils/ScatterPlotData'
 import dayTimeData from '../data/crash_day_time.json'
-import StraightenOutlinedIcon from '@mui/icons-material/StraightenOutlined'
 
 export default function ScatterPlot (props) {
   const filteredData = filter(dayTimeData, props.year, props.side)
@@ -25,7 +24,7 @@ export default function ScatterPlot (props) {
     <div className={'chart narrowChart'}>
       <div className={'chartTitle'}>
         <span>Time</span>
-        <span id='ScatterPlotLegendTrigger' className={'legendSymbolOutline'}><StraightenOutlinedIcon className={'legendSymbol'} /></span>
+        <span id='ScatterPlotLegendTrigger' className={'legendSymbolOutline'}><span className={'legendSymbol'}>?</span></span>
         <div id='ScatterPlotLegend' className={'floatingLegend'}>
           <div className={'legendTitle'}>Number of crashes</div>
           <div className={'ScatterPlotLegendRow'}>

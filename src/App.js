@@ -17,7 +17,6 @@ import Bubble from './charts/Bubble'
 import ScatterPlot from './charts/ScatterPlot'
 import Choropleth from './charts/Choropleth'
 import ChoroplethLegend from './charts/ChoroplethLegend'
-import StraightenOutlinedIcon from '@mui/icons-material/StraightenOutlined'
 
 export default function App () {
   const [yearRange, setYearRange] = useState([2018, 2022])
@@ -66,7 +65,7 @@ export default function App () {
         <div className={'chart fullChart'}>
           <div className={'chartTitle'}>
             <span>Environmental conditions</span>
-            <span id='NetworkLegendTrigger' className={'legendSymbolOutline'}><StraightenOutlinedIcon className={'legendSymbol'} /></span>
+            <span id='NetworkLegendTrigger' className={'legendSymbolOutline'}><span className={'legendSymbol'}>?</span></span>
             <div id='NetworkLegend' className={'floatingLegend'}>
               <Stack direction='row' divider={<Divider orientation="vertical" sx={{ borderWidth: '0.5px', borderColor: '#383a3e' }} flexItem />} spacing='1.5rem'>
                 <div id='NetworkOneFactor'>
@@ -202,7 +201,9 @@ export default function App () {
             <a href='https://www.vecteezy.com/members/104122094326139728765' target='_blank' rel='noreferrer'>trees</a>) and clipartix.com (
             <a href='https://clipartix.com/motorcycle-clipart-image-8614/' target='_blank' rel='noreferrer'>motorcycle</a>)
           </div>
+          <br />
           <div>Illustration for HKUST MSBD5005 Data Visualization (Group 11, Spring 2022/23)</div>
+          <div>Source code available on <a href='https://github.com/eddyyet/Crashes' target='_blank' rel='noreferrer'>Github</a></div>
           <div>All rights reserved</div>
         </div>
       </Stack>
