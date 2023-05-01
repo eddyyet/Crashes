@@ -19,7 +19,11 @@ This project showcases the use of Python for data processing and React with vari
 
 ## Data visualization
 
-The raw data files (refer to the session "Source of data, map engine and images") are combined and pre-processed with Python in `./src/data/data_slicing.ipynb`. The data are loaded into the React application and aggregated by `./src/utils/filter.js` according to the selected year range and region, and then transformed to meet chart-specific requirements.
+The data are collected from the sources listed in the session "Source of data, map engine and images". They are processed by the following steps:
+1. Combined to form one single dataset with all required attributes.
+2. Pre-processed and aggregated by year and region with Python in `./src/data/data_slicing.ipynb`.
+3. Loaded into the React application and aggregated by `./src/utils/filter.js` according to the selected year range and region
+4. Transformed by functions under `./src/utils/` to meet chart-specific requirements.
 
 The following visualizations are implemented:
 - Map (Choropleth) with crash rate (per 1000 people per year) by region and top crash areas
